@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.newland.wstdd"
+    android:versionCode="1"
+    android:versionName="0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    <!-- 屏幕自适应 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.asiainfo.cm10085.IDENTITY_AUTHENTICATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 这句话name="com.newland.。。是必须要有的，否则Application是不会生效的 -->
+    <application
+        android:name="com.newland.wstdd.common.common.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.newland.wstdd.common.activity.HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+          
+            android:screenOrientation="portrait" >
+         
+        </activity>
+
+        <!-- 引导 -->
+        <activity
+            android:name="com.newland.wstdd.common.activity.SplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.activity.GuideActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_guide"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+             
+        </activity>
+
+        <!-- 登录/注册 -->
+        <activity
+            android:name="com.newland.wstdd.login.login.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.login.regist.RegistFinishActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_regist_finish"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <receiver
+            android:name="com.tencent.sample.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.ReturnActivity"
+            android:label="@string/title_activity_return" >
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104957952" />
+                <!-- 100380359 100381104 222222 1104957952 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.sample.DataProviderActivity"
+            android:exported="false"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tencent1104957952.data" />
+            </intent-filter>
+        </activity>
+        <!-- 登录/注册 -->
+
+
+        <!-- 发起 -->
+        <activity
+            android:name="com.newland.wstdd.originate.search.OriginateSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.originate.origateactivity.OriginateChairActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.detail.FindChairDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.ShowFindListViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_show_find_list_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.hotlist.HotListListViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_show_find_list_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.hotlist.detail.HotListDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_show_find_list_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.detail.registration.EditRegistrationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_show_find_list_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.find.TJDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_show_find_list_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 发现 -->
+
+
+        <!-- 我的 -->
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.MineSettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.MyActivitiesListAcitivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.myinterest.MyInterestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_my_interest"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.applyList.ManagerApplyListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 我的  com.newland.wstdd.mine.minesetting.about -->
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.about.ProtocolActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.safe.SafeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.about.AboutTddActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的  com.newland.wstdd.mine.minesetting.about -->
+
+
+        <!-- 我的  com.newland.wstdd.mine.minesetting.feedbackandhelp -->
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.feedbackandhelp.FeedBackAndHelpActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.feedbackandhelp.FeedBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的  com.newland.wstdd.mine.minesetting.feedbackandhelp -->
+
+
+        <!-- 我的 com.newland.wstdd.mine.managerpage -->
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.MyActivitiesActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.ManagerPageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.activitycode.ActivityCodeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.multitext.MultiTextActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 我的 com.newland.wstdd.mine.managerpage -->
+
+
+        <!-- 我的 com.newland.wstdd.mine.personalcenter -->
+        <activity
+            android:name="com.newland.wstdd.mine.personalcenter.MinePersonalCenterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.personalcenter.MineMyQRCodeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"> 
+        </activity>
+        <!-- 我的 com.newland.wstdd.mine.personalcenter -->
+
+
+        <!-- 我的   com.newland.wstdd.mine.receiptaddress -->
+        <activity
+            android:name="com.newland.wstdd.mine.receiptaddress.MineReceiptAddressListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.receiptaddress.MineEditReceiptAddressActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的   com.newland.wstdd.mine.receiptaddress -->
+
+
+        <!-- 我的  com.newland.wstdd.mine.registrationlist -->
+        <activity
+            android:name="com.newland.wstdd.mine.registrationlist.MineRegistrationListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 我的  com.newland.wstdd.mine.registrationlist -->
+
+
+        <!-- 我的 com.newland.wstdd.mine.servicecenter -->
+        <activity
+            android:name="com.newland.wstdd.mine.servicecenter.MineServiceCenterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 我的 com.newland.wstdd.mine.servicecenter -->
+
+
+        <!-- 我的  com.newland.wstdd.mine.twocode -->
+        <activity
+            android:name="com.newland.wstdd.mine.twocode.TwoDimensionCodeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_two_dimension_code"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的  com.newland.wstdd.mine.twocode -->
+
+
+        <!-- 我的 com.newland.wstdd.mine.wheel.widget.WheelView -->
+        <activity
+            android:name="com.newland.wstdd.mine.wheel.widget.WheelView.BaseWheelActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的 com.newland.wstdd.mine.wheel.widget.WheelView -->
+        <!-- 我的 -->
+
+
+        <!-- 快捷 -->
+        <activity
+            android:name="com.newland.wstdd.shortcut.ShortCutActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 快捷 -->
+
+        <activity
+            android:name="com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_select_interest"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.originate.richscan.RichScanActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_richscan_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.originate.richscan.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.fileupload.FileUploadActivity"
+            android:label="@string/title_activity_file_upload"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.filedownload.FileBaseActivity"
+            android:label="@string/title_activity_file_base"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.filedownload.FileGridActivity"
+            android:label="@string/title_activity_file_grid" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.filedownload.FileListActivity"
+            android:label="@string/title_activity_file_list" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.filedownload.FileActivity"
+            android:label="@string/title_activity_file"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.receiptaddress.MineAddReceiveAddressActivity"
+            android:label="@string/title_activity_add_receive_address"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 本地选择图片的相关操作 -->
+        <activity
+            android:name="com.newland.wstdd.common.selectphoto.AlbumsActivity"
+            android:label="@string/title_activity_albums"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.common.selectphoto.AlbumItemActivity"
+            android:label="@string/title_activity_album_item" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        
+          <activity
+            android:name="com.newland.wstdd.mine.minesetting.feedbackandhelp.selectphoto.AlbumsActivity"
+            android:label="@string/title_activity_albums"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.minesetting.feedbackandhelp.selectphoto.AlbumItemActivity"
+            android:label="@string/title_activity_album_item" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.HotListActivity"
+            android:label="@string/title_activity_hot_list"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.RecommendListActivity"
+            android:label="@string/title_activity_recommend_list" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.originate.SingleActivityActivity"
+            android:label="@string/title_activity_single_activity" 
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/title_activity_wxentry"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"
+            
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.login.qqlogin.QQLoginActivity"
+            android:label="@string/title_activity_qqlogin"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.login.login.LoginBindActivity"
+            android:label="@string/title_activity_login_bind"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.editperson.MineEditPersonActivity"
+            android:label="@string/title_activity_mine_edit_person"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.registrationedit.registration.RegistrationSubmitActivity"
+            android:label="@string/title_activity_registration_edit"
+            android:transcriptMode="normal"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.registrationedit.tests.EditRegistrationActivity"
+            android:label="@string/title_activity_edit_registration"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.weixinshare.WeiXinShareActivity"
+            android:exported="true"
+            android:label="@string/title_activity_wei_xin_share"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+              android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.originate.origateactivity.SelectedCoverActivity"
+            android:label="@string/title_activity_selected_cover"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.find.categorylist.registrationedit.editregistration.EditRegistrationEditActivity"
+            android:label="@string/title_activity_edit_registration"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+             >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.managerpage.ilike.LikeListActivity"
+            android:label="@string/title_activity_like_list"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.newland.wstdd.mine.personalcenter.RemoveBindActivity"
+            android:label="@string/title_activity_remove_bind"
+              android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+    </application>
+
+</manifest>

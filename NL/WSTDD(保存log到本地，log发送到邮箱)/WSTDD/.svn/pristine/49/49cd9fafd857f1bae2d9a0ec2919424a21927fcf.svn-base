@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 发起讲座-发布  popwindow -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/find_chair_publish_ok" />
+
+    <TextView
+        android:id="@+id/public_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="融资中国2015互联网金融峰..."
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/public_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/public_title_tv"
+        android:layout_toLeftOf="@+id/public_title_tv"
+        android:background="@color/bg_gray"
+        android:text="讲座"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/public_title_tv"
+        android:layout_centerHorizontal="true"
+        android:text="1人  报名成功！"
+        android:textColor="@color/originate_darkred"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:gravity="center" >
+
+        <View
+            android:layout_width="50dip"
+            android:layout_height="1dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/bg_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分享好友一起参加"
+            android:textColor="@color/line_gray"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="50dip"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:background="@color/bg_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="20dip"
+        android:paddingBottom="20dip" >
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_find_chairdetail_pop_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="微信好友"
+            peng:peng_drawableTop="@drawable/find_chair_weixinshare" />
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_find_chairdetail_pop_weixin_zone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="微信朋友圈"
+            peng:peng_drawableTop="@drawable/find_chair_weixinshare_zone" />
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_find_chairdetail_pop_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="手机QQ"
+            peng:peng_drawableTop="@drawable/find_chair_qqshare" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/originate_chair_popwindow_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/originate_close" />
+
+</RelativeLayout>

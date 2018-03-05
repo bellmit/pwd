@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/activity_mine_personalcenter_nickname_ll"
+            style="@style/layout_mW_44H_style"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <ImageView
+                android:id="@+id/listview_like_list_item_headicon"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:src="@drawable/empty_photo" />
+
+            <TextView
+                android:id="@+id/listview_like_list_item_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dip"
+                android:text="姓名"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/line_gray" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+package com.newland.wstdd.mine.registrationlist;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragmentView;
+import com.newland.wstdd.mine.registrationlist.beanrequest.TddActivitySignVo;
+import com.newland.wstdd.mine.registrationlist.beanresponse.RegistrationListRes;
+
+/**
+ * 未通过报名名单
+ * 
+ * @author linh
+ */
+public class NoPassView extends BaseFragmentView {
+	private View view;
+//	private SimpleAdapter list2;
+//	private BasePassListView listview1, listview2;
+	private Resources resources;
+	private Context context;
+	
+	/* mList是用来存放要显示的数据 */
+	private List<HashMap<String, Object>> mList = new ArrayList<HashMap<String, Object>>();
+
+	// 服务器返回的数据
+	RegistrationListRes registrationListRes;
+	private List<TddActivitySignVo> signNoPassList;//报名未通过名单,TddActivitySignVo对象列表
+	
+	
+	
+	private BasePassListView mNopasslistview;
+	NoPassAdapter noPassAdapter;
+	
+	
+	public NoPassView(Context context) {
+		super(context);
+		this.context = context;
+		resources = context.getResources();
+		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		view = inflater.inflate(R.layout.activity_registrationlist_nopass, null);
+		mNopasslistview=(BasePassListView) view.findViewById(R.id.mylistview1);
+//		this.addView(view, new LayoutParams(android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
+//		list2 = new SimpleAdapter(context, mList, R.layout.friend_listitem, new String[] { "title", "logo" }, new int[] { R.id.title, R.id.logo });
+//
+//		listview1 = (BasePassListView) view.findViewById(R.id.mylistview1);
+//		listview1.setAdapter(list2);
+//
+//		listview2 = (BasePassListView) view.findViewById(R.id.mylistview2);
+//		listview2.setAdapter(list2);
+//		mList = getData();
+		
+		
+		
+		mNopasslistview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				
+			}
+		});
+		refresh();
+	}
+	
+
+	@Override
+	public void refresh() {
+//		try {
+//			new Thread() {
+//				public void run() {
+//					// 需要发送一个request的对象进行请求
+//					RegistrationListReq reqInfo = new RegistrationListReq();
+//					reqInfo.setActivityId("activityId");
+//					BaseMessageMgr mgr = new HandleNetMessageMgr();
+//					RetMsg<RegistrationListRes> ret = mgr.getRegistrationListInfo(reqInfo);// 泛型类，
+//					Message message = new Message();
+//					message.what = RegistrationHandle.REGISTRATION_LIST;// 设置死
+//					// 访问服务器成功 1 否则访问服务器失败
+//					if (ret.getCode() == 1) {
+//						registrationListRes = (RegistrationListRes) ret.getObj();
+//						message.obj = registrationListRes;
+//					} else {
+//						message.obj = ret.getMsg();
+//					}
+//					handlerUpdate.sendMessage(message);
+//				};
+//			}.start();
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+		
+		signNoPassList = new ArrayList<TddActivitySignVo>();
+		TddActivitySignVo tddActivitySignVo = new TddActivitySignVo();
+		tddActivitySignVo.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+		tddActivitySignVo.setSignNickName("昵称");
+		tddActivitySignVo.setConnectUserName("姓名");
+		tddActivitySignVo.setAuditStatus("0");
+		tddActivitySignVo.setKidNum("0");
+		tddActivitySignVo.setAuditStatus("未审核");
+		
+		TddActivitySignVo tddActivitySignVo1 = new TddActivitySignVo();
+		tddActivitySignVo1.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+		tddActivitySignVo1.setSignNickName("昵称");
+		tddActivitySignVo1.setConnectUserName("姓名");
+		tddActivitySignVo1.setAuditStatus("2");
+		tddActivitySignVo1.setKidNum("1");
+		tddActivitySignVo1.setAuditStatus("未审核");
+		
+		TddActivitySignVo tddActivitySignVo2 = new TddActivitySignVo();
+		tddActivitySignVo2.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+		tddActivitySignVo2.setSignNickName("昵称");
+		tddActivitySignVo2.setConnectUserName("姓名");
+		tddActivitySignVo2.setAuditStatus("1");
+		tddActivitySignVo2.setKidNum("1");
+		tddActivitySignVo2.setAuditStatus("未审核");
+		
+		signNoPassList.add(tddActivitySignVo);
+		signNoPassList.add(tddActivitySignVo1);
+		signNoPassList.add(tddActivitySignVo2);
+		
+		if (noPassAdapter == null) {
+			noPassAdapter = new NoPassAdapter(context, signNoPassList);
+			mNopasslistview.setAdapter(noPassAdapter);
+		} else {
+			noPassAdapter.notifyDataSetChanged();
+		}
+
+	}
+
+	@Override
+	public void onClick(View arg0) {
+
+	}
+
+//	/* 返回列表数据 */
+//	private List<HashMap<String, Object>> getData() {
+//		HashMap<String, Object> hashMap;
+//		for (int i = 0; i < 15; i++) {
+//			hashMap = new HashMap<String, Object>();
+//			hashMap.put("logo", R.drawable.ic_launcher);
+//			hashMap.put("title", resources.getString(R.string.app_name));
+//			mList.add(hashMap);
+//		}
+//		return mList;
+//	}
+
+	class Item {
+		public String name;
+		public boolean b = false;
+
+		public Item(String name, boolean b) {
+			this.name = name;
+			this.b = b;
+		}
+	}
+}

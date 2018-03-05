@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_mW_44H_style"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp"
+>
+    <!-- 搜索结果样式 -->
+
+    <TextView android:textSize="14sp"
+        android:id="@+id/item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:text="羽毛球"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/gray" />
+
+    <include layout="@layout/line_nopadding"/>
+</LinearLayout>

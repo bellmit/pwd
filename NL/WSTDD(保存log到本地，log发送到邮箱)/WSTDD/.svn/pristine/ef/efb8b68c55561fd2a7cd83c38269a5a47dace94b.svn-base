@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 我的设置 -->
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        style="@style/layout_mm_style"
+        android:layout_weight="1" >
+
+        <WebView
+            android:id="@+id/webview"
+            style="@style/layout_mm_style" />
+    </ScrollView>
+
+    <LinearLayout
+        style="@style/layout_mW_44H_style"
+        android:background="@color/red"
+        android:gravity="center_horizontal" >
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/mine_setting_exit_feedback_ptv"
+            style="@style/layout_wm_style"
+            android:layout_gravity="center"
+            android:drawablePadding="13dp"
+            android:gravity="center"
+            android:text="意见反馈"
+            android:textColor="@color/white"
+            peng:peng_drawableLeft="@drawable/feedback" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+package com.newland.wstdd.mine.minesetting.feedbackandhelp.bean;
+
+/**意见反馈 网络返回对象
+ * @author Administrator
+ * 2015-12-8
+ */
+public class FeedBackRes {
+
+}

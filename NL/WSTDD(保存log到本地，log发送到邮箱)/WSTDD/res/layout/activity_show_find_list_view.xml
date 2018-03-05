@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/regist_finish_title"
+        layout="@layout/title_head" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/login_line" />
+
+    <ScrollView
+        style="@style/layout_mm_style"
+        android:scrollbars="none" >
+
+        <com.newland.wstdd.common.view.CustomListViews
+            android:id="@+id/category_listview"
+            style="@style/layout_mw_style"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            >
+        </com.newland.wstdd.common.view.CustomListViews>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+package com.newland.wstdd.mine.editperson;
+
+import test.TestData;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.R.layout;
+import com.newland.wstdd.R.menu;
+import com.newland.wstdd.common.base.BaseFragmentActivity;
+import com.newland.wstdd.common.common.AppContext;
+import com.newland.wstdd.common.resultlisterer.OnPostListenerInterface;
+import com.newland.wstdd.common.tools.StringUtil;
+import com.newland.wstdd.common.tools.UiHelper;
+import com.newland.wstdd.login.RetMsg;
+import com.newland.wstdd.login.beanrequest.RegistFirstReq;
+import com.newland.wstdd.login.beanresponse.RegistFirstRes;
+import com.newland.wstdd.login.handle.RegistFragmentHandle;
+import com.newland.wstdd.mine.beanrequest.MineEditPersonReq;
+import com.newland.wstdd.mine.beanresponse.MineEditPersonRes;
+import com.newland.wstdd.mine.beanresponse.TddUserCertificate;
+import com.newland.wstdd.mine.handle.MineEditPersonInfoHandle;
+import com.newland.wstdd.netutils.BaseMessageMgr;
+import com.newland.wstdd.netutils.HandleNetMessageMgr;
+
+import android.os.Bundle;
+import android.os.Message;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View.OnClickListener;
+/**
+ * 个人信息的编辑界面
+ * @author Administrator
+ *
+ */
+public class MineEditPersonActivity extends BaseFragmentActivity implements OnPostListenerInterface{
+
+	//服务器返回的信息
+	private MineEditPersonRes mineEditPersonRes;
+	private MineEditPersonInfoHandle handler = new MineEditPersonInfoHandle(this);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_mine_edit_person);
+	}
+
+	
+
+	@Override
+	public void OnHandleResultListener(Object obj, int responseId) {
+		// TODO Auto-generated method stub
+		try {
+			switch (responseId) {
+			//编辑个人信息
+			case MineEditPersonInfoHandle.PERSON_EDIT_INFO:
+				mineEditPersonRes = (MineEditPersonRes) obj;
+				if(mineEditPersonRes!=null){
+					UiHelper.ShowOneToast(this, mineEditPersonRes.getGetResMess());
+					
+					
+				}
+				
+				break;
+
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+	@Override
+	public void OnFailResultListener(String mess) {
+		// TODO Auto-generated method stub
+		UiHelper.ShowOneToast(this, mess);
+	}
+
+	@Override
+	protected void processMessage(Message msg) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void refresh() {
+		// TODO Auto-generated method stub
+		try {
+			new Thread() {
+				public void run() {
+					// 需要发送一个request的对象进行请求
+					MineEditPersonReq reqInfo = new MineEditPersonReq();
+					TddUserCertificate tddUserCertificate=new TddUserCertificate();
+					//8个元素
+					tddUserCertificate.setCerStatus(1);//状态 1.未认证 30.初步认证  90.身份认证
+			        tddUserCertificate.setEmail("1014909632@qq.com");
+			        tddUserCertificate.setHeadimgurl(AppContext.getAppContext().getHeadImgUrl());
+			        tddUserCertificate.setIdentity("350125199212242123");
+			        tddUserCertificate.setMobilePhone("18750736798");
+			        tddUserCertificate.setNickName(AppContext.getAppContext().getNickName());
+			        tddUserCertificate.setSex(0);
+			        tddUserCertificate.setUserId(AppContext.getAppContext().getUserId());
+					BaseMessageMgr mgr = new HandleNetMessageMgr();
+					RetMsg<MineEditPersonRes> ret = mgr.getMineEditPersonInfo(reqInfo);// 泛型类，																
+					Message message = new Message();
+					message.what = MineEditPersonInfoHandle.PERSON_EDIT_INFO;// 设置死
+					// 访问服务器成功 1 否则访问服务器失败
+					if (ret.getCode() == 1) {
+						mineEditPersonRes = new MineEditPersonRes();
+						mineEditPersonRes.setGetResMess(StringUtil.noNull(ret.getMsg()));
+						message.obj = mineEditPersonRes;
+					} else {
+						message.obj = ret.getMsg();
+					}
+					handler.sendMessage(message);
+				};
+			}.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+	}
+
+
+
+	@Override
+	public void initView() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

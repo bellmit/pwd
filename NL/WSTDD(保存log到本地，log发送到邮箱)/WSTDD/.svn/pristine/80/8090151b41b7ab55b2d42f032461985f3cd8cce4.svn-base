@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:id="@+id/layout"
+    android:scrollbars="vertical"
+    android:orientation="vertical" >
+   <LinearLayout 
+	        style="@style/layout_mw_style"
+	        android:orientation="vertical">
+    <!-- 我的-个人信息 -->
+	 
+    <include layout="@layout/head" 
+        android:id="@+id/head_layout"/>
+	
+	 
+    <RelativeLayout
+        android:id="@+id/activity_mine_personalcenter_icon_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:text="头像" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_icon_extendable_iv"
+            style="@style/layout_ww_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_rightexpand" />
+
+
+        <com.newland.wstdd.common.widget.RoundImageView
+            android:id="@+id/activity_mine_personalcenter_icon_iv"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/activity_mine_personalcenter_icon_extendable_iv"
+            android:src="@drawable/fragment_mine_head_portrait" />
+    </RelativeLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_nickname_ll"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+             android:textColor="@color/gray"
+            android:gravity="center_vertical"
+            android:text="昵称" />
+
+        <EditText
+            android:id="@+id/activity_mine_personalcenter_nickname_content_edt"
+            style="@style/layout_mW_44H_style"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+             android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_nickname_extendable_iv"
+            style="@style/layout_ww_style"
+            android:gravity="center"
+            android:src="@drawable/setting_rightexpand" />
+        
+        
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+             android:textColor="@color/gray"
+            android:gravity="center_vertical"
+            android:text="手机号码" />
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_telnum_tv"
+            style="@style/layout_mW_44H_style"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:maxLength="11"
+            android:inputType="number"
+             android:textColor="@color/textgray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <RelativeLayout
+        android:id="@+id/activity_mine_personalcenter_qrcode_rl"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+             android:textColor="@color/gray"
+            android:layout_centerVertical="true"
+            android:text="我的二维码" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_qrcode_extendable_iv"
+            style="@style/layout_ww_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_rightexpand" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_qrcode_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/activity_mine_personalcenter_qrcode_extendable_iv"
+            android:src="@drawable/myqucode" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/line_gray" />
+
+    <RelativeLayout
+        android:id="@+id/activity_mine_personalcenter_bindonaccount_rl"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+             android:textColor="@color/gray"
+            android:text="绑定账号" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_bindonaccount_extendable_iv"
+            style="@style/layout_ww_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_rightexpand" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_bindonaccount_azone_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+             android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/activity_mine_personalcenter_bindonaccount_extendable_iv"
+            android:src="@drawable/qzone" />
+
+        <!-- <ImageView
+            android:id="@+id/activity_mine_personalcenter_bindonaccount_xinlang_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@+id/activity_mine_personalcenter_bindonaccount_azone_iv"
+            android:src="@drawable/weibo" /> -->
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_bindonaccount_weixin_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dip"
+            
+             android:layout_toLeftOf="@+id/activity_mine_personalcenter_bindonaccount_azone_iv"
+            android:src="@drawable/wechat" />
+    </RelativeLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_idcard_ll"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+             android:textColor="@color/gray"
+            android:text="身份证" />
+
+        <EditText
+            android:id="@+id/activity_mine_personalcenter_idcard_content_edt"
+            style="@style/layout_mW_44H_style"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:hint="未填写"
+            android:maxLength="18" android:layout_marginRight="10dp"
+            android:textColor="@color/gray"
+            android:digits="0123456789x"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_idcard_extendable_iv"
+            style="@style/layout_ww_style"
+            android:gravity="center"
+            android:src="@drawable/setting_rightexpand" />
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_sex_ll"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+             android:textColor="@color/gray"
+            android:gravity="center_vertical"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_sex_content_tv"
+            style="@style/layout_mW_44H_style"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:hint="未知" 
+            android:layout_marginRight="10dp"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_sex_extendable_iv"
+            style="@style/layout_ww_style"
+            android:gravity="center"
+            android:src="@drawable/setting_rightexpand" />
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_mailbox_ll"
+        style="@style/layout_mW_44H_style"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+             android:textColor="@color/gray"
+            android:text="邮箱" />
+		<ScrollView 
+	    style="@style/layout_mw_style"
+	    android:scrollbars="vertical">
+        <EditText
+            android:id="@+id/activity_mine_personalcenter_mailbox_content_edt"
+            style="@style/layout_mW_44H_style"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:hint="未填写"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/gray" android:layout_marginRight="10dp"
+            android:textSize="14sp" />
+		</ScrollView>
+        <ImageView
+            android:id="@+id/activity_mine_personalcenter_mailbox_extendable_iv"
+            style="@style/layout_ww_style"
+            android:gravity="center"
+            android:src="@drawable/setting_rightexpand" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+  </LinearLayout>
+	    
+	    
+	
+</ScrollView>

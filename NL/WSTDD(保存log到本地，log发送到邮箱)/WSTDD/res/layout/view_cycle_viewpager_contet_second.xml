@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="热门"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+        <!-- 更多"..." -->
+        <!--
+        <LinearLayout
+            android:id="@+id/layout_viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:id="@+id/find_more_ll"
+            style="@style/layout_ww_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="12sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:src="@drawable/setting_rightexpand" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_viewager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rr"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" >
+
+            <com.newland.wstdd.find.hotgridview.HotBaseViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+            </com.newland.wstdd.find.hotgridview.HotBaseViewPager>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

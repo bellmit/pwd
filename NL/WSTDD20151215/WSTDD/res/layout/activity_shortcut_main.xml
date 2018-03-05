@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 快捷 -->
+
+    <LinearLayout
+        android:id="@+id/activity_shortcut_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/head_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="28dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:text="取消" />
+
+            <TextView
+                android:id="@+id/head_center_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="快捷发布"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/head_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dip"
+                android:text="发布"
+                android:textColor="@color/originate_darkred" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/login_line" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_shortcut_contentedt"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@+id/activity_shortcut_title_ll"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="此时此刻，你想分享什么...."
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:textSize="12sp" />
+
+    <com.newland.wstdd.common.widget.PengTextView
+        android:id="@+id/activity_shortcut_remainwords_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/activity_shortcut_contentedt"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/text_roundstyle"
+        android:gravity="center"
+        android:text="0/150" 
+        android:textColor="@color/textgray"
+        peng:peng_drawableLeft="@drawable/addeditor"
+        peng:peng_drawableLeftHeight="8dp"
+        peng:peng_drawableLeftWith="8dp"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/activity_shortcut_remainwords_tv"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/line_gray" />
+
+    <ImageView
+        android:id="@+id/activity_shortcut_choosepicture_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:src="@drawable/empty_photo" />
+
+</RelativeLayout>

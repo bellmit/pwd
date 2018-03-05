@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:orientation="vertical" >
+
+    <!-- 通过名单 团秘 -->
+
+    <RelativeLayout
+        android:id="@+id/signlist_item_rl"
+        style="@style/layout_mW_50H_style"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/tuanda_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/signlist_tm_bg" />
+
+        <com.newland.wstdd.common.widget.RoundImageView
+            android:id="@+id/headimg_iv"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:src="@drawable/defaultheadimg" />
+
+        <TextView
+            android:id="@+id/nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/headimg_iv"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/headimg_iv"
+            android:text="TextView"
+            android:textColor="@color/textgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/truename_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname_tv"
+            android:layout_below="@+id/nickname_tv"
+            android:text="TextView"
+            android:textColor="@color/lightgray"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/phone_iv"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/test_phone" />
+
+        <TextView
+            android:id="@+id/num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/phone_iv"
+            android:text="+1"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/canceltm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/orange"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="取消团秘"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:layout_below="@+id/signlist_item_rl"
+        layout="@layout/line_nopadding" />
+
+</RelativeLayout>

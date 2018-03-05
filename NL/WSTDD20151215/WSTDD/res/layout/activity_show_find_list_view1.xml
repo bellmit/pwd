@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_layout"
+    android:orientation="vertical" >
+
+    <include layout="@layout/head" />
+
+    <com.newland.wstdd.common.view.CustomListViews
+        android:id="@+id/category_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" >
+    </com.newland.wstdd.common.view.CustomListViews>
+
+</LinearLayout>

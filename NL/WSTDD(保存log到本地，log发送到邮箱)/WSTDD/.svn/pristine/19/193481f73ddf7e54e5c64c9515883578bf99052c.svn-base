@@ -1,0 +1,6 @@
+application.package=com.newland.wstdd
+key.store=wstdd
+key.store.password=wstdd123456
+key.alias=newland
+key.alias.password=wstdd123456
+version=1.0

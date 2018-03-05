@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    xmlns:app="http://schemas.android.com/"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 服务中心 -->
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        style="@style/layout_mm_style"
+        android:background="@drawable/servicecenter_bg"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/service_headimg_iv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/tuantaitai" />
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_kefu_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="客服 我是团太太"
+                    android:textColor="@color/white" />
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_time_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="(当班时间 工作日9:00-17:00)"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <com.newland.wstdd.common.view.RoundAngleImageView
+
+                    android:id="@+id/service_twocode_iv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/empty_photo" />
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_weixin_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="微信号 woshituantaitai"
+                    android:textColor="@color/white" />
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_weixintwocode_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                      android:layout_marginBottom="5dp"
+                    android:text="微信扫描二维码"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.35"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:paddingBottom="30dp" >
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_qq_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_alignLeft="@+id/service_tel_ptv"
+                    android:layout_gravity="center_horizontal"
+                    android:text="QQ:2368288826"
+                    android:textColor="@color/white" />
+
+                <com.newland.wstdd.common.widget.PengTextView
+                    android:id="@+id/service_tel_ptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/service_qq_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="TEL:400-100-8060"
+                    android:textColor="@color/white"
+                    peng:peng_drawableRight="@drawable/servicetel" />
+
+                <com.newland.wstdd.common.widget.PengTextView
+                    android:id="@+id/service_phone_ptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/service_tel_ptv"
+                    android:layout_below="@+id/service_tel_ptv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="PHONE:13959198060"
+                    android:textColor="@color/white"
+                    peng:peng_drawableRight="@drawable/servicephone" />
+
+                <TextView android:textSize="14sp"
+                    android:id="@+id/service_email_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_alignLeft="@+id/service_tel_ptv"
+                    android:layout_below="@+id/service_phone_ptv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="EMAIL:wsttt@139.com"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

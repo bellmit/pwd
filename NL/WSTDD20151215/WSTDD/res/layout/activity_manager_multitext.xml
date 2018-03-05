@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 群发消息 -->
+
+    <include layout="@layout/head" />
+
+    <RelativeLayout
+        style="@style/layout_mW_30H_style"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/allchose_tv"
+            style="@style/layout_wm_style"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="全选"
+            android:textColor="#e4393c" />
+
+        <TextView
+            android:id="@+id/applylist_tv"
+            style="@style/layout_wm_style"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="报名名单(0)"
+            android:textColor="@color/textgray" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.newland.wstdd.mine.applyList.BasePassListView
+            android:id="@+id/multitext_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" >
+        </com.newland.wstdd.mine.applyList.BasePassListView>
+    </ScrollView>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/multitext_bottom_ll"
+        style="@style/layout_mW_40H_style"
+        android:layout_alignParentBottom="true"
+        
+        android:orientation="horizontal" >
+
+        <LinearLayout style="@style/layout_mm_style"
+            android:layout_weight="1" 
+            android:background="@color/bg_gray">
+
+            <EditText
+                android:id="@+id/multitext_send_edt"
+                style="@style/layout_mm_style"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/white"
+                android:layout_marginTop="2dp" >
+            </EditText>
+              
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/multitext_send_tv"
+            style="@style/layout_wm_style"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:background="@color/bg_gray"
+            android:paddingTop="5dip"
+            android:text="发送"
+            android:textColor="#e4393c" />
+    </LinearLayout>
+
+</LinearLayout>

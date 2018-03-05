@@ -1,0 +1,476 @@
+/**
+ * @fields ManagerApplyListActivity.java
+ */
+package com.newland.wstdd.mine.applyList;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.os.Message;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.adapter.BaseFragmentPagerAdapter;
+import com.newland.wstdd.common.base.BaseFragment;
+import com.newland.wstdd.common.base.BaseFragmentActivity;
+import com.newland.wstdd.common.resultlisterer.OnPostListenerInterface;
+import com.newland.wstdd.common.tools.StringUtil;
+import com.newland.wstdd.login.RetMsg;
+import com.newland.wstdd.mine.applyList.bean.RegistrationListReq;
+import com.newland.wstdd.mine.applyList.bean.RegistrationListRes;
+import com.newland.wstdd.mine.applyList.bean.TddActivitySignVo;
+import com.newland.wstdd.mine.applyList.bean.TddActivitySignVoInfo;
+import com.newland.wstdd.mine.applyList.bean.UpdateRegistrationListReq;
+import com.newland.wstdd.mine.applyList.bean.UpdateRegistrationListRes;
+import com.newland.wstdd.mine.applyList.handle.RegistrationHandle;
+import com.newland.wstdd.netutils.BaseMessageMgr;
+import com.newland.wstdd.netutils.HandleNetMessageMgr;
+
+/**
+ * 报名名单
+ * 
+ * @author H81 2015-11-28
+ * 
+ */
+public class ManagerApplyListActivity extends BaseFragmentActivity implements OnClickListener ,OnPostListenerInterface{
+	final String FLAG = "right_tv_change";
+	
+	private String activityId;//接收到的数据
+	
+	private List<BaseFragment> listFragments;
+	private BaseFragment currentFragment;// 当前选中的fragment
+	private PassListFragment passListFragment;// 通过
+	private NoPassListFragment noPassListFragment;// 未通过
+
+	private LinearLayout mPassLayout;
+	private LinearLayout mNoPassLayout;
+	private TextView mPassTextView;
+	private ImageView mPassImageView;
+	private TextView mNoPassTextView;
+	private ImageView mNoPassImageView;
+	private android.support.v4.view.ViewPager mViewPager;
+
+	TextView right_tv;//编辑、完成
+	
+	// 服务器返回的数据
+	RegistrationListRes registrationListRes;
+	UpdateRegistrationListRes updateRegistrationListRes;
+	RegistrationHandle handlerUpdate = new RegistrationHandle(this);
+	List<TddActivitySignVoInfo> tddActivitySigns = new ArrayList<TddActivitySignVoInfo>();
+	static List<TddActivitySignVoInfo> allList = new ArrayList<TddActivitySignVoInfo>();
+	
+	private List<TddActivitySignVoInfo> signNoPassList = new ArrayList<TddActivitySignVoInfo>();// 未通过
+	private List<TddActivitySignVoInfo> passAllList = new ArrayList<TddActivitySignVoInfo>();//通过的所有名单
+	TddActivitySignVoInfo tdTddActivitySignVo = new TddActivitySignVoInfo();// 团大
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		activityId = getIntent().getStringExtra("activityId");
+		setContentView(R.layout.activity_applylist);
+		setTitle();
+		bindViews();
+//		initFragment();
+		getRegistrationListInfos();
+//		getUpdateRegistrationListInfos() ;
+		
+		//模拟数据
+//		getData();
+	}
+
+	/**
+	 * 初始化Fragment
+	 * @param passAllList2 通过：团秘&团员
+	 * @param signNoPassList2 未通过&未审批
+	 * @param tdTddActivitySignVo2 团大
+	 */
+	private void initFragment(List<TddActivitySignVoInfo> signNoPassList2, List<TddActivitySignVoInfo> passAllList2, TddActivitySignVoInfo tdTddActivitySignVo) {
+		listFragments = new ArrayList<BaseFragment>();
+		passListFragment = PassListFragment.newInstance(ManagerApplyListActivity.this);
+		Bundle bundle2 = new Bundle();
+		bundle2.putSerializable("passAllList", (Serializable) passAllList2);
+		bundle2.putSerializable("tdTddActivitySignVo", (Serializable) tdTddActivitySignVo);
+		passListFragment.setArguments(bundle2);
+
+		noPassListFragment = NoPassListFragment.newInstance(ManagerApplyListActivity.this);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable("signNoPassList", (Serializable) signNoPassList2);
+		noPassListFragment.setArguments(bundle);
+		
+		listFragments.add(passListFragment);
+		listFragments.add(noPassListFragment);
+
+		BaseFragmentPagerAdapter mAdapter = new BaseFragmentPagerAdapter(getSupportFragmentManager(), listFragments);
+		mViewPager.setAdapter(mAdapter);
+		mViewPager.setOnPageChangeListener(pageListener);
+		mViewPager.setOffscreenPageLimit(1);
+		currentFragment = passListFragment;
+	}
+
+	/**
+	 * 设置标题
+	 */
+	private void setTitle() {
+		ImageView left_btn = (ImageView) findViewById(R.id.head_left_iv);
+		ImageButton right_btn = (ImageButton) findViewById(R.id.head_right_btn);
+		right_tv = (TextView) findViewById(R.id.head_right_tv);
+		TextView center_tv = (TextView) findViewById(R.id.head_center_title);
+		if (center_tv != null)
+			center_tv.setText("报名名单");
+		if (left_btn != null) {
+			left_btn.setVisibility(View.VISIBLE);
+			left_btn.setImageDrawable(getResources().getDrawable(R.drawable.ic_return));
+			left_btn.setOnClickListener(this);
+		}
+		if (right_btn != null) {
+			right_btn.setVisibility(View.GONE);
+		}
+		if (right_tv != null) {
+			right_tv.setText("编辑");
+			right_tv.setTextColor(getResources().getColor(R.color.originate_darkred));
+			right_tv.setVisibility(View.VISIBLE);
+			right_tv.setOnClickListener(this);
+		}
+	}
+
+	private void bindViews() {
+
+		mPassLayout = (LinearLayout) findViewById(R.id.pass_ll);
+		mNoPassLayout = (LinearLayout) findViewById(R.id.nopass_ll);
+		mPassTextView = (TextView) findViewById(R.id.pass_tv);
+		mPassImageView = (ImageView) findViewById(R.id.pass_iv);
+		mNoPassTextView = (TextView) findViewById(R.id.nopass_tv);
+		mNoPassImageView = (ImageView) findViewById(R.id.nopass_iv);
+		mViewPager = (android.support.v4.view.ViewPager) findViewById(R.id.viewpager);
+		mPassLayout.setOnClickListener(this);
+		mNoPassLayout.setOnClickListener(this);
+	}
+
+	/**
+	 * ViewPager切换监听方法
+	 * */
+	public OnPageChangeListener pageListener = new OnPageChangeListener() {
+
+		public void onPageScrollStateChanged(int arg0) {
+		}
+
+		public void onPageScrolled(int arg0, float arg1, int arg2) {
+		}
+
+		public void onPageSelected(int position) {
+			clearPress();
+			mViewPager.setCurrentItem(position);
+			currentFragment = listFragments.get(position);
+			switch (position) {
+			case 0:
+				mPassImageView.setVisibility(View.VISIBLE);
+				mPassTextView.setTextColor(getApplicationContext().getResources().getColor(R.color.red));
+				break;
+			case 1:
+				mNoPassImageView.setVisibility(View.VISIBLE);
+				mNoPassTextView.setTextColor(getApplicationContext().getResources().getColor(R.color.red));
+				break;
+			default:
+				break;
+			}
+			currentFragment.refresh();
+			right_tv.setText("编辑");
+		}
+
+	};
+
+	private void clearPress() {
+		mPassImageView.setVisibility(View.INVISIBLE);
+		mNoPassImageView.setVisibility(View.INVISIBLE);
+
+		mPassTextView.setTextColor(this.getResources().getColor(R.color.textgray));
+		mNoPassTextView.setTextColor(this.getResources().getColor(R.color.textgray));
+	}
+
+	@Override
+	protected void processMessage(Message msg) {
+
+	}
+
+	@Override
+	public void refresh() {
+
+	}
+
+	
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.head_left_iv:// 返回
+			finish();
+			break;
+		case R.id.head_right_tv:// 编辑
+			if (right_tv.getText().toString().equals("编辑")) {
+				right_tv.setText("完成");
+			}else if (right_tv.getText().toString().equals("完成")) {
+				right_tv.setText("编辑");
+				getUpdateRegistrationListInfos();
+			}
+			Intent intent = new Intent();
+			intent.setAction(FLAG);
+			sendBroadcast(intent);
+			break;
+		case R.id.pass_ll:
+			clearPress();
+			mPassImageView.setVisibility(View.VISIBLE);
+			mPassTextView.setTextColor(this.getResources().getColor(R.color.red));
+			mViewPager.setCurrentItem(0);
+			break;
+		case R.id.nopass_ll:
+			clearPress();
+			mNoPassImageView.setVisibility(View.VISIBLE);
+			mNoPassTextView.setTextColor(this.getResources().getColor(R.color.red));
+			mViewPager.setCurrentItem(1);
+			break;
+		default:
+			break;
+		}
+	}
+
+//	private void getData() {
+//		allList = new ArrayList<TddActivitySignVoInfo>();
+//		//团大
+//		TddActivitySignVoInfo tddActivitySignVo2 = new TddActivitySignVoInfo();
+//		tddActivitySignVo2.setSignId("2");
+//		tddActivitySignVo2.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo2.setSignNickName("团大昵称");
+//		tddActivitySignVo2.setConnectUserName("姓名");
+//		tddActivitySignVo2.setAuditStatus(2);
+//		tddActivitySignVo2.setSignRole(1);//signRole	报名用户角色 1.团大 2.团秘 9.团员
+//		tddActivitySignVo2.setKidNum(1);
+//		
+//		//团秘&团员
+//		TddActivitySignVoInfo tddActivitySignVo3 = new TddActivitySignVoInfo();
+//		tddActivitySignVo3.setSignId("3");
+//		tddActivitySignVo3.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo3.setSignNickName("团秘或团员昵称1");
+//		tddActivitySignVo3.setConnectUserName("姓名");
+//		tddActivitySignVo3.setAuditStatus(2);
+//		tddActivitySignVo3.setSignRole(9);//signRole	报名用户角色 1.团大 2.团秘 9.团员
+//		tddActivitySignVo3.setKidNum(1);
+//		
+//		TddActivitySignVoInfo tddActivitySignVo4 = new TddActivitySignVoInfo();
+//		tddActivitySignVo4.setSignId("4");
+//		tddActivitySignVo4.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo4.setSignNickName("团秘或团员昵称2");
+//		tddActivitySignVo4.setConnectUserName("姓名");
+//		tddActivitySignVo4.setAuditStatus(2);
+//		tddActivitySignVo4.setSignRole(2);
+//		tddActivitySignVo4.setKidNum(1);
+//
+//		//未审核&未通过
+//		TddActivitySignVoInfo tddActivitySignVo = new TddActivitySignVoInfo();
+//		tddActivitySignVo.setSignId("0");
+//		tddActivitySignVo.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo.setSignNickName("未通过昵称1");
+//		tddActivitySignVo.setConnectUserName("姓名");
+//		tddActivitySignVo.setAuditStatus(1);//审核状态  1.未审核  2.已通过  3.未通过
+//		tddActivitySignVo.setKidNum(0);
+//		
+//		TddActivitySignVoInfo tddActivitySignVo1 = new TddActivitySignVoInfo();
+//		tddActivitySignVo1.setSignId("1");
+//		tddActivitySignVo1.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo1.setSignNickName("未通过昵称2");
+//		tddActivitySignVo1.setConnectUserName("姓名");
+//		tddActivitySignVo1.setAuditStatus(1);
+//		tddActivitySignVo1.setKidNum(1);
+//		
+//		TddActivitySignVoInfo tddActivitySignVo5 = new TddActivitySignVoInfo();
+//		tddActivitySignVo5.setSignId("5");
+//		tddActivitySignVo5.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo5.setSignNickName("未通过昵称3");
+//		tddActivitySignVo5.setConnectUserName("姓名");
+//		tddActivitySignVo5.setAuditStatus(3);
+//		tddActivitySignVo5.setKidNum(1);
+//		
+//		TddActivitySignVoInfo tddActivitySignVo6 = new TddActivitySignVoInfo();
+//		tddActivitySignVo6.setSignId("6");
+//		tddActivitySignVo6.setSignHeadimgurl("2015-11-03/1446565960993.jpeg");
+//		tddActivitySignVo6.setSignNickName("未通过昵称4");
+//		tddActivitySignVo6.setConnectUserName("姓名");
+//		tddActivitySignVo6.setAuditStatus(3);
+//		tddActivitySignVo6.setKidNum(1);
+//		
+//		allList.add(tddActivitySignVo);
+//		allList.add(tddActivitySignVo1);
+//		allList.add(tddActivitySignVo2);
+//		allList.add(tddActivitySignVo3);
+//		allList.add(tddActivitySignVo4);
+//		allList.add(tddActivitySignVo5);
+//		allList.add(tddActivitySignVo6);
+//		
+//		TddActivitySignVoInfo tdTddActivitySignVo = new TddActivitySignVoInfo();// 团大
+//		for (int i = 0; i <allList.size(); i++) {
+//			try {
+//				if (allList.get(i).getSignRole()==1) {
+//					tdTddActivitySignVo = allList.get(i);
+//					allList.remove(i);
+//				}
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//		}
+//		for (int i = 0; i < allList.size(); i++) {
+//			if (allList.get(i).getAuditStatus()==1||allList.get(i).getAuditStatus()==3) {
+//				signNoPassList.add(allList.get(i));
+//			}else if (allList.get(i).getAuditStatus()==2) {
+//				passAllList .add(allList.get(i));
+//			}
+//			
+//		}
+//		initFragment(signNoPassList,passAllList,tdTddActivitySignVo);
+//	}
+	
+	/**
+	 * 35.	活动报名人员列表
+	 */
+	private void getRegistrationListInfos() {
+		try {
+			new Thread() {
+				public void run() {
+					// 需要发送一个request的对象进行请求
+					RegistrationListReq reqInfo = new RegistrationListReq();
+					reqInfo.setActivityId(activityId);
+					BaseMessageMgr mgr = new HandleNetMessageMgr();
+					RetMsg<RegistrationListRes> ret = mgr.getRegistrationListInfo(reqInfo);// 泛型类，
+					Message message = new Message();
+					message.what = RegistrationHandle.REGISTRATION_LIST;// 设置死
+					// 访问服务器成功 1 否则访问服务器失败
+					if (ret.getCode() == 1) {
+						registrationListRes = (RegistrationListRes) ret.getObj();
+						message.obj = registrationListRes;
+					} else {
+						message.obj = ret.getMsg();
+					}
+					handlerUpdate.sendMessage(message);
+				};
+			}.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	/**
+	 *  36.	更新报名列表
+	 */
+	private void getUpdateRegistrationListInfos() {
+		try {
+			new Thread() {
+				public void run() {
+					UpdateRegistrationListReq reqInfo = new UpdateRegistrationListReq();
+					allList.add(tdTddActivitySignVo);//加上团大
+					allList.get(0).getTddActivitySignVo();
+					 List<TddActivitySignVo> tempAllList = new ArrayList<TddActivitySignVo>();
+					for (int i = 0; i < allList.size(); i++) {
+						TddActivitySignVo  tddActivitySignVo=new TddActivitySignVo();
+						tddActivitySignVo=allList.get(i).getTddActivitySignVo();
+						tempAllList.add(tddActivitySignVo);
+					}
+					reqInfo.setTddActivitySigns(tempAllList);
+					BaseMessageMgr mgr = new HandleNetMessageMgr();
+					RetMsg<UpdateRegistrationListRes> ret = mgr.getUpdateRegistrationListInfo(reqInfo);// 泛型类，
+					Message message = new Message();
+					message.what = RegistrationHandle.UPDATE_REGISTRATION_LIST;// 设置死
+					// 访问服务器成功 1 否则访问服务器失败
+					if (ret.getCode() == 1) {
+						updateRegistrationListRes = new UpdateRegistrationListRes();
+						updateRegistrationListRes.setGetResMess(StringUtil.noNull(ret.getMsg()));
+						message.obj = updateRegistrationListRes;
+					} else {
+						message.obj = ret.getMsg();
+					}
+					handlerUpdate.sendMessage(message);
+				};
+			}.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	
+	@Override
+	public void OnHandleResultListener(Object obj, int responseId) {
+		try {
+			switch (responseId) {
+			case  RegistrationHandle.REGISTRATION_LIST://活动报名人员列表
+				registrationListRes= (RegistrationListRes) obj;
+				if (registrationListRes != null) {
+					//未通过名单
+					List<TddActivitySignVo> tempSignNoPassList=registrationListRes.getSignNoPassList();
+					for (int i = 0; i < tempSignNoPassList.size(); i++) {
+						TddActivitySignVoInfo inActivitySignVoInfo = new TddActivitySignVoInfo();
+						inActivitySignVoInfo.setTddActivitySignVo(tempSignNoPassList.get(i));
+						inActivitySignVoInfo.setSelected(false);
+						signNoPassList.add(inActivitySignVoInfo);
+					}
+					
+					//通过名单
+					List<TddActivitySignVo> tempSignPassList=registrationListRes.getSignPassList();
+					
+					for (int i = 0; i < tempSignPassList.size(); i++) {
+						TddActivitySignVoInfo inActivitySignVoInfo = new TddActivitySignVoInfo();
+						inActivitySignVoInfo.setTddActivitySignVo(tempSignPassList.get(i));
+						inActivitySignVoInfo.setSelected(false);
+						passAllList.add(inActivitySignVoInfo);
+					}
+					
+					allList = new ArrayList<TddActivitySignVoInfo>();
+					allList.addAll(signNoPassList);
+					allList.addAll(passAllList);
+					for (int i = 0; i <allList.size(); i++) {
+						try {
+							if (allList.get(i).getTddActivitySignVo().getSignRole()==1) {
+								tdTddActivitySignVo = allList.get(i);
+								allList.remove(i);
+							}
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+					}
+//					for (int i = 0; i < allList.size(); i++) {
+//						if (allList.get(i).getAuditStatus().equals("1")||allList.get(i).getAuditStatus().equals("3")) {
+//							signNoPassList.add(allList.get(i));
+//						}else if (allList.get(i).getAuditStatus().equals("2")) {
+//							passAllList .add(allList.get(i));
+//						}
+//						
+//					}
+					initFragment(signNoPassList,passAllList,tdTddActivitySignVo);
+				}
+				break;
+			case RegistrationHandle.UPDATE_REGISTRATION_LIST:// 更新报名列表
+			
+				break;
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void OnFailResultListener(String mess) {
+		
+	}
+
+	@Override
+	public void initView() {
+		// TODO Auto-generated method stub
+		
+	}
+}

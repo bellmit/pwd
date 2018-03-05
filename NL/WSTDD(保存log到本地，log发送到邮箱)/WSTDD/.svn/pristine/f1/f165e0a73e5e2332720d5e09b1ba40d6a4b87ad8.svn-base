@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的设置 -->
+
+    <include layout="@layout/head" />
+
+    <ImageView style="@style/layout_image_hline_style" />
+
+    <ScrollView style="@style/layout_mm_style" >
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical"
+            android:padding="5dip" >
+
+            <LinearLayout
+                android:id="@+id/mine_setting_safe_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_safe" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" />
+
+            <LinearLayout
+                android:id="@+id/mine_setting_notification_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_notification" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" />
+
+            <LinearLayout
+                android:id="@+id/mine_setting_clean_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="mineClean"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_clean" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_setting_help_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="mineHelp"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_help" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_setting_share_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="mineShare"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_share" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_setting_about_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="mineAbout"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_about" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" />
+
+            <LinearLayout
+                android:id="@+id/mine_setting_scoring_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="mineScoring"
+                android:paddingLeft="5dip"
+                android:paddingRight="0dip" >
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/originate_chair_address_icon" />
+
+                <TextView
+                    style="@style/head_title_second_style"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="0dip"
+                    android:text="@string/mine_setting_scoring" />
+
+                <ImageView
+                    style="@style/layout_image_style"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:src="@drawable/right_expansion" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" />
+
+
+            <Button
+                android:layout_marginTop="10dip"
+                android:id="@+id/mine_setting_exit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="20dip"
+                android:background="@color/originate_red"
+                android:gravity="center"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="@string/mine_setting_quit_btn"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

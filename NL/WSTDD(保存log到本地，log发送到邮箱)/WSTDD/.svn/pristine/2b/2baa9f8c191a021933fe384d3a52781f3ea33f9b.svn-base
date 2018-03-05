@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="44dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/headimg_iv"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/headimg_iv"
+        android:text="TextView"
+        android:textColor="@color/textgray"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/truename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_below="@+id/nickname_tv"
+	    android:layout_alignLeft="@+id/nickname_tv"
+        android:text="TextView"
+        android:textColor="@color/lightgray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:text="+1"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <include layout="@layout/line_nopadding"
+       android:layout_alignBottom="@+id/checkBox"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@style/MyApplyListCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <com.newland.wstdd.common.widget.RoundImageView
+        android:id="@+id/headimg_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/checkBox"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:src="@drawable/defaultheadimg" />
+
+</RelativeLayout>

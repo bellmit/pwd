@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的设置 -->
+
+    <include layout="@layout/head" />
+
+    <RelativeLayout style="@style/layout_mm_style" >
+
+        <ScrollView style="@style/layout_mm_style" >
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                style="@style/layout_mm_style"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/layout_mw_style"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dip"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:id="@+id/mine_setting_safe_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_safe" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_safe"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:padding="6dip"
+                            android:src="@drawable/right_expansion_mysetting" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_notification_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_notification" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_notification"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:padding="6dip"
+                            android:src="@drawable/right_expansion_mysetting" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/layout_mw_style"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_clean_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:onClick="mineClean"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_clean" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_clean"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:src="@drawable/right_expansion_mysetting"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_help_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:onClick="mineHelp"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_help" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_help"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:padding="6dip"
+                            android:src="@drawable/right_expansion_mysetting" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_share_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:onClick="mineShare"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_share" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_share"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:padding="6dip"
+                            android:src="@drawable/right_expansion_mysetting" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/layout_mw_style"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_about_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:onClick="mineAbout"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_about" />
+
+                        <LinearLayout
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip" >
+
+                            <TextView
+                                style="@style/layout_wm_style"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/mine_setting_about"
+                                android:textColor="@color/textgray"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/setting_about_version_tv"
+                                style="@style/layout_wm_style"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="v1.0"
+                                android:textColor="@color/lightgray"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:padding="6dip"
+                            android:src="@drawable/right_expansion_mysetting" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_setting_scoring_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:onClick="mineScoring"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="0dip" >
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_weight="0.1"
+                            android:padding="3dip"
+                            android:src="@drawable/setting_scoring" />
+
+                        <TextView
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.8"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="0dip"
+                            android:text="@string/mine_setting_scoring"
+                            android:textColor="@color/textgray"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            style="@style/layout_image_style"
+                            android:layout_height="30dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:src="@drawable/right_expansion_mysetting"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="Copyright © 2015 I&apos;M TDD"
+                    android:textColor="@color/textgray"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/mine_setting_exit_btn"
+            style="@style/layout_mW_40H_style"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dip"
+            android:background="@color/text_red"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="@string/mine_setting_quit_btn"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

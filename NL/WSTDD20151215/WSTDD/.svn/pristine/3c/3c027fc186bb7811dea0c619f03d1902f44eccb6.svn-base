@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dip"
+    android:orientation="vertical" >
+
+    <!-- 通过名单 团员 -->
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        style="@style/MyApplyListCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/headimg_iv"
+        android:layout_width="44dip"
+        android:layout_height="44dip"
+        android:layout_marginLeft="10dip"
+         android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:layout_toRightOf="@+id/checkBox"
+        android:src="@drawable/wechatbound" />
+
+    <TextView
+        android:id="@+id/nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/headimg_iv"
+        android:layout_marginLeft="5dp" android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/headimg_iv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/truename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/headimg_iv"
+        android:layout_alignLeft="@+id/nickname_tv"  android:layout_marginBottom="5dip"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/phone_iv"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/test_phone" />
+
+    <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@+id/phone_iv"
+        android:text="+1" />
+
+</RelativeLayout>

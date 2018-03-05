@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 闪屏的指定边缘宽高 -->
+    <dimen name="activity_horizontal_margin">16dip</dimen>
+    <dimen name="activity_vertical_margin">16dip</dimen>
+
+    <!-- 登录注册的公共界面 -->
+    <dimen name="regist_login_label">15sp</dimen><!-- 登录注册上方背景图字体大小 -->
+    <!-- 登录界面-->
+    <dimen name="login_hint">15sp</dimen><!-- 隐藏提示的内容的字体大小  比如请输入手机号 -->
+    
+    
+    <!-- 注册界面 -->
+    <dimen name="regist_tip_lable">11sp</dimen><!-- 点击下一步......字体的大小 -->
+	<dimen name="regist_hint">15sp</dimen><!-- 隐藏提示的内容的字体大小  比如请输入手机号 -->
+	
+	<!-- 滑动的  广告的大小  -->
+	<dimen name="view_small_padding">1dip</dimen>
+    <dimen name="view_padding">6dip</dimen>
+    
+    
+    <!-- 规范字体大小 -->
+ 	<!--  标题的字体大小    -->
+ 	<dimen name="important_textsize_11">11sp</dimen>
+ 	<dimen name="important_textsize_12">12sp</dimen>
+ 
+ 	<!-- 标签字体的大小-->
+ 	<dimen name="general_textsize_13">13sp</dimen>
+ 	<dimen name="general_textsize_14">14sp</dimen>
+ 	<!-- 一般 -->
+ 	<!-- 弱 -->
+ 	<dimen name="weak_textsize_15">15sp</dimen>
+ 	<dimen name="weak_textsize_16">16sp</dimen>
+ 	<dimen name="weak_textsize_17">17sp</dimen>
+ 	<dimen name="textsize_headtitle_center">19sp</dimen>
+ 	<!-- 弱 -->
+ 	<!-- 规范字体大小 -->
+    
+ 
+</resources>

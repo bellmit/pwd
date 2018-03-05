@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 我的活动 -->
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/hor_lin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_belate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_belate"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="我发起"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_belate"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:src="@color/originate_darkgreen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_leaveearly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_leaveearly"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="我参与"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_leaveearly"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:src="@color/originate_darkgreen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_absenteeism"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_absenteeism"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="我收藏"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_absenteeism"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:src="@color/originate_darkgreen" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/line" />
+
+</LinearLayout>

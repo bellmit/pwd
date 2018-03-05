@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的-个人信息 -->
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_nickname_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/remove_bind_weixin_icon"
+            android:drawablePadding="15dip"
+            android:gravity="center_vertical"
+            android:text="微信"
+            android:textColor="@color/textgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/remove_bind_weixin_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="已绑定"
+            android:textColor="@color/textgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/remove_bind_weixin_action"
+            style="@style/layout_mm_style"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="40dip"
+            android:layout_marginTop="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/textview_remove_bind_radius_shap"
+            android:gravity="center"
+            android:text="解绑"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_nickname_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/remove_bind_qq_icon"
+            android:drawablePadding="15dip"
+            android:gravity="center_vertical"
+            android:text="QQ"
+            android:textColor="@color/textgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/remove_bind_qq_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="已绑定"
+            android:textColor="@color/textgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/remove_bind_qq_action"
+            style="@style/layout_mm_style"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="42dip"
+            android:layout_marginTop="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/textview_remove_bind_radius_shap"
+            android:gravity="center"
+            android:text="解绑"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

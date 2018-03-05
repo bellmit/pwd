@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    xmlns:app="http://schemas.android.com/"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的-二维码 -->
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rr"
+                style="@style/layout_mw_style"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@color/white"
+                android:paddingBottom="20dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    style="@style/layout_mw_style"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/personal_nickname_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/activityType_tv"
+                        android:gravity="left"
+                        android:text="融资中国2015年金融峰会"
+                        android:textColor="@color/textgray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/activityType_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/text_rectanglegrayboderstyle"
+                        android:gravity="left"
+                        android:text="讲座"
+                        android:textColor="@color/textgray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/mycode_iv"
+                    android:layout_width="300dip"
+                    android:layout_height="300dip"
+                    android:layout_below="@+id/rl"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/public_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mycode_iv"
+                    android:layout_centerHorizontal="true"
+                    android:text="微信扫描二维码快速加入活动"
+                    android:textColor="@color/textgray"
+                    android:textSize="14sp" />
+
+                <!-- <com.newland.wstdd.common.view.RoundAngleImageView -->
+                <!-- android:id="@+id/headimg_iv" -->
+                <!-- android:layout_width="40dip" -->
+                <!-- android:layout_height="40dip" -->
+                <!-- android:layout_centerHorizontal="true" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:src="@drawable/empty_photo" -->
+                <!-- app:roundHeight="10dp" -->
+                <!-- app:roundWidth="10dp" /> -->
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/text_redroundstyle"
+                android:text="保存"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/public_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="保存二维码，分享给更多的伙伴一起加入吧~"
+                android:textColor="#D2D2D2"
+                android:textSize="14sp" />
+            
+            <View style="@style/layout_mW_54H_style"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

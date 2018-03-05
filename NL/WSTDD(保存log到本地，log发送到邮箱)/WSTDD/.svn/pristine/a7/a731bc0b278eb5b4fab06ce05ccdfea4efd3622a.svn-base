@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="index.css?v=0.1"/> -->
+    <!--  <script src="jquery-2.1.4.min.js"></script> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css?v=1.0" rel="stylesheet">
+    <style type="text/css">
+        body{
+            margin: 0px;
+        }
+        .item{
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+            padding-top:5px;
+            padding-bottom: 5px;
+            border-bottom:1px solid #e3e3e3;
+        }
+        .item p{
+            font-size: 15px;
+            padding-top: 7px;
+            width: 70%;
+            float: left;
+            margin-left: 15px;
+        }
+        .item img{
+            width: 35px;
+            height:35px;
+            right: 15px;
+            position: absolute;
+            padding: 5px;
+            float: left;
+        }
+        .itemImg{
+            width: 100%;display:none;
+            padding: 15px;
+        }
+    </style>
+    <title>如何发起快捷活动</title>
+</head>
+<body style="padding: 0px;background-color: #fff;">
+<div id="main-layout">
+    <div  style="text-align: center;position: relative;height: 35px;display: none;">
+        <img src="image/arrow_up.png"  style="width: 35px;height:35px;left: 15px;position: absolute;padding: 5px;"/>
+        <span style="font-size: 20px;padding-top: 7px;">反馈与帮助</span>
+    </div>
+    <div id="fqkj" class="item" >
+        <p >如何发起快捷活动!</p>
+        <img id="fqkjturn" src="image/arrow_up.png"  />
+    </div>
+    <!--如何发起快捷活动-->
+    <img id="fqkjImg" src="image/fqkjhd.png"  class="itemImg"/>
+    <div id="fqzt" class="item" >
+        <p >如何发起专题类活动!</p>
+        <img src="image/arrow_up.png"/>
+    </div>
+    <img id="fqztImg" src="image/fqzt.png"  class="itemImg"/>
+    <div id="szzf" class="item" >
+        <p>如何设置支付二维码!</p>
+        <img src="image/arrow_up.png"  />
+    </div>
+    <!--如何设置支付二维码-->
+    <img id="szzfImg" src="image/szzfewm.png"  class="itemImg"/>
+    <div id="glhd" class="item" >
+        <p >如何管理发起的活动!</p>
+        <img src="image/arrow_up.png" />
+    </div>
+    <!--如何管理发起的活动-->
+    <img id="glhdImg" src="image/glhd.png"  class="itemImg"/>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var fakjFlag=false;
+    $("#fqkj").click(function(){
+        if(fakjFlag){
+            $("#fqkjImg").hide();
+            $("#fqkj").find("img").attr("src","image/arrow_up.png");
+            fakjFlag=false;
+        }else{
+            $("#fqkjImg").show();
+            $("#fqkj").find("img").attr("src","image/arrow_down.png");
+            fakjFlag=true;
+        }
+
+    });
+    var fqztFlag=false;
+    $("#fqzt").click(function(){
+        if(fqztFlag){
+            $("#fqztImg").hide();
+            $("#fqzt").find("img").attr("src", "image/arrow_up.png");
+            fqztFlag=false;
+        }else{
+            $("#fqztImg").show();
+            $("#fqzt").find("img").attr("src", "image/arrow_down.png");
+            fqztFlag=true;
+        }
+
+    });
+
+    var szzfFlag=false;
+    $("#szzf").click(function(){
+        if(szzfFlag){
+            szzfFlag=false;
+            $("#szzfImg").hide();
+            $("#szzf").find("img").attr("src", "image/arrow_up.png");
+        }else{
+            szzfFlag=true;
+            $("#szzfImg").show();
+            $("#szzf").find("img").attr("src", "image/arrow_down.png");
+        }
+
+    });
+
+    var glhdFlag=false;
+    $("#glhd").click(function(){
+        if(glhdFlag){
+            glhdFlag=false;
+            $("#glhdImg").hide();
+            $("#glhd").find("img").attr("src", "image/arrow_up.png");
+        }else{
+            glhdFlag=true;
+            $("#glhdImg").show();
+            $("#glhd").find("img").attr("src", "image/arrow_down.png");
+        }
+    });
+</script>
+</body>
+</html>

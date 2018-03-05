@@ -1,0 +1,94 @@
+/**
+ * @fields NoPassAdapter.java
+ */
+package com.newland.wstdd.mine.registrationlist;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.updownloadimg.ImageDownLoad;
+import com.newland.wstdd.mine.registrationlist.beanrequest.TddActivitySignVo;
+
+/**
+ * 未通过名单 listView的 Adapter
+ * 
+ * @author H81 2015-11-27
+ * 
+ */
+public class NoPassAdapter extends BaseAdapter {
+	private LayoutInflater layoutInflater;
+	private Context context;
+	private List<TddActivitySignVo> list;
+
+	/**
+	 * 
+	 */
+	public NoPassAdapter(Context context, List<TddActivitySignVo> signNoPassList) {
+		this.context = context;
+		this.list = signNoPassList;
+		layoutInflater = LayoutInflater.from(context);
+	}
+
+	@Override
+	public int getCount() {
+		return list==null? 0 :list.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		if (list!=null&&list.size()>0) {
+			return list.get(position);
+		}
+		return null;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		ViewHolder viewHolder = null;
+		if (convertView == null&&viewHolder == null) {
+			viewHolder = new ViewHolder();
+			convertView = layoutInflater.inflate(R.layout.activity_nopass_item, null);
+
+			viewHolder.mCheckBox = (CheckBox) convertView.findViewById(R.id.checkBox);
+			viewHolder.mHeadimg_iv = (ImageView) convertView.findViewById(R.id.headimg_iv);
+			viewHolder.mNickname_tv = (TextView) convertView.findViewById(R.id.nickname_tv);
+			viewHolder.mTruename_tv = (TextView) convertView.findViewById(R.id.truename_tv);
+			viewHolder.mState_tv = (TextView) convertView.findViewById(R.id.state_tv);
+			viewHolder.mNum_tv = (TextView) convertView.findViewById(R.id.num_tv);
+		}
+
+//		viewHolder.mCheckBox 
+		ImageDownLoad.getDownLoadImg(list.get(position).getHeadimgurl(), viewHolder.mHeadimg_iv );
+		viewHolder.mNickname_tv .setText(list.get(position).getNickName());
+		viewHolder.mTruename_tv .setText(list.get(position).getConnectUserName());
+		viewHolder.mState_tv .setText(list.get(position).getAuditStatus());
+//		viewHolder.mNum_tv .setText((Integer.valueOf(signNoPassList.get(position).getKidNum())+Integer.valueOf(signNoPassList.get(position).getAdultNum()))+"");
+		viewHolder.mNum_tv .setText("+1");
+		return convertView;
+	}
+	
+	class ViewHolder {
+		private CheckBox mCheckBox;//
+		private ImageView mHeadimg_iv;//头像
+		private TextView mNickname_tv;//昵称
+		private TextView mTruename_tv;//真实姓名
+		private TextView mState_tv;//状态
+		private TextView mNum_tv;//随行人数
+	}
+	
+
+}

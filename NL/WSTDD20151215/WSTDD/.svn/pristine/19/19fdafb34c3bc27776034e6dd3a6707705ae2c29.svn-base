@@ -1,0 +1,21 @@
+package com.newland.wstdd.originate.beanresponse;
+
+import com.newland.wstdd.find.bean.TddActivity;
+
+/**
+ * 单个
+ * @author Administrator
+ *
+ */
+public class SingleActivityRes {
+	private TddActivity tddActivity;//获取到的活动对象
+
+	public TddActivity getTddActivity() {
+		return tddActivity;
+	}
+
+	public void setTddActivity(TddActivity tddActivity) {
+		this.tddActivity = tddActivity;
+	}
+	
+}

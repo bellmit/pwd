@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_mm_style"
+        android:layout_weight="5" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/select_cover_return_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingLeft="8dip"
+                android:src="@drawable/left_expandsion" />
+
+            <TextView
+                android:id="@+id/activity_select_cover_positionchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dip"
+                android:gravity="center"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/activity_select_cover_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingRight="8dip"
+                android:text="删除" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/adv_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center" >
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="5"
+        android:background="#444444"
+        android:gravity="center_vertical" >
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_selected_cover_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:drawablePadding="10dip"
+            android:gravity="left|center_vertical"
+            android:text="设置为封面"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            peng:peng_drawableLeft="@drawable/set_cover_normal_icon"
+            peng:peng_drawableLeftHeight="10dp"
+            peng:peng_drawableLeftWith="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

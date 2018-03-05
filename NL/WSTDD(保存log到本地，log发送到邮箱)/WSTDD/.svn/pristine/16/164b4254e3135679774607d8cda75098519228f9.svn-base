@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signlist_item_rl"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@style/MyApplyListCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <com.newland.wstdd.common.widget.RoundImageView
+        android:id="@+id/headimg_iv"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/checkBox"
+        android:src="@drawable/defaultheadimg" />
+
+    <TextView
+        android:id="@+id/nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/headimg_iv"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/headimg_iv"
+        android:text="TextView"
+        android:textColor="@color/textgray"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/truename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nickname_tv"
+        android:layout_below="@+id/nickname_tv"
+        android:text="TextView"
+        android:textColor="@color/lightgray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="未审核"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@+id/state_tv"
+        android:text="+1"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <include
+        android:layout_below="@+id/headimg_iv"
+        layout="@layout/line_nopadding" />
+
+</RelativeLayout>

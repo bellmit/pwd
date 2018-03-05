@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        style="@style/layout_mw_style"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp" >
+
+        <FrameLayout
+            style="@style/layout_mm_style"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/find_hot_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/test_item04" />
+
+            <TextView
+                android:id="@+id/find_hot_logoname_tv"
+                style="@style/layout_ww_style"
+                android:layout_marginLeft="6dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/textview_radius_shap"
+                android:padding="2dip"
+                android:text="讲座"
+                android:textColor="@color/gray" />
+        </FrameLayout>
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/find_hot_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:text="融资中国2015互联网金融峰会"
+                android:textColor="@color/textgray"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/find_hot_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/time"
+                android:drawablePadding="5dip"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:text="周五   09/27 08:30"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/find_hot_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="5dip"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:text="广东省深圳市"
+                android:textColor="@color/gray" />
+
+            <RelativeLayout
+                style="@style/layout_mw_style"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/find_hot_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/persons"
+                    android:drawablePadding="5dip"
+                    android:ellipsize="end"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:text="336"
+                    android:textColor="@color/text_red" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    style="@style/layout_ww_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/find_hot_ischarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:text="收费" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/find_hot_people"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="报名"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

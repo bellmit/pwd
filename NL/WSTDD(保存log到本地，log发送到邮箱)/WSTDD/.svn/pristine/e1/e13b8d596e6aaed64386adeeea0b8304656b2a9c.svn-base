@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这里的主要功能是   首先得存放在drawable    其次有一个selector的元素，最后根据不同的状态进行设置不同的颜色  也就是不同的图片 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+      
+    <item android:state_checked="true" android:drawable="@drawable/password_show_icon"/>
+	<item android:drawable="@drawable/password_hide_icon"  />
+</selector>

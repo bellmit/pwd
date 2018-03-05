@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:paddingTop="20dip" >
+
+    <!-- 分享 popwindow -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_find_chairdetail_pop_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="微信好友"
+            peng:peng_drawableTop="@drawable/find_chair_weixinshare"
+            peng:peng_drawableTopHeight="45dip"
+            peng:peng_drawableTopWith="45dip" />
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_find_chairdetail_pop_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="手机QQ"
+            peng:peng_drawableTop="@drawable/find_chair_qqshare"
+            peng:peng_drawableTopHeight="45dip"
+            peng:peng_drawableTopWith="45dip" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_find_chairdetail_pop_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="取消" />
+
+</LinearLayout>

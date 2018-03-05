@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dip"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/head_left_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="46dip"
+        android:layout_alignParentLeft="true"
+        android:onClick="onClick"
+        android:padding="13dip"
+        android:src="@drawable/left_expansion" />
+
+    <TextView
+        android:id="@+id/head_center_title"
+        style="@style/title_text"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="完成注册"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/head_right_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:padding="13dp"
+        android:text="完成"
+        android:textSize="15sp" />
+
+</RelativeLayout>

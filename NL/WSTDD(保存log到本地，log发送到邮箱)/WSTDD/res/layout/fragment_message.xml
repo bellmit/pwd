@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#C4c1dF"
+    android:orientation="vertical" >
+
+    <!-- 消息 -->
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="提到我的" />
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_height="30dip"
+            android:layout_marginRight="15dip"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:src="@drawable/right_expansion" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="邀请我的" />
+
+        <TextView android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dip"
+            android:text="14:51" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="信息中心" />
+
+        <TextView android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dip"
+            android:text="14:51" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="@string/mine_setting_safe" />
+
+        <TextView android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dip"
+            android:text="14:51" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="@string/mine_setting_safe" />
+
+        <TextView android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dip"
+            android:text="14:51" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:id="@+id/mine_setting_safe_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="mineSafe"
+        android:paddingLeft="5dip"
+        android:paddingRight="0dip" >
+
+        <ImageView
+            style="@style/layout_image_style"
+            android:layout_weight="0.1"
+            android:src="@drawable/originate_chair_address_icon" />
+
+        <TextView android:textSize="14sp"
+            style="@style/head_title_second_style"
+            android:layout_weight="0.8"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:text="@string/mine_setting_safe" />
+
+        <TextView android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dip"
+            android:text="14:51" />
+    </LinearLayout>
+
+</LinearLayout>

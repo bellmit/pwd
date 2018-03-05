@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的-个人信息 -->
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/activity_mine_personalcenter_icon_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="15dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="15dip" >
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_black_border_radius_shap"
+            android:text="讲座" />
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:text="融资中国2015互联网金融峰..." />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/layout_mw_style"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/layout_mw_style"
+                android:layout_marginLeft="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="17dip"
+                android:text="为方便活动通知，请填写真实信息哦~" />
+
+
+
+                <com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews
+                    android:id="@+id/registration_listview"
+                    style="@style/layout_mw_style"
+                    android:transcriptMode="normal"
+                    android:background="@color/white"
+                    android:descendantFocusability="beforeDescendants" >
+                </com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews>
+         
+
+            <include layout="@layout/line" />
+
+            <com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews
+                android:id="@+id/registration_sx_listview"
+                style="@style/layout_mw_style"
+                android:transcriptMode="normal"
+                android:background="@color/white"
+                android:descendantFocusability="beforeDescendants" >
+            </com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews>
+
+            <TextView
+                android:id="@+id/registration_add_people"
+                style="@style/layout_mW_50H_style"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="+添加随行人员"
+                android:textColor="@color/originate_red" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

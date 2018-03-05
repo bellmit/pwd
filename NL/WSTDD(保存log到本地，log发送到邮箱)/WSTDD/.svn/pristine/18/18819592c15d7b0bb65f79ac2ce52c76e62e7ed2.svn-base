@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 注册 -->
+
+    <LinearLayout
+        style="@style/layout_mm_style"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:background="@color/login_layout" >
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                style="@style/layout_mw_style"
+                android:layout_marginBottom="13dip"
+                android:layout_marginTop="20dip"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dip"
+                    android:layout_marginLeft="20dip"
+                    android:orientation="horizontal" >
+
+                    <EditText  android:textColorHint="@color/hint_textview"
+                        android:id="@+id/fragment_regist_phone_et"
+                        style="@style/layout_mm_style"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:hint="输入手机号"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textgray"
+                        android:textSize="@dimen/regist_hint" />
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:background="@color/login_line" />
+
+                    <TextView
+                        android:id="@+id/fragment_regist_checkcode_tv"
+                        style="@style/layout_mm_style"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:hint="获取验证码"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#949494"
+                        android:textSize="@dimen/regist_hint" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="#f0f0f0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dip"
+                    android:layout_marginLeft="20dip"
+                    android:orientation="horizontal" >
+
+                    <EditText  
+                        android:id="@+id/fragment_regist_checkcode_et"
+                        style="@style/layout_mm_style"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:digits="0123456789abcdeghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="输入验证码"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textgray"
+                        android:textColorHint="#cccccc"
+                        android:textSize="@dimen/regist_hint" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rr2"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_below="@id/ll2"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/or"
+                    style="@style/layout_ww_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left"
+                    android:text="点击下一步按钮即表示您同意"
+                    android:textColor="#949494"
+                    android:textSize="@dimen/regist_tip_lable" />
+
+                <TextView
+                    android:id="@+id/protocol_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_toRightOf="@id/or"
+                    android:text="《我是团大大服务协议》"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/regist_tip_lable" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/regist_next"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_below="@id/rr2"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/redbutton_shap"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

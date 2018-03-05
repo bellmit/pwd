@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+  <include layout="@layout/head"
+      	   android:background="@color/white" />
+    <!-- 我的-二维码 -->
+    <FrameLayout
+        android:id="@+id/bg"
+        style="@style/layout_mm_style"
+        android:layout_margin="20dip"
+        android:background="@drawable/zhifubao"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rr"
+            style="@style/layout_mm_style" >
+
+            <LinearLayout
+                android:id="@+id/ll"
+                style="@style/layout_mw_style"
+                android:layout_height="60dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="5"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/login_regist_radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/two_dimention_code_weixin_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="30dip"
+                        android:text="微信收款码"
+                        android:textColor="@drawable/login_regist_button_textcolor_seletor"
+                        android:textSize="@dimen/regist_login_label"
+                        peng:peng_drawableLeft="@drawable/twocode_weixin_bt_selector"
+                        peng:peng_drawableLeftHeight="15dp"
+                        peng:peng_drawableLeftWith="15dp" />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/two_dimention_code_zhifubao_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="15dip"
+                        android:text="支付宝收款码"
+                        android:textColor="@drawable/login_regist_button_textcolor_seletor"
+                        android:textSize="@dimen/regist_login_label"
+                         peng:peng_drawableLeft="@drawable/twocode_zhifubao_bt_selector"
+                        peng:peng_drawableLeftHeight="15dp"
+                        peng:peng_drawableLeftWith="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager  
+        android:id="@+id/viewpager"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_below="@id/ll"
+        android:flipInterval="30"  
+        android:persistentDrawingCache="animation"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

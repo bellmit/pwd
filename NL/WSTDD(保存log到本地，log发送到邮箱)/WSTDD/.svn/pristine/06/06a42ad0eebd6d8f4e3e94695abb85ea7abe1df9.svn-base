@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/interest_top_rr"
+        layout="@layout/title_head" />
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interest_top_rr"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+
+
+        <TextView
+            android:id="@+id/fragment_shop_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="我的兴趣"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_shop_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rr"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <com.newland.wstdd.mine.myinterest.DragGridView
+            android:id="@+id/fragment_shop_myGridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="none" >
+        </com.newland.wstdd.mine.myinterest.DragGridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_interest_ll"
+        style="@style/layout_mw_style"
+        android:layout_alignParentBottom="true"
+        android:background="@color/originate_red"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/add_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="添加跟多兴趣标签"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/myinterest_addmore_icon"
+            android:drawablePadding="5dip" />
+    </LinearLayout>
+
+</RelativeLayout>

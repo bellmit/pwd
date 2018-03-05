@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+    <FrameLayout
+        android:id="@+id/fl" 
+        android:layout_margin="5dp"
+        style="@style/layout_mw_style">
+		<LinearLayout
+		    android:id="@+id/ll"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:background="@drawable/interestview_radius_shap"
+		    android:orientation="horizontal" >
+
+        <RelativeLayout 
+            android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+            >
+        <TextView
+            android:id="@+id/interest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="5dp"
+            android:maxEms="10"
+       		android:ellipsize="end"
+       		android:singleLine="true" 
+            android:textColor="#ff0000"
+            android:textSize="12sp"
+            android:text="运动"
+            android:textStyle="bold"
+        />
+
+        </RelativeLayout>	
+		</LinearLayout>
+		<ImageView
+            android:id="@+id/interest_select_icon"
+            android:layout_width="17dip"
+            android:layout_height="17dip"
+            android:layout_gravity="right|top"
+            android:visibility="visible"
+            android:src="@drawable/interest_selected"
+           />
+		</FrameLayout>
+     </RelativeLayout>

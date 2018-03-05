@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="find_8icon">
+        <item>讲座</item>
+        <item>团购</item>
+        <item>招聘</item>
+        <item>聚会</item>
+        <item>旅行</item>
+        <item>众筹</item>
+        <item>投票</item>
+        <item>全部</item>
+        
+    </string-array>
+
+</resources>

@@ -1,0 +1,90 @@
+package com.newland.wstdd.mine.applyList.bean;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * 报名活动名单返回信息
+ * @author Administrator
+ *
+ */
+public class RegistrationListRes implements Serializable{
+	private List<TddActivitySignVo> signPassList;//报名通过名单,TddActivitySignVo对象列表
+	private List<TddActivitySignVo> signNoPassList;//报名未通过名单,TddActivitySignVo对象列表
+	private String signPassCount;//报名通过人数
+	private String signNoPassCount;//报名未通过人数
+	private String leaderCount;//团大团秘人数
+	private String passMenberCount;//团员人数
+	private String noPassMenberCount;//未通过人数
+	private String noJoinCount;//不参加人数
+	private String isLeader;//当前用户职位：1、	团员 2、	团大or团秘
+	private String email;//登录者邮箱
+	private String isSign;//当前登录用户是否报名"true"/”false”
+	public List<TddActivitySignVo> getSignPassList() {
+		return signPassList;
+	}
+	public void setSignPassList(List<TddActivitySignVo> signPassList) {
+		this.signPassList = signPassList;
+	}
+	public List<TddActivitySignVo> getSignNoPassList() {
+		return signNoPassList;
+	}
+	public void setSignNoPassList(List<TddActivitySignVo> signNoPassList) {
+		this.signNoPassList = signNoPassList;
+	}
+	public String getSignPassCount() {
+		return signPassCount;
+	}
+	public void setSignPassCount(String signPassCount) {
+		this.signPassCount = signPassCount;
+	}
+	public String getSignNoPassCount() {
+		return signNoPassCount;
+	}
+	public void setSignNoPassCount(String signNoPassCount) {
+		this.signNoPassCount = signNoPassCount;
+	}
+	public String getLeaderCount() {
+		return leaderCount;
+	}
+	public void setLeaderCount(String leaderCount) {
+		this.leaderCount = leaderCount;
+	}
+	public String getPassMenberCount() {
+		return passMenberCount;
+	}
+	public void setPassMenberCount(String passMenberCount) {
+		this.passMenberCount = passMenberCount;
+	}
+	public String getNoPassMenberCount() {
+		return noPassMenberCount;
+	}
+	public void setNoPassMenberCount(String noPassMenberCount) {
+		this.noPassMenberCount = noPassMenberCount;
+	}
+	public String getNoJoinCount() {
+		return noJoinCount;
+	}
+	public void setNoJoinCount(String noJoinCount) {
+		this.noJoinCount = noJoinCount;
+	}
+	public String getIsLeader() {
+		return isLeader;
+	}
+	public void setIsLeader(String isLeader) {
+		this.isLeader = isLeader;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getIsSign() {
+		return isSign;
+	}
+	public void setIsSign(String isSign) {
+		this.isSign = isSign;
+	}
+	
+}

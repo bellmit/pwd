@@ -1,0 +1,9 @@
+package com.newland.wstdd.mine.minesetting.beanresponse;
+
+/**账户与安全
+ * @author Administrator
+ * 2015-12-4
+ */
+public class SafeRes {
+
+}

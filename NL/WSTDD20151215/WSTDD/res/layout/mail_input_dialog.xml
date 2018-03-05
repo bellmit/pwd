@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+	        android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        style="@style/layout_mm_style"
+        android:orientation="vertical"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:gravity="center"
+        android:text="请输入邮箱地址"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+  <!--   <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" > -->
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:inputType="textEmailSubject"
+            android:background="@drawable/edit_rectangle_whitebg_style"
+            android:hint="邮箱号" />
+    <!-- </LinearLayout> -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:text="取消"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

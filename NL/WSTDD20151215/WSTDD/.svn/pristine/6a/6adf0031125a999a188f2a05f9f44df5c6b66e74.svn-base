@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 管理页面 -->
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:orientation="vertical" >
+
+        <include layout="@layout/head" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- <RelativeLayout -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:paddingBottom="10dip" -->
+                <!-- android:paddingTop="10dip" > -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_scan" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="20dip" -->
+                <!-- android:gravity="left|center_vertical" -->
+                <!-- android:text="扫验签到" -->
+                <!-- android:textSize="12sp" -->
+                <!-- peng:peng_drawableLeft="@drawable/quick_pre" -->
+                <!-- peng:peng_drawableLeftHeight="10dp" -->
+                <!-- peng:peng_drawableLeftWith="10dp" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_qrcode" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_alignBaseline="@+id/activity_managerpage_scan" -->
+                <!-- android:layout_alignBottom="@+id/activity_managerpage_scan" -->
+                <!-- android:layout_alignParentRight="true" -->
+                <!-- android:layout_marginRight="20dip" -->
+                <!-- android:gravity="right|center_vertical" -->
+                <!-- android:text="活动二维码" -->
+                <!-- android:textSize="12sp" -->
+                <!-- peng:peng_drawableLeft="@drawable/quick_pre" -->
+                <!-- peng:peng_drawableLeftHeight="10dp" -->
+                <!-- peng:peng_drawableLeftWith="10dp" /> -->
+                <!-- </RelativeLayout> -->
+
+                <LinearLayout
+                    style="@style/layout_mw_style"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/activity_managerpage_activityType_tv"
+                        style="@style/layout_ww_style"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/text_grayroundstyle"
+                        android:text="讲座" />
+
+                    <TextView
+                        android:id="@+id/activity_managerpage_activityTitle_tv"
+                        style="@style/layout_ww_style"
+                        android:layout_marginLeft="3dip"
+                        android:text="融资中国2015互联网金融峰..." />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dip"
+                    android:paddingTop="8dip" >
+
+                    <LinearLayout
+                        android:id="@+id/activity_managerpage_signup_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_signup_content_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88" />
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_signup_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="报名"
+                            android:textColor="@color/line_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_managerpage_comment_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_comment_content_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88" />
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_comment_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="评论"
+                            android:textColor="@color/line_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_managerpage_like_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_like_content_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="88" />
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_like_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="点赞"
+                            android:textColor="@color/line_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_managerpage_read_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_read_content_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="223" />
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_read_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="阅读"
+                            android:textColor="@color/line_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    style="@style/layout_mw_style"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_detail"
+                        style="@style/layout_mm_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="活动详情"
+                         />
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_edit"
+                        style="@style/layout_mm_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="活动编辑"
+                        />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/fouritem_ll"
+                    style="@style/layout_mw_style"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_signlist"
+                        style="@style/layout_mw_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="报名名单"
+                         />
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_share"
+                        style="@style/layout_mw_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="分享"
+                         />
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_groupsend"
+                        style="@style/layout_mw_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="群发消息"
+                        />
+
+                    <TextView
+                        style="@style/layout_1m_style"
+                        android:background="@color/bg_gray" />
+
+                    <com.newland.wstdd.common.widget.PengTextView
+                        android:id="@+id/activity_managerpage_activitycode"
+                        style="@style/layout_mw_style"
+                        android:layout_weight="1"
+                        android:drawablePadding="3dip"
+                        android:gravity="center"
+                        android:text="活动二维码"
+                        />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <!-- <ImageView -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dip" -->
+                <!-- android:layout_marginTop="10dip" -->
+                <!-- android:background="@color/line_gray" /> -->
+
+
+                <!-- <RelativeLayout -->
+                <!-- android:id="@+id/activity_managerpage_payment_rl" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:paddingBottom="5dip" -->
+                <!-- android:paddingTop="5dip" > -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:layout_marginLeft="10dip" -->
+                <!-- android:text="支付方式" /> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/activity_managerpage_payment_extendable_iv" -->
+                <!-- style="@style/img_20W_20H_style" -->
+                <!-- android:layout_alignParentRight="true" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:src="@drawable/down_expansion" /> -->
+                <!-- </RelativeLayout> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/activity_managerpage_payment_line_iv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dip" -->
+                <!-- android:layout_marginLeft="10dip" -->
+                <!-- android:layout_marginRight="10dip" -->
+                <!-- android:background="@color/line_gray" /> -->
+
+
+                <!-- <LinearLayout -->
+                <!-- android:id="@+id/activity_managerpage_payment_content_ll" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:orientation="horizontal" -->
+                <!-- android:paddingBottom="8dip" -->
+                <!-- android:paddingLeft="10dip" -->
+                <!-- android:paddingTop="8dip" > -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_payment_cash_tv" -->
+                <!-- android:layout_width="80dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:background="@drawable/text_rectangleredboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="货到付款" -->
+                <!-- android:textColor="@color/red" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_payment_online_tv" -->
+                <!-- android:layout_width="80dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:layout_marginLeft="8dip" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="在线支付" /> -->
+                <!-- </LinearLayout> -->
+
+
+                <!-- <include layout="@layout/line_nopadding" /> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dip" -->
+                <!-- android:layout_marginTop="10dip" -->
+                <!-- android:background="@color/line_gray" /> -->
+
+
+                <!-- <RelativeLayout -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_rl" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:paddingBottom="5dip" -->
+                <!-- android:paddingTop="5dip" > -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:layout_marginLeft="10dip" -->
+                <!-- android:text="配送方式" /> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_extendable_iv" -->
+                <!-- style="@style/img_20W_20H_style" -->
+                <!-- android:layout_alignParentRight="true" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:src="@drawable/down_expansion" /> -->
+                <!-- </RelativeLayout> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_line_iv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dip" -->
+                <!-- android:layout_marginLeft="10dip" -->
+                <!-- android:layout_marginRight="10dip" -->
+                <!-- android:background="@color/line_gray" /> -->
+
+
+                <!-- <LinearLayout -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_content_ll" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:orientation="horizontal" -->
+                <!-- android:paddingBottom="8dip" -->
+                <!-- android:paddingLeft="10dip" -->
+                <!-- android:paddingTop="8dip" > -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_self_tv" -->
+                <!-- android:layout_width="80dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:background="@drawable/text_rectangleredboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="自提" -->
+                <!-- android:textColor="@color/red" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_safe_tv" -->
+                <!-- android:layout_width="80dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:layout_marginLeft="8dip" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="当面交易" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_distributionmethod_mail_tv" -->
+                <!-- android:layout_width="80dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:layout_marginLeft="8dip" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="邮寄" /> -->
+                <!-- </LinearLayout> -->
+
+
+                <!-- <include layout="@layout/line_nopadding" /> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dip" -->
+                <!-- android:layout_marginTop="10dip" -->
+                <!-- android:background="@color/line_gray" /> -->
+
+
+                <!-- <LinearLayout -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginTop="10dip" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:orientation="horizontal" > -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_share_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="分享" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_invite_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="邀请参与" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_cover_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="设置封面" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_secretary_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="设置团秘" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+                <!-- </LinearLayout> -->
+
+
+                <!-- <include layout="@layout/line_nopadding" /> -->
+
+
+                <!-- <LinearLayout -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:orientation="horizontal" > -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_originateagain_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="再次发起" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_exportlist_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="导出名单" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_mass_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="群发消息" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+
+
+                <!-- <com.newland.wstdd.common.widget.PengTextView -->
+                <!-- android:id="@+id/activity_managerpage_delete_penttv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@drawable/text_rectanglegrayboderstyle" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="删除活动" -->
+                <!-- peng:peng_drawableTop="@drawable/find_chair_weixinshare" -->
+                <!-- peng:peng_drawableTopHeight="20dip" -->
+                <!-- peng:peng_drawableTopWith="20dip" /> -->
+                <!-- </LinearLayout> -->
+
+                <LinearLayout
+                    android:id="@+id/isTD_ll"
+                    style="@style/layout_mw_style"
+                    android:layout_marginTop="10dip"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <TextView
+                            style="@style/layout_mW_30H_style"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="报名是否需要审核" />
+
+                        <CheckBox
+                            android:id="@+id/activity_managerpage_isneedcheck_cb"
+                            style="@style/MyCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_nopadding" />
+
+                    <LinearLayout
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <TextView
+                            style="@style/layout_mW_30H_style"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="是否公开报名人数" />
+
+                        <CheckBox
+                            android:id="@+id/activity_managerpage_ispublishsignnum_cb"
+                            style="@style/MyCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_nopadding" />
+
+                    <LinearLayout
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <TextView
+                            style="@style/layout_mW_30H_style"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="团员报名通知" />
+
+                        <CheckBox
+                            android:id="@+id/activity_managerpage_isnotification_cb"
+                            style="@style/MyCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_nopadding" />
+
+                    <LinearLayout
+                        style="@style/layout_mW_40H_style"
+                        android:layout_marginTop="10dip"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <TextView
+                            style="@style/layout_mW_30H_style"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="想不想上团大大热点推荐" />
+
+                        <CheckBox
+                            android:id="@+id/activity_managerpage_isrecommend_cb"
+                            style="@style/MyCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_nopadding" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_managerpage_activitystate_ll"
+                        style="@style/layout_mW_40H_style"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:gravity="center_vertical"
+                            android:text="当前报名状态" />
+
+                        <TextView
+                            android:id="@+id/activity_managerpage_activitystate_tv"
+                            style="@style/layout_mW_30H_style"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:text="报名中"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/activity_managerpage_activitystate_iv"
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:gravity="center"
+                            android:src="@drawable/right_expansion" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_nopadding" />
+                </LinearLayout>
+                <!-- <LinearLayout -->
+                <!-- android:id="@+id/activity_managerpage_publicrange_ll" -->
+                <!-- style="@style/layout_mW_30H_style" -->
+                <!-- android:background="@color/white" -->
+                <!-- android:clickable="true" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:orientation="horizontal" -->
+                <!-- android:paddingLeft="10dip" -->
+                <!-- android:paddingRight="10dip" > -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="30dip" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:text="公开范围" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/activity_managerpage_publicrange_tv" -->
+                <!-- style="@style/layout_mW_30H_style" -->
+                <!-- android:layout_gravity="center_vertical" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="right|center_vertical" -->
+                <!-- android:text="团友可见" -->
+                <!-- android:textColor="@color/red" -->
+                <!-- android:textSize="10sp" /> -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/activity_managerpage_publicrange_iv" -->
+                <!-- android:layout_width="15dip" -->
+                <!-- android:layout_height="15dip" -->
+                <!-- android:gravity="center" -->
+                <!-- android:src="@drawable/right_expansion" /> -->
+                <!-- </LinearLayout> -->
+
+
+                <!-- <include layout="@layout/line_nopadding" /> -->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botttom_ll"
+        style="@style/layout_mw_style"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="复制活动"
+            android:textColor="@color/white" />
+
+        <TextView
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="删除活动"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

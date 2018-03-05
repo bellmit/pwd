@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dip"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <!-- “添加”popwindow -->
+
+    <TextView
+        android:id="@+id/originate_add_addtour"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/test_originate_add_addtour"
+        android:gravity="left|center_vertical"
+        android:text="@string/originate_add_addtour"
+        android:textSize="13sp" />
+
+    <include layout="@layout/line" />
+
+    <TextView
+        android:id="@+id/originate_add_scan"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/originate_add_scan"
+        android:gravity="left|center_vertical"
+        android:text="@string/originate_add_scan"
+        android:textSize="13sp" />
+
+    <include layout="@layout/line" />
+
+    <TextView
+        android:id="@+id/originate_add_myqrcode"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/test_originate_add_myqrcode"
+        android:gravity="left|center_vertical"
+        android:text="@string/originate_add_myqrcode"
+        android:textSize="13sp" />
+
+</LinearLayout>

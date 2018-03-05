@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lightwhite">#ddd</color><!-- 哪个界面上的哪个颜色 -->
+    <color name="white">#fff</color><!-- 白色 -->
+    <color name="black">#000</color><!-- 黑色 -->
+    <color name="red">#ff0000</color><!-- 红色 -->
+    <color name="grey_layout">#f5f5f5</color><!-- 布局中灰色的背景颜色 -->
+    <color name="grey_text">#666666</color><!-- 布局中灰色的背景颜色 -->
+    <color name="text_red">#e65252</color><!-- 红色的字体 -->
+    <color name="line_gray">#dfe0e1</color><!--line灰色 -->
+    <color name="bg_gray">#F0F0F0</color><!-- 背景灰 -->
+    <color name="greenyellow">#ADFF2F</color><!--黄绿色 --> 
+    <color name="orange">#EE8E52</color><!--  橘黄色-->
+    <color name="textgray">#797979</color><!-- 字体灰 -->
+    <!-- 半透明颜色 -->
+    <color name="transparenthalf">#EE666666</color><!-- 表示透明的背景颜色 -->
+    <!-- 全部透明 -->
+	<color name="transparent">#00000000</color><!-- 表示半透明的背景颜色 -->
+    <!-- 登录的mokuai -->
+	
+	<color name="login_regist_text">#fff</color><!-- 图片上的登入 注册  的字体颜色 -->
+	<color name="login_layout">#f5f5f5</color><!-- 登录的背景的颜色图案 -->
+	<color name="login_line">#666666</color><!-- 登录界面中的细线  -->
+	<color name="login_forget_pw">#e65252</color> <!-- 忘记密码字体颜色红色 -->
+	<!-- 发起 -->
+    <color name="originate_saffronyellow">#FF8444</color> <!-- 橘黄色 我的活动 -->
+    <color name="originate_yellow">#FFCA45</color> <!-- 黄色  有人@我-->
+	<color name="originate_darkred">#FA3137</color><!-- 运用模板 -->
+	<color name="originate_red">#F33E64</color>
+	<color name="originate_darkgreen">#2EB790</color><!-- 学校贫道 -->
+	<color name="originate_green">#49D9C3</color>
+	<color name="originate_darkblue">#4592F9</color><!-- 企业模块 -->
+	<color name="originate_blue">#1CBDF2</color>
+	
+	
+	<!-- 我的 -->
+	<color name="province_line_border">#C7C7C7</color><!-- 选择地址wheel颜色 -->  
+	
+	<!-- 图片选择 -->
+
+    <color name="focus_color">#7f33b5e5</color>
+
+</resources>

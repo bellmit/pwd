@@ -1,0 +1,105 @@
+package com.newland.wstdd.originate.search;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragment;
+import com.newland.wstdd.common.common.AppContext;
+import com.newland.wstdd.common.resultlisterer.OnPostListenerInterface;
+import com.newland.wstdd.common.tools.SharedPreferencesUtil;
+
+@SuppressLint("ValidFragment")
+public class OriginateSearchHistoryFragment extends BaseFragment implements OnPostListenerInterface{
+	private TextView moriginate_interestcontent_tv;//搜索感兴趣的内容
+	private TextView moriginate_history_tv;//历史记录
+	private ListView moriginate_history_lv;//历史记录列表
+	private TextView moriginate_cleanhistory_tv;//清除历史记录
+	OriginateSearchAdapter originateSearchAdapter;
+	
+	private Context context;
+	private AppContext appContext;
+	
+	SharedPreferencesUtil sharedPreferencesUtil = new SharedPreferencesUtil(context);
+	List<HashMap<String, String>> datasList;
+	@SuppressLint("ValidFragment")
+	public OriginateSearchHistoryFragment(Context context) {
+		this.context = context;
+	}
+	
+	private void initView(View view){
+		moriginate_interestcontent_tv = (TextView) view.findViewById(R.id.originate_interestcontent_tv);
+		moriginate_history_tv = (TextView)view. findViewById(R.id.originate_history_tv);
+		moriginate_history_lv = (ListView)view. findViewById(R.id.originate_history_lv);
+		moriginate_cleanhistory_tv = (TextView)view. findViewById(R.id.originate_cleanhistory_tv);
+
+//		List<String> list = new ArrayList<String>();
+//		list.add("羽毛球");
+//		list.add("羽毛球");
+//		list.add("羽毛球");
+//		list.add("羽毛球");
+//		list.add("羽毛球");
+//		list.add("羽毛球");
+		datasList = new ArrayList<HashMap<String,String>>();
+		datasList = sharedPreferencesUtil.getInfo(context, "searchhistory");
+		
+		originateSearchAdapter = new OriginateSearchAdapter(context, datasList);
+		moriginate_history_lv.setAdapter(originateSearchAdapter);
+		
+		
+		moriginate_cleanhistory_tv.setOnClickListener(this);
+	}
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.originate_cleanhistory_tv:
+			sharedPreferencesUtil.cleanInfo(context);
+			originateSearchAdapter.getList().clear();
+			originateSearchAdapter.setList(originateSearchAdapter.getList());
+			originateSearchAdapter.notifyDataSetChanged();
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	@Override
+	public void OnHandleResultListener(Object obj, int responseId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void OnFailResultListener(String mess) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected View createAndInitView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_originate_searchhistory,container, false);
+		appContext = AppContext.getAppContext();
+		initView(view);
+		return view;
+	}
+
+	@Override
+	public void refresh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

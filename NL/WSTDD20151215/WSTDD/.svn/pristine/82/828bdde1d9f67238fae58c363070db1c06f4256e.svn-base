@@ -1,0 +1,394 @@
+package com.newland.wstdd.find.categorylist.registrationedit.registration;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Message;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragmentActivity;
+import com.newland.wstdd.common.resultlisterer.OnPostListenerInterface;
+import com.newland.wstdd.common.tools.StringUtil;
+import com.newland.wstdd.common.tools.UiHelper;
+import com.newland.wstdd.find.bean.TddActivity;
+import com.newland.wstdd.find.categorylist.registrationedit.beanrequest.AdultInfo;
+import com.newland.wstdd.find.categorylist.registrationedit.beanrequest.CancelRegistrationReq;
+import com.newland.wstdd.find.categorylist.registrationedit.beanrequest.MainSignAttr;
+import com.newland.wstdd.find.categorylist.registrationedit.beanrequest.SubmitRegistrationReq;
+import com.newland.wstdd.find.categorylist.registrationedit.beanresponse.CancelRegistrationRes;
+import com.newland.wstdd.find.categorylist.registrationedit.beanresponse.EditRegistrationRes;
+import com.newland.wstdd.find.categorylist.registrationedit.beanresponse.SubmitRegistrationRes;
+import com.newland.wstdd.find.categorylist.registrationedit.handle.CancelRegistrationHandle;
+import com.newland.wstdd.find.categorylist.registrationedit.handle.SubmitRegistrationHandle;
+import com.newland.wstdd.login.RetMsg;
+import com.newland.wstdd.netutils.BaseMessageMgr;
+import com.newland.wstdd.netutils.HandleNetMessageMgr;
+
+/**
+ * 报名信息编辑
+ * 
+ * @author Administrator
+ * 
+ */
+public class RegistrationEditActivity extends BaseFragmentActivity implements OnPostListenerInterface {
+	Intent intent;
+	private String mainSignAttrs;// 必填信息项目 是一个以逗号隔开的字符串
+	TddActivity tddActivity;// 得到前面一个界面传递过来的活动对象 是为了获取必填项
+	// 随行人员 ListView相关信息
+	SxRegistrationEditListViews sxListViews;
+	SxRegistrationEditAdapter sxAdapter;
+	List<SxRegistrationEditAdapterData> sxAdapterDatas = new ArrayList<SxRegistrationEditAdapterData>();
+	// 本人信息
+	private List<MainSignAttr> mineAdapterDatas = new ArrayList<MainSignAttr>();
+	RegistrationEditAdapter mineEditAdapter;// 我自己的报名信息的适配器
+	SxRegistrationEditListViews mineEditListViews;
+	// private List<String> mineAdapterDatas = new ArrayList<String>();
+	// 添加随行人员
+	TextView addTextView;// 添加随行人员 带有监听事件
+
+	// 暂时的测试 服务器返回的信息
+	EditRegistrationRes submitRegistrationRes;
+	SubmitRegistrationHandle handler = new SubmitRegistrationHandle(this);
+
+	CancelRegistrationRes cancelRegistrationRes;
+	CancelRegistrationHandle handlerCancel = new CancelRegistrationHandle(this);
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_registration_edit);
+		intent = getIntent();
+		Bundle bundle = intent.getExtras();
+		tddActivity = (TddActivity) bundle.getSerializable("tddActivity");
+		initTitle();// 初始化标题
+		initView();// 初始化控件
+		initMustSelect();// 获取必填项目
+		// test();
+		refreshCancelReg();// 取消报名
+	}
+
+	// 显示出必填的项目
+	private void initMustSelect() {
+		// TODO Auto-generated method stub
+		if (tddActivity != null) {
+			mainSignAttrs = tddActivity.getSignAttr();
+			if (mainSignAttrs != null && !"".equals(mainSignAttrs)) {
+				String[] strs = mainSignAttrs.split(",");
+				// 把String数组输入list
+				for (String substr : strs) {
+					MainSignAttr mainSignAttr = new MainSignAttr();
+					mainSignAttr.setName(substr);
+					if ("姓名".equals(substr)) {
+						mainSignAttr.setValue(tddActivity.getUserName());
+					} else if ("手机".equals(substr)) {
+						mainSignAttr.setValue(tddActivity.getUserMobilePhone());
+					} else {
+						mainSignAttr.setValue(null);
+					}
+					// mainSignAttr.setValue(null);
+					mineAdapterDatas.add(mainSignAttr);
+				}
+				mineEditAdapter.setRegistrationData(mineAdapterDatas);
+				mineEditListViews.setAdapter(mineEditAdapter);
+				mineEditAdapter.notifyDataSetChanged();
+			} else {
+				MainSignAttr mainSignAttr = new MainSignAttr();
+				mainSignAttr.setName("姓名");
+				mainSignAttr.setValue(tddActivity.getUserName());
+				MainSignAttr mainSignAttr1 = new MainSignAttr();
+				mainSignAttr1.setName("手机");
+				mainSignAttr1.setValue(tddActivity.getUserMobilePhone());
+				mineAdapterDatas.add(mainSignAttr);
+				mineAdapterDatas.add(mainSignAttr1);
+				mineEditAdapter.setRegistrationData(mineAdapterDatas);
+				mineEditListViews.setAdapter(mineEditAdapter);
+				mineEditAdapter.notifyDataSetChanged();
+			}
+		}
+
+	}
+
+	/**
+	 * 设置标题
+	 * 
+	 */
+	private void initTitle() {
+		ImageView leftBtn = (ImageView) findViewById(R.id.head_left_iv);
+		TextView centerTitle = (TextView) findViewById(R.id.head_center_title);
+		TextView rightTv = (TextView) findViewById(R.id.head_right_tv);
+		ImageButton rightBtn = (ImageButton) findViewById(R.id.head_right_btn);
+		leftBtn.setVisibility(View.VISIBLE);
+		// centerTitle.setText(StringUtil.intType2Str(tddActivity.getActivityType())
+		// + "报名");
+		// rightTv.setText("发布");
+		rightTv.setVisibility(View.VISIBLE);
+		rightBtn.setVisibility(View.GONE);
+		rightBtn.setImageDrawable(getResources().getDrawable(R.drawable.find));
+		leftBtn.setOnClickListener(this);
+		rightTv.setOnClickListener(this);
+	}
+
+	private void test() {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 2; i++) {
+			SxRegistrationEditAdapterData data = new SxRegistrationEditAdapterData();
+			data.setName("李山川");
+			data.setPhone("18750736798");
+			List<Map<String, String>> maplist = new ArrayList<Map<String, String>>();
+			Map<String, String> map1 = new HashMap<String, String>();
+			map1.put("姓名", "李山川" + i);
+			Map<String, String> map3 = new HashMap<String, String>();
+			map3.put("手机", "18750736798");
+			maplist.add(map1);
+			maplist.add(map3);
+			data.setMap(maplist);
+			data.setShowRl1(true);
+			data.setShowRl2(false);
+			data.setShowListView(false);
+			data.setInParent(i);
+			sxAdapterDatas.add(data);
+		}
+		/**
+		 * 这里只是用来测试的，下面的语句需要在真实数据进行填写
+		 */
+		sxAdapter.setRegistrationData(sxAdapterDatas);
+		sxListViews.setAdapter(sxAdapter);
+		sxAdapter.notifyDataSetChanged();
+	}
+
+	public void initView() {
+		// TODO Auto-generated method stub
+		sxListViews = (SxRegistrationEditListViews) findViewById(R.id.registration_sx_listview);
+		mineEditListViews = (SxRegistrationEditListViews) findViewById(R.id.registration_listview);
+		sxAdapter = new SxRegistrationEditAdapter(this, sxAdapterDatas);
+		sxListViews.setAdapter(sxAdapter);
+		mineEditAdapter = new RegistrationEditAdapter(this, mineAdapterDatas);
+		addTextView = (TextView) findViewById(R.id.registration_add_people);
+		addTextView.setOnClickListener(this);
+	}
+
+	// 监听事件
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		super.onClick(v);
+		switch (v.getId()) {
+		case R.id.registration_add_people:
+			// 进行判断，只有添加完最后一个才可以进行下一个的判断
+			if (sxAdapterDatas.size() > 0) {
+				if (sxAdapterDatas.get(sxAdapterDatas.size() - 1).getName() == null || sxAdapterDatas.get(sxAdapterDatas.size() - 1).getPhone() == null
+						|| "".equals(sxAdapterDatas.get(sxAdapterDatas.size() - 1).getName()) || "".equals(sxAdapterDatas.get(sxAdapterDatas.size() - 1).getPhone())) {
+					UiHelper.ShowOneToast(this, "随行人员信息未完成，无法添加11111");
+				} else {
+
+					SxRegistrationEditAdapterData data = new SxRegistrationEditAdapterData();
+					data.setName(null);
+					data.setPhone(null);
+					List<Map<String, String>> maplist = new ArrayList<Map<String, String>>();
+
+					if (tddActivity != null) {
+						mainSignAttrs = tddActivity.getSignAttr();
+						if (mainSignAttrs != null && !"".equals(mainSignAttrs)) {
+							String[] strs = mainSignAttrs.split(",");
+							// 把String数组输入list
+							for (String substr : strs) {
+								Map<String, String> map = new HashMap<String, String>();
+								map.put(substr, null);
+								maplist.add(map);
+							}
+						}
+					} else {
+						UiHelper.ShowOneToast(RegistrationEditActivity.this, "活动信息为空，无法添加随行人员???");
+					}
+					data.setMap(maplist);
+					data.setShowRl1(false);
+					data.setShowRl2(true);
+					data.setShowListView(true);
+					data.setInParent(sxAdapterDatas.size());
+					sxAdapterDatas.add(data);
+					sxAdapter.setRegistrationData(sxAdapterDatas);
+					sxAdapter.notifyDataSetChanged();
+				}
+			} else {
+				// 首次添加随行人员的时候，列表是为0开始的
+				SxRegistrationEditAdapterData data = new SxRegistrationEditAdapterData();
+				data.setName(null);
+				data.setPhone(null);
+				List<Map<String, String>> maplist = new ArrayList<Map<String, String>>();
+
+				if (tddActivity != null) {
+					mainSignAttrs = tddActivity.getSignAttr();
+					if (mainSignAttrs != null && !"".equals(mainSignAttrs)) {
+						String[] strs = mainSignAttrs.split(",");
+						// 把String数组输入list
+						for (String substr : strs) {
+							Map<String, String> map = new HashMap<String, String>();
+							map.put(substr, null);
+							maplist.add(map);
+						}
+					}
+				} else {
+					UiHelper.ShowOneToast(RegistrationEditActivity.this, "活动信息为空，无法添加随行人员");
+				}
+				data.setMap(maplist);
+				data.setShowRl1(false);
+				data.setShowRl2(true);
+				data.setShowListView(true);
+				data.setInParent(0);// 首次添加随行人员的时候，
+				sxAdapterDatas.add(data);
+				sxAdapter.setRegistrationData(sxAdapterDatas);
+				sxAdapter.notifyDataSetChanged();
+
+			}
+			break;
+		case R.id.head_right_tv:
+			
+			refreshSumit();
+			break;
+		default:
+			break;
+		}
+
+	}
+
+	@Override
+	protected void processMessage(Message msg) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void refresh() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void OnHandleResultListener(Object obj, int responseId) {
+		// TODO Auto-generated method stub
+		try {
+			switch (responseId) {
+			case SubmitRegistrationHandle.SUBMIT_REGISTRATION:
+				submitRegistrationRes = (EditRegistrationRes) obj;
+				if (submitRegistrationRes != null) {
+					String mess = null;
+					mess = submitRegistrationRes.getGetResMess();
+					UiHelper.ShowOneToast(this, "完成");
+				}
+				break;
+
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void OnFailResultListener(String mess) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * 请求服务器信息  提交报名
+	 */
+	private void refreshSumit() {
+		// TODO Auto-generated method stub
+		try {
+			new Thread() {
+				public void run() {
+					// 需要发送一个request的对象进行请求
+					SubmitRegistrationReq reqInfo = new SubmitRegistrationReq();
+					// 主报名信息
+					reqInfo.setMainSignAttr(mineAdapterDatas);
+					// 随行人员报名信息
+					List<AdultInfo> adultInfos = new ArrayList<AdultInfo>();
+					for (int i = 0; i < sxAdapterDatas.size(); i++) {
+						// 添加到adultInfos
+						AdultInfo adultInfo = new AdultInfo();
+						adultInfo.setAdultPersonType(2);
+						adultInfo.setAdultUserName(sxAdapter.getRegistrationData().get(i).getName());
+						List<MainSignAttr> mainSignAttrs = new ArrayList<MainSignAttr>();
+						List<Map<String, String>> values = sxAdapter.getRegistrationData().get(i).getMap();
+						for (Map<String, String> map : values) {
+							for (Entry<String, String> entry : map.entrySet()) {
+								Object key = entry.getKey();
+								Object val = entry.getValue();
+								MainSignAttr mainSignAttr = new MainSignAttr();
+								if (!"".equals((String) key) && key != null) {
+									mainSignAttr.setName((String) key);
+								}
+								if (!"".equals((String) val) && val != null) {
+									mainSignAttr.setValue((String) val);
+								}
+								mainSignAttrs.add(mainSignAttr);
+							}
+						}
+						adultInfo.setAdultSignAttr(mainSignAttrs);
+						adultInfos.add(adultInfo);
+					}
+					reqInfo.setAdultInfos(adultInfos);
+					// 人员类型
+					reqInfo.setPersonType(1);
+					BaseMessageMgr mgr = new HandleNetMessageMgr();
+					RetMsg<SubmitRegistrationRes> ret = mgr.getSubmitRegistrationInfo(reqInfo, tddActivity.getActivityId());// 泛型类，
+					Message message = new Message();
+					message.what = SubmitRegistrationHandle.SUBMIT_REGISTRATION;// 设置死
+					// 访问服务器成功 1 否则访问服务器失败
+					if (ret.getCode() == 1) {
+						submitRegistrationRes = new EditRegistrationRes();
+						submitRegistrationRes.setGetResMess(StringUtil.noNull(ret.getMsg()));
+						message.obj = submitRegistrationRes;
+					} else {
+						message.obj = ret.getMsg();
+					}
+					handler.sendMessage(message);
+				};
+			}.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	/**
+	 * 取消报名
+	 */
+	private void refreshCancelReg() {
+		// TODO Auto-generated method stub
+		try {
+			new Thread() {
+				public void run() {
+					// 需要发送一个request的对象进行请求
+					CancelRegistrationReq reqInfo = new CancelRegistrationReq();
+					reqInfo.setActivityId("activityID");
+					BaseMessageMgr mgr = new HandleNetMessageMgr();
+					RetMsg<CancelRegistrationRes> ret = mgr.getCancelRegistrationInfo(reqInfo);// 泛型类，
+					Message message = new Message();
+					message.what = CancelRegistrationHandle.CANCEL_REGISTRATION;// 设置死
+					// 访问服务器成功 1 否则访问服务器失败
+					if (ret.getCode() == 1) {
+						cancelRegistrationRes = new CancelRegistrationRes();
+						cancelRegistrationRes.setGetResMess(StringUtil.noNull(ret.getMsg()));
+						message.obj = cancelRegistrationRes;
+					} else {
+						message.obj = ret.getMsg();
+					}
+					handlerCancel.sendMessage(message);
+				};
+			}.start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

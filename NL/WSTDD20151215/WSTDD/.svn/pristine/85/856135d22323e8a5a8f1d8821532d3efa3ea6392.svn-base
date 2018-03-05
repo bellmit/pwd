@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WSTDD</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_1">动态</string>
+    <string name="tab_2">群组</string>
+    <string name="tab_3">好友</string>
+    <string name="tab_4">会话</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_activity_login_button">登          录</string>
+    <string name="title_activity_return">ReturnActivity</string>
+
+    <!-- 发起 fragment_originate.xml -->
+    <!-- 通用模板 -->
+    <string name="originate_general_template">通用模板</string>
+    <!-- 家校频道 -->
+    <string name="originate_home_school_channel">家校频道</string>
+    <!-- 企业模块 -->
+    <string name="originate_corporation_modulization">企业模块</string>
+
+    <!-- 输入关键字 -->
+    <string name="originate_search_edttext">输入关键字</string>
+    <!-- 添加团友 -->
+    <string name="originate_add_addtour">添加团友</string>
+    <!-- 扫一扫 -->
+    <string name="originate_add_scan">扫一扫</string>
+    <!-- 我的二维码 -->
+    <string name="originate_add_myqrcode">我的二维码</string>
+    <!-- 取消 -->
+    <string name="originate_search_cancel">取消</string>
+    <!-- 搜索感兴趣的内容 -->
+    <string name="originate_search_interestcontent">搜索感兴趣的内容</string>
+    <!-- 历史搜索 -->
+    <string name="originate_search_history">历史搜索</string>
+    <!-- 清除历史搜索 -->
+    <string name="originate_search_cleanhistory">清除历史搜索</string>
+    <!-- 开讲主题 -->
+    <string name="originate_chair_theme">讲座主题</string>
+    <!-- 开讲时间 -->
+    <string name="originate_chair_time">开讲时间</string>
+    <!-- 开讲地点 -->
+    <string name="originate_chair_location">开讲地点</string>
+    <!-- 报名截止 -->
+    <string name="originate_chair_endtime">报名截止</string>
+    <!-- 人数不限 -->
+    <string name="originate_chair_numnolimit">人数不限</string>
+    <!-- 高级 -->
+    <string name="originate_chair_higher">高级</string>
+    <!-- 用户报名必填项 -->
+    <string name="originate_chair_nonempty">用户报名必填项</string>
+    <!-- 需要审核申请者 -->
+    <string name="originate_chair_needcheck">需要审核申请者</string>
+    <!-- 可见范围 -->
+    <string name="originate_chair_visiblerange">可见范围</string>
+    <!-- 全网可见 -->
+    <string name="originate_chair_wholenetworkvisible">全网可见</string>
+
+    <!-- 我的fragment_mine.xml -->
+    <!-- 昵称 -->
+    <string name="mine_nickname">昵称</string>
+    <!-- 我发起 -->
+    <string name="mine_originate">我发起</string>
+    <!-- 我参与 -->
+    <string name="mine_participation">我参与</string>
+    <!-- 我收藏 -->
+    <string name="mine_collect">我收藏</string>
+    <!-- 我的资产 -->
+    <string name="mine_property">我的资产</string>
+    <!-- 积分 -->
+    <string name="mine_integral">积分</string>
+    <!-- 资金 -->
+    <string name="mine_found">资金</string>
+    <!-- 记账本 -->
+    <string name="mine_accountbook">记账本</string>
+    <!-- 红包 -->
+    <string name="mine_redpacket">红包</string>
+    <!-- 卡券 -->
+    <string name="mine_ithaca">卡券</string>
+    <!-- 设置收货地址 -->
+    <string name="mine_receiveraddress">设置收货地址</string>
+    <!-- 支付二维码 -->
+    <string name="mine_qrcode">支付二维码</string>
+    <!-- 服务中心 -->
+    <string name="mine_servicecenter">服务中心</string>
+    <!-- 兴趣标签 -->
+    <string name="mine_interesttag">兴趣标签</string>
+    <!-- 退出当前账户 -->
+    <string name="mine_setting_quit_btn">退出当前账户</string>
+    <!-- 账户与安全 -->
+    <string name="mine_setting_safe">账户与安全</string>
+    <!-- 消息推送通知 -->
+    <string name="mine_setting_notification">消息推送通知</string>
+    <!-- 清除缓存 -->
+    <string name="mine_setting_help">反馈与帮助</string>
+    <!-- 反馈与帮助 -->
+    <string name="mine_setting_clean">清除缓存</string>
+    <!-- 分享有礼 -->
+    <string name="mine_setting_share">分享有礼</string>
+    <!-- 关于我是团大大 -->
+    <string name="mine_setting_about">关于我是团大大</string>
+    <!-- 为我们评分 -->
+    <string name="mine_setting_scoring">为我们评分</string>
+    <string name="title_activity_regist">RegistActivity</string>
+    <string name="title_activity_regist_finish">RegistFinishActivity</string>
+    <string name="title_activity_show_find_list_view">ShowFindListViewActivity</string>
+    <string name="title_activity_my_interest">MyInterestActivity</string>
+    <string name="title_activity_select_interest">SelectInterestActivity</string>
+    <string name="title_activity_two_dimension_code">TwoDimensionCodeActivity</string>
+	<!--@我是团大大  -->
+	<string name="mine_setting_about_aite">我是团大大</string>
+    
+    <!-- 报名名单 -->
+
+    <string name="pvrCompleted">已完成</string>
+    <string name="pvrUnfinished">未完成</string>
+    <string name="pvrFailure">失败</string>
+    <string name="tuanda">团大&amp;团秘</string>
+
+    <!-- 扫一扫二维码 -->
+
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_richscan_view">WebViewActivity</string>
+    <string name="title_activity_file_upload">FileUploadActivity</string>
+    <string name="title_activity_file_base">FileBaseActivity</string>
+    <string name="title_activity_file_grid">FileGridActivity</string>
+    <string name="title_activity_file_list">FileListActivity</string>
+    <string name="title_activity_file">FileActivity</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!-- imagedownload  test -->
+    <string name="button_image_list">ListView</string>
+    <string name="button_image_grid">GridView</string>
+    <string name="button_image_pager">ViewPager</string>
+    <string name="button_image_gallery">Gallery</string>
+    <string name="button_clear_memory">ClearMemoryCache</string>
+    <string name="button_clear_disk">ClearDiskCache</string>
+    <string name="button_get_memory">GetMemoryCache</string>
+    <string name="button_get_disk">GetDiskCache</string>
+    <string name="descr_image">Image</string>
+    <string name="content_tv">beautiful</string>
+    <string name="title_activity_add_receive_address">AddReceiveAddressActivity</string>
+    <string name="title_activity_albums">AlbumsActivity</string>
+    <string name="title_activity_album_item">AlbumItemActivity</string>
+    <string name="title_activity_hot_list">HotListActivity</string>
+    <string name="title_activity_recommend_list">RecommendListActivity</string>
+    <string name="title_activity_single_activity">SingleActivityActivity</string>
+    <string name="title_activity_wxentry">WXEntryActivity</string>
+    <string name="title_activity_qqlogin">QQLoginActivity</string>
+    <string name="title_activity_login_bind">LoginBindActivity</string>
+    <string name="title_activity_mine_edit_person">MineEditPersonActivity</string>
+    <string name="title_activity_registration_edit">RegistrationEditActivity</string>
+    <string name="title_activity_about_tdd">AboutTddActivity</string>
+    <string name="title_activity_edit_registration">EditRegistrationActivity</string>
+    <string name="title_activity_wei_xin_share">WeiXinShareActivity</string>
+    <string name="title_activity_selected_cover">SelectedCoverActivity</string>
+
+</resources>

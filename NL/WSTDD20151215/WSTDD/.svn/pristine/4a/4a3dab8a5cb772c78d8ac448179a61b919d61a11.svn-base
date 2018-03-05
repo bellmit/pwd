@@ -1,0 +1,302 @@
+package com.newland.wstdd.mine.applyList.bean;
+
+import java.io.Serializable;
+
+/**
+ * 参加活动对象 
+ */
+public class TddActivitySignVo implements Serializable{
+	private String signId;//报名标识
+	private String signUserId;//报名用户标识
+	private String activityId;//活动标识
+	private String signUserName;//报名用户
+	private String signTime;//报名时间
+	private String adultNum;//随行成人人数
+	private String kidNum;//随行儿童人数
+	private String totalJoinNum;//总人数
+	private String joinStatus;//报名状态  1.参加  2.不参加
+	private String auditStatus;//审核状态  1.未审核  2.已通过  3.未通过
+	private String signNickName;//报名用户昵称
+	private String signHeadimgurl;//报名用户头像
+	private String wechatOpenId;//微信openid
+	private String signUserPhone;//报名用户电话
+	private String signRole;//报名用户角色 1.团大 2.团秘 9.团员
+	private String signAttr;//json格式{"手机":"13222222222","姓名":"111111"}
+	private String payStatus;//付款状态 1.未付款  2.已付款 3.已确认1默认为0
+	private String totalFee;//总费用，默认0
+	private String salerId;//salerId 销售者标识
+	private String deliverType;//取货方式：1.邮寄  2.自提点自取  3.电话联系
+	private String connectUserName;//收货人姓名
+	private String address;//详细地址
+	private String pickupAlias;//自提点
+	private String orderNo;//订单编号
+	private String message;//留言
+	private String payTime;//付款时间
+	private String confirmTime;//确认时间
+	private String payVoucher;//付款凭证
+	private String payType;//付款方式 1.在线支付 2.货到付款
+	private String activityTime;//参加活动时间
+	private String image1;//活动封面
+	private String status;//活动状态
+	private String activityTitle;//活动标题
+	private String createTime;//活动创建时间
+	private String offTime;//活动截止时间
+	private String limitPerson;//活动限制人数
+	private String joinCount;//活动参加数
+	private String headimgurl;//团大头像
+	private String nickName;//团大昵称
+	private String clientSignTimeString;//参加时间
+	
+	
+	private boolean isSelected;//是否选中
+	
+	
+	public boolean isSelected() {
+		return isSelected;
+	}
+	public void setSelected(boolean isSelected) {
+		this.isSelected = isSelected;
+	}
+	public String getSignId() {
+		return signId;
+	}
+	public void setSignId(String signId) {
+		this.signId = signId;
+	}
+	public String getSignUserId() {
+		return signUserId;
+	}
+	public void setSignUserId(String signUserId) {
+		this.signUserId = signUserId;
+	}
+	public String getActivityId() {
+		return activityId;
+	}
+	public void setActivityId(String activityId) {
+		this.activityId = activityId;
+	}
+	public String getSignUserName() {
+		return signUserName;
+	}
+	public void setSignUserName(String signUserName) {
+		this.signUserName = signUserName;
+	}
+	public String getSignTime() {
+		return signTime;
+	}
+	public void setSignTime(String signTime) {
+		this.signTime = signTime;
+	}
+	public String getAdultNum() {
+		return adultNum;
+	}
+	public void setAdultNum(String adultNum) {
+		this.adultNum = adultNum;
+	}
+	public String getKidNum() {
+		return kidNum;
+	}
+	public void setKidNum(String kidNum) {
+		this.kidNum = kidNum;
+	}
+	public String getTotalJoinNum() {
+		return totalJoinNum;
+	}
+	public void setTotalJoinNum(String totalJoinNum) {
+		this.totalJoinNum = totalJoinNum;
+	}
+	public String getJoinStatus() {
+		return joinStatus;
+	}
+	public void setJoinStatus(String joinStatus) {
+		this.joinStatus = joinStatus;
+	}
+	public String getAuditStatus() {
+		return auditStatus;
+	}
+	public void setAuditStatus(String auditStatus) {
+		this.auditStatus = auditStatus;
+	}
+	public String getSignNickName() {
+		return signNickName;
+	}
+	public void setSignNickName(String signNickName) {
+		this.signNickName = signNickName;
+	}
+	public String getSignHeadimgurl() {
+		return signHeadimgurl;
+	}
+	public void setSignHeadimgurl(String signHeadimgurl) {
+		this.signHeadimgurl = signHeadimgurl;
+	}
+	public String getWechatOpenId() {
+		return wechatOpenId;
+	}
+	public void setWechatOpenId(String wechatOpenId) {
+		this.wechatOpenId = wechatOpenId;
+	}
+	public String getSignUserPhone() {
+		return signUserPhone;
+	}
+	public void setSignUserPhone(String signUserPhone) {
+		this.signUserPhone = signUserPhone;
+	}
+	public String getSignRole() {
+		return signRole;
+	}
+	public void setSignRole(String signRole) {
+		this.signRole = signRole;
+	}
+	public String getSignAttr() {
+		return signAttr;
+	}
+	public void setSignAttr(String signAttr) {
+		this.signAttr = signAttr;
+	}
+	public String getPayStatus() {
+		return payStatus;
+	}
+	public void setPayStatus(String payStatus) {
+		this.payStatus = payStatus;
+	}
+	public String getTotalFee() {
+		return totalFee;
+	}
+	public void setTotalFee(String totalFee) {
+		this.totalFee = totalFee;
+	}
+	public String getSalerId() {
+		return salerId;
+	}
+	public void setSalerId(String salerId) {
+		this.salerId = salerId;
+	}
+	public String getDeliverType() {
+		return deliverType;
+	}
+	public void setDeliverType(String deliverType) {
+		this.deliverType = deliverType;
+	}
+	public String getConnectUserName() {
+		return connectUserName;
+	}
+	public void setConnectUserName(String connectUserName) {
+		this.connectUserName = connectUserName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getPickupAlias() {
+		return pickupAlias;
+	}
+	public void setPickupAlias(String pickupAlias) {
+		this.pickupAlias = pickupAlias;
+	}
+	public String getOrderNo() {
+		return orderNo;
+	}
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public String getPayTime() {
+		return payTime;
+	}
+	public void setPayTime(String payTime) {
+		this.payTime = payTime;
+	}
+	public String getConfirmTime() {
+		return confirmTime;
+	}
+	public void setConfirmTime(String confirmTime) {
+		this.confirmTime = confirmTime;
+	}
+	public String getPayVoucher() {
+		return payVoucher;
+	}
+	public void setPayVoucher(String payVoucher) {
+		this.payVoucher = payVoucher;
+	}
+	public String getPayType() {
+		return payType;
+	}
+	public void setPayType(String payType) {
+		this.payType = payType;
+	}
+	public String getActivityTime() {
+		return activityTime;
+	}
+	public void setActivityTime(String activityTime) {
+		this.activityTime = activityTime;
+	}
+	public String getImage1() {
+		return image1;
+	}
+	public void setImage1(String image1) {
+		this.image1 = image1;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getActivityTitle() {
+		return activityTitle;
+	}
+	public void setActivityTitle(String activityTitle) {
+		this.activityTitle = activityTitle;
+	}
+	public String getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+	public String getOffTime() {
+		return offTime;
+	}
+	public void setOffTime(String offTime) {
+		this.offTime = offTime;
+	}
+	public String getLimitPerson() {
+		return limitPerson;
+	}
+	public void setLimitPerson(String limitPerson) {
+		this.limitPerson = limitPerson;
+	}
+	public String getJoinCount() {
+		return joinCount;
+	}
+	public void setJoinCount(String joinCount) {
+		this.joinCount = joinCount;
+	}
+	public String getHeadimgurl() {
+		return headimgurl;
+	}
+	public void setHeadimgurl(String headimgurl) {
+		this.headimgurl = headimgurl;
+	}
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	public String getClientSignTimeString() {
+		return clientSignTimeString;
+	}
+	public void setClientSignTimeString(String clientSignTimeString) {
+		this.clientSignTimeString = clientSignTimeString;
+	}
+	
+	
+}

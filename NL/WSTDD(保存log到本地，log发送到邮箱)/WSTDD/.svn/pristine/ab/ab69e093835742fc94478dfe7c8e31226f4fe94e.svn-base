@@ -1,0 +1,140 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 这里只能存放工程的包名 -->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="45dip">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.0dp"
+                android:layout_weight="1.11"
+                android:background="#f60606" >
+
+                <com.newland.wstdd.common.viewpager.HomeViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" >
+                </com.newland.wstdd.common.viewpager.HomeViewPager>
+            </FrameLayout>
+             
+        </LinearLayout>
+
+    
+
+ 
+ <LinearLayout
+            style="@style/layout_mw_style"
+            android:layout_weight="11"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@color/white"
+			>
+
+               <include
+                    android:id="@+id/line"
+                    layout="@layout/line_nopadding" />
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="3dip"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="3dip" >
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/btn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="发起"
+                        android:textColor="@drawable/button_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/button_img_selector"
+                        android:drawablePadding="1dip"
+                        
+                         />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/btn2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="发现"
+                         android:drawablePadding="1dip"
+                        android:textColor="@drawable/button_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/button1_img_selector"
+                        
+                         />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:clickable="false" >
+                    </FrameLayout>
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/btn3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:checked="false"
+                         android:drawablePadding="1dip"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="消息"
+                        android:textColor="#797979"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/msg"
+                        
+                         />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/btn4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:gravity="center"
+                         android:drawablePadding="1dip"
+                        android:text="我的"
+                        android:textColor="@drawable/button_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/button3_img_selector"
+                        
+                         />
+                </RadioGroup>
+                </LinearLayout>
+   <ImageView
+            android:id="@+id/shortcut_botton_icon"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="3dip"
+            android:src="@drawable/quick_pre" />
+</FrameLayout>

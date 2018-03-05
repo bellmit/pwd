@@ -1,0 +1,406 @@
+# view res/layout/item.xml #generated:2
+-keep class android.apps.SquareLayout { <init>(...); }
+
+# view res/layout/activity_applylist.xml #generated:82
+# view res/layout/activity_guide.xml #generated:13
+# view res/layout/activity_myactivities.xml #generated:110
+# view res/layout/activity_registrationlist.xml #generated:81
+# view res/layout/activity_selected_cover.xml #generated:60
+# view res/layout/activity_two_dimension_code.xml #generated:75
+# view res/layout/fragment_originate.xml #generated:28
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.newland.wstdd.ReturnActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.newland.wstdd.common.activity.GuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.newland.wstdd.common.activity.HomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.newland.wstdd.common.activity.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.newland.wstdd.common.common.AppContext { <init>(...); }
+
+# view AndroidManifest.xml #generated:477
+-keep class com.newland.wstdd.common.filedownload.FileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:456
+-keep class com.newland.wstdd.common.filedownload.FileBaseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:463
+-keep class com.newland.wstdd.common.filedownload.FileGridActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:470
+-keep class com.newland.wstdd.common.filedownload.FileListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:449
+-keep class com.newland.wstdd.common.fileupload.FileUploadActivity { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:13
+-keep class com.newland.wstdd.common.fragment.MainFragment { <init>(...); }
+
+# view res/layout/activity_select_interest.xml #generated:50
+-keep class com.newland.wstdd.common.listview.DefineListViews { <init>(...); }
+
+# view AndroidManifest.xml #generated:500
+-keep class com.newland.wstdd.common.selectphoto.AlbumItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:493
+-keep class com.newland.wstdd.common.selectphoto.AlbumsActivity { <init>(...); }
+
+# view res/layout/activity_myactivities_list.xml #generated:21
+# view res/layout/activity_myactivity_list.xml #generated:11
+# view res/layout/activity_show_find_list_view.xml #generated:21
+# view res/layout/activity_show_find_list_view1.xml #generated:30
+-keep class com.newland.wstdd.common.view.CustomListViews { <init>(...); }
+
+# view res/layout/fragment_find.xml #generated:71
+-keep class com.newland.wstdd.common.view.FindGridView { <init>(...); }
+
+# view res/layout/fragment_find.xml #generated:283
+# view res/layout/fragment_originate_searchhistory.xml #generated:129
+-keep class com.newland.wstdd.common.view.FindListViews { <init>(...); }
+
+# view res/layout/activity_mine_servicecenter.xml #generated:60
+-keep class com.newland.wstdd.common.view.RoundAngleImageView { <init>(...); }
+
+# view res/layout/fragment_main.xml #generated:23
+-keep class com.newland.wstdd.common.viewpager.HomeViewPager { <init>(...); }
+
+# view res/layout/fragment_login.xml #generated:1
+-keep class com.newland.wstdd.common.widget.LinearLayoutView { <init>(...); }
+
+# view res/layout/activity_login.xml #generated:56
+# view res/layout/activity_login.xml #generated:70
+# view res/layout/activity_regist_finish.xml #generated:97
+# view res/layout/activity_two_dimension_code.xml #generated:40
+# view res/layout/activity_two_dimension_code.xml #generated:57
+# view res/layout/fragment_main.xml #generated:116
+# view res/layout/fragment_main.xml #generated:57
+# view res/layout/fragment_main.xml #generated:74
+# view res/layout/fragment_main.xml #generated:98
+# view res/layout/fragment_mine.xml #generated:184
+# view res/layout/fragment_mine.xml #generated:195
+# view res/layout/fragment_mine.xml #generated:205
+# view res/layout/fragment_mine.xml #generated:215
+# view res/layout/fragment_mine.xml #generated:225
+-keep class com.newland.wstdd.common.widget.PengRadioButton { <init>(...); }
+
+# view res/layout/activity_find_chairdetail.xml #generated:107
+# view res/layout/activity_find_chairdetail.xml #generated:120
+# view res/layout/activity_find_chairdetail.xml #generated:138
+# view res/layout/activity_find_chairdetail.xml #generated:165
+# view res/layout/activity_find_chairdetail.xml #generated:391
+# view res/layout/activity_find_chairdetail.xml #generated:406
+# view res/layout/activity_find_chairdetail.xml #generated:421
+# view res/layout/activity_managerpage.xml #generated:232
+# view res/layout/activity_managerpage.xml #generated:243
+# view res/layout/activity_managerpage.xml #generated:262
+# view res/layout/activity_managerpage.xml #generated:273
+# view res/layout/activity_managerpage.xml #generated:284
+# view res/layout/activity_managerpage.xml #generated:295
+# view res/layout/activity_mine_receiptaddress_item.xml #generated:107
+# view res/layout/activity_mine_receiptaddress_item.xml #generated:79
+# view res/layout/activity_mine_receiptaddress_item.xml #generated:93
+# view res/layout/activity_mine_servicecenter.xml #generated:101
+# view res/layout/activity_mine_servicecenter.xml #generated:115
+# view res/layout/activity_mine_setting_feedback.xml #generated:32
+# view res/layout/activity_mine_setting_feedbackandhelp.xml #generated:27
+# view res/layout/activity_originate_chair.xml #generated:311
+# view res/layout/activity_originate_chair_popwindow.xml #generated:108
+# view res/layout/activity_originate_chair_popwindow.xml #generated:119
+# view res/layout/activity_originate_chair_popwindow.xml #generated:97
+# view res/layout/activity_selected_cover.xml #generated:78
+# view res/layout/activity_shortcut_main.xml #generated:74
+# view res/layout/fragment_find_listview_item.xml #generated:32
+# view res/layout/fragment_find_listview_item.xml #generated:45
+# view res/layout/fragment_find_listview_item.xml #generated:58
+# view res/layout/fragment_find_listview_item.xml #generated:74
+# view res/layout/listview_item.xml #generated:31
+# view res/layout/listview_item.xml #generated:43
+# view res/layout/listview_item.xml #generated:55
+# view res/layout/listview_item.xml #generated:71
+# view res/layout/popwindow_registration_shares.xml #generated:101
+# view res/layout/popwindow_registration_shares.xml #generated:113
+# view res/layout/popwindow_registration_shares.xml #generated:89
+-keep class com.newland.wstdd.common.widget.PengTextView { <init>(...); }
+
+# view res/layout/activity_login.xml #generated:1
+# view res/layout/activity_mine_personalcenter.xml #generated:2
+-keep class com.newland.wstdd.common.widget.RelativeLayoutView { <init>(...); }
+
+# view res/layout/activity_applylist_pass.xml #generated:50
+# view res/layout/activity_manager_multitext_item.xml #generated:51
+# view res/layout/activity_mine_myqrcode.xml #generated:98
+# view res/layout/activity_mine_personalcenter.xml #generated:65
+# view res/layout/activity_nopass_item.xml #generated:22
+# view res/layout/activity_passtm_item.xml #generated:21
+# view res/layout/activity_passty_item.xml #generated:65
+# view res/layout/fragment_mine.xml #generated:36
+-keep class com.newland.wstdd.common.widget.RoundImageView { <init>(...); }
+
+# view AndroidManifest.xml #generated:522
+-keep class com.newland.wstdd.find.HotListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:529
+-keep class com.newland.wstdd.find.RecommendListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:181
+-keep class com.newland.wstdd.find.categorylist.ShowFindListViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:173
+-keep class com.newland.wstdd.find.categorylist.detail.FindChairDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:202
+-keep class com.newland.wstdd.find.categorylist.detail.registration.EditRegistrationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:606
+-keep class com.newland.wstdd.find.categorylist.registrationedit.editregistration.EditRegistrationEditActivity { <init>(...); }
+
+# view res/layout/activity_registration_edit.xml #generated:64
+# view res/layout/activity_registration_edit.xml #generated:74
+# view res/layout/registration_edit_registration_listview_item.xml #generated:79
+-keep class com.newland.wstdd.find.categorylist.registrationedit.editregistration.EditSxRegistrationEditListViews { <init>(...); }
+
+# view AndroidManifest.xml #generated:575
+-keep class com.newland.wstdd.find.categorylist.registrationedit.registration.RegistrationSubmitActivity { <init>(...); }
+
+# view res/layout/activity_registration_submit.xml #generated:55
+# view res/layout/activity_registration_submit.xml #generated:66
+# view res/layout/registration_submit_registration_listview_item.xml #generated:76
+-keep class com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews { <init>(...); }
+
+# view AndroidManifest.xml #generated:583
+-keep class com.newland.wstdd.find.categorylist.registrationedit.tests.EditRegistrationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:209
+-keep class com.newland.wstdd.find.find.TJDetailActivity { <init>(...); }
+
+# view res/layout/view_cycle_viewpager_contet_first_viewpager.xml #generated:59
+-keep class com.newland.wstdd.find.gridview.countdown.TimeDownView { <init>(...); }
+
+# view res/layout/view_cycle_viewpager_contet_first_viewpager.xml #generated:50
+-keep class com.newland.wstdd.find.gridview.countdown.TimeTextView { <init>(...); }
+
+# view res/layout/view_cycle_viewpager_contet_first.xml #generated:40
+-keep class com.newland.wstdd.find.groupongridview.GroupBaseViewPager { <init>(...); }
+
+# view res/layout/fragment_find.xml #generated:249
+-keep class com.newland.wstdd.find.groupongridview.GroupViewPager { <init>(...); }
+
+# view res/layout/view_cycle_viewpager_contet_second.xml #generated:45
+-keep class com.newland.wstdd.find.hotgridview.HotBaseViewPager { <init>(...); }
+
+# view res/layout/fragment_find.xml #generated:263
+-keep class com.newland.wstdd.find.hotgridview.HotViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:188
+-keep class com.newland.wstdd.find.hotlist.HotListListViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.newland.wstdd.find.hotlist.detail.HotListDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.newland.wstdd.login.login.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:561
+-keep class com.newland.wstdd.login.login.LoginBindActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:553
+-keep class com.newland.wstdd.login.qqlogin.QQLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.newland.wstdd.login.regist.RegistFinishActivity { <init>(...); }
+
+# view res/layout/activity_applylist_nopass.xml #generated:19
+# view res/layout/activity_applylist_pass.xml #generated:102
+# view res/layout/activity_applylist_pass.xml #generated:122
+# view res/layout/activity_manager_multitext.xml #generated:58
+-keep class com.newland.wstdd.mine.applyList.BasePassListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:243
+-keep class com.newland.wstdd.mine.applyList.ManagerApplyListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:568
+-keep class com.newland.wstdd.mine.editperson.MineEditPersonActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:304
+-keep class com.newland.wstdd.mine.managerpage.ManagerPageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:296
+-keep class com.newland.wstdd.mine.managerpage.MyActivitiesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:228
+-keep class com.newland.wstdd.mine.managerpage.MyActivitiesListAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:312
+-keep class com.newland.wstdd.mine.managerpage.activitycode.ActivityCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:614
+-keep class com.newland.wstdd.mine.managerpage.ilike.LikeListActivity { <init>(...); }
+
+# view res/layout/activity_like_list.xml #generated:21
+-keep class com.newland.wstdd.mine.managerpage.ilike.LikeListViews { <init>(...); }
+
+# view AndroidManifest.xml #generated:320
+-keep class com.newland.wstdd.mine.managerpage.multitext.MultiTextActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:221
+-keep class com.newland.wstdd.mine.minesetting.MineSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:267
+-keep class com.newland.wstdd.mine.minesetting.about.AboutTddActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:253
+-keep class com.newland.wstdd.mine.minesetting.about.ProtocolActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:285
+-keep class com.newland.wstdd.mine.minesetting.feedbackandhelp.FeedBackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.newland.wstdd.mine.minesetting.feedbackandhelp.FeedBackAndHelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:515
+-keep class com.newland.wstdd.mine.minesetting.feedbackandhelp.selectphoto.AlbumItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:508
+-keep class com.newland.wstdd.mine.minesetting.feedbackandhelp.selectphoto.AlbumsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:260
+-keep class com.newland.wstdd.mine.minesetting.safe.SafeActivity { <init>(...); }
+
+# view res/layout/activity_my_interest.xml #generated:50
+-keep class com.newland.wstdd.mine.myinterest.DragGridView { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class com.newland.wstdd.mine.myinterest.MyInterestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:426
+-keep class com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestActivity { <init>(...); }
+
+# view res/layout/select_interest_items.xml #generated:34
+-keep class com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestGridView { <init>(...); }
+
+# view AndroidManifest.xml #generated:340
+-keep class com.newland.wstdd.mine.personalcenter.MineMyQRCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:332
+-keep class com.newland.wstdd.mine.personalcenter.MinePersonalCenterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:621
+-keep class com.newland.wstdd.mine.personalcenter.RemoveBindActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:484
+-keep class com.newland.wstdd.mine.receiptaddress.MineAddReceiveAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:359
+-keep class com.newland.wstdd.mine.receiptaddress.MineEditReceiptAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:352
+-keep class com.newland.wstdd.mine.receiptaddress.MineReceiptAddressListActivity { <init>(...); }
+
+# view res/layout/activity_registrationlist_nopass.xml #generated:14
+# view res/layout/activity_registrationlist_yespass.xml #generated:19
+# view res/layout/activity_registrationlist_yespass.xml #generated:32
+-keep class com.newland.wstdd.mine.registrationlist.BasePassListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:370
+-keep class com.newland.wstdd.mine.registrationlist.MineRegistrationListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:382
+-keep class com.newland.wstdd.mine.servicecenter.MineServiceCenterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:394
+-keep class com.newland.wstdd.mine.twocode.TwoDimensionCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:405
+-keep class com.newland.wstdd.mine.wheel.widget.WheelView.BaseWheelActivity { <init>(...); }
+
+# view res/layout/activity_mine_editreceiptaddress_popwindow.xml #generated:43
+# view res/layout/activity_mine_editreceiptaddress_popwindow.xml #generated:50
+# view res/layout/activity_mine_editreceiptaddress_popwindow.xml #generated:57
+-keep class com.newland.wstdd.mine.wheel.widget.WheelView.WheelView { <init>(...); }
+
+# view AndroidManifest.xml #generated:536
+-keep class com.newland.wstdd.originate.SingleActivityActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:165
+-keep class com.newland.wstdd.originate.origateactivity.OriginateChairActivity { <init>(...); }
+
+# view res/layout/activity_mine_setting_feedback.xml #generated:68
+# view res/layout/activity_originate_chair.xml #generated:269
+# view res/layout/activity_originate_chair.xml #generated:359
+-keep class com.newland.wstdd.originate.origateactivity.OriginateCharirGridView { <init>(...); }
+
+# view AndroidManifest.xml #generated:599
+-keep class com.newland.wstdd.originate.origateactivity.SelectedCoverActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:434
+-keep class com.newland.wstdd.originate.richscan.RichScanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:442
+-keep class com.newland.wstdd.originate.richscan.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:157
+-keep class com.newland.wstdd.originate.search.OriginateSearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:417
+-keep class com.newland.wstdd.shortcut.ShortCutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:590
+-keep class com.newland.wstdd.weixinshare.WeiXinShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:543
+-keep class com.newland.wstdd.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.tencent.connect.common.AssistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.tencent.sample.AppRegister { <init>(...); }
+
+# view AndroidManifest.xml #generated:141
+-keep class com.tencent.sample.DataProviderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:127
+-keep class com.tencent.tauth.AuthActivity { <init>(...); }
+
+# onClick res/layout/activity_mine_setting.xml #generated:227
+# onClick res/layout/fragment_mine_setting.xml #generated:188
+-keepclassmembers class * { *** mineAbout(...); }
+
+# onClick res/layout/activity_mine_setting.xml #generated:106
+# onClick res/layout/fragment_mine_setting.xml #generated:94
+-keepclassmembers class * { *** mineClean(...); }
+
+# onClick res/layout/activity_mine_setting.xml #generated:146
+# onClick res/layout/fragment_mine_setting.xml #generated:126
+-keepclassmembers class * { *** mineHelp(...); }
+
+# onClick res/layout/fragment_message.xml #generated:110
+# onClick res/layout/fragment_message.xml #generated:12
+# onClick res/layout/fragment_message.xml #generated:142
+# onClick res/layout/fragment_message.xml #generated:174
+# onClick res/layout/fragment_message.xml #generated:46
+# onClick res/layout/fragment_message.xml #generated:78
+-keepclassmembers class * { *** mineSafe(...); }
+
+# onClick res/layout/activity_mine_setting.xml #generated:283
+# onClick res/layout/fragment_mine_setting.xml #generated:226
+-keepclassmembers class * { *** mineScoring(...); }
+
+# onClick res/layout/activity_mine_setting.xml #generated:186
+# onClick res/layout/fragment_mine_setting.xml #generated:157
+-keepclassmembers class * { *** mineShare(...); }
+
+# onClick res/layout/activity_myactivities.xml #generated:18
+# onClick res/layout/activity_myactivities.xml #generated:46
+# onClick res/layout/activity_myactivities.xml #generated:74
+# onClick res/layout/title_head.xml #generated:27
+# onClick res/layout/title_head.xml #generated:7
+-keepclassmembers class * { *** onClick(...); }
+

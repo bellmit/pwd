@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 我的-个人信息 -->
+
+    <include layout="@layout/head" />
+
+    <RelativeLayout
+        android:id="@+id/activity_mine_personalcenter_icon_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="15dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="15dip" >
+
+        <TextView
+            android:id="@+id/activity_mine_personalcenter_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="讲座  融资中国2015互联网金融峰..." />
+    </RelativeLayout>
+
+    <ScrollView
+        style="@style/layout_mw_style"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/layout_mw_style"
+                android:layout_marginLeft="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="17dip"
+                android:text="为方便活动通知，请填写真实信息哦~"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/layout_mw_style"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/activity_mine_personalcenter_nickname_ll"
+                    style="@style/layout_mW_44H_style"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:text="姓名"
+                        android:textColor="@color/line_gray" />
+
+                    <EditText
+                        android:id="@+id/registreation_name"
+                        style="@style/layout_mW_44H_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:text="林未来"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    style="@style/layout_mW_44H_style"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:text="手机"
+                        android:textColor="@color/line_gray" />
+
+                    <EditText
+                        android:id="@+id/registreation_phone"
+                        style="@style/layout_mW_44H_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:text="林未来"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    style="@style/layout_mW_44H_style"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:text="部门"
+                        android:textColor="@color/line_gray" />
+
+                    <EditText
+                        android:id="@+id/registreation_department"
+                        style="@style/layout_mW_44H_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:text="林未来"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    style="@style/layout_mW_44H_style"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:text="邮箱"
+                        android:textColor="@color/line_gray" />
+
+                    <EditText
+                        android:id="@+id/registreation_mail"
+                        style="@style/layout_mW_44H_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:text="林未来"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+            </LinearLayout>
+
+            <include layout="@layout/line" />
+
+            <ExpandableListView
+                android:id="@+id/registration_listview"
+                style="@style/layout_mw_style"
+                android:background="@color/white" >
+            </ExpandableListView>
+
+            <TextView
+                android:id="@+id/registration_add_people"
+                style="@style/layout_mW_50H_style"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="+添加随行人员"
+                android:textColor="@color/originate_red" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

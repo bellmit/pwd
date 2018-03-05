@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/passTD_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:padding="5dip"
+                android:singleLine="true"
+                android:text="团大&amp;团秘  (3)"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/tuanda_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/nickname_tv"
+                    android:src="@drawable/test_applylist_td" />
+
+                <ImageView
+                    android:id="@+id/headimg_iv"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="10dip"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:src="@drawable/defaultheadimg" />
+
+                <TextView
+                    android:id="@+id/nickname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/headimg_iv"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/headimg_iv"
+                    android:text="TextView"
+                    android:textColor="@color/textgray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/truename_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/headimg_iv"
+                    android:layout_alignLeft="@+id/nickname_tv"
+                    android:layout_marginBottom="5dip"
+                    android:text="TextView"
+                    android:textColor="@color/textgray"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/phone_iv"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/test_phone" />
+
+                <TextView
+                    android:id="@+id/num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/phone_iv"
+                    android:text="+1"
+                    android:textColor="@color/textgray"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <com.newland.wstdd.mine.applyList.BasePassListView
+                android:id="@+id/passTM_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff" >
+            </com.newland.wstdd.mine.applyList.BasePassListView>
+
+            <TextView
+                android:id="@+id/passTY_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dip"
+                android:text="团员  (50)"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <com.newland.wstdd.mine.applyList.BasePassListView
+                android:id="@+id/passTY_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff" >
+            </com.newland.wstdd.mine.applyList.BasePassListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 团大权限 在通过界面显示的底部布局 “全选/未通过” -->
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <!-- <CheckBox -->
+            <!-- android:id="@+id/allchose_checkbox" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- style="@style/MyApplyListCheckBox" -->
+            <!-- android:layout_height="wrap_content" /> -->
+
+            <TextView
+                android:id="@+id/allchose_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="全选"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/setTM_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:text="设置团秘"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/nopass_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:text="未通过"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!-- 团大权限 在通过界面显示的底部布局 “全选/未通过” -->
+
+
+    <!-- 团秘权限 在通过界面显示的底部布局 “全选/未通过” -->
+
+    <LinearLayout
+        android:id="@+id/applylist_tm_bottom_ll"
+        style="@style/layout_mW_40H_style"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/applist_tm_allchose_tv"
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:background="#ee8e52"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:text="全选"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/applist_tm_nopass_tv"
+            style="@style/layout_mm_style"
+            android:layout_weight="1"
+            android:background="#e4393c"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:text="未通过"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!-- 团秘权限 在通过界面显示的底部布局 “全选/通过” -->
+
+</LinearLayout>

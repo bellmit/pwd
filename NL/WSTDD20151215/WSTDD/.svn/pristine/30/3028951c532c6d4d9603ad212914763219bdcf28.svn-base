@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" >
+    
+    <ImageView 
+        android:id="@+id/iv_businessImage"
+        style="@style/layout_ww_style"
+        android:paddingTop="10dip"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/ic_launcher"/>
+    
+    <TextView 
+        android:id="@+id/tv_businessName"
+        style="@style/layout_ww_style"
+        android:textSize="13dip"
+        android:textColor="@color/black"/>
+    
+
+</LinearLayout>

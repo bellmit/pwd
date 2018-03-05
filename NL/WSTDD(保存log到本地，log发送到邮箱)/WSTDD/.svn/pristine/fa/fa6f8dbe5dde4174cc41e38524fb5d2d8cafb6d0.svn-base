@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_layout"
+    android:orientation="vertical" >
+
+    <include layout="@layout/head" />
+
+    <LinearLayout 
+        android:id="@+id/listview_empty_iv"
+        style="@style/layout_mm_style"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView 
+        style="@style/layout_ww_style"
+        android:layout_gravity="center"
+        android:src="@drawable/listview_pic_blank"
+        />
+        <TextView 
+            style="@style/layout_ww_style"
+            android:paddingTop="5dip"
+            android:textColor="@color/textgray"
+            android:text="这里什么都没有"
+            />
+    </LinearLayout>
+  
+    <com.newland.wstdd.common.view.CustomListViews
+        android:id="@+id/category_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" >
+    </com.newland.wstdd.common.view.CustomListViews>
+
+</LinearLayout>

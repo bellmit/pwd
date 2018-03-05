@@ -1,0 +1,388 @@
+package com.newland.wstdd.common.common;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Environment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.WindowManager;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragment;
+import com.newland.wstdd.login.beanresponse.TddAdvCfgVo;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+
+/**
+ * 利用Application进行程序全局变量的初始化
+ * 
+ * @author Administrator
+ * 
+ */
+@SuppressLint("Recycle")
+public class AppContext extends Application {
+	public static IWXAPI api;
+	public static String CASH_DIR_APK = Environment.getExternalStorageDirectory() + "/newland/WBBusiness/apk/";// 缓存spk地址
+	private List<Activity> activities = new ArrayList<Activity>();
+	private static AppContext appContext;
+	private Context context;
+	private Activity currentActivity;
+	private FragmentTransaction transaction;// FragmentTransaction对fragment进行添加,移除,替换,以及执行其他动作。
+	//用户信息
+	private String userId;//保存用户的ID
+	private String userPwd;//保存用户的密码
+	private String headImgUrl;//第三方头像
+	private String nickName;//昵称
+	private String mobilePhone;//手机号
+	private String sex;//性别
+	private String email;//邮箱
+	private String identity;//身份证
+	private String cerStatus;//认证状态   1.未认证 30.初步认证  90.身份认证
+	
+	//保留的全局变量
+	
+	private String openId;//第三方的ID
+		
+	private String platForm;//第三方平台
+	private String messUpDatetime;//上拉刷新保存的时间  key
+	private String versionCode;
+	private List<String> tags = new ArrayList<String>();//标签数组ps:[登山、电影]
+	private String acNum;//我发起的活动数
+	private List<TddAdvCfgVo> homeAds = new ArrayList<TddAdvCfgVo>();//首页轮播广告数组
+	private String myFavAcNum;//我收藏的活动数
+	private String mySignAcNum;//我参加的活动数
+	
+	
+
+	public static final int REQUEST_LOGIN = 76637;
+	public static final int REQUEST_APPBAR = 10102;
+	
+
+	 
+	 public static final String ACTION_ADDRESS ="choose_address";
+
+	 public static String pageRow="10"; //每页显示10行
+
+	public static AppContext getAppContext() {
+		return appContext;
+	}
+
+	public Context getContext() {
+		return context;
+	}
+
+	public Activity getCurrentActivity() {
+		return currentActivity;
+	}
+
+	public void setCurrentActivity(Activity currentActivity) {
+		this.currentActivity = currentActivity;
+	}
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		initImageLoader(getApplicationContext());
+		context = this.getBaseContext();
+		appContext = this;
+		//注册微信
+
+				api = WXAPIFactory.createWXAPI(this, "wx525b6e6792c4c562",  true); 
+
+				api.registerApp("wx525b6e6792c4c562");
+	}
+
+	public static void setAppContext(AppContext appContext) {
+		AppContext.appContext = appContext;
+	}
+
+	public void setContext(Context context) {
+		this.context = context;
+	}
+
+	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getUserPwd() {
+		return userPwd;
+	}
+
+	public void setUserPwd(String userPwd) {
+		this.userPwd = userPwd;
+	}
+
+	public String getOpenId() {
+		return openId;
+	}
+
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
+
+	public String getHeadImgUrl() {
+		return headImgUrl;
+	}
+
+	public void setHeadImgUrl(String headImgUrl) {
+		this.headImgUrl = headImgUrl;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+
+	public String getPlatForm() {
+		return platForm;
+	}
+
+	public void setPlatForm(String platForm) {
+		this.platForm = platForm;
+	}
+
+
+	public String getMessUpDatetime() {
+		return messUpDatetime;
+	}
+
+	public void setMessUpDatetime(String messUpDatetime) {
+		this.messUpDatetime = messUpDatetime;
+	}
+
+	public List<String> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<String> tags) {
+		this.tags = tags;
+	}
+
+	public String getAcNum() {
+		return acNum;
+	}
+
+	public void setAcNum(String acNum) {
+		this.acNum = acNum;
+	}
+
+	public List<TddAdvCfgVo> getHomeAds() {
+		return homeAds;
+	}
+
+	public void setHomeAds(List<TddAdvCfgVo> homeAds) {
+		this.homeAds = homeAds;
+	}
+
+	public String getMyFavAcNum() {
+		return myFavAcNum;
+	}
+
+	public void setMyFavAcNum(String myFavAcNum) {
+		this.myFavAcNum = myFavAcNum;
+	}
+
+	public String getMySignAcNum() {
+		return mySignAcNum;
+	}
+
+	public void setMySignAcNum(String mySignAcNum) {
+		this.mySignAcNum = mySignAcNum;
+	}
+
+
+	public String getVersionCode() {
+		return versionCode;
+	}
+
+	public void setVersionCode(String versionCode) {
+		this.versionCode = versionCode;
+	}
+
+	public String getMobilePhone() {
+		return mobilePhone;
+	}
+
+	public void setMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(String identity) {
+		this.identity = identity;
+	}
+
+	public String getCerStatus() {
+		return cerStatus;
+	}
+
+	public void setCerStatus(String cerStatus) {
+		this.cerStatus = cerStatus;
+	}
+
+	/**
+	 * 检测网络是否可用
+	 * 
+	 * @return
+	 */
+	public boolean isNetworkConnected() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = cm.getActiveNetworkInfo();
+		return ni != null && ni.isConnectedOrConnecting();
+	}
+
+	/**
+	 * 用户注销
+	 */
+	public void logout() {
+		if (null != currentActivity) {
+			// LoginCache.clearLoginInfo(appContext);
+			// UiHelper.showLogin(currentActivity);// 显示登录
+			AppManager.getAppManager().finishActivity(currentActivity);
+		}
+	}
+
+	/**
+	 * 获取屏幕宽度
+	 */
+	public int getScreenWidth() {
+		WindowManager windowManager = (WindowManager) appContext.getContext()
+				.getSystemService(Context.WINDOW_SERVICE);
+		@SuppressWarnings("deprecation")
+		int width = windowManager.getDefaultDisplay().getWidth();
+		return width;
+	}
+
+	/**
+	 * 获取屏幕高度
+	 * 
+	 * @return
+	 */
+	public int getScreenHeight() {
+		WindowManager windowManager = (WindowManager) appContext.getContext()
+				.getSystemService(Context.WINDOW_SERVICE);
+		@SuppressWarnings("deprecation")
+		int height = windowManager.getDefaultDisplay().getHeight();
+		return height;
+	}
+
+	@Override
+	// 遍历存放在list中的Activity并退出
+	public void onTerminate() {
+
+		{
+			super.onTerminate();
+			for (Activity activity : activities) {
+				activity.finish();
+			}
+
+			android.os.Process.killProcess(android.os.Process.myPid());
+		}
+
+	}
+
+	public void addActivity(Activity activity) {
+		activities.add(activity);
+	}
+	
+	
+	/**
+	 * 改变当前的Fragment
+	 */
+	public void replaceFragment(FragmentManager fragmentmanager,
+			int containerViewId, BaseFragment fragment) {
+		transaction = fragmentmanager.beginTransaction();// 对fragment进行添加,移除,替换,以及执行其他动作。
+		// 设置切换Fragment时的动画效果
+		transaction.setCustomAnimations(R.anim.move_x_in, R.anim.move_x_out);// 利用xml弄出这个动画的效果																			// 先暗后明的效果
+		transaction.replace(containerViewId, fragment);// 使用的是FrameLayout当中容器，然后将fragment替换进来
+		transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// 只是设置了切换效果而已																		// 没用效果
+		transaction.commit();// 记得提交 这样才有效果
+		fragmentmanager.executePendingTransactions();// 立即执行事务
+	}
+	/**
+	 * 改变当前的Fragment
+	 */
+	public void addFragment(FragmentManager fragmentmanager,
+			int containerViewId, BaseFragment fragment) {
+		transaction = fragmentmanager.beginTransaction();// 对fragment进行添加,移除,替换,以及执行其他动作。
+		// 设置切换Fragment时的动画效果
+		transaction.setCustomAnimations(R.anim.move_x_in, R.anim.move_x_out);// 利用xml弄出这个动画的效果
+																				// 先暗后明的效果
+		transaction.add(containerViewId, fragment);// 使用的是FrameLayout当中容器，然后将fragment替换进来
+		transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// 只是设置了切换效果而已
+																				// 没用效果
+		transaction.commit();// 记得提交 这样才有效果
+		fragmentmanager.executePendingTransactions();// 立即执行事务
+	}
+	
+	public static void initImageLoader(Context context) {
+		//缓存文件的目录
+		File cacheDir = StorageUtils.getOwnCacheDirectory(context, "imageloader/Cache"); 
+		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+				.memoryCacheExtraOptions(480, 800) // max width, max height，即保存的每个缓存文件的最大长宽 
+				.threadPoolSize(3) //线程池内加载的数量
+				.threadPriority(Thread.NORM_PRIORITY - 2)
+				.denyCacheImageMultipleSizesInMemory()
+				.diskCacheFileNameGenerator(new Md5FileNameGenerator()) //将保存的时候的URI名称用MD5 加密
+				.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)) // You can pass your own memory cache implementation/你可以通过自己的内存缓存实现
+				.memoryCacheSize(2 * 1024 * 1024) // 内存缓存的最大值
+				.diskCacheSize(50 * 1024 * 1024)  // 50 Mb sd卡(本地)缓存的最大值
+				.tasksProcessingOrder(QueueProcessingType.LIFO)
+				// 由原先的discCache -> diskCache
+				.diskCache(new UnlimitedDiscCache(cacheDir))//自定义缓存路径  
+				.imageDownloader(new BaseImageDownloader(context, 5 * 1000, 30 * 1000)) // connectTimeout (5 s), readTimeout (30 s)超时时间  
+				.writeDebugLogs() // Remove for release app
+				.build();
+		//全局初始化此配置  
+		ImageLoader.getInstance().init(config);
+	}	
+
+		
+
+
+	
+}

@@ -1,0 +1,21 @@
+package com.newland.wstdd.common.tools;
+
+import android.text.Selection;
+import android.text.Spannable;
+import android.widget.EditText;
+
+/**
+ * 编辑控件的的工具，
+ * 
+ * @author Administrator
+ * 
+ */
+public class EditTextUtil {
+	//将edittext的光标显示在字符串的最后面
+	public static void setEditTextCursorLocation(EditText editText) {
+		 CharSequence text = editText.getText();
+		 if (text instanceof Spannable) {
+		 Spannable spanText = (Spannable) text;
+		 Selection.setSelection(spanText, text.length());}
+		 }
+}

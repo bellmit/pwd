@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal" >
+
+    <DatePicker
+        android:id="@+id/datepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:calendarViewShown="false"
+        android:scaleX=".7"
+        android:scaleY=".7"
+         android:layout_marginRight="-10dip"
+         />
+
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" 
+        android:fitsSystemWindows="true"
+        android:scaleX=".7"
+        android:layout_marginLeft="-20dip"
+        android:scaleY=".7"/>
+
+</LinearLayout>

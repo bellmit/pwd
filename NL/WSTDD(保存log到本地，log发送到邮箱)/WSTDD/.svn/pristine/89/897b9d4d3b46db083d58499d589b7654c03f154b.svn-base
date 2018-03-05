@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 账户与安全 -->
+
+    <include layout="@layout/head" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right|center_vertical"
+            android:text="原密码"
+            android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/oldpsw_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="原密码"
+            android:inputType="textPassword"
+            android:textColor="@color/lightgray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right|center_vertical"
+            android:text="新密码"
+            android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/newpsw_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="新密码"
+            android:inputType="textPassword"
+            android:textColor="@color/lightgray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="确认新密码"
+            android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/confirmnewpsw_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="确认新密码"
+            android:inputType="textPassword"
+            android:textColor="@color/lightgray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_nopadding" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:text="密码由6-20位英文字母、数字或者符号组成"
+        android:textColor="@color/lightgray"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 意见反馈 -->
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/activity_mine_setting_feedback_content_edt"
+            android:layout_width="match_parent"
+            android:layout_height="180dip"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="请输入您的宝贵意见与建议..."
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <com.newland.wstdd.common.widget.PengTextView
+            android:id="@+id/activity_mine_setting_feedback_remainwords_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/text_roundstyle"
+            android:gravity="center"
+            android:text="0/150"
+            android:textColor="@color/lightgray"
+            android:textSize="14sp"
+            peng:peng_drawableLeft="@drawable/addeditor" />
+
+        <include layout="@layout/line_nopadding" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/layout_ww_style"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="5dp"
+        android:text="添加照片"
+        android:textColor="@color/textgray"
+        android:textSize="14sp" />
+
+    <include layout="@layout/line_nopadding" />
+
+    <ScrollView
+        style="@style/layout_mw_style"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none" >
+
+        <com.newland.wstdd.originate.origateactivity.OriginateCharirGridView
+            android:id="@+id/selected_images_gridv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="8dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp" >
+        </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+    </ScrollView>
+
+    <include layout="@layout/line_nopadding" />
+
+    <TextView
+        style="@style/layout_ww_style"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="5dp"
+        android:text="您的联系方式"
+        android:textColor="@color/textgray"
+        android:textSize="14sp" />
+
+    <include layout="@layout/line_nopadding" />
+
+    <EditText
+        android:id="@+id/activity_mine_setting_feedback_phone_edt"
+        style="@style/layout_mw_style"
+        android:background="@color/white"
+        android:hint="请输入有效手机号以便给您反馈"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/lightgray"
+        android:textSize="14sp" />
+
+    <include layout="@layout/line_nopadding" />
+
+</LinearLayout>

@@ -1,0 +1,454 @@
+/**
+ * @fields PassListFragment.java
+ */
+package com.newland.wstdd.mine.applyList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.w3c.dom.Text;
+
+import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragment;
+import com.newland.wstdd.common.updownloadimg.ImageDownLoad;
+import com.newland.wstdd.common.view.CustomListViews.IXListViewListener;
+import com.newland.wstdd.mine.applyList.PassTMAdapter.onItemClickListener;
+import com.newland.wstdd.mine.applyList.bean.TddActivitySignVo;
+import com.newland.wstdd.mine.applyList.bean.TddActivitySignVoInfo;
+
+/**
+ * 通过名单
+ * 
+ * @author H81 2015-11-28
+ * 
+ */
+@SuppressLint("ValidFragment")
+public class PassListFragment extends BaseFragment implements IXListViewListener, OnClickListener, OnCheckedChangeListener {
+	final String FLAG = "right_tv_change";
+
+	/** 团大 */
+	private RelativeLayout relativelayout1;
+	private ImageView mHeadimg_iv;// 头像
+	private TextView mNickname_tv;// 昵称
+	private TextView mTruename_tv;// 真实姓名
+	private ImageView mPhone_iv;// 电话
+	private TextView mNum_tv;// 随行人员
+	/** 团大 */
+	/** 团秘 */
+	private TextView mPassTD_tv;// 团大&amp;团秘 (3)
+	private BasePassListView mPassTM_listview;//
+	/** 团秘 */
+	/** 团员 */
+	private TextView mPassTY_tv;//
+	private BasePassListView mPassTY_listview;//
+	/** 团员 */
+	/** 底部 */
+	private static LinearLayout mBottomlayout;//
+	private CheckBox mAllchose_checkbox;// 全选
+	private TextView mAllchose_tv;// 全选
+	private TextView mSetTM_tv;// 设置团秘
+	private TextView mNoPass_tv;// 未通过
+	/** 底部 */
+	private Context context;
+	TddActivitySignVo tdTddActivitySignVo = new TddActivitySignVo();// 团大
+	private List<TddActivitySignVoInfo> passAllList;// 通过的所有名单
+	private List<TddActivitySignVoInfo> passTMList;// 团秘
+	private List<TddActivitySignVoInfo> selectPassTMList;// 选中的团秘
+	private PassTMAdapter passTMAdapter;
+
+	private List<TddActivitySignVoInfo> passTYList = new ArrayList<TddActivitySignVoInfo>();// 团员
+	private List<TddActivitySignVoInfo> selectPassTYList;// 选中的团员
+	private PassTYAdapter passTYAdapter;// 团员
+	IntentFilter intentFilter;
+	IntentFilter updateTYFilter;// 更新团员列表
+
+	private boolean isInit = false;
+
+	public static PassListFragment newInstance(Context context) {
+		return new PassListFragment(context);
+	}
+
+	@SuppressWarnings("unchecked")
+	@SuppressLint("ValidFragment")
+	public PassListFragment(Context context) {
+		this.context = context;
+	}
+
+	@Override
+	public void onListViewRefresh() {
+
+	}
+
+	@Override
+	public void onListViewLoadMore() {
+
+	}
+
+	@Override
+	protected View createAndInitView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		Bundle bundle = getArguments();
+		passAllList = (List<TddActivitySignVoInfo>) bundle.getSerializable("passAllList");
+		tdTddActivitySignVo = (TddActivitySignVo) bundle.getSerializable("tdTddActivitySignVo");
+		View mView = inflater.inflate(R.layout.activity_applylist_pass, container, false);
+		bindViews(mView);
+		intentFilter = new IntentFilter(FLAG);
+		getActivity().registerReceiver(broadcastReceiver, intentFilter);
+		updateTYFilter = new IntentFilter("updatePassTYList");
+		// getActivity().registerReceiver(updateReceiver, updateTYFilter);
+		refresh();
+		return mView;
+	}
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		isInit = true;
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		getActivity().unregisterReceiver(broadcastReceiver);
+		// getActivity().unregisterReceiver(updateReceiver);
+	}
+
+	private void bindViews(View mView) {
+		relativelayout1 = (RelativeLayout) mView.findViewById(R.id.relativelayout1);
+		mPassTD_tv = (TextView) mView.findViewById(R.id.passTD_tv);
+		mPassTM_listview = (BasePassListView) mView.findViewById(R.id.passTM_listview);
+
+		mHeadimg_iv = (ImageView) mView.findViewById(R.id.headimg_iv);
+		mNickname_tv = (TextView) mView.findViewById(R.id.nickname_tv);
+		mTruename_tv = (TextView) mView.findViewById(R.id.truename_tv);
+		mPhone_iv = (ImageView) mView.findViewById(R.id.phone_iv);
+		mNum_tv = (TextView) mView.findViewById(R.id.num_tv);
+
+		mPassTY_tv = (TextView) mView.findViewById(R.id.passTY_tv);
+		mPassTY_listview = (BasePassListView) mView.findViewById(R.id.passTY_listview);
+		mBottomlayout = (LinearLayout) mView.findViewById(R.id.bottomlayout);
+		mAllchose_checkbox = (CheckBox) mView.findViewById(R.id.allchose_checkbox);
+		mAllchose_tv = (TextView) mView.findViewById(R.id.allchose_tv);
+		mSetTM_tv = (TextView) mView.findViewById(R.id.setTM_tv);
+		mNoPass_tv = (TextView) mView.findViewById(R.id.nopass_tv);
+		mAllchose_checkbox.setOnCheckedChangeListener(this);
+		mSetTM_tv.setOnClickListener(this);
+		mNoPass_tv.setOnClickListener(this);
+	}
+
+	@Override
+	public void refresh() {
+		if (getActivity() == null) // 说明上层activity 已经被销毁了
+		{
+			System.out.println("getActivity() 拦截");
+			return;
+		}
+		// 团秘
+		passTMList = new ArrayList<TddActivitySignVoInfo>();
+
+		// TODO 设置团大信息
+		if (tdTddActivitySignVo != null) {
+			relativelayout1.setVisibility(View.VISIBLE);
+			 ImageDownLoad.getDownLoadCircleImg(tdTddActivitySignVo.getSignHeadimgurl(),
+			 mHeadimg_iv);//头像
+			mNickname_tv.setText(tdTddActivitySignVo.getSignNickName());// 昵称
+			mTruename_tv.setText(tdTddActivitySignVo.getSignUserName());// 真实姓名
+			// mPhone_iv ;//手机
+			mNum_tv.setText(tdTddActivitySignVo.getAdultNum()+""); // 随行人员
+		} else {
+			relativelayout1.setVisibility(View.GONE);
+		}
+
+		/**
+		 * //团大
+		 * 
+		 * //团秘
+		 * 
+		 * //团员
+		 */
+		passTMList.clear();
+		passTYList.clear();
+
+		for (int i = 0; i < passAllList.size(); i++) {
+			if (passAllList.get(i).getTddActivitySignVo().getSignRole() == 2) {// signRole
+				// 报名用户角色
+				// 1.团大
+				// 2.团秘
+				// 9.团员
+				passTMList.add(passAllList.get(i));
+			} else if (passAllList.get(i).getTddActivitySignVo().getSignRole() == 9) {// signRole
+				// 报名用户角色
+				// 1.团大
+				// 2.团秘
+				// 9.团员
+				passTYList.add(passAllList.get(i));
+			}
+		}
+		passTMAdapter = new PassTMAdapter(getActivity(), passTMList);
+		mPassTM_listview.setAdapter(passTMAdapter);
+		passTMAdapter.notifyDataSetChanged();
+		for (int i = 0, size = passTMList.size(); i < size; i++) {
+			passTMList.get(i).setSelected(false);
+		}
+		for (int i = 0, size = passTYList.size(); i < size; i++) {
+			passTYList.get(i).setSelected(false);
+		}
+		passTYAdapter = new PassTYAdapter(getActivity(), passTYList);
+		mPassTY_listview.setAdapter(passTYAdapter);
+		passTYAdapter.notifyDataSetChanged();
+		mBottomlayout.setVisibility(View.GONE);
+
+		// 取消团秘
+		passTMAdapter.setOnItemClickListener(new onItemClickListener() {
+
+			@Override
+			public void onItemClick(View v, int position) {
+				// passTYList.clear();
+				ok: for (int i = 0; i < ManagerApplyListActivity.allList.size(); i++) {
+					// for (int j = 0; j < passTMList.size(); j++) {
+					if (passTMList != null && passTMList.size() > 0) {
+
+						if (passTMList.get(position).getTddActivitySignVo().getSignId().equals(ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().getSignId())) {
+							ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().setAuditStatus("2");// 审核状态
+							// 1.未审核2.已通过
+							// 3.未通过
+							ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().setSignRole(9);// 报名用户角色
+							// 1.团大2.团秘
+							// 9.团员
+							passTMList.remove(position);
+							passTYList.add(ManagerApplyListActivity.allList.get(i));
+							List<TddActivitySignVoInfo> pmList = passTMList;
+							List<TddActivitySignVoInfo> pList = passTYList;
+							for (int j = 0; j < passTYList.size(); j++) {
+								passTYList.get(j).setSelected(false);
+							}
+							break ok;
+						}
+					}
+					// }
+				}
+				for (int i = 0; i < passTYList.size(); i++) {
+					passTYList.get(i).setSelected(false);
+				}
+				// passTYAdapter = new PassTYAdapter(getActivity(), passTYList);
+				passTYAdapter.setPassTYList(passTYList);
+				passTMAdapter.notifyDataSetChanged();
+				passTYAdapter.notifyDataSetChanged();
+				mAllchose_checkbox.setChecked(false);
+
+			}
+		});
+
+		// passTYAdapter.setOnItemClickListener(new
+		// com.newland.wstdd.mine.applyList.PassTYAdapter.onItemClickListener()
+		// {
+		//
+		// @Override
+		// public void onItemClick(View v, int position) {
+		// int selectCount= 0;
+		// for (int i = 0,size =passTYList.size(); i < size; i++) {
+		// if (passTYList.get(i).isSelected()) {
+		// selectCount++;
+		// }
+		// if (selectCount == passTYList.size()) {
+		// mAllchose_checkbox.setSelected(true);
+		// }
+		// }
+		// }
+		// });
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.setTM_tv:// 设置团秘
+			for (int i = 0; i < ManagerApplyListActivity.allList.size(); i++) {
+				for (int j = 0; j < passTYList.size(); j++) {
+					boolean passTYSelected = passTYList.get(j).isSelected();
+					System.out.println("passTYSelected----------------------------" + passTYSelected);
+					if (passTYSelected) {
+						if (passTYList.get(j).getTddActivitySignVo().getSignId().equals(ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().getSignId())) {
+							ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().setAuditStatus("2");
+							ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().setSignRole(2);
+							passTYList.remove(j);
+							j--;
+							passTMList.add(ManagerApplyListActivity.allList.get(i));
+							List<TddActivitySignVoInfo> pmList = passTMList;
+							List<TddActivitySignVoInfo> pList = passTYList;
+						}
+					}
+				}
+			}
+			passTMAdapter.notifyDataSetChanged();
+			passTYAdapter.notifyDataSetChanged();
+			break;
+		case R.id.nopass_tv:// 未通过
+			for (int j = 0, size = ManagerApplyListActivity.allList.size(); j < size; j++) {
+				for (int i = 0; i < passTYList.size(); i++) {
+					boolean isSelected = passTYList.get(i).isSelected();
+					System.out.println("passTYisSelected----------------------------" + isSelected);
+					if (isSelected) {
+						if (passTYList.get(i).getTddActivitySignVo().getSignId().equals(ManagerApplyListActivity.allList.get(j).getTddActivitySignVo().getSignId())) {
+							ManagerApplyListActivity.allList.get(j).getTddActivitySignVo().setAuditStatus("3");// 审核状态
+							// 1.未审核2.已通过
+							// 3.未通过
+							ManagerApplyListActivity.allList.get(j).getTddActivitySignVo().setSignRole(1);// 报名用户角色
+							// 1.团大2.团秘
+							// 9.团员
+							passTYList.remove(i);
+						}
+					}
+				}
+			}
+			passTYAdapter.notifyDataSetChanged();
+			break;
+		default:
+			break;
+		}
+	}
+
+	public static LinearLayout getmBottomlayout() {
+		return mBottomlayout;
+	}
+
+	public static void setmBottomlayout(LinearLayout mBottomlayout) {
+		PassListFragment.mBottomlayout = mBottomlayout;
+	}
+
+	/**
+	 * 接收到广播之后
+	 */
+	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			TextView rightTv = (TextView) getActivity().findViewById(R.id.head_right_tv);
+			if (rightTv.getText().toString().equals("编辑")) {
+				mBottomlayout.setVisibility(View.GONE);
+			} else if (rightTv.getText().toString().equals("完成")) {
+				mBottomlayout.setVisibility(View.VISIBLE);
+			}
+			dataChanged();
+		}
+	};
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		for (int i = 0; i < passTYList.size(); i++) {
+			// PassTYAdapter.getIsSelected().put(i, isChecked);
+			passTYList.get(i).setSelected(isChecked);
+		}
+		// 刷新listview和TextView的显示
+		// dataChanged();
+		passTYAdapter.notifyDataSetChanged();
+		passTMAdapter.notifyDataSetChanged();
+	}
+
+	// 刷新listview和TextView的显示
+	public void dataChanged() {
+		// 通知listView刷新
+		passAllList.clear();
+		for (int i = 0; i < ManagerApplyListActivity.allList.size(); i++) {
+			if (ManagerApplyListActivity.allList.get(i).getTddActivitySignVo().getAuditStatus().equals("2")) {
+				passAllList.add(ManagerApplyListActivity.allList.get(i));
+			}
+		}
+		passTMList.clear();
+		passTYList.clear();
+		for (int i = 0; i < passAllList.size(); i++) {
+			if (passAllList.get(i).getTddActivitySignVo().getSignRole() == 1) {// signRole
+				// 报名用户角色 1.团大
+				// 2.团秘 9.团员
+				tdTddActivitySignVo = passAllList.get(i).getTddActivitySignVo();
+			} else if (passAllList.get(i).getTddActivitySignVo().getSignRole() == 2) {// signRole
+				// 报名用户角色
+				// 1.团大
+				// 2.团秘
+				// 9.团员
+				passTMList.add(passAllList.get(i));
+			} else if (passAllList.get(i).getTddActivitySignVo().getSignRole() == 9) {// signRole
+				// 报名用户角色
+				// 1.团大
+				// 2.团秘
+				// 9.团员
+				passTYList.add(passAllList.get(i));
+			}
+		}
+
+		for (int i = 0; i < passTYList.size(); i++) {
+			passTYList.get(i).setSelected(false);
+		}
+		try {
+			passTYAdapter.setPassTYList(passTYList);
+			passTMAdapter.setPassTYList(passTMList);
+			passTYAdapter.notifyDataSetChanged();
+			passTMAdapter.notifyDataSetChanged();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	/**
+	 * 对用户可见的时候，刷新界面
+	 */
+	@Override
+	public void setUserVisibleHint(boolean isVisibleToUser) {
+		// TODO Auto-generated method stub
+		super.setUserVisibleHint(isVisibleToUser);
+		if (isVisibleToUser && isInit) {
+			mAllchose_checkbox.setChecked(false);
+			dataChanged();
+		}
+
+	};
+
+	// /**
+	// * 接收到团秘列表编号广播之后
+	// */
+	// BroadcastReceiver updateReceiver = new BroadcastReceiver() {
+	//
+	// @Override
+	// public void onReceive(Context context, Intent intent) {
+	// for (int i = 0; i < ManagerApplyListActivity.allList.size(); i++) {
+	// if (ManagerApplyListActivity.allList.get(i).getSignRole()!=null) {
+	//
+	// if (ManagerApplyListActivity.allList.get(i).getSignRole().equals("9"))
+	// {// signRole
+	// // 报名用户角色
+	// // 1.团大
+	// // 2.团秘
+	// // 9.团员
+	// passTYList.add(ManagerApplyListActivity.allList.get(i));
+	// }
+	// }
+	// }
+	// for (int i = 0; i < passTYList.size(); i++) {
+	// passTYList.get(i).setSelected(false);
+	// }
+	// passTYAdapter = new PassTYAdapter(getActivity(), passTYList);
+	// passTYAdapter.setPassTYList(passTYList);
+	// passTYAdapter.notifyDataSetChanged();
+	// }
+	// };
+
+}

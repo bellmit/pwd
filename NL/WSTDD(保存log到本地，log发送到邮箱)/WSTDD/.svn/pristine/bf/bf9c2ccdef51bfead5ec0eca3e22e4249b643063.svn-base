@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:background="@color/bg_gray"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/registration_edit_listview_item_toprl1"
+            style="@style/layout_mw_style"
+            android:background="@color/text_red"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                android:id="@+id/registration_edit_sxtop_name"
+                style="@style/layout_ww_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="林多多"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/registration_edit_sxtop_phone"
+                style="@style/layout_ww_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/registration_edit_sxtop_name"
+                android:text="18750736798"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/registration_edit_sxtop_delete"
+                style="@style/layout_ww_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/text_rectangle_whiteboder_style"
+                android:text="删除"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/registration_edit_listview_item_toprl2"
+            style="@style/layout_mw_style"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/layout_ww_style"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="17dip"
+                android:text="编辑信息" />
+
+            <TextView
+                android:id="@+id/registration_edit_sxtop_edit"
+                style="@style/layout_ww_style"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="17dip"
+                android:text="完成" />
+        </RelativeLayout>
+
+        <com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews
+            android:id="@+id/registration_sx_listview"
+            style="@style/layout_mw_style"
+            android:transcriptMode="normal"
+             android:descendantFocusability="beforeDescendants"
+            android:background="@color/white" >
+        </com.newland.wstdd.find.categorylist.registrationedit.registration.SxRegistrationSubmitListViews>
+    </LinearLayout>
+
+</LinearLayout>

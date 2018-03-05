@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 分享 popwindow -->
+
+    <TextView
+        android:id="@+id/close_apply_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dip"
+        android:paddingTop="20dip"
+        android:text="关闭报名"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/open_apply_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="20dip"
+        android:text="开启报名"
+        android:textColor="@color/textgray"
+        android:textSize="14sp" />
+
+</LinearLayout>

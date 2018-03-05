@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/regist_finish_title"
+        layout="@layout/head" />
+
+    <LinearLayout
+        style="@style/layout_mm_style"
+        android:layout_below="@+id/regist_finish_title"
+        android:background="@color/grey_layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:layout_weight="2"
+            android:gravity="center" >
+
+            <com.newland.wstdd.common.widget.RoundImageView
+                android:id="@+id/regist_head_image"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:contentDescription="头像"
+                android:src="@drawable/regist_head_image" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                style="@style/layout_mm_style"
+                android:background="@color/login_layout" >
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    style="@style/layout_mw_style"
+                    android:layout_marginBottom="10dip"
+                    android:background="#ffffff"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="51dip"
+                        android:layout_marginLeft="20dip"
+                        android:orientation="horizontal" >
+
+                        <EditText 
+                            android:id="@+id/regist_nick_name"
+                            style="@style/layout_mm_style"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="昵称"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="@dimen/regist_hint" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="#f0f0f0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="51dip"
+                        android:layout_marginLeft="20dip"
+                        android:orientation="horizontal" >
+
+                        <EditText  
+                            android:id="@+id/regist_user_password"
+                            style="@style/layout_mm_style"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:hint="此密码用于手机号码登录"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="@dimen/regist_hint" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll2"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="horizontal" >
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/regist_finish_show_hide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawablePadding="2dip"
+                        android:gravity="top"
+                        android:text="显示密码"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/login_hint"
+                        peng:peng_drawableLeft="@drawable/button_password_show_hide_selector" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/regist_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/rr2"
+                    android:layout_margin="20dip"
+                    android:background="@drawable/redbutton_shap"
+                    android:text="完成注册"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

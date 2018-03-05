@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!-- 发起-讲座 -->
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="20dip"
+                >
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_theme_ll"
+                    style="@style/layout_image_originatechair_style" >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/location" />
+
+                    <EditText
+                        android:id="@+id/originate_originateactivity_title_edt"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:hint="@string/originate_chair_theme"
+                        />
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_starttime_ll"
+                    style="@style/layout_image_originatechair_style"
+                   >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/originate_chair_starttime_tv"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:hint="@string/originate_chair_time"
+                         />
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_height="25dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_location_ll"
+                    style="@style/layout_image_originatechair_style" >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/location" />
+
+                    <EditText
+                        android:id="@+id/originate_originateactivity_address_edt"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:hint="@string/originate_chair_location"
+                         />
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_endtime_ll"
+                    style="@style/layout_image_originatechair_style" >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/originate_chair_endtime_tv"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:hint="@string/originate_chair_endtime"
+                        />
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_height="25dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_numnolimit_ll"
+                    style="@style/layout_image_originatechair_style" >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/persons" />
+
+                    <EditText
+                        android:id="@+id/originate_originateactivity_limitperson_edt"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:hint="@string/originate_chair_numnolimit"
+                        android:numeric="integer"
+                         />
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <include layout="@layout/line_nopadding" />
+
+                <LinearLayout
+                    android:id="@+id/originate_chair_mustselect_ll"
+                    style="@style/layout_image_originatechair_style" >
+
+                    <ImageView
+                        style="@style/layout_image_style"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/location" />
+
+                    <TextView
+                        android:id="@+id/originate_originateactivity_signattr_tv"
+                        style="@style/layout_originate_head_title_style"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:hint="用户报名必填项"
+                    />
+
+                    <ImageView
+                        android:id="@+id/activity_originate_chair_mustselect_icon"
+                        style="@style/layout_image_style"
+                        android:layout_height="25dip"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:src="@drawable/right_expansion" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/line" />
+
+            <ScrollView
+                android:id="@+id/activity_originate_chair_mustscrollview"
+                style="@style/layout_mw_style"
+                android:scrollbars="none"
+                android:verticalSpacing="10dp"
+                android:visibility="gone" >
+
+                <com.newland.wstdd.originate.origateactivity.OriginateCharirGridView
+                    android:id="@+id/selected_must_gridv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" >
+                </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+            </ScrollView>
+
+            <include layout="@layout/line_nopadding" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="6dp"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="20dip" >
+
+                <EditText
+                    android:id="@+id/originate_chair_describe_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="填写描述，让更多的人参与...."
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:textSize="12sp" />
+
+                <com.newland.wstdd.common.widget.PengTextView
+                    android:id="@+id/originate_chair_remain_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/originate_chair_describe_edt"
+                    android:background="@drawable/text_roundstyle"
+                    android:gravity="center"
+                    android:text="0/2500"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/lightgray"
+                    peng:peng_drawableLeft="@drawable/test_shortcut_remainwords"
+                    peng:peng_drawableLeftHeight="12dp"
+                    peng:peng_drawableLeftWith="12dp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/originate_chair_remain_tv"
+                    android:background="@color/line_gray" />
+
+                <ScrollView
+                    style="@style/layout_mw_style"
+                    android:layout_below="@+id/imageView1"
+                    android:scrollbars="none" >
+
+                    <com.newland.wstdd.originate.origateactivity.OriginateCharirGridView
+                        android:id="@+id/selected_images_gridv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:verticalSpacing="10dp" >
+                    </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

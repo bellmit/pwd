@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:text="团大&amp;团秘  (3)" />
+
+        <com.newland.wstdd.mine.registrationlist.BasePassListView
+            android:id="@+id/mylistview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" >
+        </com.newland.wstdd.mine.registrationlist.BasePassListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:text="团员  (50)" />
+
+        <com.newland.wstdd.mine.registrationlist.BasePassListView
+            android:id="@+id/mylistview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" >
+        </com.newland.wstdd.mine.registrationlist.BasePassListView>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,36 @@
+package com.newland.wstdd.mine.managerpage.coversetting;
+
+import android.os.Handler;
+import android.os.Message;
+
+import com.newland.wstdd.mine.managerpage.ManagerPageActivity;
+import com.newland.wstdd.mine.managerpage.MyActivitiesListAcitivity;
+import com.newland.wstdd.mine.managerpage.beanresponse.MyActivityListRes;
+import com.newland.wstdd.originate.beanresponse.SingleActivityRes;
+
+public class ModifyCoverHandler extends Handler {
+	public static final int MODIFY_COVER = 10;//更改封面
+	private ManagerPageActivity context;
+	public ModifyCoverHandler(ManagerPageActivity context) {
+		this.context = context;
+	}
+
+	@SuppressWarnings("static-access")
+	public void handleMessage(Message msg) {
+		switch (msg.what) {
+		
+		case MODIFY_COVER:
+			// 只有当msg.obj对象为空，表示访问服务器成功
+			if (msg.obj != null) {
+				if (msg.obj instanceof String) {
+					context.OnFailResultListener((String)msg.obj);
+				} else if (msg.obj instanceof ModifyCoverRes) {
+					context.OnHandleResultListener(msg.obj, MODIFY_COVER);
+				}
+			}
+			break;
+		}
+		super.handleMessage(msg);
+	}
+
+}

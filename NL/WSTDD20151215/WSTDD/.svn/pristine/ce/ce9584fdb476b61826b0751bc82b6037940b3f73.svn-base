@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 发起/搜索 搜索结果界面 -->
+
+
+<!--    <com.newland.wstdd.common.view.CustomListViews -->
+<!--         android:id="@+id/category_listview" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:fadingEdge="none" -->
+<!--         android:focusable="true" -->
+<!--         android:footerDividersEnabled="false" -->
+<!--         android:headerDividersEnabled="false" > -->
+<!--     </com.newland.wstdd.common.view.CustomListViews> -->
+
+	<ListView style="@style/layout_mm_style"
+	    android:id="@+id/category_listview"
+	      android:fadingEdge="none"
+        android:focusable="true"
+	    ></ListView>
+</RelativeLayout>

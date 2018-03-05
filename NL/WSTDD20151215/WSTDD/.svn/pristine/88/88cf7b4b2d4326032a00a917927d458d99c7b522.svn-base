@@ -1,0 +1,190 @@
+package com.newland.wstdd.find.categorylist.registrationedit.registration;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import android.R.integer;
+import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.tools.UiHelper;
+
+/**
+ * 发现-listview 动态生成的 子适配器
+ * 
+ * @author H81 2015-11-6
+ * 
+ */
+public class SxRegistrationEditChildAdapter extends BaseAdapter {
+	private boolean isDataChange=false;//内容是否被改变了
+	private LayoutInflater mInflater;
+	private Context context;
+	List<SxRegistrationEditAdapterData> registrationData;
+	private List<Map<String, String>> tempList;
+	private int parentPosition;
+	private int focusPosition = -1;
+	// private List<String> tempList;// 数据比如手机，地址，爱好，qq，性别，姓名等等
+	
+	public SxRegistrationEditChildAdapter(Context context,
+			List<SxRegistrationEditAdapterData> registrationData,int position) {
+		this.context = context;
+		this.registrationData = registrationData;
+		this.tempList = registrationData.get(position).getMap();
+		this.parentPosition=position;
+		mInflater = LayoutInflater.from(context);
+	}
+
+	@Override
+	public int getCount() {
+		return tempList == null ? 0 : tempList.size();
+	}
+
+	@Override
+	public Map<String, String> getItem(int position) {
+		if (tempList != null && tempList.size() != 0) {
+			return tempList.get(position);
+		}
+		return null;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		final ViewHolder holder;
+
+		if (convertView == null) {
+	
+			// 根据自定义的Item布局加载布局
+			convertView = mInflater.inflate(R.layout.registration_edit_listview_childitem,parent, false);
+			holder = new ViewHolder();
+			holder.editText=(EditText) convertView.findViewById(R.id.registration_item_child_editext);
+			holder.textView=(TextView) convertView.findViewById(R.id.registration_item_child_textview);
+			// 将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag
+			convertView.setTag(holder);
+			
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+		holder.textView.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				UiHelper.ShowOneToast(context, holder.textView.getText().toString());
+			}
+		});
+	
+	
+//		Iterator iter = tempList.get(position).entrySet().iterator();
+//		while (iter.hasNext()) {
+//		Map.Entry entry = (Map.Entry) iter.next();
+//		Object key = entry.getKey();
+//		Object val = entry.getValue();
+//		holder.editText.setText((String)val);
+//		holder.textView.setText((String) key);
+//		}
+		Map<String, String> data = getItem(position);
+		for (Entry<String, String> entry : data.entrySet()) {
+			holder.textView.setText(entry.getKey());
+			holder.editText.setText(entry.getValue());
+		}
+		holder.editText.setOnFocusChangeListener(new OnFocusChangeListener() {
+
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					focusPosition = position;
+				} else {
+					focusPosition = -1;
+				}
+			}
+		});
+		holder.editText.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				if (position == focusPosition) {
+					for (Entry<String, String> entry : getItem(position).entrySet()) {
+						if(s!=null&&!"".equals(s.toString())){
+						isDataChange = true;//表示内容被改变了
+						getItem(position).put(entry.getKey(), s.toString());
+						}
+					}					
+				}
+			}
+		});
+		
+		return convertView;
+	}
+
+	// ViewHolder静态类
+	 class ViewHolder {
+		 EditText editText;// 动态生成
+		 TextView textView;//标签
+	}
+
+	public List<SxRegistrationEditAdapterData> getRegistrationData() {
+		return registrationData;
+	}
+
+	public void setRegistrationData(
+			List<SxRegistrationEditAdapterData> registrationData) {
+		this.registrationData = registrationData;
+		this.tempList = registrationData.get(getParentPosition()).getMap();
+	}
+
+	public boolean isDataChange() {
+		return isDataChange;
+	}
+
+	public void setDataChange(boolean isDataChange) {
+		this.isDataChange = isDataChange;
+	}
+
+	public int getParentPosition() {
+		return parentPosition;
+	}
+
+	public void setParentPosition(int parentPosition) {
+		this.parentPosition = parentPosition;
+	}
+
+	public List<Map<String, String>> getTempList() {
+		return tempList;
+	}
+
+	public void setTempList(List<Map<String, String>> tempList) {
+		this.tempList = tempList;
+	}
+	
+
+	
+	
+}

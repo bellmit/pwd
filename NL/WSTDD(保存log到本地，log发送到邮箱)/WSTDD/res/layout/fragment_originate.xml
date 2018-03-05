@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout style="@style/layout_mm_style" >
+
+        <!-- 发起 -->
+
+        <ScrollView
+            style="@style/layout_mw_style"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/viewpager_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:layout_weight="0.5" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/fragment_originate_vp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_below="@id/fragment_originate_vp"
+                        android:layout_gravity="bottom"
+                        android:background="#33000000"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dip"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:id="@+id/dot_0"
+                                android:layout_width="5dip"
+                                android:layout_height="5dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:background="@drawable/dot_focused" />
+
+                            <View
+                                android:id="@+id/dot_1"
+                                android:layout_width="5dip"
+                                android:layout_height="5dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:background="@drawable/dot_normal" />
+
+                            <View
+                                android:id="@+id/dot_2"
+                                android:layout_width="5dip"
+                                android:layout_height="5dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:background="@drawable/dot_normal" />
+
+                            <View
+                                android:id="@+id/dot_3"
+                                android:layout_width="5dip"
+                                android:layout_height="5dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:background="@drawable/dot_normal" />
+
+                            <View
+                                android:id="@+id/dot_4"
+                                android:layout_width="5dip"
+                                android:layout_height="5dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:background="@drawable/dot_normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dip"
+                    android:paddingBottom="3dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dip"
+                        android:text="@string/originate_general_template"
+                        android:textColor="@color/originate_red"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/originate_general_focus_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toLeftOf="@+id/originate_general_focus_iv1" />
+
+                    <ImageView
+                        android:id="@+id/originate_general_focus_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dip" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dip"
+                    android:layout_weight="2.5" >
+
+                    <HorizontalScrollView
+                        android:id="@+id/originate_genernal_hscorllview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:id="@+id/originate_genernal_leftll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:scrollbars="none" >
+
+                            <LinearLayout
+                                android:id="@+id/originate_genernal_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="2dip"
+                                android:layout_weight="1"
+                                android:background="@color/originate_darkred"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="50dip"
+                                    android:layout_height="30dip"
+                                    android:background="@drawable/originate_groupon" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="讲座"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/originate_red"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/originate_red"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/originate_red"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/originate_red"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/originate_red"
+                                    android:gravity="center"
+                                    android:text="活动"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                     />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <Button
+                                    android:id="@+id/originate_genernal_btn10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/originate_genernal_left_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|left"
+                        android:background="@drawable/originate_leftslip"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/originate_genernal_right_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@drawable/originate_rightslip"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dip"
+                    android:paddingBottom="3dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dip"
+                        android:text="@string/originate_home_school_channel"
+                        android:textColor="@color/lightgray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/originate_home_focus_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toLeftOf="@+id/originate_home_focus_iv1" />
+
+                    <ImageView
+                        android:id="@+id/originate_home_focus_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dip" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dip"
+                    android:layout_weight="2.5" >
+
+                    <HorizontalScrollView
+                        android:id="@+id/originate_home_hscorllview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:id="@+id/originate_home_leftll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:scrollbars="none" >
+
+                            <LinearLayout
+                                android:id="@+id/originate_home_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="2dip"
+                                android:layout_weight="1"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="50dip"
+                                    android:layout_height="30dip"
+                                    android:background="@drawable/originate_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="作业"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_home_btn1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_home_btn2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_home_btn3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_home_btn4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_home_btn5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_home_btn6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_home_btn7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_home_btn8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_home_btn9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <Button
+                                    android:id="@+id/originate_home_btn10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/originate_home_left_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|left"
+                        android:background="@drawable/originate_leftslip"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/originate_home_right_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@drawable/originate_rightslip"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dip"
+                    android:paddingBottom="3dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dip"
+                        android:text="@string/originate_corporation_modulization"
+                        android:textColor="@color/lightgray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/originate_corporation_focus_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toLeftOf="@+id/originate_corporation_focus_iv1" />
+
+                    <ImageView
+                        android:id="@+id/originate_corporation_focus_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dip" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dip"
+                    android:layout_weight="2.5" >
+
+                    <HorizontalScrollView
+                        android:id="@+id/originate_corporation_hscorllview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:id="@+id/originate_corporation_leftll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:scrollbars="none" >
+
+                            <!-- <Button -->
+                            <!-- android:id="@+id/originate_corporation_btn" -->
+                            <!-- android:layout_width="match_parent" -->
+                            <!-- android:layout_height="match_parent" -->
+                            <!-- android:layout_margin="2dip" -->
+                            <!-- android:layout_weight="1" -->
+                            <!-- android:background="@color/originate_darkblue" -->
+                            <!-- android:drawableTop="@drawable/originate_corporation" -->
+                            <!-- android:gravity="center" -->
+                            <!-- android:paddingBottom="10dip" -->
+                            <!-- android:paddingLeft="20dip" -->
+                            <!-- android:paddingRight="20dip" -->
+                            <!-- android:paddingTop="10dip" -->
+                            <!-- android:text="团购" -->
+                            <!-- android:textColor="@color/white" -->
+                            <!-- android:textSize="14sp" /> -->
+
+                            <LinearLayout
+                                android:id="@+id/originate_corporation_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="2dip"
+                                android:layout_weight="1"
+                                android:background="@color/originate_darkblue"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="50dip"
+                                    android:layout_height="30dip"
+                                    android:background="@drawable/originate_corporation" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="会议"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <Button
+                                    android:id="@+id/originate_corporation_btn10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dip"
+                                    android:layout_weight="1"
+                                    android:background="@color/lightgray"
+                                    android:gravity="center"
+                                    android:text="团购"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/originate_corporation_left_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|left"
+                        android:background="@drawable/originate_leftslip"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/originate_corporation_right_tv"
+                        android:layout_width="20dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@drawable/originate_rightslip"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dip"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/originate_myactivity_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dip"
+                        android:layout_weight="1"
+                        android:background="@color/originate_saffronyellow" >
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/originate_myactivity" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/originate_myactivity_content_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageView1"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/originate_myactivity_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/originate_myactivity_content_tv"
+                                android:layout_toRightOf="@+id/imageView1"
+                                android:text="我的活动"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/originate_minejoin_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dip"
+                        android:layout_weight="1"
+                        android:background="@color/originate_yellow" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/originate_minejoin_content_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/originate_minejoin_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="有人@我"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            style="@style/layout_mw_style"
+            android:layout_margin="5dip"
+            android:background="@color/transparent" >
+
+            <EditText  android:textColorHint="@color/hint_textview"
+                android:id="@+id/originagte_search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="50dip"
+                android:background="@drawable/rouded_edittext"
+                android:gravity="center_vertical"
+                android:hint="@string/originate_search_edttext"
+                android:paddingBottom="10dip"
+                android:paddingLeft="30dip"
+                android:paddingTop="10dip"
+                android:singleLine="true"
+                android:textColor="@color/textgray"
+                android:textSize="15sp" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/originagte_qrcode_iv"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dip"
+                android:src="@drawable/originate_add_scan" />
+
+            <ImageView
+                android:id="@+id/originagte_search_iv"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dip"
+                android:src="@drawable/originate_search" />
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

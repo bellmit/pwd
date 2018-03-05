@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css?v=1.0" rel="stylesheet">
+    <style type="text/css">
+        body{
+            margin: 0px;
+        }
+        .item{
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+            padding-top:5px;
+            padding-bottom: 5px;
+            border-bottom:1px solid #e3e3e3;
+        }
+        .item p{
+            font-size: 20px;
+            padding-top: 7px;
+            width: 70%;
+            float: left;
+            margin-left: 15px;
+        }
+        .item img{
+            width: 35px;
+            height:35px;
+            right: 15px;
+            position: absolute;
+            padding: 5px;
+            float: left;
+        }
+        .itemImg{
+            width: 100%;display:none;
+            padding: 15px;
+        }
+    </style>
+    <title>如何发起快捷活动</title>
+</head>
+<body style="padding: 0px;background-color: #fff;">
+<div id="main-layout">
+    <div  style="text-align: center;position: relative;height: 35px;display: none;">
+        <img src="image/turnright.png"  style="width: 35px;height:35px;left: 15px;position: absolute;padding: 5px;"/>
+        <span style="font-size: 20px;padding-top: 7px;">反馈与帮助</span>
+    </div>
+    <div id="fqkj" class="item" >
+        <p >如何发起快捷活动!</p>
+        <img src="image/turnright.png"  />
+    </div>
+    <!--如何发起快捷活动-->
+    <img id="fqkjImg" src="image/fqkjhd.png"  class="itemImg"/>
+    <div id="fqzt" class="item" >
+        <p >如何发起专题类活动!</p>
+        <img src="image/turnright.png"/>
+    </div>
+    <!--如何发起专题类活动-->
+    <img id="fqztImg" src="image/fqzt.png"  class="itemImg"/>
+    <div id="fqtg" class="item" >
+        <p >如何发起团购类活动!</p>
+        <img src="image/turnright.png"  />
+    </div>
+    <!--如何发起团购类活动-->
+    <img id="fqtgImg" src="image/fqtg.png"  class="itemImg"/>
+    <div id="szzf" class="item" >
+        <p>如何设置支付二维码!</p>
+        <img src="image/turnright.png"  />
+    </div>
+    <!--如何设置支付二维码-->
+    <img id="szzfImg" src="image/szzfewm.png"  class="itemImg"/>
+    <div id="tgxd" class="item" >
+        <p >如何进行团购下单!</p>
+        <img src="image/turnright.png" />
+    </div>
+    <!--如何进行团购下单-->
+    <img id="tgxdImg" src="image/tgxd.png"  class="itemImg"/>
+    <div id="qrsk" class="item" >
+        <p >如何确认收款!</p>
+        <img src="image/turnright.png" />
+    </div>
+    <!--如何确认收款-->
+    <img id="qtskImg" src="image/qrsk.png"  class="itemImg"/>
+    <div id="glhd" class="item" >
+        <p >如何管理发起的活动!</p>
+        <img src="image/turnright.png" />
+    </div>
+    <!--如何管理发起的活动-->
+    <img id="glhdImg" src="image/glhd.png"  class="itemImg"/>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var fakjFlag=false;
+    $("#fqkj").click(function(){
+        if(fakjFlag){
+            $("#fqkjImg").hide();
+            fakjFlag=false;
+        }else{
+            $("#fqkjImg").show();
+            fakjFlag=true;
+        }
+
+    });
+    var fqztFlag=false;
+    $("#fqzt").click(function(){
+        if(fqztFlag){
+            $("#fqztImg").hide();
+            fqztFlag=false;
+        }else{
+            $("#fqztImg").show();
+            fqztFlag=true;
+        }
+
+    });
+    var fqtgFlag=false;
+    $("#fqtg").click(function(){
+        if(fqtgFlag){
+            $("#fqtgImg").hide();
+            fqtgFlag=false;
+        }else{
+            $("#fqtgImg").show();
+            fqtgFlag=true;
+        }
+
+    });
+    var szzfFlag=false;
+    $("#szzf").click(function(){
+        if(szzfFlag){
+            szzfFlag=false;
+            $("#szzfImg").hide();
+        }else{
+            szzfFlag=true;
+            $("#szzfImg").show();
+        }
+
+    });
+    var tgxdFlag=false;
+    $("#tgxd").click(function(){
+        if(tgxdFlag){
+            tgxdFlag=false;
+            $("#tgxdImg").hide();
+        }else{
+            tgxdFlag=true;
+            $("#tgxdImg").show();
+        }
+    });
+    var qrskFlag=false;
+    $("#qrsk").click(function(){
+        if(qrskFlag){
+            qrskFlag=false;
+            $("#qtskImg").hide();
+        }else{
+            qrskFlag=true;
+            $("#qtskImg").show();
+        }
+    });
+    var glhdFlag=false;
+    $("#glhd").click(function(){
+        if(glhdFlag){
+            glhdFlag=false;
+            $("#glhdImg").hide();
+        }else{
+            glhdFlag=true;
+            $("#glhdImg").show();
+        }
+    });
+</script>
+</body>
+</html>

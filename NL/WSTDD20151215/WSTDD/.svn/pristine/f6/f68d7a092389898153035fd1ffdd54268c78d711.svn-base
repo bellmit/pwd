@@ -1,0 +1,68 @@
+package com.newland.wstdd.mine.registrationlist;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.SimpleAdapter;
+
+import com.newland.wstdd.R;
+import com.newland.wstdd.common.base.BaseFragmentView;
+
+
+/**
+ *已通过报名名单
+ * 
+ * @author linh
+ */
+public class YesPassView extends BaseFragmentView {
+	private View view;
+	private SimpleAdapter list1;
+	private BasePassListView listview1, listview2;
+	private Resources resources;
+	/* mList是用来存放要显示的数据 */
+	private List<HashMap<String, Object>> mList = new ArrayList<HashMap<String, Object>>();
+
+	public YesPassView(Context context) {
+		super(context);
+		resources = context.getResources();
+		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		view = inflater.inflate(R.layout.activity_registrationlist_yespass, null);
+		this.addView(view, new LayoutParams(android.view.ViewGroup.LayoutParams.MATCH_PARENT, android.view.ViewGroup.LayoutParams.MATCH_PARENT));
+		list1 = new SimpleAdapter(context, mList, R.layout.friend_listitem, new String[] { "title", "logo" }, new int[] { R.id.title, R.id.logo });
+		listview1 = (BasePassListView) view.findViewById(R.id.mylistview1);
+		listview1.setAdapter(list1);
+
+		listview2 = (BasePassListView) view.findViewById(R.id.mylistview2);
+		listview2.setAdapter(list1);
+		mList = getData();
+		refresh();
+	}
+
+	@Override
+	public void refresh() {
+
+	}
+
+	@Override
+	public void onClick(View arg0) {
+
+	}
+
+	/* 返回列表数据 */
+	private List<HashMap<String, Object>> getData() {
+		HashMap<String, Object> hashMap;
+		for (int i = 0; i < 15; i++) {
+			hashMap = new HashMap<String, Object>();
+			hashMap.put("logo", R.drawable.ic_launcher);
+			hashMap.put("title", resources.getString(R.string.app_name));
+			mList.add(hashMap);
+		}
+		return mList;
+	}
+
+}

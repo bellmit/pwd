@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 设置一下 LineatLayout的边框布局 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle" >
+
+    <!-- 实心  背景颜色 -->
+    <solid android:color="#00000000" />
+    <!-- 边框     -->
+    <stroke
+        android:width="0.3dp"
+        android:color="#ff0000" />
+  
+    <!-- 圆角 -->
+    <corners android:radius="40dp" />
+    <!-- 边距     -->
+    <padding
+        android:bottom="6dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="6dp" />
+
+    <!--
+    渐变 
+    <gradient
+        android:angle="270"
+        android:endColor="#FFFF82"
+        android:startColor="#13C7AF" />
+    -->
+
+</shape>

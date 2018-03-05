@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:orientation="vertical" >
+
+        <!-- 我的 -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:background="@drawable/fragment_mine_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/mine_nickname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_nickname_iv"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/mine_nickname"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <com.newland.wstdd.common.widget.RoundImageView
+                    android:id="@+id/mine_nickname_iv"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="35dip"
+                    android:src="@drawable/fragment_mine_head_portrait"
+                    imagecontrol:border_outside_color="#11F1F5FB"
+                    imagecontrol:border_thickness="4dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#33000000"
+                    android:orientation="horizontal"
+                     >
+
+                    <LinearLayout
+                        android:id="@+id/mine_originate_content_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/mine_originate_content_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mine_originate_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/mine_originate"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+					<View 
+					    android:layout_width="2dip"
+					    android:layout_height="match_parent"
+					    android:background="#11F1F5FB"/>
+                    <LinearLayout
+                        android:id="@+id/mine_participation_content_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/mine_participation_content_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mine_participation_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/mine_participation"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+					<View 
+					    android:layout_width="2dip"
+					    android:layout_height="match_parent"
+					    android:background="#11F1F5FB"/>
+                    <LinearLayout
+                        android:id="@+id/mine_collect_content_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/mine_collect_content_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mine_collect_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/mine_collect"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/mine_setting_iv"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip"
+                    android:src="@drawable/fragment_mine_setting" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            style="@style/layout_mw_style"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fragment_mine_myproperty_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="20dip"
+                    android:paddingTop="15dip"
+                    android:text="@string/mine_property"
+                    android:textColor="@color/textgray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/fragment_mine_myproperty_tv"
+                    android:layout_marginLeft="10dip"
+                    android:background="@color/line_gray" />
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv1"
+                    android:orientation="horizontal" >
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/fragment_mine_integral_tv"
+                        style="@style/layout_mine"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/mine_integral"
+                        android:textColor="@drawable/mineproperty_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/mine_integral_selector" />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/fragment_mine_found_tv"
+                        style="@style/layout_mine"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/mine_found"
+                        android:textColor="@drawable/mineproperty_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/mine_found_selector" />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/fragment_mine_accountbook_tv"
+                        style="@style/layout_mine"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/mine_accountbook"
+                        android:textColor="@drawable/mineproperty_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/mine_accountbook_selector" />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/fragment_mine_redpacket_tv"
+                        style="@style/layout_mine"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/mine_redpacket"
+                        android:textColor="@drawable/mineproperty_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/mine_redpacket_selector" />
+
+                    <com.newland.wstdd.common.widget.PengRadioButton
+                        android:id="@+id/fragment_mine_ithaca_tv"
+                        style="@style/layout_mine"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/mine_ithaca"
+                        android:textColor="@drawable/mineproperty_textcolor_seletor"
+                        android:textSize="12sp"
+                        peng:peng_drawableTop="@drawable/mine_ithaca_selector" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <include layout="@layout/line_nopadding" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mine_receiveraddress_rl"
+                style="@style/layout_mW_44H_style"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="1dip" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/minetext_style"
+                    android:text="@string/mine_receiveraddress"
+                    android:textColor="@color/textgray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_alignBottom="@+id/textView3"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_rightexpand" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_nopadding" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mine_qrcode_rl"
+                style="@style/layout_mW_44H_style"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="1dip" >
+
+                <TextView
+                    android:id="@+id/public_type_tv"
+                    style="@style/minetext_style"
+                    android:text="@string/mine_qrcode"
+                    android:textColor="@color/textgray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_alignBottom="@+id/public_type_tv"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_rightexpand" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_nopadding" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mine_servicecenter_rl"
+                style="@style/layout_mW_44H_style"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="1dip" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/minetext_style"
+                    android:text="@string/mine_servicecenter"
+                    android:textColor="@color/textgray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView9"
+                    android:layout_alignBottom="@+id/textView9"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_marginRight="25dp"
+                    android:text="I&apos;M TTT"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_alignBottom="@+id/textView9"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_rightexpand" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_nopadding" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mine_interesttag_rl"
+                style="@style/layout_mW_44H_style"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="1dip" >
+
+                <TextView
+                    android:id="@+id/public_title_tv"
+                    style="@style/minetext_style"
+                    android:text="@string/mine_interesttag"
+                    android:textColor="@color/textgray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_alignBottom="@+id/public_title_tv"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_rightexpand" />
+
+                <TextView
+                    android:id="@+id/mine_mytags1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/public_title_tv"
+                    android:layout_alignBottom="@+id/public_title_tv"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/mine_mytags2_tv"
+                    android:background="@drawable/text_rectanglegrayboderpadding1style"
+                    android:text="摄影"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mine_mytags2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/public_title_tv"
+                    android:layout_alignBottom="@+id/public_title_tv"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/mine_mytags3_tv"
+                    android:background="@drawable/text_rectanglegrayboderpadding1style"
+                    android:text="电影"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mine_mytags3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/public_title_tv"
+                    android:layout_alignBottom="@+id/public_title_tv"
+                    android:layout_alignRight="@+id/imageView9"
+                    android:layout_marginRight="25dp"
+                    android:text="..."
+                    android:background="@drawable/text_rectanglegrayboderpadding1style"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_nopadding" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

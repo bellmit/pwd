@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" 
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="10dip"
+    android:paddingBottom="9dip">   
+
+    <ImageView 
+    	android:id="@+id/logo"
+      	style="@style/user_face_image"
+      	android:src="@drawable/ic_launcher"/>
+
+	<LinearLayout
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_marginLeft="6dip"> 
+
+	    <LinearLayout 
+	    	android:orientation="horizontal" 
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content">
+		        
+	       	<TextView
+	       	    android:id="@+id/title"  
+	    		android:layout_width="match_parent" 
+	           	android:layout_height="wrap_content" 
+	           	android:textStyle="bold"
+	           	android:text="aaa"
+	           	android:textSize="14sp"
+	            android:includeFontPadding="false"
+	            android:singleLine="true"
+	            android:layout_weight="1"
+	            android:ellipsize="end"/>
+	            
+	       	<TextView 
+	       	     
+	    		android:layout_width="match_parent" 
+	           	android:layout_height="wrap_content" 
+	           	android:layout_marginLeft="3dip"
+	           	android:textStyle="bold"
+	           	android:text="+2"
+	           		android:textSize="14sp"
+	            android:includeFontPadding="false"
+	            android:singleLine="true"
+	            android:layout_weight="3.5"
+	            android:ellipsize="end"/>
+	       	<ImageView 
+	       	     
+	    		android:layout_width="match_parent" 
+	           	android:layout_height="20dip" 
+	           	android:layout_marginLeft="3dip"
+	           	android:layout_gravity="center_vertical"
+	            android:src="@drawable/ic_launcher"
+	            android:includeFontPadding="false"
+	            android:layout_weight="3.5"/>
+       	</LinearLayout>
+	    
+	    <TextView android:singleLine="true"
+	         
+	        android:layout_width="fill_parent" 
+	     	android:layout_height="wrap_content"
+	     	android:layout_marginTop="8dip"
+     		android:textSize="14sp"
+	     	android:text="魏超"
+	    	android:ellipsize="end"/> 	
+       	
+    </LinearLayout>
+
+</LinearLayout> 

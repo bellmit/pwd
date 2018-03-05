@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 发起/搜索 搜索结果界面 -->
+
+<!--     <RelativeLayout -->
+<!--         android:id="@+id/fragment1" -->
+<!--         style="@style/layout_mw_style" -->
+<!--         android:layout_margin="5dip" -->
+<!--         android:background="@color/transparent" > -->
+
+<!--         <EditText -->
+<!--             android:id="@+id/originate_search_edt" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_marginLeft="15dip" -->
+<!--             android:layout_marginRight="50dip" -->
+<!--             android:background="#EEEEF3F8" -->
+<!--             android:gravity="center_vertical" -->
+<!--             android:hint="@string/originate_search_edttext" -->
+<!--             android:paddingBottom="10dip" -->
+<!--             android:paddingLeft="30dip" -->
+<!--             android:paddingTop="10dip" -->
+<!--             android:textColor="#DDDDDD" -->
+<!--             android:textSize="12sp" > -->
+<!--         </EditText> -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/originagte_search_iv" -->
+<!--             android:layout_width="20dip" -->
+<!--             android:layout_height="20dip" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:layout_marginLeft="20dip" -->
+<!--             android:src="@drawable/originate_search" /> -->
+
+<!--         <TextView -->
+<!--             android:id="@+id/originate_cancel_tv" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="20dip" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:layout_marginRight="20dp" -->
+<!--             android:text="@string/originate_search_cancel" /> -->
+<!--     </RelativeLayout> -->
+
+   <com.newland.wstdd.common.view.CustomListViews
+        android:id="@+id/category_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" >
+    </com.newland.wstdd.common.view.CustomListViews>
+
+</RelativeLayout>

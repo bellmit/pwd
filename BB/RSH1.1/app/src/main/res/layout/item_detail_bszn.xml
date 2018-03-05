@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homelistitem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp_25">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/item_bszn_bg">
+
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginEnd="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_1">
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:src="@drawable/item_home_detail_bszn_icon" />
+
+            <TextView
+                android:id="@+id/item_detail_bszn_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_1"
+                android:layout_toEndOf="@+id/icon_iv"
+                android:layout_toStartOf="@+id/item_detail_bszn_more_tv"
+                android:text="关于提交专利申请的若干说明" />
+
+            <TextView
+                android:id="@+id/item_detail_bszn_more_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="查看更多"
+                android:textColor="@color/font_blue" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.1"
+            android:layout_below="@+id/relativelayout"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/item_detail_bszn_content_1_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:orientation="vertical"
+            android:paddingEnd="18dp"
+            android:paddingStart="38dp">
+
+            <TextView
+                android:id="@+id/item_detail_bszn_content_title1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="关于提交专利申请的若干说明"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/item_detail_bszn_content_time1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="2017-10-31 21:01:32" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_detail_bszn_content_2_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_detail_bszn_content_1_ll"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:orientation="vertical"
+            android:paddingEnd="18dp"
+            android:paddingStart="38dp">
+
+            <TextView
+                android:id="@+id/item_detail_bszn_content_title2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="关于提交专利申请的若干说明"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/item_detail_bszn_content_time2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="2017-10-31 21:01:32" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

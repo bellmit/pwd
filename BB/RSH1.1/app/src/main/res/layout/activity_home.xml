@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:peng="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_nostatusbar" />
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/home_ad_cb"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            app:canLoop="true">
+
+            <ImageView
+                android:id="@+id/home_ad_cb_iv"
+                android:background="@drawable/pic1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.bigkoo.convenientbanner.ConvenientBanner>
+
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/home_rsnews_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home_rsnews"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+
+            <include layout="@layout/line_vertical" />
+
+            <ImageView
+                android:id="@+id/home_sht_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home_sht"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+
+            <include layout="@layout/line_vertical" />
+
+            <ImageView
+                android:id="@+id/home_zsb_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home_zsb"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+
+            <include layout="@layout/line_vertical" />
+
+            <ImageView
+                android:id="@+id/home_rzy_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home_rzy"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+
+
+        </LinearLayout>
+
+        <!--注意：这里涉及到了ViewFlipper的几个常用的属性
+1.android:autoStart=”true” 当获取到当前视图时，则自动对视图进行滚动
+2.android:inAnimation 设置ViewFlipper的切入动画
+3.android:outAnimation 设置ViewFlipper的切出动画
+4.android:flipInterval 设施ViewFlipper的滚动间隔（显示延迟）-->
+        <!--<ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:autoStart="false"
+            android:background="@android:color/white"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/push_up_in"
+            android:outAnimation="@anim/push_up_out" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/flipper_ison" />
+
+            <TextView
+                android:id="@+id/flipper_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="7dp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <RelativeLayout style="@style/home_listtitle_ll_style">
+
+
+            <TextView
+                android:id="@+id/rsnews_tv"
+                style="@style/home_listtitle_title_style"
+                android:text="融商新闻" />
+
+            <ImageView
+                android:id="@+id/rsnews_more_iv"
+                style="@style/home_listtitle_moreiv_style" />
+
+            <TextView
+                android:id="@+id/rsnews_more_tv"
+                style="@style/home_listtitle_moretv_style"
+                android:layout_toLeftOf="@+id/rsnews_more_iv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@+id/rsnews_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/bg_gray" />
+
+        </RelativeLayout>
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+            android:id="@+id/rsnews_mlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:background="@color/white" />
+
+        <RelativeLayout style="@style/home_listtitle_ll_style">
+
+
+            <TextView
+                android:id="@+id/sht_tv"
+                style="@style/home_listtitle_title_style"
+                android:text="商会通" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sht_tv"
+                android:layout_marginStart="9dp"
+                android:layout_toEndOf="@+id/sht_tv"
+                android:text="热门推荐"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:id="@+id/sht_more_iv"
+                style="@style/home_listtitle_moreiv_style" />
+
+            <TextView
+                android:id="@+id/sht_more_tv"
+                style="@style/home_listtitle_moretv_style"
+                android:layout_toLeftOf="@+id/sht_more_iv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@+id/sht_tv"
+                android:background="@color/bg_gray" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rmtj_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/home_1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_1_iv"
+                    style="@style/home_rmtj_iv_style" />
+
+                <TextView
+                    android:id="@+id/home_1_tv"
+                    style="@style/home_rmtj_tv_style" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/home_2_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_2_iv"
+                    style="@style/home_rmtj_iv_style" />
+
+                <TextView
+                    android:id="@+id/home_2_tv"
+                    style="@style/home_rmtj_tv_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_3_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_3_iv"
+                    style="@style/home_rmtj_iv_style" />
+
+                <TextView
+                    android:id="@+id/home_3_tv"
+                    style="@style/home_rmtj_tv_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_4_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_4_iv"
+                    style="@style/home_rmtj_iv_style" />
+
+                <TextView
+                    android:id="@+id/home_4_tv"
+                    style="@style/home_rmtj_tv_style" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout style="@style/home_listtitle_ll_style">
+
+
+            <ImageView
+                android:id="@+id/zsb_more_iv"
+                style="@style/home_listtitle_moreiv_style" />
+
+            <TextView
+                android:id="@+id/zsb_more_tv"
+                style="@style/home_listtitle_moretv_style"
+                android:layout_toLeftOf="@+id/zsb_more_iv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@+id/zsb_tv"
+                android:background="@color/bg_gray" />
+
+            <TextView
+                android:id="@+id/zsb_tv"
+                android:text="招商宝"
+                style="@style/home_listtitle_title_style" />
+
+        </RelativeLayout>
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+            android:id="@+id/zsb_mlv"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <RelativeLayout style="@style/home_listtitle_ll_style">
+
+
+            <TextView
+                android:id="@+id/rzy_tv"
+                android:text="融资易"
+                style="@style/home_listtitle_title_style" />
+
+            <ImageView
+                android:id="@+id/rzy_more_iv"
+                style="@style/home_listtitle_moreiv_style" />
+
+            <TextView
+                android:id="@+id/rzy_more_tv"
+                style="@style/home_listtitle_moretv_style"
+                android:layout_toLeftOf="@+id/rzy_more_iv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@+id/rzy_tv"
+                android:background="@color/bg_gray" />
+
+        </RelativeLayout>
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+            android:id="@+id/rzy_mlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

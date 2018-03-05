@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="company.webdemo.agile.com.technologycompany.home.technologytrends.TechnologyTrendsActivity">
+
+    <!--科技动态列表-->
+    <include layout="@layout/head_includestatusbar" />
+
+    <include layout="@layout/line_horizontal" />
+
+    <ListView
+        android:id="@+id/lv_trends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

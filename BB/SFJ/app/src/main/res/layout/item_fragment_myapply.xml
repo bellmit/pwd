@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/item_fragment_myapply_state_tv"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/item_fragment_myapply_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/sp_15"
+        android:layout_toRightOf="@+id/item_fragment_myapply_state_tv"
+        android:maxLines="2"
+        android:text="申请假期" />
+
+    <TextView
+        android:id="@+id/item_fragment_myapply_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_fragment_myapply_name_tv"
+        android:layout_below="@+id/item_fragment_myapply_name_tv"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_10"
+        android:text="2017-11-03" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_below="@+id/item_fragment_myapply_date_tv"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@color/gray" />
+
+</RelativeLayout>

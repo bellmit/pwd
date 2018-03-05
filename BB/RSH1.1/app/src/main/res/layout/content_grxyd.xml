@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_grxyd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grxyd_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.jgmanager.xinyong.GRXYDActivity"
+    tools:showIn="@layout/activity_grxyd">
+
+
+    <EditText
+        android:id="@+id/activity_grxyd_edt"
+        android:layout_width="match_parent"
+        android:minHeight="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="17dp"
+        android:paddingTop="@dimen/dp_9"
+        android:paddingBottom="@dimen/dp_9"
+        android:textColorHint="@color/lightgray"
+        android:paddingEnd="@dimen/dp_22"
+        android:hint="请填入新的链接"
+        android:paddingStart="@dimen/dp_9"
+        android:background="@drawable/rectangle_grayedge_style" />
+
+    <ImageView
+        android:id="@+id/activity_grxyd_edticon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/activity_grxyd_edt"
+        android:layout_alignEnd="@+id/activity_grxyd_edt"
+        android:layout_alignTop="@+id/activity_grxyd_edt"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:src="@drawable/grxyd_edt_icon" />
+</RelativeLayout>

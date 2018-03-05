@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>意见反馈</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<style>
+			body{
+				background-image: url(img/bg/feedBack.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+		
+			#all{
+				position: absolute;
+				top: 0.6rem;
+			    left: 0;
+				width: 100%;				
+			}
+			#all textarea{
+				display: block;
+				width: 2.5rem;
+				height: 1.8rem;
+				padding: 0.1rem;
+				margin: 0 auto;
+				background: #ECECEC;
+				font-size: 0.12rem;
+			    box-shadow:0 0.02rem 0.02rem #CFCFCF inset;
+			}
+			#all input{
+				margin: 0.2rem 0 0 2.3rem;
+				width: 0.6rem;
+				height: 0.28rem;
+				font-size: 0.12rem;
+				color: #545454;
+				border-radius: 0.08rem;
+				border-radius: 0.08rem;
+				border-radius: 0.08rem;
+				box-shadow:0.02rem 0.02rem 0.02rem #CFCFCF;
+				background: #F2F2F2;
+			}
+			
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="wd.html" class="turnBtn"><i class="iconfont icon-fanhui"></i></a>意见反馈<a class="searchBtn">查看回复</a>
+		</header>
+		<div id="all">
+	       <textarea></textarea>
+	       <input type="button" class="submitBtn" value="提交" />
+		</div>
+		
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+			$(".submitBtn").click(function(){
+				layerTip("提交成功");
+				setTimeout("toWd()", 1000);
+			})
+			function toWd(){
+				window.location.href="wd.html"
+			}
+			
+			$(".searchBtn").click(function(){
+				var parameter3="chakanhuifu"
+				window.location.href="tongZhi.html?parameter3="+parameter3;
+			})
+		</script>
+		
+	</body>
+</html>

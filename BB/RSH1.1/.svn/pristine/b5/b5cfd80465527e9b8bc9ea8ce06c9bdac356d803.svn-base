@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="墨尔本福清商会"
+            android:id="@+id/sht_sh_ascription_child_name_tv" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="[加关注]"
+            android:background="@color/white"
+            android:id="@+id/sht_sh_ascription_child_follow_tv" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/lightgray"
+        android:layout_below="@+id/linearLayout"
+        android:visibility="gone"
+        android:layout_height="@dimen/dp_0.1" />
+
+</RelativeLayout>

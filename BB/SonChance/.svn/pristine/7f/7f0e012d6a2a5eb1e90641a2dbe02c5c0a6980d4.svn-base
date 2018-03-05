@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingBottom="18dp"
+        android:paddingRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="秘制香煎龙利鱼套餐"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的评分:" />
+
+            <RatingBar
+                android:id="@+id/person_myevaluate_ratingBar"
+                style="@style/RatingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:layout_marginLeft="10dp"
+                android:rating="3"
+                android:stepSize="0.5"></RatingBar>
+
+            <TextView
+                android:id="@+id/person_myevaluate_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#61d46f"
+                android:text="9.0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/person_myevaluate_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="left"
+            android:text="分量很多哦，口味不错，味道好，还不错，量很足，而且老板加了很多青菜" />
+
+    </LinearLayout>
+
+</LinearLayout>

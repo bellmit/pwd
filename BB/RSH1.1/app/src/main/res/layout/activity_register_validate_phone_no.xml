@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.register.RegisterValidatePhoneNoActivity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_login_nostatusbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/include"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/login_area_rl"
+                style="@style/login_edit_style"
+                android:layout_marginTop="166dp">
+
+                <TextView
+                    android:id="@+id/logiin_area_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="1"
+                    android:text="区号(+86)" />
+
+                <TextView
+                    android:id="@+id/login_getarea_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="其他"
+                    android:textColor="@color/font_blue" />
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/login_phoneno_edt"
+                style="@style/login_edit_style"
+                android:layout_below="@+id/login_area_rl"
+                android:layout_marginTop="28dp"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:textSize="@dimen/sp_12" />
+
+
+            <RelativeLayout
+                android:id="@+id/login_verifycode_rl"
+                style="@style/login_edit_style"
+                android:layout_below="@+id/login_phoneno_edt"
+                android:layout_marginTop="28dp">
+
+                <EditText
+                    android:id="@+id/login_verifycode_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:hint="验证码"
+                    android:background="@color/bg_gray"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:layout_marginBottom="@dimen/dp_1"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/login_getverficode_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="获取"
+                    android:textColor="@color/font_blue" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/login_yhxz_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_verifycode_rl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/personalcenter_phoneno_cb"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/login_yhxz_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我已阅读并同意《用户须知》"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/login_singlelogin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_yhxz_ll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimaryDark"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_5"
+                android:text="下一步"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/login_progress"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_above="@+id/copy_right"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/demo_login_progress"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

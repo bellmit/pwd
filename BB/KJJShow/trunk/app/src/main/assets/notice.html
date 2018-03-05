@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>用户须知</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		
+		<style>
+			body{
+				background-image: url(img/bg/04.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+			header{
+				background: rgba(204,204,206,0.5);
+				color: #545454;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 50%;
+				margin-left: -1.5rem;
+				width: 3rem;
+				bottom: 0;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch; /* ios5+ */
+				padding: 0.1rem 0;
+				font-size: 0.12rem;
+				color: #545454;
+				
+			}
+			.turnBtn:link {color: #545454}     /* 未访问的链接 */
+			.turnBtn:visited {color: #545454}  /* 已访问的链接 */
+			.turnBtn:hover {color:#545454}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: #545454}   /* 被选择的链接 */
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>用户须知
+		</header>
+		<p id="all">
+	        1、请在填写申请信息前认真阅读本须知的内容，如需了解更多内容请联系本协会。<br />2、新会员在申请前可先登录中国天使投资协会官方网站(china-aia.org)查看本须知，确认申请个人或单位基本符合中国天使投资协会申请条件，并自愿申请加入中国天使投资协会。<br />
+           3、新会员申请入会应当由协会现有会员推荐，在填写信息时详细填写推荐人信息，并填写申请入会的理由。
+           4、申请过程中请如实完整的填写新会员申请时所要求填写的信息并承诺所填写信息完整、真实、有效。如单位申请加入协会需要填写“组织机构代码”、“营业执照注册号”及“税务登记证编号”。<br />
+           5、新会员申请信息提交成功后协会工作人员将会按照申请流程对申请人或单位提交的信息进行详细审核，审核通过后方可成为正式会员。<br />
+		   6、个人申请，申请人在审核通过后需要按时缴纳年费及会员证工本费和两张一寸免冠照片。<br />
+		   7、凡申请成功的个人或单位将正式成为协会的会员，届时应当拥护中国天使投资协会的章程，遵守中国天使投资协会的会员管理准则。
+		</p>
+		
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			
+			$(".turnBtn").click(function(){
+				if(parameter1==null){
+					window.location.href="login.html";
+				}else{
+					window.location.href="registerMobile.html?parameter1="+parameter1;
+				}
+				
+			})
+		</script>
+		
+	</body>
+</html>

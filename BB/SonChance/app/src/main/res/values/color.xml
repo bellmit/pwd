@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="statusBarColor">#00FFFFFF</color>
+
+    <!-- headtitle背景颜色 -->
+    <color name="fontcolor">#333333</color>
+    <color name="font_gray">#999999</color>
+    <color name="white">#ffffff</color>
+    <color name="tab_select">#eeeeee</color>
+    <color name="font_blue">#0085d0</color>
+
+    <!--  颜色规范-->
+	<color name="line_gray">#e0e0e0</color><!--line灰色:分隔线、标签描边 -->
+    <color name="bg_gray">#f2f2f2</color><!-- 背景灰 ：灰白底色-->
+    <color name="textgray">#666666</color><!-- 灰色： 用于重要级文字信息、内页标题信息 -->
+    <color name="text_black">#000000</color><!-- 黑色： 用于重要级文字信息、内页标题信息 -->
+    <color name="text_red">#e4393c</color><!-- 红色的字体 ： 小面积使用，用于特别需要强调和突出的文字、按钮和icon -->
+    <color name="gray">#949494</color><!-- 灰 ：用于普通级段落信息、引导词 -->
+    <color name="lightgray">#cccccc</color><!-- 淡灰色 ： 用于辅助、次要文字信息-->
+    <color name="orange">#ee8e52</color><!--  橘黄色 ： 小面积使用，用于特别需要强调和突出的文字、按钮和icon -->
+
+    <color name="hint_textview">#cccccc</color>
+    <color name="gray2">#999999</color>
+	<!--  颜色规范-->
+    <color name="green">#32B332</color>
+    <color name="dark_green">#6AA76B</color>
+    <color name="light_green">#B0E9B7</color>
+
+    <color name="xian">#ecedef</color>
+
+    <!--黑色半透明-->
+    <color name="black_transparent">#CC000000</color>
+
+    <!--首页购物车去结算背景色-->
+    <color name="home_shoppingcart_accounts_bg">#61D46F</color>
+    <!--点餐-->
+    <color name="order_dish_shoppingcart_bg">#313131</color>
+
+    <color name="vip_color">#ffc929</color>
+</resources>

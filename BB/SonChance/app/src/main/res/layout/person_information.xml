@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_order_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/head" />-->
+    <include
+        android:id="@+id/includestatusbar_rl"
+        layout="@layout/head_includestatusbar" />
+
+    <ScrollView
+        style="@style/layout_mm_style"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="个人资料"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@color/text_black" />
+
+                <include layout="@layout/line_lr_margin18" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72.5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="头像"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.tastebychance.sonchance.view.RoundImageView
+                    android:id="@+id/person_information_headportrait_riv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView1"
+                    android:background="@drawable/person_defaultheadportrait"
+                    android:onClick="headPortraitClick" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright"
+                    android:onClick="headPortraitClick" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72.5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:visibility="gone"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="头像"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/head_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView"
+                    android:background="@drawable/person_defaultheadportrait"
+                    android:onClick="headPortraitClick" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright"
+                    android:onClick="headPortraitClick" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_lr_margin18" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="昵称"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/person_information_username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:gravity="center_vertical"
+                    android:onClick="userNameClick"
+                    android:text="SHANC_2458baJD" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright"
+                    android:onClick="userNameClick" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_lr_margin18" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="称谓"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/person_information_sex_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/person_information_sex_man_rbt"
+                        android:layout_width="68dp"
+                        android:layout_height="28dp"
+
+                        android:text="先生"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/person_information_sex_lady_rbt"
+                        android:layout_width="68dp"
+                        android:layout_height="28dp"
+                        android:checked="true"
+                        android:text="女士"
+                        android:textSize="15sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <include layout="@layout/line_lr_margin18" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="账户与安全"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@color/text_black" />
+
+                <include layout="@layout/line_lr_margin18" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="手机号"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright"
+                    android:onClick="telClick" />
+
+                <TextView
+                    android:id="@+id/person_information_tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView3"
+                    android:gravity="center_vertical"
+                    android:onClick="telClick"
+                    android:text="137****5987" />
+            </RelativeLayout>
+
+
+            <!--            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="gone"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="邮箱"
+                                android:textColor="@color/text_black"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/person_turnright"
+                                android:onClick="emailClick" />
+
+                            <TextView
+                                android:id="@+id/person_information_email_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="9dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toStartOf="@+id/imageView4"
+                                android:gravity="center_vertical"
+                                android:onClick="emailClick"
+                                android:text="未设置" />
+                        </RelativeLayout>
+
+                        <include layout="@layout/line_5h_matchparent" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="退出登录"
+                android:onClick="logoutClick"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

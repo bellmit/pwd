@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <ScrollView
+        style="@style/layout_mm_style"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/layout_mm_style"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="198dp"
+                android:background="@drawable/person_bg">
+
+
+                <FrameLayout
+                    android:id="@+id/framelayout1"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+
+
+                    <com.tastebychance.sonchance.view.RoundImageView
+                        android:id="@+id/person_item_headportrait_iv"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:background="@drawable/person_defaultheadportrait" />
+
+                    <TextView
+                        android:id="@+id/person_item_grade_tv"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="bottom|right"
+                        android:text="V0"
+                        android:textSize="7sp"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:textColor="@color/vip_color"
+                        android:background="@drawable/circle_whitebg_orangepadding_style" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/person_item_username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/framelayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="请登录"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/person_item_jifen_rl"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/person_item_jifen_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/person_item_jifen_tv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/person_item_jifen_tv"
+                        android:gravity="bottom"
+                        android:text="积分"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/choosereceivetime_fastest_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_item_jifen_tv"
+                        android:gravity="center"
+                        android:text="会员中心"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/person_turnright" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/lightgray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/person_item_ye_rl"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/person_item_ye_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/person_item_ye_tv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/person_item_ye_tv"
+                        android:gravity="bottom"
+                        android:text="元"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_item_ye_tv"
+                        android:gravity="center"
+                        android:text="账户余额"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/person_turnright" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/person_item_bindbankcard_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="绑定银行卡" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include android:visibility="gone"
+                layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_creditcard_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="免费办理信用卡" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include android:visibility="gone"
+                layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_mycoupon_rl"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="我的优惠券" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_ceiveaddress_rl"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="送餐地址管理" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_safe_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="账户与安全" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include android:visibility="gone"
+                layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_membercenter_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="会员中心" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_myevaluate_rl"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="我的评价" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_scan_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="扫一扫" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/person_item_line" />
+
+            <RelativeLayout
+                android:id="@+id/person_item_checkversion_rl"
+                android:visibility="gone"
+                style="@style/person_item_rl">
+
+                <TextView
+                    style="@style/layout_ww_style"
+                    android:layout_centerVertical="true"
+                    android:text="检查更新" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/person_turnright" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

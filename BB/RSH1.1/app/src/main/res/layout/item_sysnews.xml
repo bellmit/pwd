@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homelistitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingEnd="17dp"
+    android:paddingStart="17dp"
+    android:paddingTop="@dimen/dp_20">
+
+
+    <LinearLayout
+        android:id="@+id/item_sysnews_head_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_sysnews_head_noread_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:text="未读"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/red"
+            android:paddingTop="@dimen/dp_1"
+            android:paddingBottom="@dimen/dp_1"
+            android:background="@drawable/circle5_rededge_style" />
+
+        <TextView
+            android:id="@+id/item_sysnews_head_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您所申请的XXX已经审核通过您所申请的XXX已经审核通过"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_sysnews_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_sysnews_head_ll"
+        android:layout_marginTop="@dimen/dp_18"
+        android:maxLines="2"
+        android:text="您于2017年11月6日通过融商汇app申请的企业用户注册已经通过审核，您所注册的企业名称为：附件豹奔电子科技"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/item_sysnews_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/item_sysnews_content_tv"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="2017-11-10 16：30"
+        android:textSize="@dimen/sp_10" />
+
+    <View
+        android:id="@+id/item_yjzq_hf_underline"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/item_sysnews_time_tv"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_gray" />
+</RelativeLayout>

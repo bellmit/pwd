@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:id="@+id/person_goodsreceiptaddress_listitem_default_tv"
+            android:layout_width="34dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle25_rededge_style"
+            android:gravity="center"
+            android:text="默认"
+            android:textColor="@color/text_red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/person_goodsreceiptaddress_listitem_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/person_goodsreceiptaddress_listitem_default_tv"
+            android:text="福州软件园D区1号楼华为楼515室"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/person_goodsreceiptaddress_listitem_username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_goodsreceiptaddress_listitem_address_tv"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="8dp"
+            android:text="黄欣（先生）" />
+
+        <TextView
+            android:id="@+id/person_goodsreceiptaddress_listitem_tel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_goodsreceiptaddress_listitem_address_tv"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/person_goodsreceiptaddress_listitem_username_tv"
+            android:text="13788881225" />
+
+        <LinearLayout
+            android:id="@+id/person_goodsreceiptaddress_listitem_edt_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="18dp">
+
+            <ImageView
+                android:id="@+id/person_goodsreceiptaddress_listitem_edt_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/person_goodsreceipt_edt" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/person_goodsreceiptaddress_listitem_username_tv"
+            android:background="@color/lightgray" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="#FFFF0000"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+</LinearLayout>

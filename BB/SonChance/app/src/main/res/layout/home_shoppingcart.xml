@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_bottom_shoppingcart"
+    style="@style/layout_mw_style"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/home_shoppingcart_price_tv"
+        style="@style/layout_mm_style"
+        android:layout_weight="1"
+        android:background="@color/gray2"
+        android:drawableLeft="@drawable/order_shoppingcart_moneyicon"
+        android:drawablePadding="8dp"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:text="32"
+        android:textColor="@color/green"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/home_shoppingcart_num_tv"
+        style="@style/layout_mm_style"
+        android:layout_gravity="center"
+        android:layout_weight="0.8"
+        android:background="@color/gray2"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="共6份套餐"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/home_shoppingcart_icon_tv"
+        style="@style/layout_mw_style"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/dark_green"
+        android:onClick="orderPay"
+        android:textColor="@color/white"
+        android:text="去结算"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textSize="18sp"
+        android:paddingTop="5dp" />
+</LinearLayout>

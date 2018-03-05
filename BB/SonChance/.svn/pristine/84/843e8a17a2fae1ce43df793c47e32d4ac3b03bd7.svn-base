@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!--圆形白色背景，橘黄色边框。设置椭圆形，具体应用时限制控件为正方形即可-->
+
+    <!-- 实心 -->
+    <solid android:color="@color/white" />
+    <!-- 边框 -->
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/vip_color" />
+   
+	<!-- 圆角     -->
+    <!--<corners android:radius="25dp" />-->
+
+    <!-- 边距 -->
+    <!-- <padding
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" /> -->
+    <!--
+    渐变 
+    <gradient
+        android:angle="270"
+        android:endColor="#FFFF82"
+        android:startColor="#13C7AF" />
+    -->
+
+</shape>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>添加好友</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<link rel="stylesheet" href="css/emmm01.css" />
+		
+		<style>
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn" href="businessCard2.html"><i class="iconfont icon-fanhui"></i></a>添加好友
+		</header>
+		
+		<div id="all">
+        	<p class="addressList-searchBox" style="margin-top: 0.1rem;">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            </p>
+            <ul class="freindsList">
+            	<li>
+            		<i class="iconfont icon-geren geren"></i>
+            		<span class="freindsList-name">陈嘉莉</span>
+            		<span class="addBtn">[加好友]</span>
+            	</li>
+            	<li>
+            		<i class="iconfont icon-qiye qiye"></i>
+            		<span class="freindsList-name">华为技术有限公司</span>
+            		<span class="addBtn">[加好友]</span>
+            	</li>
+            	<li>
+            		<i class="iconfont icon-shanghui shanghui"></i>
+            		<span class="freindsList-name">上海福清融商会</span>
+            		<span class="addBtn">[加好友]</span>
+            	</li>
+            	<li>
+            		<i class="iconfont icon-jigou jigou"></i>
+            		<span class="freindsList-name">凯宾斯基大酒店</span>
+            		<span class="addBtn">[加好友]</span>
+            	</li>
+            	<li>
+            		<i class="iconfont icon-bumen bumen"></i>
+            		<span class="freindsList-name">刘易</span>
+            		<span class="addBtn">[加好友]</span>
+            	</li>
+            </ul>                
+
+           
+		</div>
+	
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+			$(".addBtn").click(function(event){
+				event.stopPropagation();
+				$(this).html("[待确认]")
+				$(this).css({
+					color:'gray',
+					
+				})
+			})
+			$(".freindsList").click(function(){
+				window.location.href="chat.html?parameter1=3"
+			})
+
+		</script>
+	</body>
+</html>

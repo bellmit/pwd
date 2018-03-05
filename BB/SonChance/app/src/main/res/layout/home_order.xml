@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        style="@style/layout_mm_style"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/order_bottom_shoppingcart"
+        android:background="@android:color/transparent">
+
+        <com.flipboard.bottomsheet.BottomSheetLayout
+            android:id="@+id/bottomSheetLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent">
+
+            <ScrollView
+                style="@style/layout_mm_style"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    style="@style/layout_mm_style"
+                    android:paddingBottom="50dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout1"
+                        style="@style/layout_mw_style"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView
+                            android:id="@+id/order_dish_img_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="181dp"
+                            android:background="@drawable/item01" />-->
+                        <com.bigkoo.convenientbanner.ConvenientBanner
+                            android:id="@+id/id_cb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/defaultphoto"
+                            app:canLoop="true" />
+
+                        <RelativeLayout
+                            style="@style/layout_mw_style"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="18dp">
+
+
+                            <TextView
+                                android:id="@+id/order_dish_title_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="秘制香煎龙利鱼套餐"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/order_dish_price_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/order_dish_title_tv"
+                                android:maxLines="1"
+                                android:text="￥32"
+                                android:textColor="@color/text_red"
+                                android:textSize="21sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/order_dish_price_tv"
+                                android:layout_alignTop="@+id/order_dish_price_tv"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/order_dish_price_tv"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/order_dish_soldnum_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/order_dish_price_tv"
+                                    android:layout_toRightOf="@+id/order_dish_price_tv"
+                                    android:text="已售:32套"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/order_dish_price_tv"
+                                android:layout_alignTop="@+id/order_dish_price_tv"
+                                android:layout_toRightOf="@+id/linearLayout1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/order_dish_discount_tv"
+                                    android:layout_width="48dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:visibility="gone"
+                                    android:background="@drawable/circle25_rededge_style"
+                                    android:gravity="center"
+                                    android:text="买送"
+                                    android:textColor="@color/text_red"
+                                    android:textSize="8sp" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/order_dish_content_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/order_dish_price_tv"
+                                android:layout_marginTop="16dp"
+                                android:text="精选优质大虾，富含丰富的蛋白质和钙磷钾硒等营养元素。精选优质大虾，富含丰富的蛋白质和钙磷钾硒等营养元素。精选优质大虾，富含丰富的蛋白质和钙磷钾硒等营养元素。精选优质大虾，富含丰富的蛋白质和钙磷钾硒等营养元素。"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/order_dish_addshoppingcart_iv"
+                                android:layout_width="70dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignBottom="@+id/order_dish_price_tv"
+                                android:layout_alignTop="@+id/order_dish_price_tv"
+                                android:background="@drawable/circle25_greenbg_style"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="加入购物车"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <LinearLayout
+                                android:id="@+id/order_dish_addshoppingcart_ll"
+                                android:layout_width="70dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignBottom="@+id/order_dish_price_tv"
+                                android:layout_alignTop="@+id/order_dish_price_tv"
+                                android:gravity="right|center_vertical"
+                                android:visibility="gone">
+
+
+                                <ImageView
+                                    android:id="@+id/order_dish_addshoppingcart_remove_iv"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/shoppingcart_remove" />
+
+                                <TextView
+                                    android:id="@+id/order_dish_addshoppingcart_num_tv"
+                                    android:layout_width="34dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="5" />
+
+                                <ImageView
+                                    android:id="@+id/order_dish_addshoppingcart_add_iv"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:paddingRight="1.5dp"
+                                    android:src="@drawable/shoppingcart_add" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/layout_mw_style"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:paddingTop="18dp"
+                        android:text="营养成分" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="18dp"
+                        android:background="@color/white"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp">
+
+                        <LinearLayout
+                            android:id="@+id/home_order_nutrientcomposition_block_ll"
+                            style="@style/layout_mw_style"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <!-- <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:orientation="vertical">
+
+                                 <ImageView
+                                     android:layout_width="30dp"
+                                     android:layout_height="30dp"
+                                     android:background="@drawable/order_dish_nutrientcomposition_calorie" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:layout_marginTop="5dp"
+                                     android:gravity="center"
+                                     android:text="热量"
+                                     android:textSize="11sp" />
+
+                                 <TextView
+                                     android:id="@+id/textView"
+                                     style="@style/layout_mw_style"
+                                     android:gravity="center"
+                                     android:text="15卡路里"
+                                     android:textSize="9sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:orientation="vertical">
+
+                                 <ImageView
+                                     android:id="@+id/imageView"
+                                     android:layout_width="30dp"
+                                     android:layout_height="30dp"
+                                     android:background="@drawable/order_dish_nutrientcomposition_fat" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:layout_marginTop="5dp"
+                                     android:gravity="center"
+                                     android:text="脂肪"
+                                     android:textSize="11sp" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:gravity="center"
+                                     android:text="20g"
+                                     android:textSize="9sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:orientation="vertical">
+
+                                 <ImageView
+                                     android:layout_width="30dp"
+                                     android:layout_height="30dp"
+                                     android:background="@drawable/order_dish_nutrientcomposition_protein" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:layout_marginTop="5dp"
+                                     android:gravity="center"
+                                     android:text="蛋白质"
+                                     android:textSize="11sp" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:gravity="center"
+                                     android:text="65g"
+                                     android:textSize="9sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:orientation="vertical">
+
+                                 <ImageView
+                                     android:layout_width="30dp"
+                                     android:layout_height="30dp"
+                                     android:background="@drawable/order_dish_nutrientcomposition_fibre" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:layout_marginTop="5dp"
+                                     android:gravity="center"
+                                     android:text="纤维"
+                                     android:textSize="11sp" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:gravity="center"
+                                     android:text="32g"
+                                     android:textSize="9sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:orientation="vertical">
+
+                                 <ImageView
+                                     android:layout_width="30dp"
+                                     android:layout_height="30dp"
+                                     android:background="@drawable/order_dish_nutrientcomposition_cholesterol" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:layout_marginTop="5dp"
+                                     android:gravity="center"
+                                     android:text="胆固醇"
+                                     android:textSize="11sp" />
+
+                                 <TextView
+                                     style="@style/layout_mw_style"
+                                     android:gravity="center"
+                                     android:text="2g"
+                                     android:textSize="9sp" />
+
+                             </LinearLayout>-->
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/order_dish_evaluate_ll"
+                        style="@style/layout_mw_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/layout_mw_style"
+                            android:orientation="horizontal"
+                            android:paddingBottom="14dp"
+                            android:paddingTop="18dp">
+
+                            <TextView
+                                style="@style/layout_wm_style"
+                                android:text="客户评价"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/order_dish_goodevaluatenum_tv"
+                                style="@style/layout_wm_style"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center_vertical"
+                                android:text="好评：182条"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/order_dish_badevaluatenum_tv"
+                                style="@style/layout_wm_style"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center_vertical"
+                                android:text="差评：2条"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <include layout="@layout/line" />
+
+                        <RadioGroup
+                            android:id="@+id/order_dish_evaluate_radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="14dp">
+
+                            <RadioButton
+                                android:id="@+id/order_dish_evaluate_all_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/evaluate_radiobutton_selector"
+                                android:checked="true"
+                                android:text="全部评价"
+                                android:textColor="@color/gray2" />
+
+                            <RadioButton
+                                android:id="@+id/order_dish_evaluate_good_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:button="@drawable/evaluate_radiobutton_selector"
+                                android:text="好评"
+                                android:textColor="@color/gray2" />
+
+                            <RadioButton
+                                android:id="@+id/order_dish_evaluate_bad_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:button="@drawable/evaluate_radiobutton_selector"
+                                android:text="差评"
+                                android:textColor="@color/gray2" />
+                        </RadioGroup>
+
+                        <com.tastebychance.sonchance.view.ListViewForScrollView
+                            android:id="@+id/order_evaluate_listview"
+                            style="@style/layout_mw_style"
+                            android:divider="@null"
+                            android:scrollbars="none"></com.tastebychance.sonchance.view.ListViewForScrollView>
+
+
+                        <RelativeLayout
+                            style="@style/layout_mw_style"
+                            android:onClick="getmoreevaluate"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/layout_ww_style"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="18dp"
+                                android:layout_marginTop="14dp"
+                                android:drawableRight="@drawable/order_evaluate_more"
+                                android:gravity="center_horizontal"
+                                android:text="更多评论" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </com.flipboard.bottomsheet.BottomSheetLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/head2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/head_left_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/order_back"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/head_center_address_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/order_share" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/order_bottom_shoppingcart"
+        style="@style/layout_mw_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:background="@color/order_dish_shoppingcart_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/order_dish_shoppingcart_price_tv"
+                style="@style/layout_wm_style"
+                android:drawablePadding="8dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="￥32"
+                android:textColor="@color/text_red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_dish_shoppingcart_showdishes_tv"
+                style="@style/layout_mm_style"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="共 6 份套餐"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/order_dish_unseleceddish_tv"
+                style="@style/layout_wm_style"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center_vertical"
+                android:text="未选购商品"
+                android:textColor="#cccccc"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/order_dish_shoppingcart_payment_iv"
+            android:layout_width="106dp"
+            android:layout_height="58dp"
+            android:layout_gravity="right"
+            android:background="@color/green"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/order_dish_shoppingcart_payment" />
+    </LinearLayout>
+</RelativeLayout>

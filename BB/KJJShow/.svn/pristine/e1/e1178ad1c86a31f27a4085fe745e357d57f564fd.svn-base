@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>企业详情、商会详情、部门详情、机构详情、招商宝-商机-工业区、镇、商会管理、企业管理</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+        <!--企业详情、商会详情、部门详情、机构详情、招商宝-商机-工业区、镇、商会管理、企业管理共用此页面-->
+		<style>
+			body{
+				background: #DFDFDF;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+			.box{
+				display: none;
+			}
+			.ad{
+				display: block;
+				width: 100%;
+				height: 1.5rem;
+				
+				
+			}
+			.tab{
+				background: white;
+				width: 100%;
+				height: 0.45rem;
+				padding: 0.1rem 0;
+				display: flex;
+				justify-content: space-around;
+				
+				
+			}
+			.tab2 li{
+				width: 25%;
+			}
+			.tab1 li{
+				width: 33%;
+			}
+			.tab li+li{
+				border-left: 0.01rem solid #E4E4E4;
+			    
+			}
+			.tab a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				
+			}
+			.tab1 a span:nth-child(1),.tab2 a span:nth-child(1){
+				font-size: 0.16rem;
+				color: #2c2c2c;
+			}
+			.tab1 a span:nth-child(2),.tab2 a span:nth-child(2){
+				font-size: 0.12rem;
+				color: #1D4894;
+			}
+			.menu{
+				background: white;
+				display: block;
+				width: 100%;
+				padding: 0.05rem 0;
+				overflow: hidden;
+				font-size: 0.14rem;
+				color: #1D4894;
+				margin: 0.03rem 0;
+				
+			}
+			.menu i{
+				font-size: 0.26rem;
+				color: #1D4894;
+				vertical-align: -0.05rem;
+				margin-left: 0.1rem;
+				margin-right: 0.08rem;
+			}
+			.xiangyou{
+				float: right;
+				font-size: 0.2rem !important;
+				margin-top: 0.06rem;
+				margin-right: 0.1rem;
+			}
+			.quitBtn{
+				display: block;
+				margin: 0.1rem auto;
+				background: #F16256;
+				color: white;
+				
+				width: 2.4rem;
+				height: 0.45rem;
+				line-height: 0.45rem;
+				font-size: 0.16rem;
+			}
+			.quitBtn i{
+				margin-right: 0.1rem;
+				font-size: 0.26rem;
+				vertical-align: -0.04rem;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>
+			<span class="header-title">商会详情</span><!--企业详情、商会详情、部门详情、机构详情、招商宝-商机-工业区、镇、商会管理、企业管理-->
+			
+			<!--企业详情、商会详情才会有此按钮，注意！！！-->
+			<a class="searchBtn"><i class="iconfont icon-jiaguanzhu jiaguanzhu"></i></a>
+		</header>
+		
+		<div id="all">
+			<!--企业详情0-->
+	        <div class="box enterpriseDetail">
+	        	<img class="ad" src="img/fake/1510102994(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li><li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>融资</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a class="menu jianjieBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu rongzixiangmuBtn">
+	                    <i class="iconfont icon-xiangmu"></i>
+	            	           融资项目
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zixunBtn">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu lianxiUs" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-lianxiwomen"></i>
+	            	           联系我们
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	        </div>
+	        <!--商会详情1-->
+	        <div class="box shangHuiDetail">
+	        	<img class="ad" src="img/fake/1510102982.jpg" />
+		        <ul class="tab tab2">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>会员数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>商会秀</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a  class="menu jianjieBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu tongZhiBtn" >
+	                    <i class="iconfont icon-tongzhi"></i>
+	            	           通知
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zixunBtn">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu shanghuixiuBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuixiu"></i>
+	            	           商会秀
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu applyBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-ruhuishenqing"></i>
+	            	           入会申请
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu lianxiUs" >
+	                    <i class="iconfont icon-shanghuitong-lianxiwomen"></i>
+	            	           联系我们
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            <button class="quitBtn"><i class="iconfont icon-tuichu"></i>退出商会</button>
+	        </div>
+		    <!--部门详情2-->
+		    <div class="box bumenDetail">
+	        	<img class="ad" src="img/fake/1510103301.jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>招商秀</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a  class="menu jianjieBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zhengceBtn" >
+	                    <i class="iconfont icon-zhengce"></i>
+	            	           政策
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            <a class="menu zixunBtn">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu shanghuixiuBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuixiu"></i>
+	            	           商会秀
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            <a class="menu guideBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhinan"></i>
+	            	           指南
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu shangbaoBtn " >
+	                    <i class="iconfont icon-shujushangbao"></i>
+	            	           上报
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu downLoadBtn" >
+	                    <i class="iconfont icon-xiazai1"></i>
+	            	           下载
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu lianxiUs" >
+	                    <i class="iconfont icon-shanghuitong-lianxiwomen"></i>
+	            	           联系我们
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu" style="margin-bottom: 0.3rem;">
+	                    <i class="iconfont icon-banshichu"></i>
+	            	           办事入口
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	        </div>
+		    <!--机构详情3-->
+		    <div class="box jigouDetail">
+	        	<img class="ad" src="img/fake/1510103326(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>放贷信息</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a   class="menu jianjieBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu fangdaiBtn" >
+	                    <i class="iconfont icon-daikuanbaoxian"></i>
+	            	           放贷信息
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            <a class="menu zixunBtn">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            
+	            <a class="menu guideBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhinan"></i>
+	            	          办事 指南
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu shangbaoBtn" >
+	                    <i class="iconfont icon-shujushangbao"></i>
+	            	           上报
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu downLoadBtn" >
+	                    <i class="iconfont icon-xiazai1"></i>
+	            	           下载
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            <a class="menu" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-xinyongqia"></i>
+	            	           办理信用卡
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu" style="margin-bottom: 0.3rem;">
+	                    <i class="iconfont icon-gerenxinyong"></i>
+	            	           个人信用贷
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	        </div>
+		    <!--招商宝-商机-工业区、镇4-->
+		    <div class="box shangjiDetail">
+	        	<img class="ad" src="img/fake/1510102994(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>招商秀</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a  class="menu jianjieBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zhengceBtn" >
+	                    <i class="iconfont icon-zhengce"></i>
+	            	           政策
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	           
+	            <a class="menu shanghuixiuBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhaoshangxiu"></i>
+	            	           商会秀
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            <a class="menu guideBtn" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhinan"></i>
+	            	           指南
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu shangbaoBtn" >
+	                    <i class="iconfont icon-shujushangbao"></i>
+	            	           上报
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu downLoadBtn" >
+	                    <i class="iconfont icon-xiazai1"></i>
+	            	           下载
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a  class="menu lianxiUs" style="margin-bottom: 0.3rem;">
+	                    <i class="iconfont icon-shanghuitong-lianxiwomen"></i>
+	            	           联系我们
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            
+	        </div>
+    		 <!--商会管理5-->
+		    <div class="box shangHuiManage">
+	        	<img class="ad" src="img/fake/1510103320(1).jpg" />
+		        <ul class="tab tab2">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>会员数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>商会秀</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a  class="menu jianjieManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu tongzhifbManage" >
+	                    <i class="iconfont icon-tongzhi"></i>
+	            	           通知发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zixunfabuManage">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu xiangmufabBtn" >
+	                    <i class="iconfont icon-shanghuixiu"></i>
+	            	           项目发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu vipManageBtn" >
+	                    <i class="iconfont icon-ruhuishenqing"></i>
+	            	           会员管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+
+	        </div>
+		    <!--企业管理6-->
+		    <div class="box qiyeManage">
+	        	<img class="ad" src="img/fake/1510103313(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>融资</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a  class="menu jianjieManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu xiangmufabBtn" >
+	                    <i class="iconfont icon-xiangmu"></i>
+	            	           项目管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            <a class="menu zixunfabuManage">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            
+	        </div>
+		    <!--机构管理7-->
+		    <div class="box qiyeManage">
+	        	<img class="ad" src="img/fake/1510103313(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>融资</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a class="menu jianjieManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            <a href="introduction.html?a=6&b=shangHuiTong"  class="menu" >
+	                    <i class="iconfont icon-daikuanbaoxian"></i>
+	            	           放贷发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a class="menu zixunfabuManage">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu zhinanshangcManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhinan"></i>
+	            	           指南上传
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu shangbaoManage" >
+	                    <i class="iconfont icon-shujushangbao"></i>
+	            	           上报管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu xzscManage" >
+	                    <i class="iconfont icon-xiazai1"></i>
+	            	           下载上传
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	            <a href="introduction.html?a=6&b=shangHuiTong"  class="menu" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-xinyongqia"></i>
+	            	           信用卡链接
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a href="introduction.html?a=6&b=shangHuiTong"  class="menu" >
+	                    <i class="iconfont icon-gerenxinyong"></i>
+	            	           个人信用贷链接
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	           
+	            
+	            
+	            
+	        </div>
+		    <!--部门管理8-->
+		    <div class="box qiyeManage">
+	        	<img class="ad" src="img/fake/1510103313(1).jpg" />
+		        <ul class="tab tab1">
+		        	<li>
+		        		<a>
+		        			<span>4,635</span>
+		        			<span>粉丝数</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>11</span>
+		        			<span>融资</span>
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a>
+		        			<span>3.6万</span>
+		        			<span>浏览量</span>
+		        		</a>
+		        	</li>
+		        </ul>
+		        
+		        <a class="menu jianjieManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-shanghuitong-jianjie"></i>
+	            	           简介管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu zhengceManage" >
+	                    <i class="iconfont icon-zhengce"></i>
+	            	           政策
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            
+	             <a class="menu zixunfabuManage">
+	                    <i class="iconfont icon-shanghuitong-zixun"></i>
+	            	           资讯发布
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu zhaoshangxiuManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhaoshangxiu"></i>
+	            	           招商秀管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu zhinanshangcManage" style="margin-top: 0.15rem;">
+	                    <i class="iconfont icon-zhinan"></i>
+	            	           指南上传
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	            <a   class="menu shangbaoManage" >
+	                    <i class="iconfont icon-shujushangbao"></i>
+	            	           上报管理
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	            <a   class="menu xzscManage" >
+	                    <i class="iconfont icon-xiazai1"></i>
+	            	           下载上传
+	            	    <i class="iconfont icon-xiangyou xiangyou"></i>
+	            </a>
+	           
+	           
+	            
+	            
+	        </div>
+		</div>
+	    <script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+
+			$(".applyBtn").click(function(){
+				window.location.href="apply.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			$(".tongZhiBtn").click(function(){
+				var parameter3="tongzhi"
+				
+				window.location.href="tongZhi.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			$(".zixunBtn").click(function(){
+				window.location.href="infoList.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			
+			
+			
+			
+			
+			$(".rongzixiangmuBtn").click(function(){
+				var parameter3="rongzixiangmuBtn"
+				window.location.href="infoList.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			
+			$(".fangdaiBtn").click(function(){
+				var parameter3="fangdaiBtn"
+				window.location.href="infoList.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			
+			
+			
+			
+			$(".jianjieBtn").click(function(){
+			    window.location.href="introduction.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			$(".shanghuixiuBtn").click(function(){
+				var parameter3="shanghuixiu"
+				 window.location.href="infoList.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			$(".zhengceBtn").click(function(){
+				var parameter3="zhengce"
+				window.location.href="tongZhi.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			$(".shangbaoBtn").click(function(){
+				var parameter3="shangbao"
+				window.location.href="report.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			$(".guideBtn").click(function(){
+				
+				window.location.href="guideView.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			$(".downLoadBtn").click(function(){
+				window.location.href="downloadFile.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			
+			$(".zhengceManage").click(function(){
+				var parameter3="zhengceManage";
+				window.location.href="infoListManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+			})
+			$(".zixunfabuManage").click(function(){
+				var parameter3="zixunfabuManage";
+				window.location.href="infoListManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+			})
+			
+			$(".jianjieManage").click(function(){
+				window.location.href="editIntroduction.html?parameter1="+parameter1;
+			})
+			$(".zhaoshangxiuManage").click(function(){
+				var parameter3="zhaoshangxiuManage";
+				window.location.href="infoListManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+			})
+			$(".xiangmufabBtn").click(function(){
+				var parameter3="xiangmufabBtn";
+				window.location.href="infoListManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+			})
+			$(".zhinanshangcManage").click(function(){
+				var parameter3="zhinanshangcManage";
+				window.location.href="guideManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+			})
+			$(".shangbaoManage").click(function(){
+				window.location.href="reportView.html?parameter1="+parameter1
+			})
+			
+			$(".xzscManage").click(function(){
+				window.location.href="uploadFile.html?parameter1="+parameter1
+			})
+			$('.tongzhifbManage').click(function(){
+				window.location.href="tongZhiManage.html?parameter1="+parameter1
+			})
+			
+			$(".vipManageBtn").click(function(){
+				window.location.href="vipManage.html?parameter1="+parameter1
+			})
+			
+			if(parameter1==0||parameter1==1||parameter1==6){
+				$(".header-title").html("商会详情")
+				$(".box").eq(1).show()	
+				
+			}else if(parameter1==2){
+				$(".header-title").html("企业详情")
+				$(".box").eq(0).show()	
+			}else if(parameter1==3){
+				$(".header-title").html("部门详情")
+				$(".box").eq(2).show()	
+			}else if(parameter1==4){
+				$(".header-title").html("机构详情")
+				$(".box").eq(3).show()	
+			}
+			else if(parameter1==5){
+				$(".header-title").html("部门详情")
+				$(".box").eq(4).show()	
+			}else if(parameter1==7){
+				$(".header-title").html("商会管理")
+				$(".box").eq(5).show()	
+				$(".searchBtn").hide()
+			}else if(parameter1==8){
+				$(".header-title").html("企业管理")
+				$(".box").eq(6).show()	
+				$(".searchBtn").hide()
+			}else if(parameter1==9){
+				$(".header-title").html("机构管理")
+				$(".box").eq(7).show()
+				$(".searchBtn").hide()
+			}else if(parameter1==10){
+				$(".header-title").html("部门管理")
+				$(".box").eq(8).show()	
+				$(".searchBtn").hide()
+			}
+			
+			
+			
+			
+			$(".turnBtn").click(function(){
+				if(parameter2=="shangHuiTong"){
+					
+					window.location.href="shangHuiTong.html?parameter1="+parameter1;
+					return
+				}else if(parameter2=="zhaoShangBao"){
+					if(parameter1==5){
+						window.location.href="zhaoShangBao.html?parameter1="+0;
+					}else{
+						window.location.href="zhaoShangBao.html?parameter1="+parameter1;
+					}
+					
+					return
+				}else if(parameter2=="rongZiYi"){
+//					if(parameter1==0||parameter1==1){
+						window.location.href="rongZiYi.html?parameter1="+parameter1;
+//					}
+					return
+				}else if(parameter2=="message"){
+					window.location.href="message.html?parameter1="+parameter1;
+					return
+				}else if(parameter1==10||parameter1==8||parameter1==9||parameter1==7){
+					window.location.href="wd.html";
+					return
+				}else if(parameter1==6){
+					window.location.href="index.html";
+					return
+				}else{
+					window.history.go(-1);
+				}
+				
+			})
+			
+			$(".lianxiUs").click(function(){
+				layer.open({
+				    content: '0591-888888？'
+				    ,btn: ['联系我们', '取消']
+				    ,yes: function(index){
+				      location.reload();
+				      layer.close(index);
+			        }
+			    })
+			})
+
+
+
+			
+//			企业详情/商会详情 右上角关注按钮操作
+			var a=0;
+			$(".jiaguanzhu").click(function(){
+				if(a==0){
+					a=1;
+					$(".jiaguanzhu").removeClass("icon-jiaguanzhu")
+					$(".jiaguanzhu").addClass("icon-yiguanzhu")
+					layerTip("关注成功")
+				}else{
+					a=0;
+					$(".jiaguanzhu").removeClass("icon-yiguanzhu")
+					$(".jiaguanzhu").addClass("icon-jiaguanzhu")
+					layerTip("已取消关注")
+				}
+				
+			})
+			
+			
+			$('.quitBtn').click(function(){
+				layer.open({
+				    content: '确定退出商会？'
+				    ,btn: ['心意已决', '容我三思']
+				    ,yes: function(index){
+				      location.reload();
+				      layer.close(index);
+			        }
+			})
+			})
+			
+			
+		</script>
+	</body>
+</html>

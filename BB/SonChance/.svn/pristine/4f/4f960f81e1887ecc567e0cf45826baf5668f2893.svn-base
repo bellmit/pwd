@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homelistitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="18dp"
+    android:paddingTop="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_toEndOf="@+id/homelist_image"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/home_listitem_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:maxLines="1"
+            android:text="秘制香煎龙利鱼套餐"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_listitem_title_tv"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/home_listitem_discount_tv"
+                android:layout_width="46dp"
+                android:layout_height="12dp"
+                android:background="@drawable/circle25_rededge_style"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginRight="10dp"
+                android:text="买送"
+                android:textColor="@color/text_red"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/home_listitem_soldnum_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/home_listitem_discount_tv"
+                android:layout_toRightOf="@+id/home_listitem_discount_tv"
+                android:textSize="11sp"
+                android:text="已售302单" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/order_dish_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text="￥32"
+            android:textColor="@color/text_red"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/order_dish__addshoppingcart_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linearLayout1"
+            android:paddingBottom="8dp"
+            android:paddingRight="18dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/order_dish_addshoppingcart_iv"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/shoppingcart_add" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/num_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linearLayout1"
+            android:gravity="right|center_vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/remove_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="18dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/remove_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shoppingcart_remove" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/num_tv"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1" />
+
+            <LinearLayout
+                android:id="@+id/add_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/add_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shoppingcart_add" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/home_listitem_price_underline"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:layout_below="@+id/order_dish_price_tv"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="18dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:id="@+id/home_listitem_evaluate_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_listitem_price_underline"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/home_listitem_goodevaluatenum_tv"
+                style="@style/layout_wm_style"
+                android:gravity="center_vertical"
+                android:text="综合评价：4.8"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/home_listitem_badevaluatenum_tv"
+                style="@style/layout_wm_style"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="好评率：98%"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/home_listitem_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_listitem_evaluate_ll"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:text="182****3423：味道不错，商家的态度好！包装的很不错哦！！食材新鲜味道不错，试试吧"
+            android:textSize="12sp" />
+
+
+        <!--<LinearLayout
+            android:id="@+id/home_listitem_introduce_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_listitem_evaluate_ll"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/home_listitem_content_tv"
+                android:layout_width="187.5dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="182****3423：味道不错，商家的态度好！包装的很不错哦！！食材新鲜味道不错，试试吧"
+                android:textSize="12sp" />-->
+
+        <!-- <TextView
+             android:id="@+id/home_listitem_contentscore_integer_tv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:maxLines="1"
+             android:text="8"
+             android:textColor="@color/green"
+             android:textSize="12.15sp" />-->
+
+        <!--<TextView
+            android:id="@+id/home_listitem_contentscore_decimal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:maxLines="1"
+            android:text=".4"
+            android:visibility="gone"
+            android:textColor="@color/green"
+            android:textSize="9.1sp" />-->
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/homelist_image"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/line_gray" />
+
+    <com.tastebychance.sonchance.view.NumImageView
+        android:id="@+id/homelist_image"
+        android:layout_width="120dp"
+        android:layout_height="124dp"
+        android:src="@drawable/homelistimage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

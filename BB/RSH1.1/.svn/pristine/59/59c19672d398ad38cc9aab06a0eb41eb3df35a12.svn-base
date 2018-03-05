@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_zjmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.zjmanager.ZJManagerActivity"
+    tools:showIn="@layout/activity_mine_zjmanager">
+
+    <ImageView
+        android:id="@+id/activity_mine_manager_head_iv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pic1"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_mine_manager_head_iv"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_18">
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_fsnum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fsnum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fs_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="粉丝数"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_shxnum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fangdaiinfonum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fangdaiinfo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="放贷信息"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_llnum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_llshownum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_llnum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="浏览量"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relativelalyout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_jj_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_jianjie_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_zcfb_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_zhengcefabu_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_zsx_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_zhaoshangxiu_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_zxfb_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_zixunfabu_iv" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativelalyout1"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dp_8">
+
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_znsc_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_zhinanshangchuan_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_xzsc_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_xiazaishangchuan_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_sbgl_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/mine_zjmanager_shangbaoguanli_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_yjzq_iv"
+            style="@style/manager_entrance_equalization_style"
+            android:background="@drawable/yijianzhengqiu" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

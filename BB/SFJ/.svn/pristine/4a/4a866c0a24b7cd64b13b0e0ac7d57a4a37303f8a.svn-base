@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tastebychance.sfj.apply.ExamineStatusActivity">
+
+    <include layout="@layout/head_includestatusbar" />
+
+    <LinearLayout style="@style/activity_examine_status_item_ll_style">
+
+        <TextView
+            style="@style/activity_examine_status_item_ll_key_style"
+            android:text="请假信息"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_15" />
+
+
+        <TextView
+            android:id="@+id/activity_examine_status_status_tv"
+            style="@style/activity_examine_status_item_ll_value_style"
+            android:text="被驳回"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <include layout="@layout/line_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="@dimen/dp_34">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="请假类型" />
+
+
+                <TextView
+                    android:id="@+id/activity_examine_status_leavetype_tv"
+                    style="@style/activity_examine_status_item_ll_value_style"
+                    android:text="事假" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal_margin20_matchparent" />
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="@dimen/dp_34">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="申请时间" />
+
+
+                <TextView
+                    android:id="@+id/activity_examine_status_applydate_tv"
+                    style="@style/activity_examine_status_item_ll_value_style"
+                    android:text="2017年8月28日" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal_margin20_matchparent" />
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="@dimen/dp_34">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="请假天数" />
+
+
+                <TextView
+                    android:id="@+id/activity_examine_status_applydays_tv"
+                    style="@style/activity_examine_status_item_ll_value_style"
+                    android:text="1天" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal_margin20_matchparent" />
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="@dimen/dp_34">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="起止日期" />
+
+
+                <TextView
+                    android:id="@+id/activity_examine_status_applyfromdate_todate_tv"
+                    style="@style/activity_examine_status_item_ll_value_style"
+                    android:text="2017年9月1日至2017年9月1日" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal_margin20_matchparent" />
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_28"
+                android:paddingTop="@dimen/dp_10">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="请假事由\n及去处" />
+
+
+                <TextView
+                    android:id="@+id/activity_examine_status_reason_tv"
+                    style="@style/activity_examine_status_item_ll_value_style"
+                    android:text="办理女儿的转学手续以及帮忙整理新宿舍，福清市第一中学" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:background="@drawable/circle5_grayedge_lightgraybg_style" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:background="@color/bg_gray" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="@drawable/circle5_grayedge_lightgraybg_style" />
+
+            <LinearLayout
+                style="@style/activity_examine_status_item_ll_style"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_24">
+
+                <TextView
+                    style="@style/activity_examine_status_item_ll_key_style"
+                    android:text="处理流程"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_15" />
+
+
+                <TextView style="@style/activity_examine_status_item_ll_value_style" />
+
+            </LinearLayout>
+
+            <name.quanke.app.libs.emptylayout.EmptyLayout
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.tastebychance.sfj.view.MyListView
+                    android:id="@+id/mlv"
+                    android:divider="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </name.quanke.app.libs.emptylayout.EmptyLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

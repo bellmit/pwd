@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">科技局</string>
+    <string name="title_activity_personal">个人中心</string>
+    <string name="title_activity_news">消息</string>
+    <string name="title_activity_et_directory">企业名录</string>
+    <string name="title_activity_technology_trends">科技动态</string>
+    <string name="title_activity_show_web">展示Web界面</string>
+    <string name="title_activity_login">登录界面</string>
+    <string name="title_activity_technology_bureau">科技局</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_change_pwd">修改密码</string>
+</resources>

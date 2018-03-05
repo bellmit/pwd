@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home_head_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <ImageView
+        android:id="@+id/home_speechsearch"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right"
+        android:src="@drawable/home_speechsearch"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/home_search_edt" />
+
+    <com.tastebychance.sonchance.view.PengTextView
+        android:id="@+id/home_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        peng:peng_drawableLeft="@drawable/home_locate"
+        android:gravity="center_vertical"
+        android:text=" 福州"
+        peng:peng_drawableLeftHeight="10dp"
+        peng:peng_drawableLeftWidth="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/home_search_edt"
+        android:layout_width="264dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:background="@drawable/circle5_whitebg_style"
+        android:drawableRight="@drawable/home_search"
+        android:focusable="false"
+        android:textSize="12sp"
+        android:hint="输入搜索菜品"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

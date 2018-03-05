@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>申请入会</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<link rel="stylesheet" href="css/apply.css" />
+		<style>
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+		<!--该页面包含申请入会的三个模块：填写资料、企业概况信息、个人及企业简介-->
+		
+		
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>申请入会<a class="searchBtn">下一步</a>
+		</header>
+		<div id="all">
+	        <ul class="tab">
+	        	<li>
+	        		填写资料
+	        	</li>
+	        	<li>
+	        		企业概况信息
+	        	</li>
+	        	<li>
+	        		个人及企业简介
+	        	</li>
+	        </ul>
+	        <p class="notice">（注意：以下均为必填项，若无则填“无”）</p>
+            <!--填写资料-->
+            <div class="con con_txzl">
+            	<p >
+            		姓名<input type="text" style="width:2.5rem;" />
+            	</p>
+            	<p >
+            		性别<i class="iconfont icon-yuandianweixuanzhong radioBtn"></i>男<i class="iconfont icon-yuandianweixuanzhong radioBtn"></i>女
+            	</p>
+            	<p >
+            		出生年月<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		籍贯<input type="text" style="width:2.5rem;" />
+            	</p>
+            	<p >
+            		党员<input type="text" style="width:2.5rem;" />
+            	</p>
+            	<p >
+            		民族<input type="text" style="width:2.5rem;" />
+            	</p>
+            	<p >
+            		健康状况<input type="text"  style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		文化程度<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		申请商会职务<input type="text" style="width:2rem;" />
+            	</p>
+            	<p >
+            		毕业院校及专业<input type="text" style="width:1.9rem;" />
+            	</p>
+            	<p>
+            		通讯地址<textarea placeholder="（国家+省+街道+详细地址）" style="width:2.4rem;"></textarea>
+            	</p>
+            	<p >
+            		联系电话<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		现任社会职务<input type="text" style="width:2rem;" />
+            	</p>
+            	<div class="list" style="margin-bottom: 0.2rem;">
+	       	        <!--图片上传成功 input内显示“已上传”-->
+			       	<div class="photoBtn">
+		        	    <i class="iconfont icon1 icon-zhaoxiang"></i>
+		        	    <input class="photo" type="file" />
+			        </div>
+	               <span>使用者名片</span><input class="useCard" type="text" placeholder="未上传" disabled="disabled" style="float: right;"  />
+	            </div>
+            </div>
+            <!--企业概况信息-->
+            <div class="con con_qygk">
+            	<p >
+            		企业名称<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		企业性质<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		法人代表<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		法人姓名<input type="text" style="width:2.3rem;" />
+            	</p>
+            	<p >
+            		法人代码<input type="text" style="width:2.3rem;" />
+            	</p>
+            	
+            	<p >
+            		企业资产（固定）<input type="text" style="width:1.9rem;" />
+            	</p>
+            	<p >
+            		企业资产（流动）<input type="text" style="width:1.9rem;" />
+            	</p>
+            	<p >
+            		企业注册资金<input type="text" style="width:2rem;" />
+            	</p>
+            	<p >
+            		企业员工总数<input type="text" style="width:2rem;" />
+            	</p>
+            	<p >
+            		企业年产值或营业收入<input type="text" style="width:1.6rem;" />
+            	</p>
+            	<p >
+            		企业纳税额<input type="text" style="width:2.1rem;" />
+            	</p>
+            	<p style="margin-bottom: 0.2rem;">
+            		经营范围<textarea  style="width:2.4rem;"></textarea>
+            	</p>
+            	
+            	
+            	
+            </div>
+            <!--个人及企业简介-->
+            <div class="con con_grjqyjj">
+            	<p>个人简介</p>
+            	<textarea></textarea>
+            	<p>企业简介</p>
+            	<textarea></textarea>
+            	<p style="font-size: 0.1rem;color: gray;text-align: center;margin: 0.1rem;"><i class="iconfont icon-queren queren" style="vertical-align: -0.01rem;"></i>我已阅读并同意<a class="ruhuixuzhiBtn" style="font-size:0.1rem;text-decoration:underline;">《入会须知》</a></p>
+            </div>
+            
+		</div>
+		
+	
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+			
+			if(parameter3==undefined){
+				$(".tab li").eq(0).css("visibility","visible")
+			    $(".con").eq(0).css("display","block")
+			  
+				
+			}else{
+				$(".tab li").eq(parameter3).css("visibility","visible")
+			    $(".con").eq(parameter3).css("display","block")
+			      $(".searchBtn").html("提交")
+			}
+			
+			$(".ruhuixuzhiBtn").click(function(){
+				window.location.href="applyNotice.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			$(".searchBtn").click(function(){
+				if($(".searchBtn").html()=="下一步"){
+					for(var i=0;i<$(".tab li").length;i++){
+						if($(".tab li").eq(i).css("visibility")=="visible"){
+							if(i<2){
+								
+								$(".tab li").css("visibility","hidden")
+					            $(".tab li").eq(i+1).css("visibility","visible")
+					            $(".con").css("display","none")
+					            $(".con").eq(i+1).css("display","block")
+							    if(i==1){
+									$(".searchBtn").html("提交")
+								}
+							    return
+							}
+							
+						}
+						
+					}
+				}else{
+					
+					window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+				}
+				
+				
+					
+			})
+			
+			$(".turnBtn").click(function(){
+				
+				for(var i=0;i<$(".tab li").length;i++){
+					if($(".tab li").eq(i).css("visibility")=="visible"){
+						if(i>0){
+							
+							$(".tab li").css("visibility","hidden")
+				            $(".tab li").eq(i-1).css("visibility","visible")
+				            $(".con").css("display","none")
+				            $(".con").eq(i-1).css("display","block")
+				            $(".searchBtn").html("下一步")
+						}else{
+							window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+						}
+						
+					}
+				}
+				
+			})
+			
+			$(".radioBtn").eq(0).addClass("icon-yuandianxuanzhong")
+			$(".radioBtn").click(function(){
+				$(".radioBtn").addClass("icon-yuandianweixuanzhong")
+				$(".radioBtn").removeClass("icon-yuandianxuanzhong")
+				
+				$(this).addClass("icon-yuandianxuanzhong")
+			})
+			
+			
+			var a=0
+			$(".queren").click(function(){
+				if(a==0){
+					a=1;
+					$(".queren").css("color","#1D4894")
+				}else{
+					a=0;
+					$(".queren").css("color","")
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:text="确定"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/dp_8"
+        android:id="@+id/popupwindow_item_leavetype_confirm_tv"/>
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_shijia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="事假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_bingjia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="病假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_nianxiujia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="年休假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_shangjia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="丧假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_hunjia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="婚假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_chanjia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="产假" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_leavetype_tanqinjia_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="探亲假" />
+
+
+</LinearLayout>

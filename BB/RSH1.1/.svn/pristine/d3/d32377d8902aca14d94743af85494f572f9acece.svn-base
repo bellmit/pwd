@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullToRefreshRelativeLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/yjzq_input_ll">
+
+        <include layout="@layout/pullable_refreshhead" />
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullableScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/pullablescrollview"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/yjzq_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_18"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_20" />
+
+
+                <ImageView
+                    android:id="@+id/yjzq_dw_logo_iv"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@+id/yjzq_title_tv"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/yjzq_dw_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/yjzq_dw_logo_iv"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/yjzq_dw_logo_iv"
+                    android:layout_toStartOf="@+id/yjzq_dw_guanzhu_tv"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/yjzq_dw_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/yjzq_dw_logo_iv"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/yjzq_dw_logo_iv"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/yjzq_dw_guanzhu_tv"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/yjzq_dw_logo_iv"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/circle25_bluebg_style"
+                    android:padding="@dimen/dp_4"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/yjzq_dw_content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yjzq_dw_logo_iv"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:textSize="@dimen/sp_15" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0.1"
+                    android:layout_below="@+id/yjzq_dw_content_tv"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/yjzq_hf_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textSize="@dimen/sp_15"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableLeft="@drawable/box_shujufuqing"
+                    android:text="回复" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0.1"
+                    android:layout_below="@+id/yjzq_hf_title_tv"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/lightgray" />
+
+                <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                    android:id="@+id/mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/view2"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:divider="@null">
+
+                </rongshanghui.tastebychance.com.rongshanghui.view.MyListView>
+
+            </RelativeLayout>
+        </rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullableScrollView>
+
+        <include layout="@layout/pullable_loadmore" />
+    </rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullToRefreshRelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/yjzq_input_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle_grayedge_style"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/yjzq_input_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_9"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_weight="1"
+            android:background="@drawable/circle5_grayedge_lightgraybg_style"
+            android:hint="请输入您的意见"
+            android:maxLines="3"
+            android:padding="@dimen/dp_10"
+            android:textColorHint="#d5d5d5" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/yjzq_input_send_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/dp_9"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_9"
+                android:background="@drawable/circle5_bluebg_style"
+                android:gravity="center"
+                android:minHeight="44dp"
+                android:layout_alignParentBottom="true"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

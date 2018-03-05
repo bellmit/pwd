@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_type"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.register.RegisterEntranceTypeActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/head_login_includestatusbar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="请选择您需要注册的注册类型"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="（以便您获取更精准的全球融商资讯）"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/registertype_sh_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="商会注册" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/REGISTERENTRANCETYPE_JG_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="机构注册" />
+
+    <View
+        android:id="@+id/view3"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/registertype_qy_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="企业注册" />
+
+    <View
+        android:id="@+id/view4"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/REGISTERENTRANCETYPE_BMZJ_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="部门/镇街" />
+
+    <View
+        android:id="@+id/view5"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/registertype_yy_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="医院注册" />
+
+    <View
+        android:id="@+id/view6"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/registertype_xx_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="学校注册" />
+
+    <View
+        android:id="@+id/view7"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/registertype_qt_tv"
+        style="@style/register_entrancetype_type_style"
+        android:layout_gravity="center_horizontal"
+        android:text="其他注册" />
+
+    <View
+        android:id="@+id/view8"
+        style="@style/register_entrancetype_typeunderline_style"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

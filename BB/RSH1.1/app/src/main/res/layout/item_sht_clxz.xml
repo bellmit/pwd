@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homelistitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/item_sht_clxz_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="@dimen/dp_18"
+        android:background="@drawable/sht_department_zc_itembg"
+        android:paddingBottom="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/item_sht_clxz_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="41dp"
+            android:text="关于提交专利申请的若干说明" />
+
+        <TextView
+            android:id="@+id/item_sht_clxz_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_below="@+id/item_sht_clxz_title_tv"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_10"
+            android:text="2017-10-31 21:01:32" />
+
+        <TextView
+            android:id="@+id/item_sht_clxz_progressvalue_tv"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/item_sht_clxz_title_tv"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="13dp"
+            android:text="下载中0%"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_10"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/item_sht_clxz_progress"
+        android:layout_below="@+id/item_sht_clxz_rl"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/item_sht_clxz_rl"
+        android:layout_alignStart="@+id/item_sht_clxz_rl"
+        android:layout_height="@dimen/dp_3" />
+</RelativeLayout>

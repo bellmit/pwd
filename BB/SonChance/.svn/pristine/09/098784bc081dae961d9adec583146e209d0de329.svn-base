@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="CateringService"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/layout_30w_30h_style"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/home_cateringservice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配餐服务"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="OpinionFeedback"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/layout_30w_30h_style"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/home_msg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="HealthyLife"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/layout_30w_30h_style"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/home_healthylife" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健康生活"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="MyOrder"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/layout_30w_30h_style"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/home_shop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的订单"
+            android:textSize="9sp" />
+    </LinearLayout>
+</LinearLayout>

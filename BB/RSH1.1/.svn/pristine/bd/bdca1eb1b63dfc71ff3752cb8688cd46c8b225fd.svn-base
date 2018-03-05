@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_bmmanager_jj"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.managercommon.jjedt.ManagerJJActivity"
+    tools:showIn="@layout/activity_bmmanager_jj">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="40dp">
+
+
+            <RelativeLayout
+                android:id="@+id/relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/font_blue">
+
+                <ImageView
+                    android:id="@+id/mine_manager_jj_uploadpicbg_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:background="@color/font_blue" />
+
+                <ImageView
+                    android:id="@+id/mine_manager_jj_uploadpic_iv"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="73dp"
+                    android:src="@drawable/manager_jjedt_icon" />
+
+                <TextView
+                    android:id="@+id/mine_manager_jj_uploadpic_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mine_manager_jj_uploadpic_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="点击上传图片"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativelayout1"
+                style="@style/jjedt_item_rl_style"
+                android:layout_below="@+id/relativelayout">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="名称"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/mine_manager_jj_username_tv"
+                    style="@style/manager_jjedt_edt_style"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_toEndOf="@+id/textView7"
+                    android:hint="30个字符内"
+                    android:maxLength="30"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_4"
+                    android:gravity="center_vertical"
+                    android:layout_toStartOf="@+id/mine_manager_jj_username_edt_tv" />
+
+                <TextView
+                    android:id="@+id/mine_manager_jj_username_edt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_21"
+                    android:text="编辑" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/relativelalyout1"
+                style="@style/jjedt_item_ll_style"
+                android:layout_below="@+id/relativelayout1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="地址" />
+
+                <EditText
+                    android:id="@+id/mine_manager_jj_ascription_edt"
+                    style="@style/manager_jjedt_edt_style" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                style="@style/jjedt_item_ll_style"
+                android:layout_below="@+id/relativelalyout1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="电话" />
+
+                <TextView
+                    android:id="@+id/mine_manager_jj_phoneno_tv"
+                    style="@style/manager_jjedt_edt_style"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:inputType="phone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                style="@style/jjedt_item_ll_style"
+                android:layout_below="@+id/linearLayout3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="邮箱" />
+
+                <EditText
+                    android:id="@+id/mine_manager_jj_email_edt"
+                    style="@style/manager_jjedt_edt_style"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                style="@style/jjedt_item_ll_style"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout4"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="领导介绍" />
+
+                <LinearLayout
+                    android:id="@+id/mine_manager_jj_leaderinfo_ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_13">
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch1_edt"
+                        style="@style/manager_jjedt_zhicheng_edt_style" />
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch1_name_edt"
+                        style="@style/manager_jjedt_name_edt_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_manager_jj_leaderinfo_ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3">
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch2_edt"
+                        style="@style/manager_jjedt_zhicheng_edt_style" />
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch2_name_edt"
+                        style="@style/manager_jjedt_name_edt_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_manager_jj_leaderinfo_ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3">
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch3_edt"
+                        style="@style/manager_jjedt_zhicheng_edt_style" />
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch3_name_edt"
+                        style="@style/manager_jjedt_name_edt_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_manager_jj_leaderinfo_ll4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3">
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch4_edt"
+                        style="@style/manager_jjedt_zhicheng_edt_style" />
+
+                    <EditText
+                        android:id="@+id/mine_manager_jj_zhch4_name_edt"
+                        style="@style/manager_jjedt_name_edt_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:layout_below="@+id/linearLayout5"
+                android:background="@color/light_blue" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="@dimen/dp_13"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="简介" />
+
+                <EditText
+                    android:id="@+id/mine_manager_jj_jj_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="245dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:padding="@dimen/dp_10"
+                    android:background="@drawable/rectangle_grayedge_style"
+                    android:gravity="left|top" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadvideo_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/uploadvideo_pb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_8" />
+
+                <TextView
+                    android:id="@+id/uploadvideo_pb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_3"
+                    android:text="0%"
+                    android:textColor="@color/font_blue" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/jc_video_rl"
+                style="@style/jjedt_upload_rl_style">
+
+                <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                    android:id="@+id/jc_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/uploadvideo_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shipingshangchuan"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jc_video_rl"
+                android:layout_marginStart="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="注：\n1.视频大小不能超过50M（约15秒）\n2.视频支持上传格式：mp4"
+                android:textSize="@dimen/sp_14"
+                android:id="@+id/textView16" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

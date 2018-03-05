@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>简介编辑</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+
+		<style>
+			body{
+				background: #DEE7F2;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+			#preview4{
+				
+				width: 100%;
+				height: 1.5rem;
+				background: #EBF0F7;
+				position: relative;
+				
+			}
+			.zhaoxiang{
+				font-size: 0.6rem;
+				color: gray;
+				position: absolute;
+				left: 50%;
+				margin-left: -0.3rem;
+				top: 50%;
+				margin-top: -0.3rem;
+			}
+			.info{
+				width: 100%;
+				background: white;
+				margin: 0.08rem 0;
+				padding: 0.08rem 0;
+			}
+			.info p{
+				color: #545454;
+				width: 3rem;
+				margin: 0 auto;
+				padding: 0.05rem 0;
+				overflow: hidden;
+				
+			}
+			.info p:nth-child(1){
+				font-size: 0.16rem;
+			}
+			.info p:nth-child(2),.info p:nth-child(3),.info p:nth-child(4){
+				font-size: 0.1rem;
+			}
+			.info p i{
+				font-size: 0.18rem;
+				color: #545454;
+				margin-right: 0.05rem;
+				vertical-align: -0.01rem;
+			}
+			.info p input{
+				font-size: 0.12rem;
+			}
+			.bianji{
+				float: right !important;
+				color: #1D4894 !important;
+				font-size: 0.24rem !important;
+				margin-right: 0 !important;
+			}
+            .detail{
+            	width: 100%;
+            	background: white;
+            	padding: 0.2rem 0;
+            	
+            }
+            .detail p{
+            	width: 3rem;
+            	margin: 0 auto;
+            	font-size: 0.1rem;
+				color: #545454;
+            }
+            .detail p .zhengce{
+            	font-size: 0.18rem;
+            	margin-right: 0.1rem;
+            }
+            .detail textarea{
+            	display: block;
+            	margin: 0.1rem auto;
+            	width: 2.8rem;
+            	padding: 0.1rem;
+            	background: #f0f0f0;
+            	height: 1.5rem;
+            	font-size: 0.12rem;
+            	
+            }
+            #preview5{
+            	margin: 0.1rem auto;
+            	border: 0.01rem solid #C4C4C4;
+            	border-radius: 0.1rem;
+            	-webkit-border-radius: 0.1rem;
+            	-moz-border-radius: 0.1rem;
+            	position: relative;
+            	width: 2.6rem;
+            	height: 1.53rem;
+            }
+            .turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+			
+			.searchBtn:link {color: white}     /* 未访问的链接 */
+			.searchBtn:visited {color: white}  /* 已访问的链接 */
+			.searchBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.searchBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>简介<a class="searchBtn">保存</a>
+		</header>
+		
+		<div id="all">
+			<div id="preview4">
+	        	<i id="imghead4" class="iconfont icon-zhaoxiang zhaoxiang" onclick="$('#previewImg4').click();"></i>
+            </div>         
+            <input type="file" onchange="previewImage4(this)" style="display: none;" id="previewImg4">
+		    
+		    <div class="info">
+		    	<p>
+		    		<i class="iconfont icon-shanghui-jianjieguanli"></i>
+		    		<input type="text" placeholder="编辑名称.." />
+		    		<i class="iconfont icon-bianji bianji bianji2"></i>
+		    	</p>
+		    	<p>
+		    		<i class="iconfont icon-banshichu"></i>
+		    		<input type="text" placeholder="编辑地址.." />
+		    		<i class="iconfont icon-bianji bianji"></i>
+		    	</p>
+		    	<p>
+		    		<i class="iconfont icon-shanghuitong-lianxiwomen"></i>
+		    		<input type="text" placeholder="编辑电话.." />
+		    		<i class="iconfont icon-bianji bianji"></i>
+		    	</p>
+		    	<p>
+		    		<i class="iconfont icon-youxiang"></i>
+		    		<input type="text" placeholder="编辑邮箱.." />
+		    		<i class="iconfont icon-bianji bianji"></i>
+		    	</p>
+		    </div>
+		    
+		    <div class="detail">
+		    	<p><i class="iconfont icon-zhengce zhengce"></i>填写简介</p>
+		    	
+		    	<textarea placeholder="请输入内容.."></textarea>
+		    	<!--<div class="videoBox" >
+		    	<video id="video1">
+				    <source src="/example/html5/mov_bbb.mp4" type="video/mp4" />
+				    <source src="/example/html5/mov_bbb.ogg" type="video/ogg" />
+		    	</video>
+		    	<i  class="iconfont icon-bofang bofang"></i>
+		    	</div>-->
+		    	
+			    <div id="preview5">
+		        	<i id="imghead5" class="iconfont icon-zhaoxiang zhaoxiang" onclick="$('#previewImg5').click();"></i>
+	                <p style="width: 100%;text-align: center;padding: 0.1rem 0;">注意：视频大小仅限10M以内</p>
+			    </div>         
+	            <input type="file" onchange="previewImage5(this)" style="display: none;" id="previewImg5">
+		    </div>
+		</div>
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+	    <script type="text/javascript" src="js/uploadImg.js" ></script>
+		<script>
+			$(".bianji2").click(function(){
+				layer.open({
+				    content: '名称一个月只能修改一次'
+				    ,btn: ['确定', '取消']
+				    ,yes: function(index){
+				     
+				      layer.close(index);
+			        }
+			    })
+			})
+            $(".bianji").click(function(){
+            	$(this).prev("input").focus()
+            })
+//			$(".bofang").click(function(e){
+//				e.stopPropagation(); 
+//				$(".bofang").css("display","none")
+//			    $("video1").play() 
+//			    
+//			})
+//			$(".videoBox").click(function(){
+//				$(".bofang").css("display","block")
+//			    $("video1").pause()
+//			    
+//			})
+
+            var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+		
+			$(".turnBtn").click(function(){
+				
+				window.location.href="info.html?parameter1="+parameter1;
+			})
+			$(".searchBtn").click(function(){
+					layerTip("保存成功");
+				setTimeout("toInfo()", 1000);
+			})
+			function toInfo(){
+				window.location.href="info.html?parameter1="+parameter1;
+			}
+		</script>
+	</body>
+</html>

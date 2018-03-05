@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+<!--    <include
+        android:id="@+id/head"
+        layout="@layout/head" />-->
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/head_includestatusbar" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/head" />
+
+    <!-- <TextView
+         android:id="@+id/location_errInfo_text"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom|left"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="10dp"
+         android:background="@color/text_red"
+         android:text="TextView"
+         android:textColor="@color/gray"
+         android:visibility="gone" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/person_address_locate_iv"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/person_address_locateicon" />
+
+            <TextView
+                android:id="@+id/person_address_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:onClick="searchClick"
+                android:layout_weight="1"
+                android:text="福州金山科技企业孵化器"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/person_address_turnright_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:onClick="searchClick"
+                android:background="@drawable/person_turnright" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/person_address_confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/circle25_greenbg_style"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</RelativeLayout>

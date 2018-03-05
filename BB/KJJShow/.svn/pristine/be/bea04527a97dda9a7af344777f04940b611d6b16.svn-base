@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>注册（机构）</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<!--
+		4-1-1-2我的-登入 - 注册-信息填写(商会)
+		4-1-1-2我的-登入 - 注册-信息填写(机构)
+		4-1-1-2我的-登入 - 注册-信息填写(政府企业)
+		这三张设计图公用该html页面，不一样的地方做显示隐藏操作就可以啦！
+		-->
+		<style>
+			body{
+				background-image: url(img/bg/03.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+			header{
+				background: rgba(204,204,206,0.5);
+				color: #545454;
+			}
+			#all{
+				position: absolute;
+				top: 0.7rem;
+			    left: 0;
+				width: 100%;				
+			}
+			.list{
+				width: 2.45rem;
+				margin: 0 auto;
+				
+				overflow: hidden;
+				padding: 0.1rem;
+				display: none;
+			}
+			.list span{
+				float: left;
+				width: 0.65rem;
+				font-size: 0.12rem;
+				
+				height: 0.27rem;
+				line-height: 0.27rem;
+				color:#545454
+				
+			}
+			.list input[type=text]{
+				float: left;
+				width: 1.6rem;
+				height: 0.23rem;
+				padding: 0.02rem 0.05rem;
+				background: white;
+				margin-left: 0.05rem;
+				font-size: 0.12rem;
+				
+			}
+			.useCard{
+				width: 1.34rem !important;
+			}
+			.photoBtn{
+				float: right;
+				position: relative;
+				width: 0.26rem;
+				height: 0.26rem;
+			}
+			.photoBtn i{
+				font-size: 0.26rem;
+				color: grey;
+			}
+			.photo{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0.26rem;
+				height: 0.26rem;
+				opacity: 0;
+			}
+			.turnBtn:link {color: #545454}     /* 未访问的链接 */
+			.turnBtn:visited {color:  #545454}  /* 已访问的链接 */
+			.turnBtn:hover {color: #545454}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color:  #545454}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"  ><i class="iconfont icon-fanhui"></i></a>信息填写<a class="searchBtn">注册</a>
+		</header>
+		<div id="all">
+	       <div class="list">
+	       	<span>机&nbsp;构&nbsp;名&nbsp;称</span><input type="text"  />
+	       </div>
+	       
+	       <div class="list">
+	       	<span>单&nbsp;位&nbsp;名&nbsp;称</span><input type="text"  />
+	       </div>
+	       
+	       <div class="list">
+	       	<!--图片上传成功 input内显示“已上传”-->
+	       	<span>使用者名片</span><input class="useCard" type="text" placeholder="未上传" disabled="disabled"  />
+	       	<div class="photoBtn">
+	        		<input class="photo" type="file" />
+	        	    <i class="iconfont icon1 icon-zhaoxiang"></i>
+	        </div>
+	       </div>
+	       
+	       <div class="list">
+	       	<span>单&nbsp;位&nbsp;邮&nbsp;箱</span><input type="text"  />
+	       </div>
+	       
+	       
+	       <div class="list">
+	       	<span>使用人姓名</span><input type="text"  />
+	       </div>
+	       
+	       <div class="list">
+	       	<span>&nbsp;&nbsp;&nbsp;类&nbsp;&nbsp;&nbsp;&nbsp;型</span><input class="typeText" type="text" placeholder="点击进入选择" />
+	       </div>
+	       
+	       <div class="list">
+	       	<span>&nbsp;归&nbsp;&nbsp;属&nbsp;&nbsp;地</span><input class="guishudi" type="text" placeholder="点击进入选择"  />
+	       </div>
+		</div>
+		
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			$(".turnBtn").click(function(){
+				
+				window.location.href="registerMobile.html?parameter1="+parameter1;
+			})
+			
+			if(parameter1==1){
+				$(".list").eq(1).show()
+				$(".list").eq(2).show()
+				$(".list").eq(3).show()
+				$(".list").eq(4).show()
+			}else if(parameter1==2){
+				
+				$(".list").eq(1).show()
+				$(".list").eq(2).show()
+				$(".list").eq(3).show()
+				$(".list").eq(4).show()
+				$(".list").eq(6).show()
+				
+				
+			}else if(parameter1==3){
+				
+				$(".list").eq(1).show()
+				$(".list").eq(2).show()
+				$(".list").eq(3).show()
+				$(".list").eq(4).show()
+				$(".list").eq(5).show()
+				
+			}else if(parameter1==4){
+				$(".list").eq(1).show()
+				$(".list").eq(2).show()
+				$(".list").eq(3).show()
+				$(".list").eq(4).show()
+			}
+			
+			$(".searchBtn").click(function(){
+				layerTip("注册成功");
+				setTimeout("toIndex()", 1000);
+			})
+			function toIndex(){
+				window.location.href="index.html"
+			}
+			
+			$(".typeText").click(function(){
+				var parameter1=3;
+				window.location.href="type.html?parameter1="+parameter1
+			})
+			$(".guishudi").click(function(){
+				var parameter1=2;
+				window.location.href="QCellCore.html?parameter1="+parameter1
+			})
+		</script>
+	</body>
+</html>

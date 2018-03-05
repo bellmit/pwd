@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:fitsSystemWindows="false"
+    >
+
+    <include layout="@layout/head_includestatusbar"
+        android:id="@+id/includestatusbar_rl"/>
+
+    <EditText
+        android:id="@+id/feedback_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/includestatusbar_rl"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="来聊聊您的看法吧，您的每一个意见都是我们前进的动力。(字数请限制在240字以内)"
+        android:imeOptions="actionDone"
+        android:lineSpacingExtra="6.0dp"
+        android:minHeight="200dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/gray2"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/feedback_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/feedback_content"
+        android:layout_alignRight="@+id/feedback_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="5dp"
+        android:text="（0/240）"
+        android:textColor="@color/text_red"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/feedback_success_ll"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/includestatusbar_rl">
+
+        <ImageView
+            android:id="@+id/feedback_success_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:paddingTop="40dp"
+            android:src="@drawable/feedbacksuccess" />
+
+        <TextView
+            android:id="@+id/feedback_success_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发表成功"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:id="@+id/feedback_success_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:text="非常感谢您的参与,您的宝贵意见，是我们前进的动力。"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/StyledIndicators"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/head_rl"
+        layout="@layout/head_nostatusbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_rl"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/fragment_myapply_rl"
+            style="@style/news_tab_rl_style">
+
+            <TextView
+                android:id="@+id/fragment_myapply_name_tv"
+                style="@style/news_tab_tv_style"
+                android:text="收件箱" />
+
+            <ImageView
+                android:id="@+id/fragment_myapply_underline_iv"
+                style="@style/news_tab_iv_style" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_myneedtobedealwith_rl"
+            style="@style/news_tab_rl_style">
+
+            <TextView
+                android:id="@+id/fragment_myneedtobedealwith_name_tv"
+                style="@style/news_tab_tv_style"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="已发送" />
+
+            <ImageView
+                android:id="@+id/fragment_myneedtobedealwith_underline_iv"
+                style="@style/news_tab_iv_style" />
+
+            <TextView
+                android:id="@+id/unread"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:visibility="gone"
+                android:layout_alignRight="@+id/fragment_myneedtobedealwith_name_tv"
+                android:layout_alignTop="@+id/fragment_myneedtobedealwith_name_tv"
+                android:background="@drawable/tab_unread_icon"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.1"
+        android:layout_below="@+id/linearLayout"
+        android:background="@color/gray" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_zncategory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zncategory_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.managercommon.zhinan.ZNCategoryListActivity"
+    tools:showIn="@layout/activity_zncategory">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dp_64"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_6"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                android:id="@+id/activity_zncategory_add_mlv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:scrollbars="none">
+
+            </rongshanghui.tastebychance.com.rongshanghui.view.MyListView>
+
+            <TextView
+                android:id="@+id/activity_zncategory_add_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:textColor="@color/text_black"
+                android:text="添加类别" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

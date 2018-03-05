@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activity_forgetpwd_rootlayout"
+    android:background="@color/white"
+    tools:context="com.tastebychance.sfj.login.forgetpwd.ForgetPwdActivity">
+
+    <include layout="@layout/head_includestatusbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            style="@style/activity_login_input_icon_style"
+            android:src="@drawable/mobike" />
+
+        <View style="@style/activity_login_input_verticalline_style" />
+
+        <EditText
+            android:id="@+id/activity_forgetpwd_phoneno_edt"
+            style="@style/activity_login_input_edt_style"
+            android:inputType="number"
+            android:maxLength="13"
+            android:hint="请输入手机号码" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="@dimen/dp_24">
+
+        <ImageView
+            style="@style/activity_login_input_icon_style"
+            android:src="@drawable/safe" />
+
+        <View style="@style/activity_login_input_verticalline_style" />
+
+        <EditText
+            android:id="@+id/activity_forgetpwd_verifycode_edt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_2"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:textSize="@dimen/sp_15"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/activity_forgetpwd_getverifycode_tv"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/circle5_darkbluebg_style"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15"
+            android:text="获取验证码"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            style="@style/activity_login_input_icon_style"
+            android:src="@drawable/man" />
+
+        <View style="@style/activity_login_input_verticalline_style" />
+
+        <EditText
+            android:id="@+id/activity_forgetpwd_account_edt"
+            style="@style/activity_login_input_edt_style"
+            android:inputType="text"
+            android:hint="请输入账户" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="@dimen/dp_24">
+
+        <ImageView
+            style="@style/activity_login_input_icon_style"
+            android:src="@drawable/permissions" />
+
+        <View style="@style/activity_login_input_verticalline_style" />
+
+        <EditText
+            android:id="@+id/activity_forgetpwd_resetpwd_edt"
+            style="@style/activity_login_input_edt_style"
+            android:inputType="textPassword"
+            android:hint="重设新密码" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="@dimen/dp_24">
+
+        <ImageView
+            style="@style/activity_login_input_icon_style"
+            android:src="@drawable/permissions" />
+
+        <View style="@style/activity_login_input_verticalline_style" />
+
+        <EditText
+            android:id="@+id/activity_forgetpwd_confirmpwd_edt"
+            style="@style/activity_login_input_edt_style"
+            android:inputType="textPassword"
+            android:hint="确认新密码" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/activity_forgetpwd_confirm_tv"
+        style="@style/activity_forgetpwd_input_ll_style"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/circle5_graybg_style"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:text="确     认" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/activity_forgetpwd_callservice_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:gravity="center_horizontal"
+        android:text="联系管理员找回：0591-88888888"
+        android:textColor="@color/font_blue" />
+
+
+</LinearLayout>

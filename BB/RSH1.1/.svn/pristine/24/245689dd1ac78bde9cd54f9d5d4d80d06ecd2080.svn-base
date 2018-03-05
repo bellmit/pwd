@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullToRefreshRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include layout="@layout/pullable_refreshhead" />
+
+    <rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullableScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/pullablescrollview"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_16">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/font_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView17"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/textView17"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_10"
+                    android:text="给福清市长留言"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/sp_15" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="193dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp">
+
+                <ImageView
+                    android:id="@+id/hdly_child1__bg_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/twolevellist_head_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#33000000"
+                    android:lineSpacingExtra="8sp"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_7"
+                    android:textColor="@color/white"
+                    android:textSize="15sp">
+
+                    <TextView
+                        android:id="@+id/hdly_child1_ly_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle25_whitebg_style"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_4"
+                        android:text="留言" />
+
+                    <TextView
+                        android:id="@+id/hdly_child1_ckhf_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:layout_toStartOf="@+id/hdly_child1_ly_tv"
+                        android:background="@drawable/circle25_whitebg_style"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_4"
+                        android:text="查看回复" />
+
+                    <TextView
+                        android:id="@+id/unread"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignRight="@+id/hdly_child1_ckhf_tv"
+                        android:layout_alignTop="@+id/hdly_child1_ckhf_tv"
+                        android:layout_marginRight="@dimen/dp_14"
+                        android:background="@drawable/tab_unread_icon"
+                        android:textColor="@android:color/white"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/font_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView18"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/textView18"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_10"
+                    android:text="意见征集"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/sp_15" />
+
+
+            </RelativeLayout>
+
+            <name.quanke.app.libs.emptylayout.EmptyLayout
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                    android:id="@+id/mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none">
+
+                </rongshanghui.tastebychance.com.rongshanghui.view.MyListView>
+            </name.quanke.app.libs.emptylayout.EmptyLayout>
+
+        </LinearLayout>
+    </rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullableScrollView>
+
+    <include layout="@layout/pullable_loadmore" />
+</rongshanghui.tastebychance.com.rongshanghui.view.pullableview.PullToRefreshRelativeLayout>

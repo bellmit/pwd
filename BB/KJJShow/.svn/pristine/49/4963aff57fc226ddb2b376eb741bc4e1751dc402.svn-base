@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>商会秀、资讯、招商秀、放贷信息、融资项目、我的收藏</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+
+		<link rel="stylesheet" href="css/emmm01.css" />
+		<!--商会秀、资讯、招商秀、放贷信息、融资项目共用一个页面！！！！！！-->
+		
+		<style>
+			.sourceAddress{
+				width: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>
+			<span class="header-title"></span><!--(或 资讯、招商秀、放贷信息、融资项目、我的收藏)-->
+		</header>
+		
+		<div id="all">
+
+            <div class="listBox" style="display: block;">
+            	
+            	<div class="rongshangNews-list">
+	        		<img src="img/fake/1510103089(1).jpg" />
+	        		<p class="rongshangNews-list-title">福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。</p>
+	        		<p class="rongshangNews-list-con">
+	        			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1.6万</span><span class="rongshangNews-list-tab sourceAddress">福清顺达有限公司</span>
+	        		</p>
+	            </div>
+	            <div class="rongshangNews-list">
+	        		<img src="img/fake/1510103320(1).jpg" />
+	        		<p class="rongshangNews-list-title">福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。</p>
+	        		<p class="rongshangNews-list-con">
+	        			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1.6万</span><span class="rongshangNews-list-tab sourceAddress">福清顺达有限公司</span>
+	        		</p>
+	            </div>
+	            <div class="rongshangNews-list">
+	        		<img src="img/fake/1510103326(1).jpg" />
+	        		<p class="rongshangNews-list-title">福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。</p>
+	        		<p class="rongshangNews-list-con">
+	        			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1.6万</span><span class="rongshangNews-list-tab sourceAddress">福清顺达有限公司</span>
+	        		</p>
+	            </div>
+            </div>
+           
+		</div>
+	
+		
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+			
+			if(parameter3=="shanghuixiu"){
+				$(".header-title").html("商会秀")
+			}else if(parameter3=="rongzixiangmuBtn"){
+				$(".header-title").html("融资项目")
+			}else if(parameter3=="fangdaiBtn"){
+				$(".header-title").html("放贷信息")
+			}else{
+				if(parameter1==10){
+				     $(".header-title").html("我的收藏")
+			    }else if(parameter1==0||parameter1==1||parameter1==2||parameter1==3||parameter1==4){
+				    $(".header-title").html("资讯")
+			    }
+			}
+			
+			$(".turnBtn").click(function(){
+				if(parameter1==10){
+					
+					window.location.href="wd.html";
+					return
+				}else if(parameter1==0){
+				
+						window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+					
+					
+					return
+				}else if(parameter2=="rongZiYi"){
+//					if(parameter1==0||parameter1==1){
+						window.location.href="rongZiYi.html?parameter1="+parameter1;
+//					}
+					return
+				}else if(parameter2=="message"){
+					window.location.href="message.html?parameter1="+parameter1;
+					return
+				}else{
+					window.history.go(-1);
+				}
+				
+			})
+			
+			$(".rongshangNews-list").click(function(){
+				window.location.href="detail.html?parameter1="+parameter1;
+			})
+		</script>
+	</body>
+</html>

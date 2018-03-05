@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sht_mine_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+
+    android:paddingTop="@dimen/dp_18"
+    android:paddingEnd="@dimen/dp_21"
+    android:paddingStart="@dimen/dp_19">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/item_adopt_tv"
+        android:layout_marginTop="20dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/sp_15"
+        android:textColor="#999999"
+        android:layout_toStartOf="@+id/item_adopt_tv"
+        android:text="广东省福清商会" />
+
+    <TextView
+        android:id="@+id/item_adopt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_name_tv"
+        android:layout_alignBottom="@+id/item_name_tv"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/font_blue"
+        android:layout_centerVertical="true"
+        android:text="申请" />
+
+
+</RelativeLayout>

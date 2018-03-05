@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+
+            <TextView
+                android:id="@+id/order_form_dishname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="商品名称"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/order_form_dishnum_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="x6"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/order_form_dishprice_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/iv_add"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="14sp"
+            tools:text="￥192" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_form_give_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <ImageView
+                android:id="@+id/order_form_give_iv"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/order_form_sendicon" />
+
+            <TextView
+                android:id="@+id/order_form_givedishname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="商品名称"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/order_form_givedishnum_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="x6"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/order_form_givedishprice_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/iv_add"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="14sp"
+            tools:text="￥192" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

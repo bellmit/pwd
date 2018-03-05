@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>下载管理</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		
+		<style>
+			#all{
+	            position: absolute;
+				top: 0.4rem;
+			    left: 0;
+				width: 100%;
+			}
+			#all p{
+				width: 3rem;
+				margin: 0.1rem auto;
+				font-size: 0.14rem;
+				
+			}
+			#all p input{
+				border-bottom: 0.01rem solid gray;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				font-size: 0.12rem;
+				height: 0.25rem;
+				padding:0 0.08rem;
+				width: 2.5rem;
+			}
+			#preview,#preview2,#preview3{
+				width: 3rem;
+				margin: 0.1rem auto;
+				height: 1.5rem;
+				background: #EBF0F7;
+				position: relative;
+			
+			}
+			
+			.zhaoxiang{
+				font-size: 0.6rem;
+				color: gray;
+				position: absolute;
+				left: 50%;
+				margin-left: -0.3rem;
+				top: 50%;
+				margin-top: -0.3rem;
+			}
+			textarea{
+				display: block;
+				width: 2.8rem;
+				margin: 0 auto;
+				height: 1.5rem;
+				background: #f0f0f0;
+				padding: 0.1rem;
+				font-size: 0.12rem;
+				
+			}
+			.fileCacheList{
+				display: block;
+				width: 2.7rem;
+				margin: 0 auto 0.12rem;
+				overflow: hidden;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				font-size: 0.15rem;
+				
+				color: #545454;
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			   
+			    padding:0.035rem 0.15rem ;
+			    
+			}
+			.fileCacheList span{
+				color: #1D4894;
+				font-size: 0.1rem;
+			}
+			.fileCacheList .xiangyou{
+				float: right;
+				font-size: 0.2rem;
+				color: #1D4894;
+				margin-top: 0.03rem;
+			}
+			
+			.uploadAllBtn{
+				display: block;
+				width: 0.8rem;
+				height: 0.3rem;
+				background: white;
+				margin: 0 auto;
+				border:0.01rem solid #A3A3A3 !important;
+			    box-shadow:-0.02rem -0.02rem 0.02rem #CFCFCF inset;
+				font-size: 0.14rem;
+				color: #545454;
+			}
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+			
+			.searchBtn:link {color: white}     /* 未访问的链接 */
+			.searchBtn:visited {color: white}  /* 已访问的链接 */
+			.searchBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.searchBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>
+			下载管理
+			<a class="searchBtn">查看</a>
+		</header>
+		
+		<div id="all">
+	        <p>标题<input type="text" placeholder="请输入..." /></p>
+	        <a  class="fileCacheList" onclick="$('#uploadBtn').click()" >
+                                       上传附件<span class="filenum">（已上传0个附件）</span>
+        	          
+        	    <i class="iconfont icon-xiangyou xiangyou"></i>
+        	</a>
+        	<input onchange="uploadFile(this)" id="uploadBtn" type="file" hidden="hidden" />
+	        
+            
+           
+           <input class="uploadAllBtn" type="button" value="上传" />
+            
+            
+		</div>
+	
+	    <script type="text/javascript" src="js/layer/layer.js" ></script>
+	    <script type="text/javascript" src="js/useLayer.js" ></script>
+		<script type="text/javascript" src="js/uploadImg.js" ></script>
+		<script>
+			var i=0
+			function uploadFile(obj){
+				
+				layerTip("上传成功")
+				$(".filenum").html("（已上传"+(i+1)+"个附件）")
+				i++
+			}
+			
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+            $(".turnBtn").click(function(){
+				window.location.href="info.html?parameter1="+parameter1;
+			})
+            $(".uploadAllBtn").click(function(){
+            	layerTip("上传成功");
+				setTimeout("toUploadView()", 1000);
+            })
+            $(".searchBtn").click(function(){
+            	window.location.href="uploadView.html?parameter1="+parameter1
+            })
+            
+			function toUploadView(){
+				window.location.href="uploadView.html?parameter1="+parameter1
+			}
+		</script>
+	</body>
+</html>

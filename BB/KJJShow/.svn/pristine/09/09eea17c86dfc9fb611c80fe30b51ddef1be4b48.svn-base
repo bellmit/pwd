@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>我的</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		
+		<style>
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				
+				width: 100%;
+				bottom: 0.45rem;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch; /* ios5+ */
+				
+			}
+			.card{
+				margin: 0.1rem auto;
+				width: 2.98rem;
+				height: 1.4rem;
+				border: 0.01rem solid #CCCCCC;
+                border-radius:0.03rem ;
+                -webkit-border-radius:0.03rem ;
+                -moz-border-radius:0.03rem ;
+                box-shadow:-0.01rem -0.01rem 0.02rem #D2D2D2 inset;
+				
+			}
+			.card img{
+				display: block;
+				width: 0.55rem;
+				height: 0.55rem;
+				/*border: 0.025rem solid #1d4894;*/
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				margin: 0.25rem auto 0.15rem;
+			}
+			.card p{
+				width: 100%;
+				text-align: center;
+				font-size: 0.13rem;
+				color: #1D4894;
+				
+			}
+			.menu{
+				width: 3rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				
+			}
+			.menu li{
+				width: 0.95rem;
+				height: 0.95rem;
+				margin-bottom: 0.05rem;
+				border: 0.01rem solid #CCCCCC;
+                border-radius:0.03rem ;
+                -webkit-border-radius:0.03rem ;
+                -moz-border-radius:0.03rem ;
+                box-shadow:-0.01rem -0.01rem 0.02rem #D2D2D2 inset;
+			}
+			.menu li a{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				
+			}
+			.menu li a:link {color:#1D4894 }     /* 未访问的链接 */
+			.menu li a:visited {color:#1D4894 }  /* 已访问的链接 */
+			.menu li a:hover {color:#1D4894}    /* 当有鼠标悬停在链接上 */
+			.menu li a:active {color: #1D4894}   /* 被选择的链接 */
+			.menu li:nth-child(1),li:nth-child(2),li:nth-child(3),li:nth-child(4),li:nth-child(5){
+				color: #1D4894;
+			}
+			.menu li:nth-child(6),li:nth-child(7),li:nth-child(8),li:nth-child(9){
+				color: #1D4894;
+			}
+			.menu li a{
+				font-size: 0.12rem;
+			}
+			.menu li i{
+				font-size: 0.32rem;
+				margin-top: 0.2rem;
+			}
+			.searchBtn:link {color: white}     /* 未访问的链接 */
+			.searchBtn:visited {color: white}  /* 已访问的链接 */
+			.searchBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.searchBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-wode-kefu"></i></a>我的<a href="setting.html" class="searchBtn"><i class="iconfont icon-wode-shezhi"></i></a>
+		</header>
+		<div id="all">
+	        <div class="card">
+	        	<img src="img/用户头像.png" />
+	        	<p style="-webkit-tap-highlight-color: rgba(0,0,0,0);" onclick="login()">[点击登录]</p>
+	        	<!--
+	        		登录成功后，此处显示如下：
+	        	<p>[账号：139000000000]</p>
+	        	-->
+	        </div>
+            <ul class="menu">
+            	<li>
+            		<a href="personalInfo.html">
+            			<i class="iconfont icon-wode-gerenxinxi"></i>个人信息
+            		</a>
+            	</li>
+            	<li>
+            		<a href="myAttention.html">
+            			<i class="iconfont icon-wode-guanzhu"></i>我的关注
+            		</a>
+            	</li>
+            	<li>
+            		<a href="#" class="myCollection">
+            			<i class="iconfont icon-wode-wodeshoucang"></i>我的收藏
+            		</a>
+            	</li>
+            	<li>
+            		<a href="feedBack.html">
+            			<i class="iconfont icon-wode-fankui"></i>意见反馈
+            		</a>
+            	</li>
+            	<li>
+            		<a href="fileCache.html">
+            			<i class="iconfont icon-wode-huancun"></i>文件缓存
+            		</a>
+            	</li>
+            	<li>
+            		<a class="toInfo" href="info.html?parameter1=7">
+            			<i class="iconfont icon-wode-shanghuiguanli"></i>商会管理
+            		</a>
+            	</li>
+            	<li>
+            		<a class="toInfo" href="info.html?parameter1=10">
+            			<i class="iconfont icon-wode-bumenguanli"></i>部门管理
+            		</a>
+            	</li>
+            	
+            	<li>
+            		<a class="toInfo" href="info.html?parameter1=8">
+            			<i class="iconfont icon-wode-qiyeguanli"></i>企业管理
+            		</a>
+            	</li>
+            	<li>
+            		<a class="toInfo" style="color:gray" ><!--href="info.html?parameter1=9"-->
+            			<i class="iconfont icon-wode-jigouguanli"></i>机构管理
+            		</a>
+            	</li>
+            	
+            </ul>
+		</div>
+		
+		<ul class="footer">
+		    	<li>
+		    		<a href="index.html">
+		    			<i class="iconfont icon-shouyechufa"></i>首页
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="businessCard.html">
+		    			<i class="iconfont icon-mingpianjiachufa"></i>名片夹
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="message.html">
+		    			<i class="iconfont icon-xiaoxichufa"></i>消息
+		    		</a>
+		    	</li>
+		    	<li >
+		    		<a style="color:#1d4894;">
+		    			<i class="iconfont icon-wodechufa"></i>我的
+		    		</a>
+		    	</li>
+		</ul>
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script>
+			function login(){
+				window.location.href="login.html";
+			}
+			$(".turnBtn").click(function(){
+				 layer.open({
+				    content: '0591-888888'
+				    ,btn: ['拨打客服电话', '取消']
+				    ,yes: function(index){
+				      location.reload();
+				      layer.close(index);
+				    }
+				 });
+  
+			})
+			
+			$(".myCollection").click(function(){
+				var parameter1=10;
+		        window.location.href="infoList.html?parameter1="+parameter1;				
+			})
+			
+			
+			
+//			$(".toInfo").click(function(){
+//				 window.location.href="infoList.html?parameter1="+parameter1;	
+//			})
+		</script>
+		
+	</body>
+</html>

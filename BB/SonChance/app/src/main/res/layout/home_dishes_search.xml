@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tastebychance.sonchance.view.adjustsizelinearlayout.KeyboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    android:fitsSystemWindows="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/includestatusbar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/text_red"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/head_left_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view1"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/head_left" />
+
+        <com.tastebychance.sonchance.homepage.locate.SearchEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/head_left_iv"
+            android:background="@drawable/circle_whitebg_style"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:hint="输入商品名称"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15.0dip" />
+    </RelativeLayout>
+    <!--<FrameLayout
+        android:id="@+id/search_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment1"
+        android:background="@color/white"
+         >
+    </FrameLayout>-->
+
+    <!--<LinearLayout
+        android:id="@+id/listview_empty_ll"
+        style="@style/layout_mm_style"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/layout_ww_style"
+            android:layout_gravity="center"
+            android:src="@drawable/listview_pic_blank" />
+
+        <TextView
+            style="@style/layout_ww_style"
+            android:paddingTop="5dip"
+            android:text="这里什么都没有"
+            android:textColor="@color/textgray" />
+    </LinearLayout>-->
+    <ListView
+        android:id="@+id/category_listview"
+        style="@style/layout_mm_style"
+        android:fadingEdge="none"
+        android:layout_below="@+id/includestatusbar_rl"
+        android:dividerHeight="0.5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:focusable="true" >
+    </ListView>
+
+
+    </RelativeLayout>
+</com.tastebychance.sonchance.view.adjustsizelinearlayout.KeyboardLayout>

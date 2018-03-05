@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/dp_13"
+    android:paddingTop="@dimen/dp_13">
+
+
+    <ImageView
+        android:id="@+id/item_exainestatusa_status_iv"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/pass" />
+
+    <TextView
+        android:id="@+id/item_exainestatusa_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_toRightOf="@+id/item_exainestatusa_status_iv"
+        android:text="局长"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/item_exainestatusa_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:text="2018年8月31日"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/item_exainestatusa_reason_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/sp_10"
+        android:layout_below="@+id/item_exainestatusa_name_tv"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/item_exainestatusa_name_tv"
+        android:background="@drawable/rectangle_grayedge_style"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_13"
+        android:text="原因：领导试产，不得缺席"
+        android:textColor="@color/lightgray" />
+
+
+</RelativeLayout>

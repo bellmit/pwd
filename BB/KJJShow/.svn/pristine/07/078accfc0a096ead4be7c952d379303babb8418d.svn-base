@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>详情</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		
+		
+		
+		
+		<style>
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 50%;
+				width: 3rem;
+				margin-left: -1.5rem;
+				
+				bottom: 0.4rem;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch; /* ios5+ */
+				
+			}
+			#all img{
+				width: 100%;
+				height: auto;
+			}
+			#all .title,.message,.con,.zan{
+				color: grey;
+			}
+			#all .title{
+				font-size: 0.14rem;
+				
+				padding: 0.1rem 0;
+			}
+			#all .message{
+				font-size: 0.1rem;
+				
+			}
+			#all .con{
+				font-size: 0.12rem;
+				padding: 0.1rem 0;
+			}
+			#all .zan{
+				margin: 0.1rem;
+			}
+			#all .zan,.zan-num{
+				font-size: 0.1rem;
+			}
+			
+			#all .zan i{
+				margin-right: 0.05rem;
+				color: #1d4894;
+			}
+			#all .zan-num{
+				
+				color: #1d4894;
+				padding:0 0.05rem;
+			}
+			.operate{
+				width: 100%;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				background: #EEEEEE;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				
+				
+				
+			}
+			.operate a{
+				padding:0 0.1rem;
+			}
+			.operate i{
+				font-size: 0.26rem;
+				color: #54a8b9;
+			}
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn" href="#" ><i class="iconfont icon-fanhui"></i></a>详情
+		</header>
+		
+		<div id="all">
+	        <p class="title">第二届世界融商大会在福清举行</p>
+	        <p class="message">福清融商会&nbsp;&nbsp;&nbsp;&nbsp;发布于2017-10-29&nbsp;&nbsp;11:59</p>
+	        <p class="con">
+	        	<img src="img/fake/1510103301.jpg" />
+	        	东南网9月13日讯（本网记者 郑思楠）今日，第二届世界融商大会在福清举行。海外融商代表、内地融商代表、在融的国有企业负责人、在融异地企业家、台商代表等近600人参加本届大会。
+
+　　据悉，本届融商大会的主题是“凝聚融商大智慧，共建美好大福清”，旨在宣传首届世界融商大会以来福清社会发展和经济建设所取得的成就。福清市人民政府代市长张帆向会议介绍“大福清”发展战略—即“一轴、两湾、三圈、四个融合、五大板块”，从更高层级、以更宽视野、在更大领域构建“大福清”发展格局。福州市委常委陈晔则表示，福清的腾飞需要广大持之以恒融商的支持，希望广大融商常回家看看，积极投身家乡建设，抓住五区叠加带来的重大发展机遇。
+
+　　世界福清社团联谊会主席林文光、美年大健康产业集团董事长俞熔、福耀玻璃集团董事长曹德旺还代表融商发言。林文光表示，本届融商大会，将进一步加强融商力量，让海内外融商互通信息，交流经验，合作共赢，为海内外融商拓展发展空间，为福清建设开创新辉煌。
+
+　　大会还对对热心家乡公益事业的各界人士进行表彰，表彰的对象是首届融商大会之后，2011年1月至2016年7月间，在福清市捐赠公益事业累计达到200万元及以上的单位和个人。受表彰的个人和企业达到76家，捐款总额达到82154.81万元，其中捐款亿元以上的有2人。
+
+　　另外，在本届大会举办期间，福清市海外联谊会、福清市归国华侨联合会、福清市工商业联合会同时召开换届大会。此外，大会还举办“大福清”发展与融商新机遇座谈会，融商论坛等活动。
+	        </p>
+	        
+	        <p class="zan">
+	        	<i class="iconfont icon-dianzan"></i>王小明、刘莉、朱金宝、林晓辉、陈撤、上海福清融商会、武汉福清融商会、柯润、严鱼...共<span class="zan-num">85</span>人觉得很赞！
+	        </p>
+           
+		</div>
+	
+	    <div class="operate">
+	    	<a><i class="iconfont icon-fenxiang"></i></a>
+	    	<!--点击星星收藏后 星星变为灰色-->
+	    	<a><i class="iconfont icon-shoucang shoucang"></i></a>
+	    	<!--点赞后为灰色-->
+	    	<a><i class="iconfont icon-dianzan dianzan"></i></a>
+	    </div>
+		
+		
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+
+
+
+
+			var a=0;
+			$(".shoucang").click(function(){
+				if(a==0){
+					a=1;
+					$(".shoucang").css("color","grey")
+					layerTip("收藏成功");
+				}else{
+					a=0;
+					$(".shoucang").css("color","#54a8b9")
+					layerTip("已取消收藏");
+				}
+			})
+			
+			var b=0;
+			$(".dianzan").click(function(){
+				if(b==0){
+					b=1;
+					$(".dianzan").css("color","grey")
+					layerTip("点赞成功");
+				}else{
+					b=0;
+					$(".dianzan").css("color","#54a8b9")
+					layerTip("已取消点赞");
+				}
+			})
+			
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+			$(".turnBtn").click(function(){
+				if(parameter2=="rongshangNews"){
+					window.location.href="rongshangNews.html?parameter1="+parameter1;
+					return
+				}else if(parameter2=="zhaoShangBao"){
+					window.location.href="zhaoShangBao.html?parameter1="+parameter1;
+					return
+				}else if(parameter2=="rongZiYi"){
+//					if(parameter1==0||parameter1==1){
+						window.location.href="rongZiYi.html?parameter1="+parameter1;
+//					}
+					return
+				}else if(parameter2=="message"){
+					window.location.href="message.html?parameter1="+parameter1;
+					return
+				}else if(parameter2=="manage"){
+					window.location.href="infoListManage.html?parameter1="+parameter1+"&parameter3="+parameter3;
+					return
+				}else if(parameter1==10){
+					window.location.href="infoList.html?parameter1="+parameter1
+					return
+				}else{
+					window.location.href="index.html"
+				}
+				
+			})
+		</script>
+	</body>
+</html>

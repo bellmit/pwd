@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">融商汇</string>
+    <string name="title_activity_area_code">区号选择界面</string>
+    <string name="title_activity_register_entrancetype">注册入口选择类型界面（列表）</string>
+    <string name="title_activity_register">注册信息填写界面</string>
+    <string name="title_activity_register_validate_phone_no">注册-手机验证</string>
+    <string name="title_activity_register_bmzj">部门镇街手机验证界面</string>
+    <string name="title_activity_register_jg">注册-信息填写页面：机构</string>
+    <string name="title_activity_register_shqy">注册：信息填写界面：商会、企业</string>
+    <string name="title_activity_register_type">注册类型选择界面</string>
+    <string name="title_activity_ascription">所属地</string>
+    <string name="title_activity_shtshdetail">商会通-商会信息</string>
+    <string name="title_activity_shtqydetail">商会通-企业信息</string>
+    <string name="title_activity_shtdepartmentdetail">商会通-部门信息</string>
+    <string name="title_activity_personal_center">我的-个人中心</string>
+    <string name="title_activity_industry_choose">我的-个人中心-行业选择</string>
+    <string name="title_activity_qymanager">我的-企业管理</string>
+    <string name="title_activity_bmmanager">我的-部门管理</string>
+    <string name="title_activity_bmmanager_jj">我的-部门管理-简介编辑</string>
+    <string name="title_activity_manager_jjuser_name">我的-管理-简介-名称编辑</string>
+    <string name="title_activity_manager_phone_no">我的-管理-简介编辑-区号电话号码编辑</string>
+    <string name="title_activity_home_rmtj">首页-热门推荐</string>
+    <string name="title_activity_shtjgdetail">首页-商会通-机构信息</string>
+    <string name="title_activity_shtxx">首页-商会通-学校信息</string>
+    <string name="title_activity_shmanager">我的-商会管理界面</string>
+    <string name="title_activity_jgmanager">我的-机构管理界面</string>
+    <string name="title_activity_zjmanager">我的-镇街管理界面</string>
+    <string name="title_activity_xxyyqt">我的-学校医院其他界面</string>
+    <string name="title_activity_zsb">首页-招商宝</string>
+    <string name="title_activity_rzy">首页-融资易</string>
+    <string name="title_activity_zsbzj">首页-招商宝-镇街信息</string>
+    <string name="title_activity_fabu">我的-管理-发布（项目或风采、政策、资讯类）</string>
+    <string name="title_activity_change_pwd">我的-管理-更改密码</string>
+    <string name="title_activity_rhsq">首页-商会通-入会申请</string>
+    <string name="title_activity_home_detaillist">首页-数量页-资讯、商会秀等列表</string>
+    <string name="title_activity_home_detailzclist">首页-商会通-部门-信息-政策列表</string>
+    <string name="title_activity_home_bszncklist">首页-商会通-机构-办事指南-查看更多列表</string>
+    <string name="title_activity_home_detailbsznlist">首页-信息-办事指南列表</string>
+    <string name="title_activity_mine_feed_back">我的-意见反馈</string>
+    <string name="title_activity_mine_my_care">我的-我的关注</string>
+    <string name="title_activity_mine_my_collection">我的-我的收藏</string>
+    <string name="title_activity_fabu_deleteable">我的-商会秀、招商秀（可删除）</string>
+    <string name="title_activity_znsc">我的-管理-指南上传</string>
+    <string name="title_activity_znck">我的-指南管理-指南查看</string>
+    <string name="title_activity_zncategory">我的-管理-指南管理-类别</string>
+    <string name="title_activity_zncategory_add">我的-管理-指南管理-类别添加</string>
+    <string name="title_activity_grxyd">我的-机构管理-个人信用贷链接</string>
+    <string name="title_activity_member_num">我的-商会管理-会员管理-总数量</string>
+    <string name="title_activity_member_list">我的-商会管理-会员-列表</string>
+    <string name="title_activity_member_reject">我的-商会管理-会员管理-拒绝入会</string>
+    <string name="title_activity_member_info">我的-商会管理-会员管理-成员资料</string>
+    <string name="title_activity_setting_change_account">我的-设置-变更账户</string>
+    <string name="title_activity_setting_phone_bind">我的-设置-手机绑定-验证当前手机号</string>
+    <string name="title_activity_setting_phone_validate_phone_no">我的-设置-手机绑定-验证当前手机号</string>
+    <string name="title_activity_rzyh">首页-融资易-入驻银行</string>
+    <string name="title_activity_sbmanager">我的-单位管理-上报管理</string>
+    <string name="title_activity_download_manager">我的-单位管理-下载管理</string>
+    <string name="title_activity_download_ck">我的-单位管理-下载上传-查看</string>
+    <string name="title_activity_clsb">首页-部门、机构、镇街-材料上报</string>
+    <string name="title_activity_sbcklist">首页-部门、机构、镇街-材料上报-上报查看</string>
+    <string name="title_activity_conversation_list_uicustom">ConversationListUICustomActivity
+    </string>
+    <string name="title_activity_host">HostActivity</string>
+    <string name="title_activity_clxz">材料下载</string>
+
+    <!--wxshare-->
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+    <string name="title_activity_vitamio_player">VitamioPlayerActivity</string>
+    <string name="title_activity_video_view">VideoViewActivity</string>
+    <string name="title_activity_jcvideo_player">JCVideoPlayerActivity</string>
+    <!--wxshare-->
+
+    <string name="commandText">ffmpeg -y -i /sdcard/videokit/in.mp4 -strict experimental -vf transpose=1 -s 160x120 -r 30 -aspect 4:3 -ab 48000 -ac 2 -ar 22050 -b 2097k /sdcard/videokit/out.mp4</string>
+    <string name="commandTextPre">ffmpeg -y -i </string>
+    <!--simple-->
+    <!--<string name="commandTextParams"> -strict experimental -s 320x240 -r 30 -aspect 3:4 -ab 48000 -ac 2 -ar 22050 -vcodec mpeg4 -b 2097152</string>-->
+    <!--<string name="commandTextParams"> "-strict","experimental", "-vf", "movie=/sdcard/videokit/water.png [watermark]; [in][watermark] overlay=main_w-overlay_w-10:10 [out]","-s", "320x240","-r", "30", "-b", "15496k", "-vcodec", "mpeg4","-ab", "48000", "-ac", "2", "-ar", "22050", "/sdcard/videokit/out1.mp4</string>-->
+
+    <!--<string name="commandTextParams"> -strict experimental -s 320x240 -r 30 -aspect 3:4 -ab 48000 -ac 2 -ar 22050 -vcodec mpeg4 -b 2097152</string>-->
+    <!--<string name="commandTextParams"> -strict -2 -s 320x240 -r 30 -vcodec copy -ab 48000 -ac 2 -ar 22050 -b 2097k </string>-->
+    <!--<string name="commandTextParams"> -strict experimental -vf transpose=1 -s 368x208 -r 30 -aspect 4:3 -ab 48000 -vcodec mpeg4 -ac 2 -ar 22050 -b 2097k </string>-->
+    <string name="commandTextParams"> -strict experimental -vf transpose=1 -s 320x240 -r 30 -aspect 4:3 -ab 48000 -ac 2 -ar 22050 -b 2097k </string>
+
+    <string name="commandTextOutFilePath">/sdcard/videokit/out.mp4</string>
+    <string name="title_activity_fwdtclsb">服务大厅-材料上报</string>
+    <string name="title_activity_fwdt">政务大厅-服务大厅</string>
+    <string name="title_activity_zwdtclsblist">材料上报-列表页面</string>
+    <string name="title_activity_hdly">互动留言</string>
+    <string name="title_activity_ckhflist">互动留言-查看回复</string>
+    <string name="title_activity_sjfq">政务大厅-数据福清</string>
+    <string name="title_activity_sjfqlist">数据福清-数据要闻列表</string>
+    <string name="title_activity_ly">互动留言-留言</string>
+    <string name="title_activity_fwdtgzlist">服务大厅-关注列表界面</string>
+    <string name="title_activity_yjzq">政务大厅-互动留言-意见征求</string>
+
+
+    <!--上拉加载，下拉刷新-->
+    <string name="head">这里是HeadView</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="title_activity_yjfkckhf">我的-意见反馈-查看回复</string>
+    <string name="title_activity_yi_jian_zheng_qiu_manager">部门、镇街管理-意见征求管理</string>
+    <string name="title_activity_register_fail">注册失败页面</string>
+    <string name="title_activity_yjzqshow">YJZQShowActivity</string>
+    <!--上拉加载，下拉刷新-->
+
+
+</resources>

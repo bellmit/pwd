@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>企业详情、商会详情、部门详情、机构详情</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+
+		<style>
+			body{
+				background: #DEE7F2;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+			.ad{
+				display: block;
+				width: 100%;
+				height: 1.5rem;
+				
+				
+			}
+			.info{
+				width: 100%;
+				background: white;
+				margin: 0.08rem 0;
+				padding: 0.08rem 0;
+			}
+			.info p{
+				color: #545454;
+				width: 3rem;
+				margin: 0 auto;
+				padding: 0.05rem 0;
+				
+			}
+			.info p:nth-child(1){
+				font-size: 0.16rem;
+			}
+			.info p:nth-child(2),.info p:nth-child(3),.info p:nth-child(4){
+				font-size: 0.1rem;
+			}
+			.info p i{
+				font-size: 0.18rem;
+				color: #545454;
+				margin-right: 0.05rem;
+				vertical-align: -0.01rem;
+			}
+            .detail{
+            	width: 100%;
+            	background: white;
+            	padding: 0.2rem 0;
+            	position: relative;
+            }
+            .detail i{
+            	font-size: 0.18rem;
+				color: #545454;
+				position: absolute;
+				left: 0.1rem;
+				top: 0.2rem;
+            }
+            .detail p{
+            	width: 3rem;
+            	margin: 0 auto;
+            }
+            .detail p{
+            	text-indent: 2em;
+            	font-size: 0.1rem;
+            	color: #545454;
+            }
+            .detail p:first-letter{  
+                font-size:0.18rem;  
+               
+               
+            } 
+            .detail .videoBox{
+            	margin: 0.1rem auto;
+            	border: 0.01rem solid #C4C4C4;
+            	border-radius: 0.1rem;
+            	-webkit-border-radius: 0.1rem;
+            	-moz-border-radius: 0.1rem;
+            	position: relative;
+            	width: 2.6rem;
+            	height: 1.53rem;
+            }
+            .detail video{
+            	display: block;
+            	width: 100%;
+            	height: 100%;
+            	border-radius: 0.1rem;
+            	-webkit-border-radius: 0.1rem;
+            	-moz-border-radius: 0.1rem;
+            	
+            }
+            .detail .bofang{
+            	font-size: 0.9rem;
+            	position: absolute;
+            	left: 50%;
+            	margin-left:-0.45rem ;
+            	top: 50%;
+            	margin-top:-0.5rem ;
+            	 -webkit-tap-highlight-color: rgba(0,0,0,0);
+            	
+            }
+             .turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>简介
+		</header>
+		
+		<div id="all">
+			<img class="ad" src="img/fake/1510103301.jpg" />
+		    
+		    <div class="info">
+		    	<p><i class="iconfont icon-shanghui-jianjieguanli"></i>上海市福清商会</p>
+		    	<p><i class="iconfont icon-banshichu"></i>上海市普陀区真北路2022号映像戴斯大酒店8337~8339室</p>
+		    	<p><i class="iconfont icon-shanghuitong-lianxiwomen"></i>021-52788322/17302179686</p>
+		    	<p><i class="iconfont icon-youxiang"></i>1398286791@qq.com</p>
+		    </div>
+		    
+		    <div class="detail">
+		    	<i class="iconfont icon-zhengce"></i>
+		    	<p>
+		    		福清， 简称“融”，县域经济实力位居福建全省第3位，综合实力在全国中小城市排名26位。2016年上半年，实现地区生产总值366亿元，比增8.5%；1-7 月份完成规模以上工业产值867.4亿元，比增4.9%；一般公共预算总收入50.5亿元，比增8%；固定资产投资410.9亿元，比增4.8%；社会消 费品零售总额195.5亿元，比增12.3%。9月12日—13日，来自全球100多个国家的融商代表、企业家代表、台商代表汇聚福清，凝心聚力，共谋 “大福清”发展蓝图。
+		    	</p>
+		    	<div class="videoBox" >
+		    	<video id="video1">
+				    <source src="/example/html5/mov_bbb.mp4" type="video/mp4" />
+				    <source src="/example/html5/mov_bbb.ogg" type="video/ogg" />
+		    	</video>
+		    	<i  class="iconfont icon-bofang bofang"></i>
+		    	</div>
+		    </div>
+		</div>
+	  
+		<script>
+
+			$(".bofang").click(function(e){
+				e.stopPropagation(); 
+				$(".bofang").css("display","none")
+			    $("video1").play() 
+			    
+			})
+			$(".videoBox").click(function(){
+				$(".bofang").css("display","block")
+			    $("video1").pause()
+			    
+			})
+			
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			$(".turnBtn").click(function(){
+				
+				window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+			$(".searchBtn").click(function(){
+				window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+
+		</script>
+	</body>
+</html>

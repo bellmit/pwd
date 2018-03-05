@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>通知、政策、查看回复</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+        <!--通知、政策共用此页面-->
+        
+        
+        <link rel="stylesheet" href="css/emmm02.css" />
+		<style>
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a><span class="header-title"></span>
+		</header>
+		
+		<div id="all">
+             
+            <!--通知样式-->
+             <section class="first">
+             	<p>2017-10-31&nbsp;21:01:32</p>
+             	<h1>关于决议商会增设办事点选址的通知</h1>
+             </section>
+             <section class="first">
+             	<p>2017-10-31&nbsp;21:01:32</p>
+             	<h1>福清市第二届世界融商大会：凝心聚力 共谋“大福清”发展蓝图</h1>
+             </section>
+             <section class="first">
+             	<p>2017-10-31&nbsp;21:01:32</p>
+             	<h1>汇聚融商力量，建设“大福清”</h1>
+             </section>
+             
+            <!-- 政策样式-->
+             <section class="second">
+             	<p>2017-10-31&nbsp;21:01:32<span class="source">福清市科技局</span></p>
+             	<h1>福清市第二届世界融商大会：凝心聚力 共谋“大福清”发展蓝图</h1>
+             </section>
+		</div>
+	
+		
+		<script>
+			$("section").hide()
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+			
+			if(parameter3=="zhengce"){
+				$(".header-title").html("政策")
+				
+					$(".second").show()
+			
+			}else if(parameter3=="tongzhi"||parameter1==6){
+				$(".header-title").html("通知")
+				
+				    $(".first").show()
+				
+					
+			}else if(parameter3=="shangbao"){
+				$(".header-title").html("上报")
+				
+				    $(".first").show()
+				
+					
+			}else if(parameter3=="chakanhuifu"){
+				$(".header-title").html("意见反馈")
+				$(".first").show()
+			}
+			
+			$(".turnBtn").click(function(){
+				if(parameter2=="shangHuiTong"){
+window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			    }else if(parameter3=="chakanhuifu"){
+			    	window.location.href="feedBack.html";
+			    }else if(parameter1==6){
+			    	window.location.href="info.html?parameter1="+parameter1;
+			    }
+			})
+			
+			$("section").click(function(){
+				
+				window.location.href="tongZhiDetail.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_shqy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.cardclip.CardClipActivity"
+    tools:showIn="@layout/activity_register_shqy">
+
+    <TextView
+        android:id="@+id/register_unitname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="52dp"
+        android:text="单位名称" />
+
+    <EditText
+        android:id="@+id/register_unitname_edt"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="46dp"
+        android:layout_toEndOf="@+id/register_unitname_tv"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/register_unitemail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/register_unitemail_edt"
+        android:layout_alignBottom="@+id/register_unitemail_edt"
+        android:layout_alignStart="@+id/register_unitname_tv"
+        android:text="单位邮箱" />
+
+    <EditText
+        android:id="@+id/register_unitemail_edt"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/register_unitname_edt"
+        android:layout_alignStart="@+id/register_unitname_edt"
+        android:layout_below="@+id/register_unitname_edt"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/register_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/register_username_edt"
+        android:layout_alignBottom="@+id/register_username_edt"
+        android:layout_alignEnd="@+id/register_unitemail_tv"
+        android:text="使用人名字" />
+
+    <TextView
+        android:id="@+id/register_ascription_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/register_ascription_edt_tv"
+        android:layout_alignBottom="@+id/register_ascription_edt_tv"
+        android:layout_alignEnd="@+id/register_username_tv"
+        android:text="所属地" />
+
+    <TextView
+        android:id="@+id/register_ascription_edt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/register_username_edt"
+        android:layout_alignStart="@+id/register_username_edt"
+        android:layout_below="@+id/register_username_edt"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="点击进入选择"
+        android:singleLine="true"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/register_username_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/register_unitemail_edt"
+        android:layout_alignStart="@+id/register_unitemail_edt"
+        android:layout_below="@+id/register_unitemail_edt"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true" />
+
+
+    <ImageView
+        android:id="@+id/register_usercardclip_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="123dp"
+        android:layout_alignEnd="@+id/register_ascription_edt_tv"
+        android:layout_alignStart="@+id/register_ascription_edt_tv"
+        android:layout_below="@+id/register_ascription_edt_tv"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:scaleType="fitXY"
+        android:src="@drawable/register_usercardclip_edt_bg" />
+
+    <TextView
+        android:id="@+id/register_usercardclip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/register_ascription_tv"
+        android:layout_alignTop="@+id/register_usercardclip_iv"
+        android:layout_marginTop="6dp"
+        android:text="使用者名片" />
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_member_num"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shmanager_membernum_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.shmanager.membermanager.MemberNumActivity"
+    tools:showIn="@layout/activity_member_num">
+
+    <RelativeLayout
+        android:id="@+id/activity_shmanager_membernum_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/znsc_title_edt"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/rectangle_grayedge_style">
+
+        <TextView
+            android:id="@+id/activity_shmanager_membernum_name_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:text="商会成员" />
+
+        <TextView
+            android:id="@+id/activity_shmanager_membernum_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="23dp"
+            android:layout_toStartOf="@+id/activity_shmanager_membernum_add_iv"
+            android:layout_toEndOf="@+id/activity_shmanager_membernum_name_tv"
+            android:gravity="center_vertical"
+            android:text="0人" />
+
+        <ImageView
+            android:id="@+id/activity_shmanager_membernum_add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/znsc_turn_right" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_shmanager_membernumtobeaudited_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/activity_shmanager_membernum_rl"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/rectangle_grayedge_style">
+
+        <TextView
+            android:id="@+id/activity_shmanager_membernumtobeaudited_name_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:text="待审核" />
+
+        <TextView
+            android:id="@+id/activity_shmanager_membernumtobeaudited_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="23dp"
+            android:layout_toStartOf="@+id/activity_shmanager_membernumtobeaudited_add_iv"
+            android:layout_toEndOf="@+id/activity_shmanager_membernumtobeaudited_name_tv"
+            android:gravity="center_vertical"
+            android:text="0人" />
+
+        <ImageView
+            android:id="@+id/activity_shmanager_membernumtobeaudited_add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/znsc_turn_right" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/content_order_form"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includestatusbar_rl"
+        layout="@layout/head_includestatusbar" />
+
+    <TextView
+        android:id="@+id/person_information_error_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:text="您输入的手机号不正确,请重新输入"
+        android:textColor="@color/text_red"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingRight="18dp">
+
+        <com.tastebychance.sonchance.view.cleanableeditext.CleanableEditText
+            android:id="@+id/person_information_inputnewphoneno_edt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@+id/personal_information_getverifycode_tv"
+            android:background="@drawable/personalcenter_editbg"
+            android:gravity="bottom"
+            android:hint="请输入新的手机号"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:paddingBottom="4dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/personal_information_getverifycode_tv"
+            android:layout_width="88dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/circle25_greenbg_style"
+            android:text="发送验证码"
+            android:layout_alignBottom="@+id/person_information_inputnewphoneno_edt"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/personal_information_inputverifycode_edt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/personalcenter_editbg"
+        android:gravity="bottom"
+        android:hint="请输入验证码"
+        android:maxLength="6"
+        android:paddingBottom="4dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

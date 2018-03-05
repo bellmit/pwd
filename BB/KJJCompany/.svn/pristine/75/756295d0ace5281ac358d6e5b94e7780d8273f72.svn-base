@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_mm_style"
+    tools:context="company.webdemo.agile.com.technologycompany.home.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/includestatusbar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/bg_gray"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/head_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingBottom="10dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/head_left" />
+
+            <TextView
+                android:id="@+id/head_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/head_left_iv"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/textgray" />
+
+            <TextView
+                android:id="@+id/head_center_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view1"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/head_right_btn"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:background="@drawable/head_share"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/head_right_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view1"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/id_cb"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/includestatusbar_rl"
+            android:background="@drawable/defaultphoto"
+            app:canLoop="true" />
+
+
+        <!--注意：这里涉及到了ViewFlipper的几个常用的属性
+1.android:autoStart=”true” 当获取到当前视图时，则自动对视图进行滚动
+2.android:inAnimation 设置ViewFlipper的切入动画
+3.android:outAnimation 设置ViewFlipper的切出动画
+4.android:flipInterval 设施ViewFlipper的滚动间隔（显示延迟）-->
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_cb"
+            android:autoStart="false"
+            android:background="@android:color/white"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/push_up_in"
+            android:outAnimation="@anim/push_up_out" />
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/flipper"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_technologybureau_ptv"
+                style="@style/style_home_9lattice"
+                android:text="科技局"
+                peng:peng_drawableTop="@drawable/home_technologybureau" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_technologytrends_ptv"
+                style="@style/style_home_9lattice"
+                android:text="科技动态"
+                peng:peng_drawableTop="@drawable/home_technologytrends" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_technologypolicy_ptv"
+                style="@style/style_home_9lattice"
+                android:text="科技政策"
+                peng:peng_drawableTop="@drawable/home_technologypolicy" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@+id/ll_1"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/view4"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_serviceguide_ptv"
+                style="@style/style_home_9lattice"
+                android:text="办事指南"
+                peng:peng_drawableTop="@drawable/home_serviceguide" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_onlinecommunication_ptv"
+                style="@style/style_home_9lattice"
+                android:text="在线沟通"
+                peng:peng_drawableTop="@drawable/home_onlinecommunication" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/home_guestbook_ptv"
+                style="@style/style_home_9lattice"
+                android:text="公众信箱"
+                peng:peng_drawableTop="@drawable/home_guestbook" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@+id/ll_2"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/view2"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:text="文件推送"
+                peng:peng_drawableTop="@drawable/home_filepush" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:text="文件下载"
+                android:visibility="invisible"
+                peng:peng_drawableTop="@drawable/home_technologybureau" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:text="关于我们"
+                android:visibility="invisible"
+                peng:peng_drawableTop="@drawable/home_technologybureau" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_3"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="科技动态"
+                android:textColor="@color/text_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="更多..."
+                android:textColor="@color/orange" />
+
+            <company.webdemo.agile.com.technologycompany.view.MyListView
+                android:id="@+id/mylistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_more" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

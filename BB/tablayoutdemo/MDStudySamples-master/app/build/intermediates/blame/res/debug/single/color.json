@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\state_press_black.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\color\\state_press_black.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.0\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.0\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\fab_ripple.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\color\\fab_ripple.xml"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\selector_blue.xml",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\color\\selector_blue.xml"
+    }
+]

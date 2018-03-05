@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_mw_style"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/order_shoppingcart_dishname"
+            style="@style/layout_mw_style"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:text="秘制香煎龙利鱼套餐"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            style="@style/layout_mw_style"
+            android:layout_weight="2.5"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/order_shoppingcart_moneyicon" />
+
+            <TextView
+                android:id="@+id/order_shoppingcart_dishesprice"
+                style="@style/layout_ww_style"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:text="26"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/order_shoppingcart_dishesless"
+                style="@style/layout_ww_style"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ordershoppingcart_dishesless" />
+
+            <TextView
+                android:id="@+id/order_shoppingcart_dishesnum"
+                style="@style/layout_ww_style"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="1" />
+
+            <ImageButton
+                android:id="@+id/order_shoppingcart_dishesmore"
+                style="@style/layout_ww_style"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ordershoppingcart_dishesmore" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+</LinearLayout>

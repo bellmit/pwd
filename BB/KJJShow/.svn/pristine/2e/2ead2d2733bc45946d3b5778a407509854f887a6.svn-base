@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>指南查看</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+    
+		
+		
+		<style>
+			body{
+				background: #F0F0F0;
+			}
+		
+			#all{
+				position: absolute;
+				top: 0.4rem;
+			    left: 0;
+				width: 100%;				
+			}
+			ul{
+				width: 100%;
+			}
+			ul li{
+				background: white;
+				margin-bottom: 0.05rem;
+				box-shadow:0.02rem 0.02rem 0.02rem #CFCFCF;
+				
+			}
+			ul li a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				padding: 0.15rem 0;
+				width: 3rem;
+				margin: 0 auto;
+				height: 0.28rem;
+				line-height: 0.28rem;
+			}
+			ul li p{
+				width: 2.3rem;
+				float: left;
+				font-size: 0.15rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.zhinan{
+				color: #1D4894;
+				float: left;
+				font-size: 0.28rem;
+				margin-right: 0.05rem;
+			}
+			.quxiao{
+				color: #F55959;
+				float: right;
+				font-size: 0.2rem;
+				
+			}
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>指南查看
+		</header>
+		<div id="all">
+	        <ul>
+	        	<li>
+	        		<a>
+	        			<i class="iconfont icon-zhinan zhinan"></i>
+		        		<p>关于XXX的规范说明关于XXX的规范说明关于XXX的规范说明</p>
+		        		<i class="iconfont icon-quxiao quxiao"></i>
+	        		</a>
+	        	</li>
+	        	<li>
+	        		<a>
+	        			<i class="iconfont icon-zhinan zhinan"></i>
+		        		<p>关于XXX的规范说明</p>
+		        		<i class="iconfont icon-quxiao quxiao"></i>
+	        		</a>
+	        	</li>
+	        	
+	        </ul>
+		</div>
+		
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script>
+			$(".quxiao").click(function(){
+				layer.open({
+				    content: '确定移除该指南？'
+				    ,btn: ['确定', '取消']
+				    ,yes: function(index){
+//				      location.reload();
+				      layer.close(index);
+			        }
+			    })
+				$(this).parent().parent().remove()
+			})
+			
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			if(parameter2=="shangHuiTong"){
+				$(".quxiao").hide()
+			}
+			$(".turnBtn").click(function(){
+				if(parameter2=="shangHuiTong"){
+				   window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			    }else{
+			    	window.location.href="guideManage.html?parameter1="+parameter1;
+			    }
+			})
+			
+			
+			$("#all a").click(function(){
+				window.location.href="guideDetail.html?parameter1="+parameter1+"&parameter2="+parameter2;
+			})
+		</script>
+	</body>
+</html>

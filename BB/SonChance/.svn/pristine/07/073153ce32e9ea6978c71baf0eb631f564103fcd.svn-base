@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includestatusbar_rl"
+        layout="@layout/head_includestatusbar" />
+
+    <TextView
+        android:id="@+id/person_information_error_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="您输入的手机号不正确,请重新输入"
+        android:textColor="@color/text_red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/personal_information_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="当前绑定 151***5987"
+        android:textColor="@color/text_black" />
+
+    <EditText
+        android:id="@+id/person_information_inputfullphoneno_edt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/personalcenter_editbg"
+        android:gravity="bottom"
+        android:hint="请输入当前绑定的完整手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="4dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+</LinearLayout>

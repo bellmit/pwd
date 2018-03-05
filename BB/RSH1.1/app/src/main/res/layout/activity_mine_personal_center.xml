@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personalcenter_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.register.RegisterBMZJEntranceActivity">
+
+    <include layout="@layout/head_includestatusbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/personalcenter_head_riv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/personalcenter_head_riv"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:gravity="center"
+                    android:text="图标修改"
+                    android:textColor="@color/font_blue" />
+
+                <rongshanghui.tastebychance.com.rongshanghui.view.RoundImageView
+                    android:id="@+id/personalcenter_head_riv"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/person_defaultheadportrait" />
+
+                <ImageView
+                    android:id="@+id/personalcenter_headindex_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/personalcenter_head_riv"
+                    android:layout_alignEnd="@+id/personalcenter_head_riv"
+                    android:background="@drawable/person_head_index_icon" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal_darkgrayedge" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/personcenter_item_name_style"
+                    android:text="使用者信息" />
+
+                <TextView
+                    android:id="@+id/personalcenter_userinfotype_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView3" />
+
+
+                <TextView
+                    android:id="@+id/personalcenter_userinfo_share_tv"
+                    style="@style/personcenter_item_option_style"
+                    android:text="分享名片" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal_darkgrayedge" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/personcenter_item_name_style"
+                    android:text="昵称" />
+
+                <EditText
+                    android:id="@+id/personalcenter_nicheng_edt"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView5"
+                    android:hint="请输入昵称" />
+
+                <TextView
+                    android:id="@+id/personalcenter_nicheng_copy_tv"
+                    style="@style/personcenter_item_option_style"
+                    android:text="编辑" />
+
+            </LinearLayout>
+
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/personalcenter_sex_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/personcenter_item_name_style"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/personalcenter_sex_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/personalcenter_sex_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/personalcenter_industry_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/personcenter_item_name_style"
+                    android:text="所在行业" />
+
+                <TextView
+                    android:id="@+id/personalcenter_industry_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/personalcenter_industry_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/personalcenter_areacode_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    style="@style/personcenter_item_name_style"
+                    android:text="区号" />
+
+                <TextView
+                    android:id="@+id/personalcenter_areacode_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/personalcenter_areacode_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/personcenter_item_name_style"
+                    android:text="电话" />
+
+                <EditText
+                    android:id="@+id/personalcenter_phoneno_edt"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView12"
+                    android:hint="请输入电话" />
+
+                <TextView
+                    android:id="@+id/personalcenter_phoneno_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    style="@style/personcenter_item_name_style"
+                    android:text="邮箱" />
+
+                <EditText
+                    android:id="@+id/personalcenter_email_edt"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView13"
+                    android:hint="请输入邮箱" />
+
+                <TextView
+                    android:id="@+id/personalcenter_email_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/personalcenter_city_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    style="@style/personcenter_item_name_style"
+                    android:text="所在城市" />
+
+                <TextView
+                    android:id="@+id/personalcenter_city_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/personalcenter_city_change_tv"
+                    style="@style/personcenter_item_option_style" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    style="@style/personcenter_item_name_style"
+                    android:text="单位名称"
+                    android:textColor="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/personalcenter_companyname_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView15"
+
+                    android:textColor="@color/lightgray" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/personalcenter_jiguan_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_16"
+                android:visibility="gone"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/personcenter_item_name_style"
+                    android:text="归属地"
+                    android:textColor="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/personalcenter_jiguan_tv"
+                    style="@style/personcenter_item_value_style"
+                    android:layout_toEndOf="@+id/textView9"
+                    android:textColor="@color/lightgray" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>名片夹</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<link rel="stylesheet" href="css/emmm01.css" />
+		<style>
+			#all{
+	
+				bottom: 0.5rem;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch; /* ios5+ */
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			名片夹<!--<a class="searchBtn"><i class="iconfont icon-xiazai"></i></a>-->
+		</header>
+		
+		<div id="all">
+	        <ul class="tabBox2">
+	        	<li>
+	        		<a>我的名片</a>
+	        	</li>
+	        	<li>
+	        		<a>好友消息</a>
+	        	</li>
+	        	<li>
+	        		<a >通讯录</a>
+	        	</li>
+	        </ul>
+	        
+	        
+            
+            <div class="listBox">
+            	<div class="myCard">
+            		<img class="myCard-head"  src="img/用户头像.png" />
+            		<span class="myCard-name">郑辉</span>
+            		<div style="clear: both;"></div>
+            		<p class="myCard-tab">个人信息</p>
+            		
+            		<p class="myCard-message sex">
+            			<span>性别</span><span>男</span>
+            		</p>
+            		<p class="myCard-message jiguan">
+            			<span>籍贯</span><span>福建福清</span>
+            		</p>
+            		<p class="myCard-message industry">
+            			<span>行业</span><span>金融</span>
+            		</p>
+            		<p class="myCard-message city">
+            			<span>城市</span><span>上海</span>
+            		</p>
+            		<p class="myCard-message phoneNum">
+            			<span>手机</span><span>130-0000-0000</span>
+            		</p>
+            		<p class="myCard-message email">
+            			<span>邮箱</span><span>7000089@qq.com</span>
+            		</p>
+            		<div style="clear: both;"></div>
+            		<a class="myCard-share"><img class="" src="img/share.png" /></a>
+	        		<img class="myCard-personal" src="img/geren.png" />
+            	</div>
+            </div>
+          <div class="listBox">
+            	 
+            	 
+            	 <div class="friendMessage">
+            	 	<div class="friendMessage-head">
+            	 		<img src="img/用户头像.png" />
+            	 		<div class="friendMessage-head-num">3</div>
+            	 	</div>
+            	 	<div class="friendMessage-con">
+            	 		<p class="who">李晨</p>
+            	 		<!--显示语音消息的情况下，调用改样式-->
+            	 		<!--<p class="voice">[语音]</p>-->
+            	 		<p class="character">商汇打算扩展海外业务</p>
+            	 	</div>
+            	 	
+            	 	<span class="friendMessage-tab">个人</span>
+            	 </div>
+            	 
+            	 <div class="friendMessage">
+            	 	<div class="friendMessage-head">
+            	 		<img src="img/用户头像.png" />
+            	 		<div class="friendMessage-head-num">3</div>
+            	 	</div>
+            	 	<div class="friendMessage-con">
+            	 		<p class="who">刘洲</p>
+            	 		<p class="voice">[语音]</p>
+            	 	</div>
+            	 	
+            	 	<span class="friendMessage-tab">个人</span>
+            	 </div>
+            	 
+            	 
+            	
+	            
+            </div>
+            <div class="listBox">
+            	<div class="addressList">
+            		<p class="addressList-searchBox">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            		</p>
+            	    <a class="addressList-operation" href="newFriends.html">
+            	    	<i style="font-size: 0.29rem;" class="iconfont icon-xindehaoyou"></i>新的好友
+            	    	<i  class="iconfont icon-xiangyou xiangyou"></i>
+            	    	
+            	    	<i class="iconfont icon-new new"></i>
+            	    </a>
+            	    <a class="addressList-operation" href="addFriends.html">
+            	    	<i style="font-size: 0.24rem;" class="iconfont icon-tianjiahaoyou"></i>
+            	                    添加好友
+            	        <i class="iconfont icon-xiangyou xiangyou"></i>
+            	    </a>
+            	    <ul class="lianxiList">
+            	    	<li>
+            	    		<a>
+            	    			<p>陈家康</p><span>[个人]</span>
+            	    		</a>
+            	    	</li>
+            	    	<li>
+            	    		<a>
+            	    			<p>李磊</p><span>[个人]</span>
+            	    		</a>
+            	    	</li>
+            	    	<li>
+            	    		<a>
+            	    			<p>豹奔科技有限公司</p><span>[企业]</span>
+            	    		</a>
+            	    	</li>
+            	    	
+            	    </ul>
+            	</div>
+            </div>
+            
+		</div>
+	
+	    <ul class="footer">
+		    	<li>
+		    		<a href="index.html">
+		    			<i class="iconfont icon-shouyechufa"></i>首页
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a style="color:#1d4894;">
+		    			<i class="iconfont icon-mingpianjiachufa"></i>名片夹
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="message.html">
+		    			<i class="iconfont icon-xiaoxichufa"></i>消息
+		    		</a>
+		    	</li>
+		    	<li >
+		    		<a href="wd.html">
+		    			<i class="iconfont icon-wodechufa"></i>我的
+		    		</a>
+		    	</li>
+		</ul>
+		
+		<script>
+			$(".listBox").eq(2).show();
+			$(".tabBox2 li a").eq(2).css({
+				background:"white",
+				color:"black",
+				border:"0.01rem solid #A3A3A3",
+			    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+			    borderRadius:"0.03rem"
+			})
+			$(".tabBox2 li a").click(function(){
+				var a=$('.tabBox2 li a').index(this);
+				$(".tabBox2 li a").css({
+					background:"",
+					color:"",
+					border:"",
+				    boxShadow:"",
+				    borderRadius:""
+				})
+				$(".listBox").hide();
+				$(this).css({
+					background:"white",
+					color:"black",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+			    })
+				$(".listBox").eq(a).show();
+			})
+			
+			$(".email span:nth-child(1),.phoneNum span:nth-child(1)").width($(".sex span").width())
+			
+			
+			$(".myCard-share").click(function(){
+				
+			})
+			
+			$(".friendMessage").click(function(){
+				var parameter1=1;
+				window.location.href="chat.html?parameter1="+parameter1;
+				
+			})
+			
+			
+			$(".lianxiList").click(function(){
+				var parameter1=2;
+				window.location.href="chat.html?parameter1="+parameter1;
+			})
+		</script>
+	</body>
+</html>

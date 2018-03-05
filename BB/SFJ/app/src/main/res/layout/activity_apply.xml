@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_writefile_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.tastebychance.sfj.apply.ApplyActivity">
+
+    <include
+        android:id="@+id/head_rl"
+        layout="@layout/head_includestatusbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="请假类型" />
+
+                <TextView
+                    android:id="@+id/activity_apply_item_leavetype_tv"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="--请选择--" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="天数类型" />
+
+                <TextView
+                    android:id="@+id/activity_apply_item_daytype_tv"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="--请选择--" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="申请时间" />
+
+                <TextView
+                    android:id="@+id/activity_apply_item_applytime_tv"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="--请选择--" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/activity_apply_item_name_edt"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="请输入" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/activity_apply_item_sex_tv"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="--请选择--" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/activity_apply_item_birthdate_tv"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="--请选择--" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="现工作单\n位及职务" />
+
+                <EditText
+                    android:id="@+id/activity_apply_item_job_edt"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="请输入" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="请假天数" />
+
+                <EditText
+                    android:id="@+id/activity_apply_item_leavedays_edt"
+                    style="@style/activity_apply_item_value_style"
+                    android:hint="请输入"
+                    android:inputType="number|numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/activity_apply_item_ll_style">
+
+                <TextView
+                    style="@style/activity_apply_item_key_style"
+                    android:text="起止日期" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/activity_apply_item_leavefromdate_tv"
+                        style="@style/activity_apply_item_value_style"
+                        android:hint="请选择" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="至"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/activity_apply_item_leavetodate_tv"
+                        style="@style/activity_apply_item_value_style"
+                        android:hint="请选择" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_18"
+                android:gravity="center_vertical"
+                android:text="请假事由及去处"
+                android:textSize="@dimen/sp_15" />
+
+            <EditText
+                android:id="@+id/activity_apply_item_leavereason_edt"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:gravity="left"
+                android:hint="请假事由及去处"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

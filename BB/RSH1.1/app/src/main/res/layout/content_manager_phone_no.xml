@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_manager_phone_no"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bmzj_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.managercommon.jjedt.ManagerPhoneNoActivity"
+    tools:showIn="@layout/activity_manager_phone_no">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/manager_jj_areacode_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_weight="2"
+            android:background="@drawable/rectangle_grayedge_style"
+            android:gravity="center"
+            android:padding="@dimen/dp_3"
+            android:text="区号选择" />
+
+        <EditText
+            android:id="@+id/manager_jj_phoneno_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:minHeight="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_grayedge_style"
+            android:hint="请输入完整手机号码"
+            android:padding="@dimen/dp_3"
+            android:inputType="phone"
+            android:textColorHint="@color/lightgray" />
+    </LinearLayout>
+</RelativeLayout>

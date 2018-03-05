@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_mm_style">
+
+
+    <RelativeLayout
+        style="@style/layout_mm_style"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/view1"
+            layout="@layout/head_includestatusbar" />
+
+        <RelativeLayout
+            android:id="@+id/relativelayout2"
+            style="@style/layout_mw_style"
+            android:layout_below="@+id/relativelayout1"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/phone_iv"
+                style="@style/layout_ww_style"
+                android:background="@drawable/point_select" />
+
+            <TextView
+                android:id="@+id/phone_tv"
+                style="@style/layout_ww_style"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_toRightOf="@+id/phone_iv"
+                android:text="科技局电话:400-667788-5"
+                android:textColor="@color/textgray" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/relativelayout2"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/person_changeheadportrait_ptv"
+                style="@style/style_home_9lattice"
+                android:text="修改头像"
+                peng:peng_drawableTop="@drawable/home_serviceguide" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/person_enterpriseinfo_ptv"
+                style="@style/style_home_9lattice"
+                android:text="企业信息"
+                peng:peng_drawableTop="@drawable/home_onlinecommunication" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/person_changepasswd_ptv"
+                style="@style/style_home_9lattice"
+                android:text="修改密码"
+                peng:peng_drawableTop="@drawable/home_guestbook" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@+id/ll_1"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/view2"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                android:id="@+id/person_filecache_ptv"
+                style="@style/style_home_9lattice"
+                android:text="文件缓存"
+                peng:peng_drawableTop="@drawable/home_serviceguide" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:id="@+id/person_interactiveinfo_ptv"
+                android:text="互动信息"
+                peng:peng_drawableTop="@drawable/home_onlinecommunication" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:id="@+id/person_subaccount_ptv"
+                android:text="子账户"
+                peng:peng_drawableTop="@drawable/home_guestbook" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@+id/ll_2"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/view3"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:id="@+id/person_businessschedule_ptv"
+                android:text="业务进度"
+                peng:peng_drawableTop="@drawable/home_serviceguide" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:id="@+id/person_logout_ptv"
+                android:text="账户退出"
+                peng:peng_drawableTop="@drawable/home_onlinecommunication" />
+
+            <include layout="@layout/line_vertical" />
+
+            <company.webdemo.agile.com.technologycompany.view.PengTextView
+                style="@style/style_home_9lattice"
+                android:text="公众信箱"
+                android:visibility="invisible"
+                peng:peng_drawableTop="@drawable/home_guestbook" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:background="@color/font_blue"
+            android:layout_below="@+id/view1"
+            android:layout_alignParentStart="true">
+
+
+            <company.webdemo.agile.com.technologycompany.view.RoundImageView
+                android:id="@+id/person_headportrait_riv"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/defaultphoto" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                style="@style/layout_ww_style"
+                android:layout_below="@+id/person_headportrait_riv"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/person_login_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:background="@drawable/circle5_whiteedge_style"
+                    android:gravity="right"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_6"
+                    android:text="登录"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/person_register_tv"
+                    style="@style/layout_ww_style"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:gravity="left"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_6"
+                    android:background="@drawable/circle5_whiteedge_style"
+                    android:text="注册"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/person_loginstatus_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="登录后即可同步您的数据"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

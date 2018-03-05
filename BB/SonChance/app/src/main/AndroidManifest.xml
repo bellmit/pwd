@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tastebychance.sonchance"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <!-- 地图包、搜索包需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 威富通支付 -->
+    <uses-permission android:name="cn.swiftpass.spay.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="cn.swiftpass.spay.permission.MM_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="xvtian.gai.receiver" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--mac book-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1d4bb124833f95357b09dac27daf48c9" />
+
+        <!--<meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d73167d50a5af5163a97ed26b7450b2b" />-->
+        <!--
+         在android4.0以上系统中的 Activity加上下面这句，可以支持地图横竖屏切换
+         android:configChanges="orientation|keyboardHidden|screenSize"
+                               例如：
+         <activity
+            android:name=".startup.StartUpActivity"
+            android:label="@string/basic_map"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        -->
+
+        <activity
+            android:name=".startup.StartUpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 启动页 -->
+        <!--
+            <activity
+            android:name=".startup.StartUpActivity"
+            android:label="启动页"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        -->
+        <!-- 引导页 -->
+        <activity
+            android:name=".startup.GuideActivity"
+            android:label="引导页"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".TabHostMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.tastebychance.task"
+            android:theme="@style/AppTheme" />
+
+        <!-- ****************************************************** 首页 **************************************************** -->
+        <!-- 首页 -->
+        <activity
+            android:name=".homepage.HomeActivity"
+            android:label="首页"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 首页-地址列表 -->
+
+        <activity
+            android:name=".homepage.locate.PlaceChooseActivity"
+            android:label="首页选择地址列表"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 首页-列表-点餐界面 -->
+        <activity
+            android:name=".homepage.order.OrderActivity"
+            android:label="点餐"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 订单界面：订单配送至 -->
+        <activity
+            android:name=".homepage.afterpay.AfterPayActivity"
+            android:label="支付完成后界面"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.cateringservice.CateringServiceActivity"
+            android:label="首页-配餐服务"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.healthylife.HealthyLifeActivity"
+            android:label="首页-健康生活"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.opinionfeedback.OpinionFeedbackActivity"
+            android:label="首页-意见反馈"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.myorder.MyOrderActivity"
+            android:label="首页-我的订单界面"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.search.DishesSearchActivity"
+            android:label="@string/title_activity_dishes_search"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".homepage.toevaluate.ToEvaluateActivity"
+            android:label="@string/title_activity_to_evaluate"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.orderform.OrderFormActivity"
+            android:label="订单界面"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".homepage.pay.PayActivity"
+            android:label="支付"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx76ec42464d54a739" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.switfpass.pay.activity.PayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".homepage.pay.PayDetailActivity"
+            android:label="@string/title_activity_pay_detail"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <!-- ****************************************************** 首页 **************************************************** -->
+
+
+        <!-- ****************************************************** 发现 **************************************************** -->
+        <!-- 发现页 -->
+        <activity
+            android:name=".find.FindActivity"
+            android:label="发现"
+            android:theme="@style/AppTheme" />
+        <!-- ****************************************************** 发现 **************************************************** -->
+
+
+        <!-- ****************************************************** 个人 **************************************************** -->
+        <activity
+            android:name=".personal.PersonalActivity"
+            android:label="@string/title_activity_personal"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.personalcenter.PersonalInformationActivity"
+            android:label="个人界面-个人中心"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.personalcenter.PersonalInformationNameActivity"
+            android:label="个人中心-更改昵称"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.personalcenter.PersonalInformationPhoneNoActivity"
+            android:label="个人中心-验证旧手机号"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.personalcenter.PersonalInformationNewPhoneNoActivity"
+            android:label="个人中心-输入新手机号"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.ordercoupon.PersonCouponActivity"
+            android:label="个人-我的优惠券"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 个人-收货地址管理 -->
+        <activity
+            android:name=".personal.locate.GoodsReceiptAddressManagerActivity"
+            android:label="收货地址管理"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 新增收货地址 -->
+        <activity
+            android:name=".personal.locate.GoodsReceiptAddressAddOrEditActivity"
+            android:label="新增收货地址"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.locate.MarkerAnimationActivity"
+            android:label="新增收货地址-mapview界面"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.locate.PoiKeywordSearchActivity"
+            android:label="新增收货地址-mapview界面-搜索界面"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 个人-定位获取地址 -->
+        <!-- 个人-扫一扫界面 -->
+        <activity
+            android:name=".personal.richscan.RichScanActivity"
+            android:label="扫一扫"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.bankcard.BankCardActivity"
+            android:label="@string/title_activity_bank_card"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.bankcard.BankCardAddActivity"
+            android:label="@string/title_activity_bank_card_add"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.myevaluate.MyEvaluateActivity"
+            android:label="@string/title_activity_my_evaluate"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.membercenter.MemberCenterActivity"
+            android:label="@string/title_activity_member_center"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.balance.BalanceActivity"
+            android:label="@string/title_activity_balance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.balance.BalanceDetailActivity"
+            android:label="@string/title_activity_balance_detail"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.balance.BalanceRechargeActivity"
+            android:label="我的-账户余额-充值"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx76ec42464d54a739" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".personal.versioncheck.VersionCheckActivity"
+            android:label="我的版本更新"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- ****************************************************** 个人 **************************************************** -->
+
+
+        <!-- ****************************************************** 关于 **************************************************** -->
+        <!-- 关于界面 -->
+        <activity
+            android:name=".about.AboutActivity"
+            android:label="关于"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- ****************************************************** 关于 **************************************************** -->
+
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".loginandregister.LoginActivity"
+            android:label="登录"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 注册界面 -->
+        <activity
+            android:name=".loginandregister.RegisterActivity"
+            android:label="注册"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 登录界面-客户需知 -->
+        <activity
+            android:name=".loginandregister.KHXZActivity"
+            android:label="客户需知"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".loginandregister.ForgetPwdActivity"
+            android:label="忘记密码"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 更改密码 -->
+        <activity
+            android:name=".loginandregister.ChangePwdActivity"
+            android:label="更改密码"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 更改密码成功 -->
+        <activity
+            android:name=".loginandregister.ChangePwdSuccessActivity"
+            android:label="更改密码成功"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

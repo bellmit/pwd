@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_confirm_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/dp_8"
+        android:text="确定" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_05_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="0.5天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_10_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="1天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_15_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="1.5天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_20_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="2天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_25_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="2.5天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_30_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="3天" />
+
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_35_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="3.5天" />
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_40_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="4天" />
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_45_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="4.5天" />
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_50_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="5天" />
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_55_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="5.5天" />
+    <TextView
+        android:id="@+id/popupwindow_item_daytype_60_tv"
+        style="@style/popupwindow_apply_leavetype_style"
+        android:text="6天及以上" />
+
+
+</LinearLayout>

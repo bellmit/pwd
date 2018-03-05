@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_mine_feed_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="28dp"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp"
+    android:paddingTop="28dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.feedback.MineFeedBackActivity"
+    tools:showIn="@layout/activity_mine_feed_back">
+
+
+    <EditText
+        android:id="@+id/feedback_content"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_below="@+id/includestatusbar_rl"
+        android:background="@color/bg_gray"
+        android:gravity="top"
+        android:hint="正文"
+        android:imeOptions="actionDone"
+        android:lineSpacingExtra="6.0dp"
+        android:minHeight="200dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:inputType="textMultiLine"
+        android:paddingTop="10dp"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/lightgray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/feedback_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/feedback_content"
+        android:layout_alignRight="@+id/feedback_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="5dp"
+        android:text="（0/240）"
+        android:visibility="gone"
+        android:textColor="@color/text_red"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/feedback_commit_tv"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="提交"
+        android:layout_below="@+id/feedback_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_5"
+        android:background="@color/bg_gray"
+        android:layout_marginTop="28dp" />
+
+</RelativeLayout>

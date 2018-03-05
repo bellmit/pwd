@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/item_writefile_contact_delete_iv"
+        android:layout_width="13dp"
+        android:layout_centerVertical="true"
+        android:layout_height="13dp"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:src="@drawable/cut" />
+
+    <TextView
+        android:id="@+id/item_writefile_contact_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="局长"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/item_writefile_contact_delete_iv"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sp_15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/item_writefile_contact_delete_iv"
+        android:layout_height="@dimen/dp_14"/>
+</RelativeLayout>

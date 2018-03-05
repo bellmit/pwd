@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.RegisterFailActivity">
+
+    <include
+        android:id="@+id/head_rl"
+        layout="@layout/head_includestatusbar" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_rl"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawableLeft="@drawable/registerfail_warnicon"
+        android:drawablePadding="@dimen/dp_10"
+        android:text="失败原因" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.1"
+        android:layout_below="@+id/textView"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_40"
+        android:background="@color/bg_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/registerfail_bg"
+        android:layout_below="@+id/view"
+        android:paddingTop="22dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/registerfail_reason_icon_iv"
+            android:layout_width="10dp"
+            android:layout_height="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/registerfail_reason_icon" />
+
+        <TextView
+            android:id="@+id/registerfail_reason_tcontent_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_toEndOf="@+id/registerfail_reason_icon_iv" />
+
+        <TextView
+            android:id="@+id/call_service_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

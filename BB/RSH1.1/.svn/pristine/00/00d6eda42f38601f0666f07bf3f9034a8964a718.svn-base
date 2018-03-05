@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_manager_jjuser_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.managercommon.jjedt.ManagerJJUserNameActivity"
+    tools:showIn="@layout/activity_manager_jjuser_name">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:inputType="textPersonName"
+        android:hint="请输入您要变更的新名称(30个字符内)"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:maxLength="30"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rectangle_grayedge_style"
+        android:textColorHint="@color/lightgray"
+        android:padding="@dimen/dp_8"
+        android:id="@+id/manager_jjusername_edt" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:text="注意：名称修改，每月仅限一次"
+        android:layout_below="@+id/manager_jjusername_edt" />
+</RelativeLayout>

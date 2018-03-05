@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="mainfragment" type="id"></item> <!-- 登入结果的id -->
+    <item name="minefragment" type="id"></item>
+	<item name="findfragment" type="id"></item>
+	<item name="originatefragment" type="id"></item>
+	<item name="messagefragment" type="id"></item>
+	
+	
+	
+	<!-- 扫一扫二维码信息   -->
+	<item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="quit" type="id"/>
+
+    <item type="id" name="tabcontent" />
+    
+</resources>

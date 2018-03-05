@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="97dp"
+    android:background="@color/bg_gray"
+    android:orientation="horizontal">
+
+    <LinearLayout style="@style/web_detail_share_ll_style">
+
+        <ImageView
+            android:id="@+id/web_detail_share_wx_iv"
+            style="@style/web_detail_share_iv_style"
+            android:src="@drawable/web_share_wx" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        style="@style/web_detail_share_ll_style">
+
+        <ImageView
+            android:id="@+id/web_detail_share_wxpyq_iv"
+            style="@style/web_detail_share_iv_style"
+            android:src="@drawable/web_share_wxpyq" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/web_detail_share_ll_style">
+
+        <ImageView
+            android:id="@+id/web_detail_share_qq_iv"
+            style="@style/web_detail_share_iv_style"
+            android:src="@drawable/web_share_qq" />
+    </LinearLayout>
+</LinearLayout>

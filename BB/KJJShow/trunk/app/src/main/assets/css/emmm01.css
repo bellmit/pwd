@@ -1,0 +1,807 @@
+#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+			.tabBox,.tabBox2,.tabBox3,.tabBox4{
+				width:3.01rem;
+				height: 0.31rem;
+				line-height: 0.3rem;
+				margin: 0.1rem auto;
+				background: #E1E1E1;
+				
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem 0.02rem 0.02rem #CFCFCF inset;
+			    
+				/*background: -webkit-linear-gradient(#E1E1E1, white, #E1E1E1); 
+  background: -o-linear-gradient(#E1E1E1, white, #E1E1E1);
+  background: -moz-linear-gradient(#E1E1E1, white, #E1E1E1);
+  background: linear-gradient(#E1E1E1, white, #E1E1E1); */
+				
+			}
+			.tabBox li{
+				float: left;
+				width: 25%;
+				text-align: center;
+			}
+			.tabBox2 li{
+				float: left;
+				width: 33.3%;
+				text-align: center;
+			}
+			.tabBox3 li{
+				float: left;
+				width: 49.9%;
+				text-align: center;
+			}
+			.tabBox4 li{
+				float: left;
+				width: 20%;
+				text-align: center;
+			}
+			.tabBox li a,.tabBox2 li a,.tabBox3 li a,.tabBox4 li a{
+				font-size: 0.14rem;
+				color: #909090;
+				display: block;
+			}
+			.imgBox{
+				width:3.01rem;
+				margin: 0 auto;
+				height: 1.8rem;
+				position: relative;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem 0.02rem 0.02rem #CFCFCF inset;
+				
+			}
+			.imgBox img{
+				width: 100%;
+				height: 100%;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				
+				 box-shadow: -0.02rem 0.02rem 0.02rem #CFCFCF inset;
+				
+			}
+			.imgBox p{
+				width: 2.91rem;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				position:absolute ;
+				bottom: 0;
+				left: 0;
+				color: white;
+				font-size: 0.12rem;
+				background: rgba(0,0,0,0.6);
+				padding: 0 0.05rem;
+				border-bottom-left-radius: 0.05rem;
+				border-bottom-right-radius: 0.05rem;
+				-webkit-border-bottom-left-radius: 0.05rem;
+				-webkit-border-bottom-right-radius: 0.05rem;
+				
+			}
+			.listBox{
+				display: none;
+			}
+			.rongshangNews-list{
+				width: 2.85rem;
+				margin: 0.08rem auto;
+				padding: 0.08rem;
+				border: 0.01rem solid #A3A3A3;
+				overflow: hidden;
+				position: relative;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.01rem -0.01rem 0.01rem #CFCFCF inset;
+			}
+			.rongshangNews-list img{
+				width: 1rem;
+				height: 0.7rem;
+				float: left;
+				border-radius: 0.05rem;
+				border: 0.01rem solid #A3A3A3;
+			    box-shadow: 0.02rem 0.02rem 0.02rem #CFCFCF;
+			}
+			.rongshangNews-list p{
+				width: 1.8rem;
+				
+				
+				
+			}
+			.rongshangNews-list-title{
+				font-size: 0.13rem;
+				float: right;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2; /* 这个表示要显示几行 */
+				-webkit-box-orient: vertical;
+				
+			}
+			.rongshangNews-list-con{
+				overflow: hidden;
+				position: absolute;
+				bottom: 0.08rem;
+				right: 0.08rem;
+			}
+			.rongshangNews-list-eyes{
+				font-size: 0.18rem;
+				color: #54a8b9;
+				margin-right: 0.05rem;
+			}
+			.rongshangNews-list-readNum{
+				font-size: 0.12rem;
+			   color: #B3B3B3;
+			}
+			.rongshangNews-list-tab{
+				float: right;
+				font-size: 0.12rem;
+				
+				border: 0.01rem solid #A3A3A3;
+				color: #B3B3B3;
+				padding:0.01rem 0.05rem;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				
+				box-shadow: -0.01rem -0.01rem 0.01rem #CFCFCF inset;
+				
+			}
+			.sourceAddress{
+				width: 0.6rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			
+			
+			/*招商宝-商机*/
+			.businessOpportunity{
+				width: 3rem;
+				margin: 0 auto;
+				
+				
+			}
+			.businessOpportunity li{
+				width: 2.9rem;
+				padding: 0.05rem;
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			    margin: 0.1rem 0;
+			}
+			.businessOpportunity a{
+				overflow: hidden;
+				display: block;
+				width: 100%;
+				height: 100%;
+				line-height: 0.3rem;
+				
+			}
+			.businessOpportunity img{
+				width: 0.3rem;
+				height: 0.3rem;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				float: left;
+			}
+			.businessOpportunity p{
+				float: left;
+				margin-left: 0.1rem;
+				width: 2.1rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				font-size: 0.14rem;
+			}
+			.businessOpportunity i{
+				float: right;
+				font-size: 0.18rem;
+				color: #1D4894;
+			}
+			
+            /*名片夹-我的名片*/
+            .myCard{
+				width: 3.18rem;
+				height: 3.9rem;
+				margin: 0 auto;
+				background: url(../img/bg/05.png);
+				background-size: 100% 3.9rem;
+				background-repeat: no-repeat;
+				position: relative;
+			}
+			.myCard-head{
+				
+				width: 0.9rem;
+				height: 0.9rem;
+				border-radius: 50%;
+				margin:0.5rem 0.3rem 0.2rem 0.35rem;
+				float: left;
+				
+			}
+			.myCard-name{
+				
+				float: right;
+				width: 1.3rem;
+				margin:0.6rem 0.3rem 0 0;
+				
+				font-size: 0.2rem;
+				letter-spacing: 0.01rem;
+				text-align: center;
+			}
+			.myCard-tab{
+				
+				border-bottom:0.01rem solid gray;
+				position: absolute;
+				right: 0.2rem;
+				top: 1.2rem;
+				padding: 0.05rem 0;
+				color: #1D4894;
+				font-weight: bold;
+				font-size: 0.13rem;
+				text-align: right;
+				width: 1.4rem;
+				letter-spacing: 0.01rem;
+			}
+			.myCard-share{
+				position: absolute;
+				width: 1rem;
+				right: 0.06rem;
+				bottom: 0.5rem;
+				width: 0.6rem;
+				height: auto;
+			}
+			.myCard-share img{
+				width: 100%;
+				height: 100%;
+			}
+			.myCard-personal{
+				
+				position: absolute;
+				width: 0.6rem;
+				right: 0.06rem;
+				bottom: 0.2rem;
+			}
+			.myCard-message{
+				float: left;
+				background: #E1E1E1;
+				
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem 0.02rem 0.02rem #CFCFCF inset;
+			    height: 0.31rem;
+			    line-height: 0.31rem;
+			    font-size: 0.13rem;
+			    color: gray;
+			}
+			.myCard-message span{
+				float: left;
+				text-align: center;
+				
+				
+			}
+			.myCard-message span:nth-child(1){
+				font-size: 0.1rem;
+				background: white;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+				height: 0.3rem;
+				
+			}
+			.myCard-message span:nth-child(2){
+				font-size: 0.1rem;
+				
+				
+			}
+			.sex,.industry{
+				width: 1.2rem;
+				margin:0.1rem 0.2rem 0.1rem 0.25rem; 
+			}
+			.jiguan,.city{
+				width: 1.2rem;
+				margin:0.1rem 0; 
+				
+				
+			}
+			.sex span,.jiguan span,.industry span,.city span{
+				width: 48%;
+				
+			}
+			.email,.phoneNum{
+				width:2rem;
+				margin:0.1rem 0 0.1rem 0.25rem; 
+				
+			}
+			.email span,.phoneNum span{
+				width: 69%;
+			}
+			
+			
+			.friendMessage{
+				width: 2.9rem;
+				margin: 0.1rem auto;
+				padding: 0.05rem;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			    overflow: hidden;
+			    -webkit-tap-highlight-color: rgba(0,0,0,0);
+			    
+			}
+			.friendMessage-head{
+				width: 0.4rem;
+				height: 0.4rem;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				
+				float: left;
+				position: relative;
+			}
+			.friendMessage-head img{
+				width:100%;
+				height:100%;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+			}
+			.friendMessage-head-num{
+				position: absolute;
+				width: 0.15rem;
+				height: 0.15rem;
+				color: white;
+				text-align: center;
+				right: 0;
+				top: 0;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				background: red;
+				font-size: 0.1rem;
+			}
+			.friendMessage-tab{
+				float: right;
+				/*margin-right: 0.05rem;
+				margin-top: 0.05rem;*/
+				font-size: 0.14rem;
+				color: gray;
+				writing-mode:tb-rl;
+				width: 0.14rem;
+				
+				padding: 0.05rem 0.04rem 0.05rem 0.08rem;
+				
+			
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			}
+			.friendMessage-con{
+				width: 1.95rem;
+				float: left;
+				margin-left: 0.05rem;
+				
+				
+			}
+			.who{
+				font-size: 0.15rem;
+				color: gray;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.voice{
+				font-size: 0.12rem;
+				color: #AB5252;
+			}
+			.character{
+				font-size: 0.12rem;
+				color: grey;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.addressList-searchBox{
+				width: 3rem;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.addressList-searchBox input{
+				background: #EAEAEA;
+				float: left;
+				width: 2.3rem;
+				height: 0.25rem;
+				padding: 0.05rem 0.1rem;
+				border: 0.01rem solid #A3A3A3;
+				box-shadow: -0.02rem 0.02rem 0.02rem #CFCFCF inset;
+			}
+			.addressList-searchBox a{
+				float: right;
+			    width: 0.35rem;
+			    height: 0.35rem;
+			    line-height: 0.33rem;	
+			   text-align: right;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.03rem;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			}
+			.addressList-searchBox i{
+				font-size: 0.2rem;
+				color: #1D4894;
+				
+			}
+			.addressList-operation{
+				position: relative;
+				display: block;
+				width: 3rem;
+				margin: 0.1rem auto;
+				font-size: 0.15rem;
+				color: gray;
+				line-height: 0.35rem;
+				
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+				
+			}
+			.addressList-operation i{
+				color: #1D4894;
+				margin-left: 0.05rem;
+				margin-right: 0.05rem;
+				vertical-align: -0.04rem;
+				
+			}
+			.xiangyou{
+				
+				float: right;
+				margin-top: 0.03rem;
+				margin-right: 0.1rem !important;
+				
+			}
+			.new{
+				position: absolute;
+				left: -0.05rem;
+				top: -0.04rem;
+				font-size: 0.28rem;
+				color: red !important;
+			}
+			.addressList ul{
+				width: 3rem;
+				margin: 0 auto;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.05rem;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			}
+			.addressList ul li{
+				width: 2.9rem;
+				margin: 0 auto;
+				border-bottom: 0.01rem solid gray;
+			}
+			.addressList ul a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				
+				overflow: hidden;
+				padding: 0.1rem 0;
+				color: #545454;
+			}
+			.addressList ul p{
+				float: left;
+				font-size: 0.13rem;
+				width: 2.5rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.addressList ul span{
+				float: right;
+				color: #1D4894;
+				font-size: 0.13rem;
+			}
+			
+            /*首页-搜索*/
+            .searchAddressList{
+				width: 3rem;
+				margin: 0 auto;
+			}
+			.searchAddressList li{
+				width: 100%;
+				height: 100%;
+				border: 0.01rem solid #A3A3A3;
+				box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			    border-radius: 0.03rem;
+				-webkit-border-radius: 0.03rem;
+				margin: 0.1rem 0;
+			}
+			.searchAddressList a{
+				display: block;
+				width: 2.9rem;
+				padding: 0.05rem;
+				overflow: hidden;
+				height: 0.4rem;
+				line-height: 0.4rem;
+			}
+			.searchAddressList img{
+				width: 0.4rem;
+				height: 0.4rem;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				float: left;
+			}
+			.searchAddressList p{
+				float: left;
+				width: 1.6rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin-left: 0.05rem;
+				font-size: 0.14rem;
+			}
+			
+			.searchAddressList input{
+				float: right;
+				border: 0.01rem solid #A3A3A3;
+				box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+				background: white;
+				border-radius: 0.03rem;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				width: 0.6rem;
+				height: 0.25rem;
+				margin-top: 0.08rem;
+				margin-right: 0.05rem;
+				color: grey;
+				text-align: center;
+			}
+			
+
+			/*商会通*/
+            .shangHuiTong-my{
+				width: 3rem;
+				margin: 0 auto;
+			}
+			.shangHuiTong-my li{
+				width: 0.92rem;
+				height: 0.92rem;
+				float: left;
+				margin-bottom: 0.09rem;
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			    border-radius: 0.04rem;
+			    -webkit-border-radius: 0.03rem;
+			    -moz-border-radius: 0.03rem;
+			}
+			.shangHuiTong-my a{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			.shangHuiTong-my img{
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 50%;
+			    -webkit-border-radius: 50%;
+			    -moz-border-radius: 50%;
+			    margin: 0 auto;
+			}
+			.shangHuiTong-my p{
+				font-size: 0.1rem;
+				width: 0.9rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.shangHuiTong-my i{
+				font-size: 0.6rem;
+				color: gray;
+			}
+			
+			
+			.searchResults{
+				width: 3rem;
+				margin: 0 auto;
+				padding: 0.1rem 0;
+			}
+			.searchResults p{
+				
+				height: 0.3rem;
+				line-height: 0.3rem;
+				overflow: hidden;
+				font-size: 0.12rem;
+				color: gray;
+				padding: 0 0.05rem;
+			}
+			.searchResults span{
+				display: inline-block;
+				width: 2.9rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				
+			}
+			.searchResults a{
+				float: right;
+				margin-right: 0.08rem;
+				text-decoration: underline;
+				color: #1D4894;
+			}
+			.jiaguanzhu{
+				float: right;
+				font-size: 0.2rem;
+				color: #1D4894;
+				margin-right: 0.05rem;
+				color:#1D4894;
+				
+				
+				
+			}
+			
+			.conditionBox{
+				width: 3rem;
+				margin: 0.1rem auto 0;
+				overflow: hidden;
+				
+			}
+			.atHomeAndAbroad{
+				width: 1rem;
+				height:0.3rem ;
+				border: 0.01rem solid #A3A3A3;
+				box-shadow: -0.02rem 0.02rem 0.02rem #CFCFCF inset;
+				overflow: hidden;
+				float: left;
+				
+			}
+			.atHomeAndAbroad span{
+				display: block;
+				width: 49%;
+				float: left;
+				text-align: center;
+				height: 100%;
+				line-height: 0.3rem;
+				font-size: 0.13rem;
+				color: gray;
+			}
+			.conditionBox-city{
+				float: right;
+				width: 1.9rem;
+				height:0.3rem ;
+				position: relative;
+				border: 0.01rem solid #A3A3A3;
+				box-shadow: -0.02rem 0.02rem 0.02rem #CFCFCF inset;
+			    background: #EAEAEA;
+			    overflow: hidden;
+			    
+			}
+			.conditionBox-city select{
+				width: 1.9rem;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: transparent;
+				padding: 0 0.3rem 0 0.1rem;
+				font-size: 0.14rem;
+				color: gray;
+			}
+			.conditionBox-city a{
+				background: white;
+				float: right;
+			    width: 0.3rem;
+			    height: 0.3rem;
+			    line-height: 0.3rem;	
+			   text-align: center;
+				border: 0.01rem solid #A3A3A3;
+				border-radius: 0.03rem;
+				-webkit-border-radius: 0.03rem;
+				-moz-border-radius: 0.03rem;
+				 box-shadow: -0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			}
+			.conditionBox-city i{
+				font-size: 0.2rem;
+				color: #1D4894;
+				
+			}
+			
+            /*融资易*/
+            .rongZiYi-creditCard{
+				display: block;
+				width: 2.9rem;
+				margin: 0 auto;
+				overflow: hidden;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				font-size: 0.13rem;
+				font-weight: bold;
+				color: #1D4894;
+				border:0.01rem solid #A3A3A3;
+			    box-shadow:-0.02rem -0.02rem 0.02rem #CFCFCF inset;
+			    border-radius: 0.04rem;
+			    -webkit-border-radius: 0.03rem;
+			    -moz-border-radius: 0.03rem;
+			    padding: 0.05rem;
+			}
+			.rongZiYi-creditCard .xiangyou{
+				float: right;
+				font-size: 0.2rem;
+				color: #1D4894;
+			}
+			.rongZiYi-creditCard .xinyongqia{
+				font-size: 0.3rem;
+				color: #1D4894;
+				vertical-align: -0.05rem;
+				margin-right: 0.08rem;
+			}
+			
+			/*新的好友*/
+			.freindsList{
+				width: 3rem;
+				margin: 0.1rem auto;
+			}
+			.freindsList li{
+				overflow: hidden;
+				padding: 0.08rem 0;
+				border-bottom: 0.01rem solid #DADADA;				
+				
+			}
+			.freindsList span{
+				font-size: 0.15rem;
+			}
+			.freindsList .addBtn{
+				float: right;
+				letter-spacing: 0.02rem;
+				color: #1D4894;
+			}
+			.freindsList i{
+				font-size: 0.16rem;
+				margin-right: 0.05rem;
+				float: left;
+				margin-top: 0.02rem;
+			}
+			.freindsList-name{
+				display: block;
+				width: 2.1rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				float: left;
+			}
+			
+            .freindsList .geren{
+				color: #116A98;
+			}
+			.freindsList .qiye{
+				color: #116A98;
+			}
+			.freindsList .shanghui{
+				color: #445CEF;
+			}
+			.freindsList .jigou{
+				color: #169688;
+			}
+			.freindsList .bumen{
+				color: #3B8094;
+			}

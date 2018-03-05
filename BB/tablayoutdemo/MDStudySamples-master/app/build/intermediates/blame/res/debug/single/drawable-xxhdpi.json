@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_explore.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_explore.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_cloud.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_cloud.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_me.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_me.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_home.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_settings.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_settings.png"
+    }
+]

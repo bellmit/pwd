@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/area_code_firstword_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingTop="5dp"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/first_word_border"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.1"
+        android:layout_marginStart="@dimen/dp_8"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/item_area_child_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/area_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/area_code_tv"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="名称"
+            android:textColor="@color/lightgray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/area_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="0093" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.1"
+            android:layout_below="@+id/area_name_tv"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+
+</LinearLayout>

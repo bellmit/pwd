@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_nostatusbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="@color/font_blue">
+
+        <ImageView
+            android:id="@+id/fragment_mine_headbg_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_wd"
+            android:scaleType="fitXY" />
+
+        <com.tastebychance.sfj.view.RoundImageView
+            android:id="@+id/fragment_mine_headpic_riv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/person_defaultheadportrait" />
+
+        <TextView
+            android:id="@+id/fragment_mine_nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_mine_headpic_riv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="李易峰"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_mine_grxx_rl"
+        style="@style/fragment_mine_item_rl_style">
+
+        <ImageView
+            android:id="@+id/fragment_mine_grxx_icon_iv"
+            style="@style/fragment_mine_item_icon_style"
+            android:src="@drawable/mymesg" />
+
+        <TextView
+            android:id="@+id/fragment_mine_grxx_name_tv"
+            style="@style/fragment_mine_item_name_style"
+            android:layout_toEndOf="@+id/fragment_mine_grxx_icon_iv"
+            android:text="个人信息" />
+
+        <ImageView style="@style/fragment_mine_item_rightiv_style" />
+
+        <View style="@style/fragment_mine_item_underline_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_mine_contacts_rl"
+        style="@style/fragment_mine_item_rl_style">
+
+        <ImageView
+            android:id="@+id/fragment_mine_contacts_icon_iv"
+            style="@style/fragment_mine_item_icon_style"
+            android:src="@drawable/frends" />
+
+        <TextView
+            android:id="@+id/fragment_mine_contacts_name_tv"
+            style="@style/fragment_mine_item_name_style"
+            android:layout_toEndOf="@+id/fragment_mine_contacts_icon_iv"
+            android:text="通讯录" />
+
+        <ImageView style="@style/fragment_mine_item_rightiv_style" />
+
+        <View style="@style/fragment_mine_item_underline_style" />
+    </RelativeLayout>
+
+
+</LinearLayout>

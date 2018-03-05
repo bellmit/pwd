@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sht_mine_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingStart="@dimen/dp_16">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/item_name_tv"
+        android:layout_marginTop="20dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/item_sht_department_follow_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_name_tv"
+        android:layout_alignBottom="@+id/item_name_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="[取消关注]"
+        android:textColor="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="广东省福清商会" />
+
+
+</RelativeLayout>

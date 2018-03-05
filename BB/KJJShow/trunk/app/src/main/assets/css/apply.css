@@ -1,0 +1,147 @@
+body{
+				background: #DFDFDF;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+				
+			}
+			.tab{
+				display: block;
+				width: 3rem;
+				margin: 0 auto;
+				
+				height: 0.4rem;
+				line-height: 0.4rem;
+				border-bottom: 0.01rem solid #C1C1C1;
+			}
+			.tab li:nth-child(1){
+				width: 24%;
+			}
+			.tab li:nth-child(2),.tab li:nth-child(3){
+				width: 38%;
+			}
+			.tab li{
+				/* width: 33.3%;*/
+				display: block;
+				float: left;
+				border-bottom: 0.02rem solid  #1D4894;
+				
+				font-size: 0.14rem;
+				
+				color: #545454;
+				text-align: center;
+				visibility:hidden
+			}
+			.notice{
+				
+				font-size: 0.1rem;
+				color: grey;
+				padding: 0.05rem 0.1rem;
+			}
+			.con{
+				display: none;
+				
+			}
+			
+			.con_txzl p,.con_qygk p,.con_grjqyjj p{
+				width: 3rem;
+				margin: 0 auto;
+				font-size: 0.12rem;
+				color: gray;
+				overflow: hidden;
+				padding: 0.05rem 0;
+				
+				line-height: 0.28rem;
+				
+				
+			}
+			
+			.con_txzl input,.con_qygk input,.con_txzl textarea,.con_qygk textarea{
+				font-size: 0.12rem;
+				color: gray;
+				float: right;
+				
+			}
+			.con_txzl .photoBtn{
+				float: right;
+			}
+			.con_txzl input,.con_qygk input{
+				height: 0.18rem;
+				line-height: 0.18rem;
+				padding: 0.05rem 0.05rem;
+			
+			}
+			.con_txzl .radioBtn{
+				color: #1D4894;
+				margin-left: 0.2rem;
+				vertical-align: -0.01rem;
+				margin-right: 0.02rem;
+				font-size: 0.16rem;
+			}
+			.con_txzl textarea,.con_qygk textarea{
+				height: 0.5rem;
+			}
+			.con_txzl .list{
+				width: 3rem;
+				margin: 0 auto;
+				
+				overflow: hidden;
+				padding: 0.1rem;
+			}
+			.con_txzl .list span{
+				float: left;
+				
+				font-size: 0.12rem;
+				
+				height: 0.27rem;
+				line-height: 0.27rem;
+				color:gray;
+				
+			}
+			.con_txzl .list input[type=text]{
+				float: right;
+				width: 1.65rem;
+				height: 0.18rem;
+				line-height: 0.18rem;
+				padding: 0.05rem 0.05rem;
+				background: white;
+				margin-left: 0.05rem;
+				font-size: 0.12rem;
+				
+			}
+			.useCard{
+				width: 1.8rem !important;
+				margin-right: 0.1rem;
+			}
+			.photoBtn{
+				float: right;
+				position: relative;
+				width: 0.28rem;
+				height: 0.28rem;
+			}
+			.photoBtn i{
+				font-size: 0.27rem;
+				color: grey;
+			}
+			.photo{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0.28rem !important;
+				height: 0.28rem !important;
+				opacity: 0;
+				padding: 0 !important;
+			
+			
+			}
+			.con_grjqyjj textarea{
+				display: block;
+				width: 3rem;
+				margin: 0 auto;
+				height: 1.6rem;
+				font-size: 0.12rem;
+				color: gray;
+			}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- textView 矩形灰色边框 -->
+    <!-- 白色 -->
+    <solid android:color="#ffffff" />
+
+    <!-- 边框 -->
+    <stroke
+        android:width="1dip"
+
+        android:color="@color/colorPrimaryDark" />
+
+
+</shape>

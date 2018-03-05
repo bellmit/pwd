@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_xxyyqt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".register.RegisterSHQYActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include2"
+                layout="@layout/head_nostatusbar" />
+
+            <TextView
+                android:id="@+id/register_unitname_tv"
+                style="@style/register_xinxitianxie_title_style"
+                android:layout_marginTop="26dp"
+                android:text="单位名称" />
+
+            <EditText
+                android:id="@+id/register_unitname_edt"
+                style="@style/register_xinxitianxie_edt_style"
+                android:hint="30个字符内"
+                android:maxLength="30" />
+
+            <TextView
+                android:id="@+id/register_unitemail_tv"
+                style="@style/register_xinxitianxie_title_style"
+                android:text="单位邮箱" />
+
+            <EditText
+                android:id="@+id/register_unitemail_edt"
+                style="@style/register_xinxitianxie_edt_style" />
+
+            <TextView
+                android:id="@+id/register_username_tv"
+                style="@style/register_xinxitianxie_title_style"
+                android:text="使用人名字" />
+
+            <EditText
+                android:id="@+id/register_username_edt"
+                style="@style/register_xinxitianxie_edt_style" />
+
+            <TextView
+                android:id="@+id/register_ascription_tv"
+                style="@style/register_xinxitianxie_title_style"
+                android:text="所属地" />
+
+            <TextView
+                android:id="@+id/register_ascription_edt_tv"
+                style="@style/register_xinxitianxie_edt_style"
+                android:paddingEnd="@dimen/dp_12"
+                android:drawableRight="@drawable/znsc_turn_right" />
+
+            <TextView
+                android:id="@+id/register_usercardclip_tv"
+                style="@style/register_xinxitianxie_title_style"
+                android:text="使用者名片" />
+
+
+            <ImageView
+                android:id="@+id/register_usercardclip_iv"
+                style="@style/register_xinxitianxie_edt_style"
+                android:layout_height="182dp"
+                android:background="@drawable/register_usercardclip_edt_bg" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

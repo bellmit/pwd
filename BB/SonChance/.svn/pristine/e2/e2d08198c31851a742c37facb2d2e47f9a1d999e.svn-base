@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_order_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/head" />-->
+    <include layout="@layout/head_includestatusbar"
+        android:id="@+id/view1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:id="@+id/textView1"
+        android:text="当前账户余额(元)"/>
+
+    <TextView
+        android:id="@+id/balance_value_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="24.91"
+        android:textColor="@color/text_black"
+        android:gravity="center"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="30dp"
+        android:textSize="74sp"/>
+
+    <TextView
+        android:layout_width="82dp"
+        android:layout_height="30dp"
+        android:text="查看明细"
+        android:textColor="@color/dark_green"
+        android:layout_below="@+id/balance_value_tv"
+        android:layout_marginTop="29.5dp"
+        android:gravity="center"
+        android:onClick="balanceDetailClick"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:background="@drawable/circle25_darkgreenedge_style"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:text="账户充值"
+        android:textSize="20sp"
+        android:onClick="rechargeClick"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/circle5_redbg_style"/>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_xxyyqt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/head_nostatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/register_type_bank_ll"
+        style="@style/item_jgregister_type_ll_style">
+
+        <CheckBox
+            android:id="@+id/register_type_bank_cb"
+            style="@style/item_jgregister_type_cb_style" />
+
+        <TextView
+            android:id="@+id/register_type_bank_tv"
+            style="@style/item_jgregister_type_tv_style"
+            android:text="银行" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/register_type_negotiablesecurities_ll"
+        style="@style/item_jgregister_type_ll_style">
+
+        <CheckBox
+            android:id="@+id/register_type_negotiablesecurities_cb"
+            style="@style/item_jgregister_type_cb_style" />
+
+        <TextView
+            android:id="@+id/register_type_negotiablesecurities_tv"
+            style="@style/item_jgregister_type_tv_style"
+            android:text="证券" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_type_insurance_ll"
+        style="@style/item_jgregister_type_ll_style">
+
+        <CheckBox
+            android:id="@+id/register_type_insurance_cb"
+            style="@style/item_jgregister_type_cb_style" />
+
+        <TextView
+            android:id="@+id/register_type_insurance_tv"
+            style="@style/item_jgregister_type_tv_style"
+            android:text="保险" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_type_trust_ll"
+        style="@style/item_jgregister_type_ll_style">
+
+        <CheckBox
+            android:id="@+id/register_type_trust_cb"
+            style="@style/item_jgregister_type_cb_style" />
+
+        <TextView
+            android:id="@+id/register_type_trust_tv"
+            style="@style/item_jgregister_type_tv_style"
+            android:text="信托" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_type_fund_ll"
+        style="@style/item_jgregister_type_ll_style">
+
+        <CheckBox
+            android:id="@+id/register_type_fund_cb"
+            style="@style/item_jgregister_type_cb_style" />
+
+        <TextView
+            android:id="@+id/register_type_fund_tv"
+            style="@style/item_jgregister_type_tv_style"
+            android:text="基金" />
+    </LinearLayout>
+
+</LinearLayout>

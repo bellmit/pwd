@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="left">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/mine_myfollow_underline" />
+
+    <ImageView
+        android:id="@+id/head_left_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_below="@+id/mine_myfollow_underline"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:paddingBottom="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:src="@drawable/head_left" />
+
+    <TextView
+        android:id="@+id/head_center_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mine_myfollow_underline"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mine_myfollow_underline"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/head_right_iv"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:background="@drawable/home_search"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/head_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/mine_myfollow_underline"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

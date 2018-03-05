@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>商会通</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<link rel="stylesheet" href="css/emmm01.css" />
+		
+		<style>
+			
+            .turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn" href="index.html"><i class="iconfont icon-fanhui"></i></a>商会通
+		</header>
+		
+		<div id="all">
+	        <ul class="tabBox4">
+	        	<li>
+	        		<a>我的</a>
+	        	</li>
+	        	<li>
+	        		<a>商会</a>
+	        	</li>
+	        	<li>
+	        		<a>企业</a>
+	        	</li>
+	        	<li>
+	        		<a>部门</a>
+	        	</li>
+	        	<li>
+	        		<a>机构</a>
+	        	</li>
+	        	
+	        </ul>
+	        
+            <!--我的-->
+            <div class="listBox">
+            	<ul class="shangHuiTong-my">
+            		<li>
+            			<a class="">
+            				<img src="img/fake/1.png" />
+            				<p>广东省福清市商会</p>
+            			</a>
+            		</li>
+            		<li>
+            			<a>
+            				<img src="img/fake/2.png" />
+            				<p>广东省福清市商会</p>
+            			</a>
+            		</li>
+            		<li>
+            			<a>
+            				<img src="img/fake/3.png" />
+            				<p>广东省福清市商会</p>
+            			</a>
+            		</li>
+            		<li>
+            			<a>
+            				<img src="img/fake/4.png" />
+            				<p>广东省福清市商会</p>
+            			</a>
+            		</li>
+            		
+            		<li>
+            			<a>
+            				<i class="iconfont icon-tianjia tianjia"></i>
+            			</a>
+            		</li>
+            	</ul>
+            </div>
+            <!--商会-->
+            <div class="listBox">
+            	<p class="addressList-searchBox">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            	</p>
+            	<div class="conditionBox">
+	    			<div class="atHomeAndAbroad">
+	    				<span>国内</span>
+	    				<span>国际</span>
+	    			</div>
+	    			<div class="conditionBox-city">
+	    				<select >
+	    					
+	    					<!--<option>福建省</option>
+	    					<option>上海</option>
+	    					<option>北京</option>
+	    					<option>吉林省</option>
+	    					<option>香港</option>
+	    					<option>四川省</option>
+	    					<option>山西省</option>
+	    					<option>河北省</option>-->
+	    				</select>
+	    				 <a><i class="iconfont icon-xiala"></i></a>
+	    			</div>
+	    		</div>
+            	<!--以下为搜索结果样式-->
+    		    <div class="searchResults" a="0">
+    		    	<input class="cache" type="hidden" value="" />
+	    			<p><span>宁德市福清商会</span></p>
+	    			<p><span>莆田市福清商会</span></p>
+	    			<p><span>泉州市福清商会</span></p>
+	    			
+	    		</div>
+            	
+            </div>
+            <!--企业-->
+            <div class="listBox">
+            	<p class="addressList-searchBox">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            	</p>
+            	<!--以下为搜索结果样式-->
+    		    <div class="searchResults">
+    		    	<input class="cache" type="hidden" value="" />
+	    			<p><span>福马</span></p>
+	    			<p><span>鹤庆</span></p>
+	    			<p><span>虎都</span></p>
+	    		
+	    			
+	    		</div>
+            	
+            </div>
+            <!--部门-->
+            <div class="listBox">
+            	<p class="addressList-searchBox">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            	</p>
+            	<!--以下为搜索结果样式-->
+    		    <div class="searchResults">
+    		    	<input class="cache" type="hidden" value="" />
+	    			<p><span>市政府</span></p>
+	    			<p><span>科技局</span></p>
+	    			<p><span>林业局</span></p>
+	    			<p><span>农牧局</span></p>
+	    			
+	    			
+	    		</div>
+            	
+            </div>
+            <!--机构-->
+            <div class="listBox">
+            	<p class="addressList-searchBox">
+            			<input type="text" />
+            		    <a><i class="rongshangNews-list-eyes iconfont icon-xiazai"></i></a>
+            	</p>
+            	<!--以下为搜索结果样式-->
+    		    <div class="searchResults">
+    		    	<input class="cache" type="hidden" value="" />
+	    			<p><span>建设银行</span></p>
+	    			<p><span>民生银行</span></p>
+	    			<p><span>光大银行</span></p>
+	    		</div>
+            	
+            </div>
+           
+		</div>
+	
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script type="text/javascript" src="js/province.js" ></script>
+		<script type="text/javascript" src="js/zone-description.js" ></script>
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			
+			
+			if(parameter1==null){
+				$(".listBox").eq(1).show();
+				$(".cache").eq(0).val("1")
+				$(".tabBox4 li a").eq(1).css({
+					background:"white",
+					color:"black",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+				})
+
+			}else{
+				
+				$(".listBox").eq(parameter1).show();
+				$(".tabBox4 li a").eq(parameter1).css({
+					background:"white",
+					color:"black",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+				})
+				
+                
+				
+				
+			}
+			
+			
+			$(".tianjia").click(function(){
+				$(".listBox").hide();
+				$(".tabBox4 li a").css({
+					background:"",
+					color:"",
+					border:"",
+				    boxShadow:"",
+				    borderRadius:""
+				})
+				$(".listBox").eq(1).show();
+				$(".cache").eq(0).val("1")
+				$(".tabBox4 li a").eq(1).css({
+					background:"white",
+					color:"black",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+				})
+			})
+			$(".tabBox4 li a").click(function(){
+				var a=$('.tabBox4 li a').index(this);
+				
+				if(a>0){
+					$(".cache").eq(a-1).val(a)
+				}
+				$(".tabBox4 li a").css({
+					background:"",
+					color:"",
+					border:"",
+				    boxShadow:"",
+				    borderRadius:""
+				})
+				$(".listBox").hide();
+				$(this).css({
+					background:"white",
+					color:"black",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+			    })
+				$(".listBox").eq(a).show();
+				
+				
+				
+			})
+			
+
+			
+      
+            $(".shangHuiTong-my li").css("margin-right","0.09rem")
+			var num=$(".shangHuiTong-my li").length;
+			for(var i=0;i<num;i++){
+				if((i+1)%3==0){
+					
+					$(".shangHuiTong-my li").eq(i).css("margin-right","0")
+				}
+			}
+			
+			
+			$(".searchResults p").attr("a","0")
+			$(".searchResults p").attr("c","0")
+			$(".searchResults p").click(function(){
+	            if($(this).attr("c")==0){
+						if($(this).attr("a")==0){
+							$(".searchResults p").attr("a","0");
+							$(".searchResults a").remove();
+							$(".jiaguanzhu").remove();
+							$(".searchResults p").css({
+						    	border:"",
+						    	boxShadow:"",
+						    	background:"",
+						    	fontSize:""
+						    })
+							$(".searchResults p").find("span").css({
+						    	width:"2.9rem"
+						    })
+							$(this).attr("a","1")
+							$(this).html($(this).html()+'<i onclick="guanzhu(this)" class="iconfont icon-jiaguanzhu jiaguanzhu"></i><a onclick="linkDetail(this)">详情</a>')
+							$(".jiaguanzhu").attr("b","0")
+							
+						    $(this).css({
+						    	border:"0.01rem solid #A3A3A3",
+						    	boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+						    	background:"white",
+						    	fontSize:"0.14rem",
+						    	
+						    })
+						    $(this).find("span").css({
+						    	width:"2.2rem"
+						    })
+						}else{
+							return
+						}
+				}else{
+					    if($(this).attr("a")==0){
+							$(".searchResults p").attr("a","0");
+							$(".jiaguanzhu").remove();
+							$(".searchResults a").remove();
+							$(".searchResults p").css({
+						    	border:"",
+						    	boxShadow:"",
+						    	background:"",
+						    	fontSize:""
+						    })
+							$(".searchResults p").find("span").css({
+						    	width:"2.9rem"
+						    })
+							$(this).attr("a","1")
+							$(this).html($(this).html()+'<i style="-webkit-tap-highlight-color: rgba(0,0,0,0);" onclick="guanzhu(this)" class="iconfont icon-yiguanzhu jiaguanzhu"></i><a onclick="linkDetail(this)">详情</a>')
+							$(".jiaguanzhu").attr("b","1")
+							
+						    $(this).css({
+						    	border:"0.01rem solid #A3A3A3",
+						    	boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+						    	background:"white",
+						    	fontSize:"0.14rem"
+						    })
+						    $(this).find("span").css({
+						    	width:"2.2rem"
+						    })
+						}else{
+							return
+						}
+				}
+            })
+		    function guanzhu(obj){
+				if($(obj).attr("b")==0){
+					$(obj).attr("b","1")
+					$(obj).removeClass("icon-jiaguanzhu")
+				    $(obj).addClass("icon-yiguanzhu")
+				    $(obj).parent().attr("c","1")
+				    layerTip("已关注");
+				}else{
+					$(obj).attr("b","0")
+					$(obj).removeClass("icon-yiguanzhu")
+				    $(obj).addClass("icon-jiaguanzhu")
+				     $(obj).parent().attr("c","0")
+				    layerTip("已取消关注");
+				}
+			}
+
+            function linkDetail(obj){
+            	var parameter1=$(obj).parents("p").siblings(".cache").val();
+				var parameter2="shangHuiTong"
+				window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+				
+            	
+            }
+            $(".atHomeAndAbroad span").eq(0).css({
+				background:"white",
+				color:"gray",
+				border:"0.01rem solid #A3A3A3",
+			    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+			    borderRadius:"0.03rem"
+			})
+            $(".conditionBox-city select").html("<option>---请选择国内地区---</option>")
+            for(var i=0;i<arrProvince.length;i++){
+            	$(".conditionBox-city select").append("<option>"+arrProvince[i]+"</option>");
+            
+            }
+            
+
+			$(".atHomeAndAbroad span").click(function(){
+				if($(this).html()=="国内"){
+					$(".conditionBox-city select").find("option").remove();
+					$(".conditionBox-city select").html("<option>---请选择国内地区---</option>")
+					for(var i=0;i<arrProvince.length;i++){
+		            	$(".conditionBox-city select").append("<option>"+arrProvince[i]+"</option>");
+		            
+		            }
+					
+				}else if($(this).html()=="国际"){
+					$(".conditionBox-city select").find("option").remove();
+					$(".conditionBox-city select").html("<option>---请选择国际地区---</option>")
+					for(var i=0;i<arr.length;i++){
+						var name=arr[i][0];
+						
+            			$(".conditionBox-city select").append("<option>"+name+"</option>");
+            
+                    }
+				}
+				
+				var a=$('.atHomeAndAbroad span').index(this);
+				$(".atHomeAndAbroad span").css({
+					background:"",
+					color:"",
+					border:"",
+				    boxShadow:"",
+				    borderRadius:""
+				})
+				$(this).css({
+					background:"white",
+					color:"#2c2c2c",
+					border:"0.01rem solid #A3A3A3",
+				    boxShadow:"-0.02rem -0.02rem 0.02rem #CFCFCF inset",
+				    borderRadius:"0.03rem"
+			    })
+
+				
+				
+			})
+			
+			
+			$(".shangHuiTong-my a").click(function(){
+				var a=$(".shangHuiTong-my a").index(this)
+				var parameter2="shangHuiTong"
+				if(a<$(".shangHuiTong-my a").length-1){
+					var parameter1=0;
+					window.location.href="info.html?parameter1="+parameter1+"&parameter2="+parameter2;
+				}
+			})
+		</script>
+	</body>
+</html>

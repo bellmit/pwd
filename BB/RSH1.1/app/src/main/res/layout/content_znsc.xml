@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_znsc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.managercommon.zhinan.ZNSCActivity"
+    tools:showIn="@layout/activity_znsc">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="64dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/znsc_title_edt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:hint="标题" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:layout_below="@+id/znsc_title_edt"
+                android:id="@+id/znsc_add_rl">
+
+                <TextView
+                    android:id="@+id/znsc_add_num_tv"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:paddingStart="@dimen/dp_10"
+                    android:layout_height="match_parent"
+                    android:text="上传附件" />
+
+                <ImageView
+                    android:id="@+id/znsc_add_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/znsc_turn_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/znsc_add_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_below="@+id/znsc_add_rl">
+
+                <!--附件列表-->
+                <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                    android:id="@+id/activity_zncategory_addfujian_mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none">
+
+                </rongshanghui.tastebychance.com.rongshanghui.view.MyListView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/znsc_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:layout_below="@+id/znsc_add_ll"
+                android:background="@color/bg_gray"
+                android:gravity="top"
+                android:hint="正文"
+                android:imeOptions="actionDone"
+                android:lineSpacingExtra="6.0dp"
+                android:minHeight="200dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/lightgray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/znsccontent_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/znsc_content_tv"
+                android:layout_alignRight="@+id/znsc_content_tv"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"
+                android:text="（0/240）"
+                android:visibility="gone"
+                android:textColor="@color/text_red"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:layout_below="@+id/znsc_content_tv"
+                android:id="@+id/znsc_chosetype_rl">
+
+                <TextView
+                    android:id="@+id/znsc_chosetype_name_tv"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:paddingStart="@dimen/dp_10"
+                    android:layout_height="match_parent"
+                    android:text="选择分类" />
+
+                <ImageView
+                    android:id="@+id/znsc_chosetype_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/znsc_turn_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/znsc_commit_tv"
+                android:layout_width="113dp"
+                android:layout_height="40dp"
+                android:text="提交"
+                android:layout_below="@+id/znsc_chosetype_rl"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/dp_5"
+                android:background="@drawable/rectangle_grayedge_style"
+                android:layout_marginTop="33dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

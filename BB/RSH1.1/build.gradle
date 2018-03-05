@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//配置“通用的配置”
+subprojects{
+    apply from: "${project.rootDir}/common_config.gradle"
+
+//    dependencies {
+//        testCompile 'junit:junit:4.12'
+//    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/'}
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1' //emptylayout Add this line
+
+        //bugly配置符号表
+        classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
+
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

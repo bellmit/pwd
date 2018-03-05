@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'sonchance.keystore'
+            keyPassword 'tastebychance@12345687'
+            storeFile file('/Users/shenbinghong/Desktop/tastebychance/SONCHANCE/SonChance/trunk/sonchance.keystore')
+            storePassword 'tastebychance@12345687'
+        }
+        debug {
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "com.tastebychance.sonchance"
+        minSdkVersion 17
+        targetSdkVersion 19
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            // VersionName后缀
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+        }
+        release {
+            // 不显示log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    productFlavors {
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    dexOptions {
+        //使用增量模式构建
+        //incremental true
+        //最大堆内存
+        javaMaxHeapSize "8g"
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+        //线程数
+        threadCount = 8
+    }
+
+    build.doLast {
+        def today = new Date().format('yyyyMMdd');
+        copy {
+            from('build/outputs/apk')
+            into('/output')
+//            into('/')
+            include('app-release.apk')
+            rename('app-release.apk', 'SonChance' + "_" + today + '.apk')
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(includes: ['*.jar'], dir: 'libs')
+    compile files('libs/fastjson-1.2.4.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/okhttp-3.4.1.jar')
+    compile files('libs/okio-1.9.0.jar')
+    compile files('libs/universal-image-loader-1.9.2.jar')
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.flipboard:bottomsheet-core:1.5.1'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/Android_Map3D_SDK_V5.2.1_20170630.jar')
+    compile files('libs/AMap_Location_V3.5.0_20170731.jar')
+    compile files('libs/AMap_Search_V5.2.1_20170630.jar')
+    compile files('libs/Android_Map3D_SDK_V5.2.1_20170630.jar')
+    compile files('libs/Volley.jar')
+    compile files('libs/wftsdk5.0.jar')
+    compile files('libs/libammsdk.jar')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.dyhdyh.loadingbar:loadingbar:1.4.4'
+}

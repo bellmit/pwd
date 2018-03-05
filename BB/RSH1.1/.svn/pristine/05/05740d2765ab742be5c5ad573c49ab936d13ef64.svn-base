@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_news"
+    style="@style/StyledIndicators"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_news">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/news_guanzhu_rl"
+            style="@style/news_tab_rl_style">
+
+            <TextView
+                android:id="@+id/news_guanzhu_tv"
+                android:text="关注消息"
+                style="@style/news_tab_tv_style" />
+
+            <ImageView
+                android:id="@+id/news_guanzhu_iv"
+                style="@style/news_tab_iv_style" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/news_xitong_rl"
+            style="@style/news_tab_rl_style">
+
+            <TextView
+                android:id="@+id/news_xitong_tv"
+                style="@style/news_tab_tv_style"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="系统消息" />
+
+            <ImageView
+                android:id="@+id/news_xitong_iv"
+                style="@style/news_tab_iv_style" />
+
+            <TextView
+                android:id="@+id/unread"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignRight="@+id/news_xitong_tv"
+                android:layout_alignTop="@+id/news_xitong_tv"
+                android:background="@drawable/tab_unread_icon"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout" />
+</RelativeLayout>

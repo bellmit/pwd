@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="company.webdemo.agile.com.technologycompany">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 地图包、搜索包需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TabHostMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyBaseActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".common.ShowWebActivity"
+            android:label="@string/title_activity_show_web"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" />
+
+        <!-- 首页 -->
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="首页"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.technologytrends.TechnologyTrendsActivity"
+            android:label="@string/title_activity_technology_trends"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.technologybureau.TechnologyBureauActivity"
+            android:label="@string/title_activity_technology_bureau"
+            android:theme="@style/AppTheme" />
+        <!-- 首页 -->
+
+
+        <!-- 信箱 -->
+        <activity
+            android:name=".etdirectory.EtDirectoryActivity"
+            android:label="@string/title_activity_et_directory"
+            android:theme="@style/AppTheme" />
+        <!-- 信箱 -->
+
+
+        <!-- 消息 -->
+        <activity
+            android:name=".news.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:theme="@style/AppTheme" />
+        <!-- 消息 -->
+
+
+        <!-- 个人中心 -->
+        <activity
+            android:name=".personal.PersonalActivity"
+            android:label="@string/title_activity_personal"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".register.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".personal.changepwd.ChangePWDActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/title_activity_change_pwd"></activity>
+        <!-- 个人中心 -->
+
+    </application>
+
+</manifest>

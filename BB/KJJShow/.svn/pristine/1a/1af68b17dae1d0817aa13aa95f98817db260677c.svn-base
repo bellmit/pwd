@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>手机验证</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/layer/layer.js" ></script>
+		
+		
+		
+		<style>
+			body{
+				background-image: url(img/bg/04.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+			header{
+				background: rgba(204,204,206,0.5);
+				color: #545454;
+			}
+			#all{
+				position: absolute;
+				top: 0.8rem;
+				
+				width: 100%;
+				bottom: 0;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch; /* ios5+ */
+				padding: 0.1rem 0;
+				font-size: 0.12rem;
+				color: #545454;
+				
+			}
+			
+			.list{
+				width: 2.2rem;
+				margin: 0 auto;
+				
+				overflow: hidden;
+				padding: 0.1rem 0;
+			}
+			input[type=text]{
+				padding: 0.03rem 0.05rem;
+				height: 0.22rem;
+				background: transparent;
+				border-bottom: 0.01rem solid gray;
+				width: 1.34rem;
+				font-size: 0.12rem;
+				
+				
+			}
+			p{
+				text-align: center;
+				font-size: 0.1rem;
+				padding: 0.15rem 0 0.05rem;
+			}
+			p a{
+				font-size: 0.1rem;
+				text-decoration: underline;
+			}
+			.icon1{
+				font-size: 0.28rem;
+				vertical-align: -0.03rem;
+				margin-right: 0.05rem;
+			}
+			.zoneDescriptionText,.diququhao,.yanzhengma,.checkCode,.shoujibangding-shouji,.phoneNum{
+				float: left;
+			}
+			.zoneDescriptionBtn{
+				float: right;
+				width: 0.28rem;
+				position: relative;
+			}
+			.zoneDescription{
+				width: 0.28rem;
+				height: 0.28rem;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+			}
+			.phoneNum{
+			   width: 1.62rem !important;
+			}
+			.checkCode{
+				width: 1.08rem !important;
+			}
+			.nextBtn{
+				display: block;
+				margin: 0.25rem auto;
+				background: #545454;
+				color: white;
+				width: 2rem;
+				height: 0.4rem;
+				font-size: 0.14rem;
+			}
+			.getBtn{
+				width: 0.54rem;
+				height: 0.28rem;
+				margin-left: 0.05rem;
+				background: #545454;
+				color: white;
+				letter-spacing: 0.01rem;
+				float: right;
+				font-size: 0.12rem;
+			}
+			.queren{
+				vertical-align: -0.01rem;
+				margin-right: 0.01rem;
+			}
+			.turnBtn:link {color: #545454}     /* 未访问的链接 */
+			.turnBtn:visited {color: #545454}  /* 已访问的链接 */
+			.turnBtn:hover {color:#545454}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: #545454}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn" href="registerSelect.html"><i class="iconfont icon-fanhui"></i></a>手机验证
+		</header>
+		<div id="all">
+	        <div class="list">
+	        	<i class="iconfont icon1 icon-diququhao diququhao"></i>
+	        	<input class="zoneDescriptionText"  type="text" value="区号（+86）" disabled="disabled" />
+	        	<div class="zoneDescriptionBtn">
+	        		<select class="zoneDescription"></select>
+	        	    <i class="iconfont icon1 icon-more"></i>
+	        	</div>
+	        </div>
+	        
+	        <div class="list">
+	        	
+	        	<i class="iconfont icon1 icon-shoujibangding-shouji shoujibangding-shouji"></i>
+	        	<input class="phoneNum" type="text" placeholder="请输入手机号码" />
+	        </div>
+	        
+	        <div class="list">
+	        	<i class="iconfont icon1 icon-yanzhengma yanzhengma"></i>
+	        	<input class="checkCode" type="text" placeholder="请输入验证码" />
+	        	<input class="getBtn" type="button" value="获取" />
+	        </div>
+	        
+	         <p>
+	        	<i class="iconfont icon2 icon-queren queren"></i>我已阅读并同意<a class="yhxzBtn" style="color: #545454;">《用户须知》</a>
+	         </p>
+	        <input class="nextBtn" type="button" value="下一步" />
+		</div>
+		
+		<script type="text/javascript" src="js/zone-description.js" ></script>
+		<script type="text/javascript" src="js/regular.js" ></script>
+		<script type="text/javascript" src="js/useLayer.js" ></script>
+		<script>
+			for(var i=0;i<arr.length;i++){
+				var name=arr[i][0];
+				var code=arr[i][1];
+				$(".zoneDescription").append("<option>"+name+"("+code+")"+"</option>");
+			}
+			
+			$(".zoneDescription").change(function(){
+                var value=$(this).val();
+				var value = value.replace(/[^0-9]/ig,""); 
+				$(".zoneDescriptionText").val("区号（+"+value+")")
+			})
+			
+			var a=0
+			$(".queren").click(function(){
+				if(a==0){
+					a=1;
+					$(".queren").css("color","#1D4894")
+				}else{
+					a=0;
+					$(".queren").css("color","")
+				}
+			})
+			
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			$(".nextBtn").click(function(){
+//				var phoneNum=$(".phoneNum").val();
+//				var checkCode=$(".checkCode").val();
+//				if(phoneNum==""){
+//					layerTip("请输入手机号");
+//					return
+//				}
+//				if(!regPhoneNum.test(phoneNum)){
+//					layerTip("手机号输入错误");
+//					return
+//				}
+//				if(checkCode==""){
+//					layerTip("请输入验证码");
+//					return
+//				}
+//				if(a==0){
+//					layerTip("您是否同意《用户须知》规定内容");
+//					return
+//				}
+                if(parameter1==0){
+                	window.location.href="registerPersonal.html?parameter1="+parameter1;
+                }else if(parameter1==1){
+					window.location.href="registerMessage.html?parameter1="+parameter1;
+				}else if(parameter1==2){
+					window.location.href="registerMessage.html?parameter1="+parameter1;
+				}else if(parameter1==3){
+					window.location.href="registerMessage.html?parameter1="+parameter1;
+				}else if(parameter1==4){
+					window.location.href="registerMessage.html?parameter1="+parameter1;
+				}
+
+			})
+			
+			$(".yhxzBtn").click(function(){
+				
+				window.location.href="notice.html?parameter1="+parameter1;
+			})
+			$(".getBtn").click(function(){
+				var phoneNum=$(".phoneNum").val();
+				
+				if(phoneNum==""){
+					layerTip("请输入手机号");
+					return
+				}
+				if(!regPhoneNum.test(phoneNum)){
+					layerTip("手机号输入错误");
+					return
+				}
+				
+				settime();
+			})
+			
+			
+			
+			var countdown=3;
+			function settime(){
+//				$(".getBtn").val();
+				if(countdown==0){
+					$(".getBtn").attr('disabled',false);
+					$(".getBtn").val("获取");
+					
+					countdown=3;
+					return
+				}else{
+					$(".getBtn").attr('disabled',true);
+					
+					$(".getBtn").val(countdown+"s");
+					countdown--;
+					
+				}
+				setTimeout(function(){settime()},1000);
+			}
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/includestatusbar_rl"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="left"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/mine_myfollow_underline"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/search_edt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mine_myfollow_underline"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@+id/search_cancel_tv"
+        android:background="@color/white"
+        android:hint="请输入关键字"
+        android:maxLines="1"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_5"
+        android:textSize="15.0dip" />
+
+    <TextView
+        android:id="@+id/search_cancel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mine_myfollow_underline"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+
+        android:text="取消"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/search_icon_iv"
+        android:src="@drawable/search_bar_icon_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_edt"
+        android:layout_alignTop="@+id/search_edt"
+        android:layout_toStartOf="@+id/search_cancel_tv"
+        android:paddingLeft="@dimen/dp_10" />
+</RelativeLayout>

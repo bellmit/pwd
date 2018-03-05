@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/includestatusbar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/text_red"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/head_location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/view1"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="福州市"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/head_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/head_location_tv"
+                android:clickable="true"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/addresssearch_pull" />
+
+<!--            <com.tastebychance.sonchance.homepage.locate.SearchEditText
+                android:id="@+id/home_search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle25_whitebg_style"
+                android:drawableLeft="@drawable/home_search"
+                android:drawableRight="@drawable/home_more"
+                android:focusable="false"
+                android:hint="请输入关键字"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textSize="12sp" />-->
+
+            <AutoCompleteTextView
+                android:id="@+id/keyWord"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/circle25_whitebg_style"
+                android:completionThreshold="1"
+                android:layout_marginRight="10dp"
+                android:dropDownVerticalOffset="1.0dip"
+                android:textColorHint="@color/gray"
+                android:imeOptions="actionDone"
+                android:drawableLeft="@drawable/addresssearch_search"
+                android:drawableRight="@drawable/addresssearch_clear"
+                android:inputType="text|textAutoComplete"
+                android:maxLength="20"
+                android:hint="请输入关键字"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+<!--            <com.tastebychance.sonchance.homepage.locate.SearchEditText
+                android:id="@+id/home_search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle25_whitebg_style"
+                android:drawableLeft="@drawable/home_search"
+                android:drawableRight="@drawable/home_more"
+                android:focusable="false"
+                android:hint="请输入关键字"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textSize="12sp" />-->
+
+            <!--<com.tastebychance.sonchance.view.searcheview.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle25_whitebg_style"
+                app:searchBlockColor="#ffffff"
+                app:searchBlockHeight="150"
+                android:textSize="12sp"
+                app:textColorSearch="#9b9b9b"
+                app:textHintSearch="输入查询关键字"
+                app:textSizeSearch="5dp" />
+-->
+
+            <TextView
+                android:id="@+id/head_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

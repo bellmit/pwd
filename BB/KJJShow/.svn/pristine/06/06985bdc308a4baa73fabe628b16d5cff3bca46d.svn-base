@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>会员管理</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+
+		
+		
+		<style>
+			body{
+				background-image: url(img/bg/vipManage.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+		
+			#all{
+				position: absolute;
+				top: 0.5rem;
+			    left: 0;
+				width: 100%;				
+			}
+			
+			.vipManageList{
+				display: block;
+				width: 2.8rem;
+				margin: 0 auto 0.12rem;
+				overflow: hidden;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				font-size: 0.15rem;
+				
+				color: #545454;
+				
+			    box-shadow:-0.01rem 0rem 0.03rem #CFCFCF;
+			   
+			    padding:0.05rem 0.1rem ;
+			    
+			}
+			.vipManageList span{
+				color: gray;
+				font-size: 0.12rem;
+				margin-left: 0.15rem;
+			}
+			.vipManageList .xiangyou{
+				float: right;
+				font-size: 0.2rem;
+				color: #1D4894;
+				margin-top: 0.03rem;
+			}
+			.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+			
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>会员管理
+		</header>
+		<div id="all">
+	        <a  class="vipManageList" >
+                                           商会成员<span>59人</span>
+        	          
+        	    <i class="iconfont icon-xiangyou xiangyou"></i>
+        	</a>
+        	<a  class="vipManageList" >
+                                           待审核<span>10人</span>
+        	          
+        	    <i class="iconfont icon-xiangyou xiangyou"></i>
+        	</a>
+		</div>
+		
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			$(".turnBtn").click(function(){
+				window.location.href="info.html?parameter1="+parameter1;
+			})
+		</script>
+		
+	</body>
+</html>

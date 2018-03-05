@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                style="@style/sjfq_ll_style">
+
+                <RelativeLayout
+                    android:id="@+id/sjfq_sjyw_rl"
+                    style="@style/sjfq_title_rl_style">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        style="@style/sjfq_title_nameleftdraw_style" />
+
+                    <TextView
+                        android:id="@+id/sjfq_sjyw_tv"
+                        style="@style/sjfq_title_name_style"
+                        android:layout_toEndOf="@+id/textView17"
+                        android:text="数据要闻" />
+
+                    <ImageView
+                        android:id="@+id/sjfq_sjyw_more_iv"
+                        style="@style/sjfq_title_more_style" />
+                </RelativeLayout>
+
+                <!--<include layout="@layout/line_horizontal" />-->
+
+                <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                    android:id="@+id/sjyw_mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sjfq_sjyw_rl"
+                    android:background="@drawable/rectangle_grayedge_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/sjfq_ll_style"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <RelativeLayout
+                    android:id="@+id/sjjd_rl"
+                    style="@style/sjfq_title_rl_style">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        style="@style/sjfq_title_nameleftdraw_style" />
+
+                    <TextView
+                        android:id="@+id/sjfq_sjjd_tv"
+                        style="@style/sjfq_title_name_style"
+                        android:layout_toEndOf="@+id/textView18"
+                        android:text="数据解读" />
+
+                    <ImageView
+                        android:id="@+id/sjfq_sjjd_more_iv"
+                        style="@style/sjfq_title_more_style" />
+                </RelativeLayout>
+
+                <!--<include layout="@layout/line_horizontal" />-->
+
+                <rongshanghui.tastebychance.com.rongshanghui.view.MyListView
+                    android:id="@+id/sjjd_mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sjjd_rl"
+                    android:background="@drawable/rectangle_grayedge_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

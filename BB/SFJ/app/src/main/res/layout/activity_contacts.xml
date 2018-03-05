@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contacts_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.tastebychance.sfj.mine.contacts.ContactsActivity">
+
+
+    <include layout="@layout/head_includestatusbar" />
+
+    <com.tastebychance.sfj.view.SearchIconClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="16dip"
+        android:background="@drawable/circle5_grayedge_lightgraybg_style"
+        android:hint="搜索"
+        android:maxLines="1"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="通讯录"
+        android:textColor="#989898"
+        android:textSize="@dimen/sp_15" />
+
+    <name.quanke.app.libs.emptylayout.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#f4f4f4"
+                android:dividerHeight="1px"
+                android:listSelector="#0000"/>
+
+            <com.tastebychance.sfj.view.QuickIndexBar
+                android:id="@+id/quickIndexBar"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right" />
+
+            <TextView
+                android:id="@+id/currentWord"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_bluebg_style"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </name.quanke.app.libs.emptylayout.EmptyLayout>
+</LinearLayout>

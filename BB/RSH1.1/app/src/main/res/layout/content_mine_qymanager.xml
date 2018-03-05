@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_qymanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.qymanager.QYManagerActivity"
+    tools:showIn="@layout/activity_mine_qymanager">
+
+    <ImageView
+        android:id="@+id/activity_mine_manager_head_iv"
+        style="@style/detail_count_layout_headiv_style"
+        android:background="@drawable/pic1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/detail_count_layout_style"
+        android:layout_below="@+id/activity_mine_manager_head_iv">
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_rzxm_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_rzxmnum_tv"
+                style="@style/detail_count_layout_num_style"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_rzxm_tv"
+                style="@style/detail_count_layout_numshow_style"
+                android:text="融资项目" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_fs_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fsnum_tv"
+                style="@style/detail_count_layout_num_style"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fs_tv"
+                style="@style/detail_count_layout_numshow_style"
+                android:text="粉丝数" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_zx_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_zxnum_tv"
+                style="@style/detail_count_layout_num_style"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_zx_tv"
+                style="@style/detail_count_layout_numshow_style"
+                android:text="资讯" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_ll_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_llnum_tv"
+                style="@style/detail_count_layout_num_style"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_ll_tv"
+                style="@style/detail_count_layout_numshow_style"
+                android:text="浏览量" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelalyout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_jj_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/mine_qymanager_jianjie_iv" />
+
+        <ImageView
+            android:layout_toEndOf="@+id/activity_mine_manager_jj_iv"
+            android:id="@+id/activity_mine_manager_xmgl_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/mine_qymanager_xiangmu_iv" />
+
+        <ImageView
+            android:layout_toEndOf="@+id/activity_mine_manager_xmgl_iv"
+            android:id="@+id/activity_mine_manager_zxfb_iv"
+            android:layout_width="81dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/mine_qymanager_zixun_iv" />
+
+        <ImageView
+            android:layout_toEndOf="@+id/activity_mine_manager_zxfb_iv"
+            android:id="@+id/activity_mine_manager_fcgl_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/mine_qymanager_fengcai_iv" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sht_mine_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.RoundImageView
+            android:id="@+id/item_head_rtv"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/person_defaultheadportrait" />
+
+
+        <TextView
+            android:id="@+id/item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="22dp"
+            android:layout_toEndOf="@+id/item_head_rtv"
+            android:layout_toStartOf="@+id/item_adopt_iv"
+            android:text="广东省福清商会"
+            android:textColor="#999999"
+            android:textSize="@dimen/sp_15" />
+
+        <ImageView
+            android:id="@+id/item_adopt_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_5"
+            android:src="@drawable/item_znck_del" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

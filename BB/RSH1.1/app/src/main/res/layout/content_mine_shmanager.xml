@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_shmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rongshanghui.tastebychance.com.rongshanghui.mime.shmanager.SHManagerActivity"
+    tools:showIn="@layout/activity_mine_shmanager">
+
+    <ImageView
+        android:id="@+id/activity_mine_manager_head_iv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/pic1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_mine_manager_head_iv"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_18">
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_huiyuannum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_huiyuannum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_huiyuan_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="会员数"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_fsnum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fsnum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_fs_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="粉丝数"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_shanghuixiu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_shanghuixiunum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_shanghuixiu_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="商会秀"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+
+        <include layout="@layout/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/activity_mine_manager_llnum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_mine_manager_llshownum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/activity_mine_manager_llnum_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="浏览量"
+                android:textColor="@color/font_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelalyout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_jianjieguanli_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/mine_shmanager_jianjie_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_zixunfabu_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:layout_toEndOf="@+id/activity_mine_manager_jianjieguanli_iv"
+            android:background="@drawable/mine_shmanager_zixunfabu_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_shanghuixiufabu_iv"
+            android:layout_width="81dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:layout_toEndOf="@+id/activity_mine_manager_zixunfabu_iv"
+            android:background="@drawable/mine_shmanager_shanghuixiufabu_iv" />
+
+        <ImageView
+            android:id="@+id/activity_mine_manager_huiyuanguanli_iv"
+            android:layout_width="82dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:layout_toEndOf="@+id/activity_mine_manager_shanghuixiufabu_iv"
+            android:background="@drawable/mine_shmanager_huiyuanguanli_iv" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

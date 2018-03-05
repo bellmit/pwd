@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/web_rootlayout"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includestatusbar_rl"
+        layout="@layout/head_nostatusbar" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_below="@+id/includestatusbar_rl"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/relativelayout"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray"
+        android:layout_height="49dp">
+
+        <ImageView
+            android:id="@+id/detail_share_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:src="@drawable/detail_share_icon" />
+
+        <ImageView
+            android:id="@+id/detail_collect_iv"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:src="@drawable/detail_uncollect_icon"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/detail_praise_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/detail_unpraise_icon"
+            android:layout_marginBottom="@dimen/dp_8" />
+    </RelativeLayout>
+</RelativeLayout>

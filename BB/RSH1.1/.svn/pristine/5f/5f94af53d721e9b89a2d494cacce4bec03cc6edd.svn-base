@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_areacode_rootlayout"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_nostatusbar" />
+
+    <!-- 搜索栏 -->
+
+    <rongshanghui.tastebychance.com.rongshanghui.view.SearchIconClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dip"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:hint="请输入关键字"
+        android:maxLines="1"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_15"
+        android:paddingLeft="10dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/search_nocity_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="right|top"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="没有匹配的城市"
+        android:textColor="#454545"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#f4f4f4"
+            android:dividerHeight="1px"
+            android:listSelector="#0000"></ListView>
+
+        <rongshanghui.tastebychance.com.rongshanghui.view.QuickIndexBar
+            android:id="@+id/quickIndexBar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:id="@+id/currentWord"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_bluebg_style"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

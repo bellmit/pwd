@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_mm_style"
+    android:background="@color/white"
+    tools:context="company.webdemo.agile.com.technologycompany.home.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/includestatusbar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/head_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingBottom="10dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/head_left" />
+
+            <TextView
+                android:id="@+id/head_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/head_left_iv"
+                android:layout_below="@+id/view1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/textgray" />
+
+            <TextView
+                android:id="@+id/head_center_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="科技局"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/id_cb"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/includestatusbar_rl"
+            android:background="@drawable/defaultphoto"
+            app:canLoop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:background="@drawable/defaultphoto"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="机构职责"
+                android:paddingLeft="@dimen/dp_18"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:background="@drawable/defaultphoto"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="领导介绍"
+                android:paddingLeft="@dimen/dp_18"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:background="@drawable/defaultphoto"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="内设机构"
+                android:paddingLeft="@dimen/dp_18"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_order_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/head" />-->
+    <include
+        android:id="@+id/view1"
+        layout="@layout/head_includestatusbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="选择充值金额"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:orientation="horizontal"
+
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_1000_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:text="1000元" />
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_500_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:text="500元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_300_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:text="300元" />
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_100_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:text="100元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_50_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:text="50元" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle5_grayedge_style"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout3"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="12dp"
+                android:text="*暂未开放体现功能" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:paddingBottom="20dp"
+                android:paddingLeft="18dp"
+                android:text="选择支付方式"
+                android:textColor="@color/text_black" />
+
+            <RelativeLayout
+                android:id="@+id/relativelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="18dp"
+                android:visibility="gone"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/person_balancerecharge_paymenttype_zfb_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/order_form_payment_zfb_small" />
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_paymenttype_zfb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/person_balancerecharge_paymenttype_zfb_iv"
+                    android:background="@color/white"
+                    android:text="支付宝支付"
+                    android:textColor="@color/text_black" />
+
+                <CheckBox
+                    android:id="@+id/person_balancerecharge_paymenttype_zfb_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/check_selector"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout1"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/person_balancerecharge_paymenttype_wx_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/order_form_payment_wx_small" />
+
+                <TextView
+                    android:id="@+id/person_balancerecharge_paymenttype_wx_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/person_balancerecharge_paymenttype_wx_iv"
+                    android:background="@color/white"
+                    android:text="微信支付"
+                    android:textColor="@color/text_black" />
+
+                <CheckBox
+                    android:id="@+id/person_balancerecharge_paymenttype_wx_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/check_selector"
+                    android:checked="false" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/person_balancerecharge_torecharge_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/circle5_greenbg_style"
+        android:gravity="center"
+        android:text="去充值"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

@@ -1,0 +1,1 @@
+include ':app', ':library', ':vitamio', ':wx', ':jcvideoplayer-lib', ':ffmpeg4android_lib', ':emptylayout'

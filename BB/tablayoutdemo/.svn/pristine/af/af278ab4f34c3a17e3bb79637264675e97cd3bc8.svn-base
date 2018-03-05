@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_mobile.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_mobile.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_scan.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_scan.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_toolbar_search.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_toolbar_search.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_location.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_location.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_toolbar_add.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_toolbar_add.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_card.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_card.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_more.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_more.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_scan_96.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_scan_96.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_pay_96.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_pay_96.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_toolbar_order.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_toolbar_order.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_avatar.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_avatar.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_coupon.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_coupon.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_pay.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_pay.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_camera_96.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_camera_96.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_menu_home_selected.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_menu_home_selected.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_menu_home_normal.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_menu_home_normal.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_password.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_password.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_toolbar_order_72.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_toolbar_order_72.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_item_more.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_item_more.png"
+    },
+    {
+        "merged": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_alipay_search_96.png",
+        "source": "F:\\UsefulDemo\\MDStudySamples-master\\MDStudySamples-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_alipay_search_96.png"
+    }
+]

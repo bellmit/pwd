@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_fwdt_gridview_iv"
+        style="@style/home_rmtj_iv_style" />
+
+    <TextView
+        android:id="@+id/item_fwdt_gridview_tv"
+        style="@style/home_rmtj_tv_style" />
+</LinearLayout>

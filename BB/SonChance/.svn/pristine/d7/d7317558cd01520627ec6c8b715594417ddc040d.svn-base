@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_myorder_history_ll"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/home_myorder_tv"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:text="历史订单"
+        android:background="@color/white"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/home_myorder_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/text_red"
+        android:visibility="visible" />
+</LinearLayout>

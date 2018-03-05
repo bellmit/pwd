@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="js/swiper/swiper.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			
+			
+			.rongshangNews-head a:link {color: black}     /* 未访问的链接 */
+			.rongshangNews-head a:visited {color: black}  /* 已访问的链接 */
+			.rongshangNews-head a:hover {color:black}    /* 当有鼠标悬停在链接上 */
+			.rongshangNews-head a:active {color: black}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			融商汇<a class="searchBtn"><i class="iconfont icon-xiazai"></i></a>
+		</header>
+		<div id="all">
+	        <!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <a class="swiper-slide"><img  src="img/1.png" /></a>
+		            <a class="swiper-slide"><img src="img/fake/1510102982.jpg" /></a>
+		            <a class="swiper-slide"><img  src="img/fake/1510102994(1).jpg" /></a>
+		        </div>
+		         <div class="swiper-pagination"></div>
+		    </div>
+		    
+		    <ul class="nav">
+		    	<li>
+		    		<a href="rongshangNews.html">
+		    			<img src="img/index/融商新闻.png" />融商新闻
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="shangHuiTong.html">
+		    			<img src="img/index/商会通.png" />商会通
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="zhaoShangBao.html">
+		    			<img src="img/index/招商宝.png" />招商宝
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="rongZiYi.html">
+		    			<img src="img/index/融资易.png" />融资易
+		    		</a>
+		    	</li>
+		    </ul>
+		    
+		    <div class="message">
+			    <p onclick="linkDetail()">
+			    	<i class="iconfont icon-gonggao"></i><span>通知通告：</span>福建省侨联主席：让“福清华侨”成为金字招牌
+			    </p>
+		    </div>
+
+            <div class="rongshangNews">
+            	<p class="rongshangNews-head">
+            	    融商新闻<a href="rongshangNews.html">更多>></a>
+            	</p>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103089(1).jpg" />
+            		<p class="rongshangNews-list-title">浓浓乡音喜相逢 满满乡情话发展</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1.1万</span><span class="rongshangNews-list-tab">头条</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103306(1).jpg" />
+            		<p class="rongshangNews-list-title">第二届世界融商大会在侨乡福清开幕</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1.6万</span><span class="rongshangNews-list-tab">头条</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103326(1).jpg" />
+            		<p class="rongshangNews-list-title">福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。福清新旧城区将迎来“大外环时代”。</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1万</span><span class="rongshangNews-list-tab">头条</span>
+            		</p>
+            	</div>
+            </div>
+            
+            <div class="rongshangNews">
+            	<p class="rongshangNews-head" >
+            	    商会通<a href="shangHuiTong.html">更多>></a>
+            	</p>
+            	<span class="rongshangNews-hotTag">热门推荐</span>
+            	<ul class="rongshangNews-nav">
+		    	<li>
+		    		<a>
+		    			<img src="img/fake/1.png" />
+		    			<p>
+		    				广东省福清市交流会 
+		    			</p>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a>
+		    			<img src="img/fake/2.png" />
+		    			<p>
+		    				武汉市福清融商汇
+		    			</p>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a>
+		    			<img src="img/fake/3.png" />
+		    			<p>
+		    				上海市福清融商汇
+		    			</p>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a>
+		    			<img src="img/fake/4.png" />
+		    			<p>
+		    				融商汇 
+		    			</p>
+		    		</a>
+		    	</li>
+		    </ul>
+            	
+            </div>
+            
+            <div class="rongshangNews">
+            	<p class="rongshangNews-head">
+            	    招商宝<a href="zhaoShangBao.html">更多>></a>
+            	</p>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103301.jpg" />
+            		<p class="rongshangNews-list-title">“二次招商”破解工业发展瓶颈</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">1,000</span><span class="rongshangNews-list-tab">金融资讯</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103306(1).jpg" />
+            		<p class="rongshangNews-list-title">凝心聚力 共谋“大福清”发展蓝图</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">3.6万</span><span class="rongshangNews-list-tab">金融资讯</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103313(1).jpg" />
+            		<p class="rongshangNews-list-title">福清元洪国际食品园一期填方工程完工</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">6,980</span><span class="rongshangNews-list-tab">金融资讯</span>
+            		</p>
+            	</div>
+            </div>
+            
+            <div class="rongshangNews">
+            	<p class="rongshangNews-head">
+            	    融资易<a href="rongZiYi.html">更多>></a>
+            	</p>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510102957(1).jpg" />
+            		<p class="rongshangNews-list-title">农业部领导来融调研农产品质量安全工作</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">5,012</span><span class="rongshangNews-list-tab">融资</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103320(1).jpg" />
+            		<p class="rongshangNews-list-title">变废为宝产品热销</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">3万</span><span class="rongshangNews-list-tab">贷款</span>
+            		</p>
+            	</div>
+            	<div class="rongshangNews-list">
+            		<img src="img/fake/1510103326(1).jpg" />
+            		<p class="rongshangNews-list-title">省道305线三山至东瀚段“白改黑”主体提前完工</p>
+            		<p class="rongshangNews-list-con">
+            			<i class="rongshangNews-list-eyes iconfont icon-liulanshu"></i><span class="rongshangNews-list-readNum">3.2万</span><span class="rongshangNews-list-tab">融资</span>
+            		</p>
+            	</div>
+            </div>
+            
+		</div>
+		
+		<ul class="footer">
+		    	<li>
+		    		<a  style="color:#1d4894;">
+		    			<i class="iconfont icon-shouyechufa"></i>首页
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="businessCard.html">
+		    			<i class="iconfont icon-mingpianjiachufa"></i>名片夹
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="message.html">
+		    			<i class="iconfont icon-xiaoxichufa"></i>消息
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="wd.html">
+		    			<i class="iconfont icon-wodechufa"></i>我的
+		    		</a>
+		    	</li>
+		</ul>
+		
+		<script src="js/swiper/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				paginationClickable: true,
+				spaceBetween: 30,
+				centeredSlides: true,
+				autoplay: 2500,
+				autoplayDisableOnInteraction: false
+			});
+			$(".nav").height($(".nav li").width())
+			
+			$(".rongshangNews-list").click(function(){
+				window.location.href="detail.html";
+			})
+			
+			
+			function linkDetail(){
+				window.location.href="detail.html";
+			}
+			$(".searchBtn").click(function(){
+				window.location.href="search.html";
+			})
+			
+			
+			$(".rongshangNews-nav li a").click(function(){
+				
+				var parameter1=6;
+				window.location.href="info.html?parameter1="+parameter1;
+			})
+		</script>
+	</body>
+</html>

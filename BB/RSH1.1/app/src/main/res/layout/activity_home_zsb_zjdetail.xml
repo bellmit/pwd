@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_zsbzjdetail_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includestatusbar_rl"
+        layout="@layout/head_includestatusbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/includestatusbar_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                style="@style/detail_count_layout_style"
+                android:layout_below="@+id/activity_detail_head_iv">
+
+                <LinearLayout
+                    android:id="@+id/activity_detail_fsnum_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_detail_fsnumshow_tv"
+                        style="@style/detail_count_layout_num_style"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/activity_detail_fsnum_tv"
+                        style="@style/detail_count_layout_numshow_style"
+                        android:text="粉丝数" />
+                </LinearLayout>
+
+                <include layout="@layout/line_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/activity_detail_zcnum_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_detail_zcnumshow_tv"
+                        style="@style/detail_count_layout_num_style"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/activity_detail_zcnum_tv"
+                        style="@style/detail_count_layout_numshow_style"
+                        android:text="政策" />
+                </LinearLayout>
+
+                <include layout="@layout/line_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/activity_detail_shxnum_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_detail_shxnumshow_tv"
+                        style="@style/detail_count_layout_num_style"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/activity_detail_shxnum_tv"
+                        style="@style/detail_count_layout_numshow_style"
+                        android:text="商会秀" />
+                </LinearLayout>
+
+                <include layout="@layout/line_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/activity_detail_llnum_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_detail_llnumshow_tv"
+                        style="@style/detail_count_layout_num_style"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/activity_detail_llnum_tv"
+                        style="@style/detail_count_layout_numshow_style"
+                        android:text="浏览量" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:paddingBottom="40dp"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10">
+
+                <ImageView
+                    android:id="@+id/activity_detail_jj_iv"
+                    android:layout_width="97dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/zsb_zj_jianjie" />
+
+                <ImageView
+                    android:id="@+id/activity_detail_zx_iv"
+                    android:layout_width="90dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/activity_detail_jj_iv"
+                    android:background="@drawable/zsb_zj_zixun" />
+
+                <ImageView
+                    android:id="@+id/activity_detail_shx_iv"
+                    android:layout_width="151dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/activity_detail_zx_iv"
+                    android:background="@drawable/zsb_zj_shanghuixiu" />
+
+
+                <ImageView
+                    android:id="@+id/activity_detail_lxwm_iv"
+                    android:layout_width="72dp"
+                    android:layout_height="112dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/activity_detail_jj_iv"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/zsb_zj_lianxiwomen" />
+
+                <ImageView
+                    android:id="@+id/activity_detail_bszn_iv"
+                    android:layout_width="91dp"
+                    android:layout_height="112dp"
+                    android:layout_alignTop="@+id/activity_detail_lxwm_iv"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/activity_detail_lxwm_iv"
+                    android:background="@drawable/zsb_zj_banshizhinan" />
+
+                <ImageView
+                    android:id="@+id/activity_detail_clxz_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="112dp"
+                    android:layout_alignTop="@+id/activity_detail_bszn_iv"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/activity_detail_bszn_iv"
+                    android:background="@drawable/zsb_zj_cailiaoxiazai" />
+
+                <ImageView
+                    android:id="@+id/activity_detail_clsb_iv"
+                    android:layout_width="89dp"
+                    android:layout_height="112dp"
+                    android:layout_alignTop="@+id/activity_detail_clxz_iv"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/activity_detail_clxz_iv"
+                    android:background="@drawable/zsb_zj_cailiaoshangbao" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/activity_detail_head_iv"
+                style="@style/detail_count_layout_headiv_style" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

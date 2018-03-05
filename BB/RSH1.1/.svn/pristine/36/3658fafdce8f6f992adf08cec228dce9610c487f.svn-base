@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_grayedge_style"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/item_ly_title_rl"
+            style="@style/item_ckhf_title_rl_style">
+
+            <TextView
+                android:id="@+id/item_ly_title_tv"
+                style="@style/item_ckhf_title_name_style"
+                android:text="留言内容：" />
+
+            <TextView
+                android:id="@+id/item_ly_time_tv"
+                style="@style/item_ckhf_title_date_style" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/bg_gray" />
+
+        <TextView
+            android:id="@+id/item_ly_content_tv"
+            style="@style/item_ckhf_content_style" />
+
+        <LinearLayout
+            android:id="@+id/item_hf_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/item_hf_title_rl"
+                style="@style/item_ckhf_title_rl_style">
+
+                <TextView
+                    android:id="@+id/item_hf_title_tv"
+                    style="@style/item_ckhf_title_name_style"
+                    android:text="回复内容：" />
+
+                <TextView
+                    android:id="@+id/item_hf_time_tv"
+                    style="@style/item_ckhf_title_date_style" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_gray" />
+
+            <TextView
+                android:id="@+id/item_hf_content_tv"
+                style="@style/item_ckhf_content_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

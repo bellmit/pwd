@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>企业详情、商会详情、部门详情、机构详情、招商宝-商机-工业区、镇、商会管理、企业管理</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="js/layer/layer.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+        <!--企业详情、商会详情、部门详情、机构详情、招商宝-商机-工业区、镇、商会管理、企业管理共用此页面-->
+		<style>
+			body{
+				background: #DFDFDF;
+			}
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+.tip{
+	
+    padding-top: 0.1rem;
+    font-size: 0.1rem;
+	color: darkgray;
+   
+    text-align: center
+}
+.chat_con{
+	width: 100%;
+
+	margin-bottom: 0.6rem;
+	overflow:auto
+}
+.chated{
+	width: 94%;
+	margin: 0.1rem auto 0;
+	overflow: hidden;
+
+}
+.chating{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.45rem;
+    background:#f0f0f0;
+    border-top: 0.01rem solid #CECECE;
+    overflow: hidden;
+}
+.chating span{
+	display: block;
+	width: 0.3rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background: white;
+	float: left;
+	border: 0.01rem solid #E7E7E7;
+	text-align: center;
+    box-shadow:0 0.02rem 0.02rem #CFCFCF inset;
+    margin-top: 0.07rem;
+    
+}
+.chating span i{
+	font-size: 0.26rem;
+	
+	color: #1D4894;
+}
+.chating input{
+	float: left;
+	height: 0.2rem;
+	padding: 0.05rem ;
+	 margin-top: 0.07rem;
+	 margin-right: 0.05rem;
+	 box-shadow:0 0.02rem 0.02rem #CFCFCF inset;
+	border-radius: 0.08rem;
+	-moz-border-radius: 0.08rem;
+	-webkit-border-radius: 0.08rem;
+	width: 1.8rem;
+}
+
+
+
+.you li,.me li{
+	width: 2.5rem;
+	/*border: 0.01rem solid black;*/
+	display: inline-block;
+}
+.you li img,.me li img{
+    width:0.4rem; 
+	height:0.4rem; 
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+
+}
+.you li p,.me li p{
+	max-width: 1.8rem;
+	font-size: 0.12rem;
+	
+	padding: 0.1rem;
+	margin-top:0.04rem;
+	border-radius: 0.08rem;
+	-moz-border-radius: 0.08rem;
+	-webkit-border-radius: 0.08rem;
+	
+	letter-spacing: 0.01rem;
+	word-wrap:break-word;
+	position: relative;
+
+}
+.you li img{
+    float: left;
+}
+.me li img{
+    float: right;
+}
+.you li p{
+	float: left;
+	background: #1D4894;
+	margin-left: 0.1rem;
+	color: white;
+
+}
+.me li p{
+	color: #1D4894;
+	float: right;
+	margin-right: 0.1rem;
+	background: white;
+	 box-shadow:0 0.02rem 0.02rem #CFCFCF inset;
+	/*background-image: -moz-linear-gradient( 90deg, rgb(97,197,110) 0%, rgb(110,216,127) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(97,197,110) 0%, rgb(110,216,127) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(97,197,110) 0%, rgb(110,216,127) 100%);*/
+}
+.me{
+	float: right;
+}
+.you .sanjiaox{
+	position:absolute;
+	left: -10px;
+	top: -0.01rem;
+	
+	
+
+	width: 0;height: 0;
+	
+	
+	
+	border-top: 5px solid transparent;
+    border-right: 10px solid #e5e5ea;
+    border-bottom: 5px solid transparent;
+     border-left: 5px solid transparent;
+
+     transform: rotate(30deg);
+-ms-transform: rotate(30deg); /* IE 9 */
+-webkit-transform: rotate(30deg); /* Safari and Chrome */
+	
+}
+.me .sanjiaox{
+	position:absolute;
+	right: -10px;
+	top: -0.01rem;
+	
+
+	width: 0;height: 0;
+	
+	
+	
+	border-top: 5px solid transparent;
+    border-left: 10px solid rgb(110,216,127);
+    border-bottom: 5px solid transparent;
+     border-right: 5px solid transparent;
+
+     transform: rotate(-30deg);
+-ms-transform: rotate(-30deg); /* IE 9 */
+-webkit-transform: rotate(-30deg); /* Safari and Chrome */
+	
+}
+
+.turnBtn:link {color: white}     /* 未访问的链接 */
+			.turnBtn:visited {color: white}  /* 已访问的链接 */
+			.turnBtn:hover {color:white}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color: white}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>
+			刘洲
+			
+			
+			
+		</header>
+		
+		<div id="all">
+			<div class="chat_con" id="chat_con">
+<p class="tip">2017-10-31&nbsp;&nbsp;13:20:54</p>
+
+<div class="chated" id="chated">
+
+
+		<ul class="you"  >
+			<li><img src="img/用户头像.png" /><p>希望接下来我们合作愉快<!--<span class="sanjiaox" ></span>--></p></li>
+		</ul>
+	
+		<ul class="me"   >
+			<li><img src="img/用户头像.png" /><p>合作愉快！<!--<span class="sanjiaox"></span>--></p></li>
+		</ul>
+
+
+
+</div>
+
+</div>
+<div class="chating" >
+	<span style="margin-left: 0.1rem;margin-right: 0.05rem;"><i class="iconfont icon-yuyin1"></i></span>
+	<input type="text" />
+	<span style="margin-right: 0.05rem;"><i class="iconfont icon-biaoqing"></i></span>
+	<span><i class="iconfont icon-yuanxingtianjia"></i></span>
+	
+</div>
+		</div>
+	    
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			
+			$(".turnBtn").click(function(){
+				if(parameter2=="search"){
+					if(parameter1==1){
+					    window.location.href="search.html?parameter1="+parameter1
+					}else{
+						window.history.go(-1);
+					}
+				}else{
+					
+					
+					if(parameter1==1||parameter1==2){
+					    window.location.href="businessCard.html?parameter1="+parameter1
+					}else if(parameter1==3){
+						window.location.href="addFriends.html?parameter1="+parameter1
+					}else if(parameter1==4){
+						window.location.href="newFriends.html?parameter1="+parameter1
+					}else{
+						window.history.go(-1);
+					}
+				}
+				
+				
+			})
+			
+		</script>
+	</body>
+</html>

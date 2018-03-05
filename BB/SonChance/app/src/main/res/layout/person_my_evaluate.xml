@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_mw_style"
+    android:id="@+id/root_layout"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view2"
+        layout="@layout/head_includestatusbar" />
+
+    <com.tastebychance.sonchance.view.PullRefreshListView
+        android:id="@+id/pullrefreshlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view2"
+        android:divider="@null"
+        android:scrollbars="none">
+
+    </com.tastebychance.sonchance.view.PullRefreshListView>
+</RelativeLayout>

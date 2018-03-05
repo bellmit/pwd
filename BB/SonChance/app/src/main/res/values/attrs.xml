@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PengRadioButton">
+        <!-- 设置top图片的宽度 -->
+        <attr name="peng_drawableTopWidth" format="dimension" />
+        <!-- 设置top图片的高度 -->
+        <attr name="peng_drawableTopHeight" format="dimension" />
+        <attr name="peng_drawableBottomWidth" format="dimension" />
+        <attr name="peng_drawableBottomHeight" format="dimension" />
+        <attr name="peng_drawableRightWidth" format="dimension" />
+        <attr name="peng_drawableRightHeight" format="dimension" />
+        <attr name="peng_drawableLeftWidth" format="dimension" />
+        <attr name="peng_drawableLeftHeight" format="dimension" />
+        <!-- 设置top的图片资源 -->
+        <attr name="peng_drawableTop" format="reference" />
+        <attr name="peng_drawableBottom" format="reference" />
+        <attr name="peng_drawableRight" format="reference" />
+        <attr name="peng_drawableLeft" format="reference" />
+    </declare-styleable>
+   <!--     <attr name="drawable_width" format="dimension"/>
+        <attr name="drawable_height" format="dimension"/>-->
+
+    <declare-styleable name="TimeTextView">
+
+    </declare-styleable>
+    
+
+	<declare-styleable name="RoundAngleImageView">
+	<attr name="roundWidth" format="dimension" />
+	<attr name="roundHeight" format="dimension" />
+	</declare-styleable>
+
+	<!-- 圆形头像图片 -->
+	<declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"/>
+    </declare-styleable>
+
+    <!--自定义带下标的头像-->
+    <declare-styleable name="MyUserPhoto">
+        <attr name="small_height" format="dimension"/>
+        <attr name="small_width" format="dimension"/>
+        <attr name="is_vip" format="dimension"/>
+        <attr name="small_icon" format="dimension"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="IdentifyingCodeView">
+        <!--输入框的数量-->
+        <attr name="icv_et_number" format="integer" />
+        <!--输入框的宽度-->
+        <attr name="icv_et_width" format="dimension|reference" />
+        <!--输入框之间的分割线-->
+        <attr name="icv_et_divider_drawable" format="reference" />
+        <!--输入框文字颜色-->
+        <attr name="icv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="icv_et_text_size" format="dimension|reference" />
+        <!--输入框获取焦点时边框-->
+        <attr name="icv_et_bg_focus" format="reference" />
+        <!--输入框没有焦点时边框-->
+        <attr name="icv_et_bg_normal" format="reference" />
+    </declare-styleable>
+
+    <!--自定义搜索输入框-->
+    <declare-styleable name="Search_View">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" />
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+
+</resources>

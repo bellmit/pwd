@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <!-- 禁止了把数字转化为拨号链接 -->
+	    <meta name="format-detection" content="telephone=no">
+		<title>通知</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+
+		
+		
+		<style>
+			#all{
+				position: absolute;
+				top: 0.4rem;
+				left: 0;
+				width: 100%;
+			}
+			#all h1{
+				width: 3rem;
+				margin: 0.15rem auto 0.18rem;
+				font-weight: normal;
+				color: #545454;
+				text-align: center;
+				font-size: 0.16rem;
+			}
+			#all p{
+				width: 3rem;
+				margin: 0 auto;
+				color: gray;
+				text-indent: 2em;
+			}
+			.turnBtn:link {color: #545454}     /* 未访问的链接 */
+			.turnBtn:visited {color:  #545454}  /* 已访问的链接 */
+			.turnBtn:hover {color: #545454}    /* 当有鼠标悬停在链接上 */
+			.turnBtn:active {color:  #545454}   /* 被选择的链接 */
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="turnBtn"><i class="iconfont icon-fanhui"></i></a>
+			<span class="header-title"></span>
+		</header>
+		
+		<div id="all">
+         <h1>广东省福建福清商会成立三周年庆典隆重举行</h1>
+         <p>
+         	2017年1月14日，广东省福建福清商会第一届第四次会员代表大会暨成立三周年庆典在广州四季酒店隆重举行。大会当晚齐聚近300名领导来宾及商会成员，共同迎接此次盛会。
+    武警广东省总队原总队长洪少虎将军、福建省人民政府驻广州办事处主任陈起东先生、广东安华美博集团有限公司董事局主席王福官先生、广东省政法委原书记吴泽耀、广东省劳动与社会保障厅原厅长、高级顾问方潮贵先生、广州市政府原副市长陈绮绮女士、广东福建商会秘书长甘大春先生、广东省广州市福州商会会长陈锦魁先生、中国致公党广东省委原秘书长王中民先生、南海海洋研究所原书记林民田先生等嘉宾受邀出席。
+         </p>  
+           
+		</div>
+	
+		
+		<script>
+			var pathName = document.location.pathname; 
+			function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+			var parameter1=GetQueryString("parameter1");
+			var parameter2=GetQueryString("parameter2");
+			var parameter3=GetQueryString("parameter3");
+			if(parameter3=="zhengce"){
+				$(".header-title").html("政策详情")
+			}else if(parameter3=="tongzhi"||parameter3=="tongzhi2"){
+				$(".header-title").html("通知详情")
+			}
+			$(".turnBtn").click(function(){
+				if(parameter3=="tongzhi2"){
+					window.location.href="tongZhiManage.html?parameter1="+parameter1
+				}else{
+					window.location.href="tongZhi.html?parameter1="+parameter1+"&parameter2="+parameter2+"&parameter3="+parameter3;
+				}
+				
+			})
+		</script>
+	</body>
+</html>

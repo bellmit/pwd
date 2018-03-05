@@ -1,0 +1,518 @@
+# view res/layout/fragment_indicator_layout.xml #generated:313
+# view res/layout/integral_shop.xml #generated:144
+# view res/layout/minitest.xml #generated:83
+# view res/layout/my_attendance.xml #generated:143
+# view res/layout/my_attendance_statistics_detail.xml #generated:116
+# view res/layout/my_information.xml #generated:267
+# view res/layout/my_payroll.xml #generated:228
+# view res/layout/my_payroll2.xml #generated:241
+# view res/layout/my_performance_detail.xml #generated:141
+# view res/layout/my_service.xml #generated:16
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:19
+# view res/layout/abc_action_bar_decor_include.xml #generated:47
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:29
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:52
+-keep class android.support.v7.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:31
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:40
+# view res/layout/abc_action_mode_bar.xml #generated:19
+-keep class android.support.v7.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:25
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:35
+-keep class android.support.v7.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abc_action_bar_home.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abc_action_bar_tabbar.xml #generated:17
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.internal.widget.LinearLayoutICS { <init>(...); }
+
+# view v11\res/layout-v11/abc_action_bar_decor.xml #generated:17
+# view v11\res/layout-v11/abc_simple_decor.xml #generated:17
+-keep class android.support.v7.internal.widget.NativeActionModeAwareLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_tab.xml #generated:17
+-keep class android.support.v7.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:85
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view res/layout/my_integral.xml #generated:19
+# view res/layout/mysalary_dissent.xml #generated:35
+-keep class android.widget.TextView { <init>(...); }
+
+# view res/layout/pullrefresh_listview_main.xml #generated:9
+-keep class com.lee.view.PullRefreshListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.newland.comp.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class com.newland.comp.activity.MenuTabActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:66
+-keep class com.newland.comp.activity.PwdDiscoveryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class com.newland.comp.activity.ScaleImgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.newland.comp.activity.ShowPhotoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class com.newland.comp.activity.hr.HrActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.newland.comp.activity.hr.HrFilingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class com.newland.comp.activity.hr.HrIntegralShopActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.newland.comp.activity.hr.HrLeaveOfficeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.newland.comp.activity.hr.HrVacateApplyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.newland.comp.activity.indicator.IndicatorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:70
+-keep class com.newland.comp.activity.indicator.IndicatorDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.newland.comp.activity.indicator.IndicatorOrgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.newland.comp.activity.indicator.IndicatorWarningActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.newland.comp.activity.indicator.IntegraExchangeDetail_ { <init>(...); }
+
+# view AndroidManifest.xml #generated:88
+-keep class com.newland.comp.activity.more.MoreActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.newland.comp.activity.more.MoreFeedBackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.newland.comp.activity.more.MoreStaffAspActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.newland.comp.activity.more.MoreStaffAspDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.newland.comp.activity.my.ChangePwdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class com.newland.comp.activity.my.DeviceInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.newland.comp.activity.my.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.newland.comp.activity.my.MyAttendanceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.newland.comp.activity.my.MyAttendanceLeaveActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.newland.comp.activity.my.MyAttendanceOverTimeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.newland.comp.activity.my.MyAttendanceStatisticsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.newland.comp.activity.my.MyInergralActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.newland.comp.activity.my.MyInergralDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.newland.comp.activity.my.MyInformationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.newland.comp.activity.my.MyMessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.newland.comp.activity.my.MyMessageDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.newland.comp.activity.my.MyPayrollActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.newland.comp.activity.my.MyPerformanceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.newland.comp.activity.my.MyPerformanceDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.newland.comp.activity.my.MyPersonListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.newland.comp.activity.my.MyPersonListNoSearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.newland.comp.activity.my.MyScheduleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.newland.comp.activity.my.MySelfActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.newland.comp.activity.my.MyStartActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.newland.comp.activity.my.MyStartKnowledgeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:45
+-keep class com.newland.comp.activity.my.MyStartPerforRankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.newland.comp.activity.my.MyStartTrainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.newland.comp.activity.my.MyStartWorkShiftActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class com.newland.comp.activity.my.MysalaryDissentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.newland.comp.activity.my.SalaryDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.newland.comp.activity.my.SalaryDetailActivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.newland.comp.activity.my.SystemSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.newland.comp.activity.my.miniknowledge.MiniKnowledgeDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.newland.comp.activity.my.miniknowledge.MiniKnowledgeListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.newland.comp.activity.my.miniknowledge.MiniKnowledgeMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.newland.comp.activity.my.minitest.MiniTestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:86
+-keep class com.newland.comp.activity.process.PrDetailWebActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.newland.comp.activity.process.PrToDoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.newland.comp.activity.process.PrToDoDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class com.newland.comp.activity.process.PrYandFActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.newland.comp.activity.process.PrYandFDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class com.newland.comp.activity.process.ProcessActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:12
+-keep class com.newland.comp.common.AppContext { <init>(...); }
+
+# view AndroidManifest.xml #generated:94
+-keep class com.newland.comp.service.LoopSysMsgService { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.newland.comp.test.TestActivity { <init>(...); }
+
+# view res/layout/indicator_acc.xml #generated:339
+# view res/layout/more_staffasp_detail.xml #generated:475
+-keep class com.newland.comp.view.MyListView { <init>(...); }
+
+# view res/layout/fragment_indicator_operation_item.xml #generated:26
+-keep class com.newland.comp.view.MyWebView { <init>(...); }
+
+# view res/layout/prtodo_detail.xml #generated:146
+-keep class com.newland.comp.view.NoScrollListView { <init>(...); }
+
+# view res/layout/exchangerecoder.xml #generated:62
+# view res/layout/fragment_exchange_zone.xml #generated:139
+# view res/layout/fragment_secondkill.xml #generated:115
+# view res/layout/listview_data_tiitle.xml #generated:18
+# view res/layout/more_staffasp.xml #generated:53
+# view res/layout/my_attendance_filing.xml #generated:14
+# view res/layout/my_attendance_leave_detail.xml #generated:20
+# view res/layout/my_attendance_overtime_detail.xml #generated:20
+# view res/layout/my_attendance_statistics_detail_absenteeism.xml #generated:14
+# view res/layout/my_attendance_statistics_detail_belate.xml #generated:14
+# view res/layout/my_attendance_statistics_detail_leaveearly.xml #generated:14
+# view res/layout/my_integral_detail.xml #generated:15
+# view res/layout/my_message.xml #generated:9
+# view res/layout/my_performance_detail_manager.xml #generated:8
+# view res/layout/my_performance_detail_product.xml #generated:8
+# view res/layout/my_schedule.xml #generated:138
+# view res/layout/personlist.xml #generated:42
+# view res/layout/prtodo.xml #generated:121
+# view res/layout/pryiban.xml #generated:121
+-keep class com.newland.comp.view.PullRefreshListView { <init>(...); }
+
+# onClick res/layout/fragment_secondkill_dialog.xml #generated:72
+-keepclassmembers class * { *** affirm(...); }
+
+# onClick res/layout/my_integral.xml #generated:248
+-keepclassmembers class * { *** btn_current(...); }
+
+# onClick res/layout/my_integral.xml #generated:210
+-keepclassmembers class * { *** btn_kf_detail(...); }
+
+# onClick res/layout/my_start.xml #generated:388
+-keepclassmembers class * { *** btn_knowledge(...); }
+
+# onClick res/layout/my_service.xml #generated:220
+-keepclassmembers class * { *** btn_my_attendance(...); }
+
+# onClick res/layout/my_service.xml #generated:185
+-keepclassmembers class * { *** btn_my_inergral(...); }
+
+# onClick res/layout/mysalary_dissent.xml #generated:101
+-keepclassmembers class * { *** btn_next_userid_layout(...); }
+
+# onClick res/layout/my_start.xml #generated:313
+-keepclassmembers class * { *** btn_performance(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:162
+# onClick res/layout/my_integral.xml #generated:48
+# onClick res/layout/my_start.xml #generated:45
+# onClick res/layout/personlist.xml #generated:31
+-keepclassmembers class * { *** btn_search(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:85
+# onClick res/layout/indicator_acc.xml #generated:65
+-keepclassmembers class * { *** btn_select_date(...); }
+
+# onClick res/layout/main_tabhost_menu.xml #generated:117
+# onClick res/layout/main_tabhost_menu.xml #generated:162
+# onClick res/layout/main_tabhost_menu.xml #generated:36
+# onClick res/layout/main_tabhost_menu.xml #generated:63
+# onClick res/layout/main_tabhost_menu.xml #generated:90
+-keepclassmembers class * { *** btn_tab(...); }
+
+# onClick res/layout/my_start.xml #generated:363
+-keepclassmembers class * { *** btn_training(...); }
+
+# onClick res/layout/my_start.xml #generated:338
+-keepclassmembers class * { *** btn_work_shift(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:45
+-keepclassmembers class * { *** chart_hide_btn(...); }
+
+# onClick res/layout/vacate.xml #generated:115
+-keepclassmembers class * { *** clickDaiban(...); }
+
+# onClick res/layout/prtodo.xml #generated:100
+# onClick res/layout/pryiban.xml #generated:100
+-keepclassmembers class * { *** clickEnddate(...); }
+
+# onClick res/layout/vacate.xml #generated:213
+-keepclassmembers class * { *** clickLeave(...); }
+
+# onClick res/layout/leave_office.xml #generated:432
+-keepclassmembers class * { *** clickLeave_type(...); }
+
+# onClick res/layout/vacate.xml #generated:522
+-keepclassmembers class * { *** clickLeavereason(...); }
+
+# onClick res/layout/leave_office.xml #generated:481
+-keepclassmembers class * { *** clickMain_reason(...); }
+
+# onClick res/layout/leave_office.xml #generated:530
+-keepclassmembers class * { *** clickSce_reason(...); }
+
+# onClick res/layout/hr_filing.xml #generated:63
+-keepclassmembers class * { *** clickSpinner_type(...); }
+
+# onClick res/layout/pryiban.xml #generated:68
+-keepclassmembers class * { *** clickStartDate(...); }
+
+# onClick res/layout/more_feedback.xml #generated:110
+-keepclassmembers class * { *** clickThird_spinner(...); }
+
+# onClick res/layout/vacate.xml #generated:164
+-keepclassmembers class * { *** clickType(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:152
+-keepclassmembers class * { *** clickWeek(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:111
+-keepclassmembers class * { *** clickdur(...); }
+
+# onClick res/layout/more_feedback.xml #generated:72
+-keepclassmembers class * { *** clickfirstspinner(...); }
+
+# onClick res/layout/more_feedback.xml #generated:88
+-keepclassmembers class * { *** clicksecondspinner(...); }
+
+# onClick res/layout/prtodo.xml #generated:68
+-keepclassmembers class * { *** clickstartdate(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:129
+-keepclassmembers class * { *** clicktime(...); }
+
+# onClick res/layout/exchangerecoder.xml #generated:28
+-keepclassmembers class * { *** clicktypespinner(...); }
+
+# onClick res/layout/process.xml #generated:22
+-keepclassmembers class * { *** dbprocess_click(...); }
+
+# onClick res/layout/hr.xml #generated:69
+# onClick res/layout/more.xml #generated:69
+-keepclassmembers class * { *** filing_click(...); }
+
+# onClick res/layout/process.xml #generated:89
+-keepclassmembers class * { *** fqprocess_click(...); }
+
+# onClick res/layout/hr.xml #generated:45
+# onClick res/layout/more.xml #generated:45
+-keepclassmembers class * { *** leave_click(...); }
+
+# onClick res/layout/activity_syssetting.xml #generated:103
+# onClick res/layout/activity_syssetting.xml #generated:146
+# onClick res/layout/activity_syssetting.xml #generated:225
+# onClick res/layout/activity_syssetting.xml #generated:65
+-keepclassmembers class * { *** llronclick(...); }
+
+# onClick res/layout/my_service.xml #generated:351
+-keepclassmembers class * { *** miniknowledge(...); }
+
+# onClick res/layout/my_service.xml #generated:376
+-keepclassmembers class * { *** minitest(...); }
+
+# onClick res/layout/my_service.xml #generated:327
+-keepclassmembers class * { *** my_indicator(...); }
+
+# onClick res/layout/hr.xml #generated:180
+# onClick res/layout/more.xml #generated:178
+# onClick res/layout/my_service.xml #generated:268
+-keepclassmembers class * { *** my_info(...); }
+
+# onClick res/layout/my_service.xml #generated:96
+-keepclassmembers class * { *** my_message(...); }
+
+# onClick res/layout/my_service.xml #generated:137
+-keepclassmembers class * { *** my_payroll(...); }
+
+# onClick res/layout/my_service.xml #generated:161
+-keepclassmembers class * { *** my_performance(...); }
+
+# onClick res/layout/hr.xml #generated:206
+# onClick res/layout/more.xml #generated:204
+# onClick res/layout/my_service.xml #generated:292
+-keepclassmembers class * { *** my_schedule(...); }
+
+# onClick res/layout/hr.xml #generated:154
+# onClick res/layout/more.xml #generated:152
+# onClick res/layout/my_service.xml #generated:244
+-keepclassmembers class * { *** my_start(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:190
+# onClick res/layout/fragment_indicator_layout.xml #generated:218
+# onClick res/layout/fragment_indicator_layout.xml #generated:247
+# onClick res/layout/fragment_indicator_layout.xml #generated:276
+# onClick res/layout/hr_filing.xml #generated:190
+# onClick res/layout/indicator_acc.xml #generated:20
+# onClick res/layout/integral_shop.xml #generated:107
+# onClick res/layout/integral_shop.xml #generated:20
+# onClick res/layout/integral_shop.xml #generated:47
+# onClick res/layout/integral_shop.xml #generated:77
+# onClick res/layout/minitest.xml #generated:20
+# onClick res/layout/minitest.xml #generated:49
+# onClick res/layout/my_attendance.xml #generated:104
+# onClick res/layout/my_attendance.xml #generated:19
+# onClick res/layout/my_attendance.xml #generated:48
+# onClick res/layout/my_attendance.xml #generated:76
+# onClick res/layout/my_attendance_statistics_detail.xml #generated:20
+# onClick res/layout/my_attendance_statistics_detail.xml #generated:49
+# onClick res/layout/my_attendance_statistics_detail.xml #generated:78
+# onClick res/layout/my_payroll.xml #generated:110
+# onClick res/layout/my_payroll.xml #generated:139
+# onClick res/layout/my_payroll.xml #generated:168
+# onClick res/layout/my_payroll.xml #generated:197
+# onClick res/layout/my_payroll.xml #generated:23
+# onClick res/layout/my_payroll.xml #generated:52
+# onClick res/layout/my_payroll.xml #generated:81
+# onClick res/layout/my_payroll2.xml #generated:115
+# onClick res/layout/my_payroll2.xml #generated:144
+# onClick res/layout/my_payroll2.xml #generated:174
+# onClick res/layout/my_payroll2.xml #generated:204
+# onClick res/layout/my_payroll2.xml #generated:30
+# onClick res/layout/my_payroll2.xml #generated:57
+# onClick res/layout/my_payroll2.xml #generated:86
+# onClick res/layout/my_perfor.xml #generated:186
+# onClick res/layout/my_performance_detail.xml #generated:25
+# onClick res/layout/my_performance_detail.xml #generated:53
+# onClick res/layout/prtodo.xml #generated:57
+# onClick res/layout/pryiban.xml #generated:57
+# onClick res/layout/title_head.xml #generated:40
+# onClick res/layout/title_head.xml #generated:9
+# onClick res/layout/title_head2.xml #generated:40
+# onClick res/layout/title_head2.xml #generated:9
+# onClick res/layout/vacate.xml #generated:587
+-keepclassmembers class * { *** onClick(...); }
+
+# onClick res/layout/fragment_indicator_layout.xml #generated:70
+# onClick res/layout/indicator_acc.xml #generated:50
+# onClick res/layout/title_head.xml #generated:29
+# onClick res/layout/title_head2.xml #generated:29
+-keepclassmembers class * { *** right_btn(...); }
+
+# onClick res/layout/test_activity.xml #generated:7
+-keepclassmembers class * { *** run_js(...); }
+
+# onClick res/layout/indicator_acc_orgid.xml #generated:69
+-keepclassmembers class * { *** search(...); }
+
+# onClick res/layout/hr.xml #generated:92
+# onClick res/layout/more.xml #generated:128
+-keepclassmembers class * { *** shop_click(...); }
+
+# onClick res/layout/more.xml #generated:21
+-keepclassmembers class * { *** staffaspirations_click(...); }
+
+# onClick res/layout/fragment_exchange_detail.xml #generated:209
+-keepclassmembers class * { *** submit(...); }
+
+# onClick res/layout/leave_office.xml #generated:637
+# onClick res/layout/prtodo_detail.xml #generated:298
+-keepclassmembers class * { *** submit_from(...); }
+
+# onClick res/layout/hr.xml #generated:128
+# onClick res/layout/more.xml #generated:93
+# onClick res/layout/process.xml #generated:113
+-keepclassmembers class * { *** train_click(...); }
+
+# onClick res/layout/hr.xml #generated:21
+-keepclassmembers class * { *** vacate_click(...); }
+
+# onClick res/layout/process.xml #generated:65
+-keepclassmembers class * { *** ybprocess_click(...); }
+

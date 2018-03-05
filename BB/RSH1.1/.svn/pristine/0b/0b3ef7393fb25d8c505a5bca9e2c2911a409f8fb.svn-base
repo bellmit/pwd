@@ -1,0 +1,169 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+//apply from: "${project.rootDir}/common_config.gradle"
+
+// 注：需要配置符号表时，使用bugly插件
+apply plugin: 'bugly'
+bugly {
+    appId = '9dd897e6a3'
+    appKey = '9fb8fe05-b48a-4d40-a96b-eb9a18b06810'
+}
+
+def configInfo = project.ext
+
+android {
+    signingConfigs {
+
+        release {
+            keyAlias 'rsh'
+            keyPassword 'rsh@12345687'
+            storeFile file('/Users/shenbinghong/Desktop/tastebychance/RSH/rsh.jks')
+            storePassword 'rsh@12345687'
+        }
+
+    }
+
+    compileSdkVersion configInfo.compileSdkVersion
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "rongshanghui.tastebychance.com.rongshanghui"
+        minSdkVersion configInfo.minSdkVersion
+        targetSdkVersion configInfo.targetSdkVersion
+        versionCode 6
+        versionName "1.1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        jackOptions.enabled = true
+
+        multiDexEnabled true
+
+        //添加部分
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a' //, 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        //签名配置
+        release {
+            debuggable false
+            signingConfig signingConfigs.release
+            minifyEnabled configInfo.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+            }
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable true
+            testCoverageEnabled true
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility configInfo.sourceCompatibility
+        targetCompatibility configInfo.targetCompatibility
+    }
+
+    dexOptions {
+        //使用增量模式构建
+        //incremental true
+        //最大堆内存
+        javaMaxHeapSize configInfo.javaMaxHeapSize
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+        //线程数
+        threadCount = 8
+    }
+
+    build.doLast {
+        def today = new Date().format('yyyyMMdd');
+        copy {
+            from('build/outputs/apk')
+            into('/output')
+//            into('/')
+            include('app-release.apk')
+            rename('app-release.apk', 'RSH' + "_" + today + '.apk')
+        }
+    }
+
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile files('libs/universal-image-loader-1.9.2.jar')
+    //    compile files('libs/okhttp-3.4.1.jar')
+    //    compile files('libs/okio-1.9.0.jar')
+    compile project(':library')
+    compile files('libs/fastjson-1.2.4.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/systembartint-1.0.4.jar')
+    compile 'com.dyhdyh.loadingbar:loadingbar:1.4.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    provided 'de.greenrobot:eventbus-annotation-processor:3.0.0-beta1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.android.support:multidex:1.0.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //必选
+    //    compile(name: 'IMCore-2.0.2', ext: 'aar')
+    //可选，如果使用SDK的UI必须添加该依赖，如果不使用SDK的UI，完全自己开发UI则无需添加该依赖
+    //    compile(name: 'IMKit-2.0.2', ext: 'aar')
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    //wxshare
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //qqshare
+    implementation files('libs/open_sdk_r5923_lite.jar')
+    implementation project(':wx')
+    implementation project(':vitamio')
+    implementation project(':jcvideoplayer-lib')
+    implementation project(':ffmpeg4android_lib')
+    implementation project(':emptylayout')
+    //bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+}
